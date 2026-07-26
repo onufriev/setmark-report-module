@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "evidence"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "createdAt",
+          "recordedBy"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "domainId"
+            ]
+          },
+          {
+            "required": [
+              "domainIds"
+            ]
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(SRC-EV|PM-DEC|AI-PROP)-[0-9]{3,}$"
+          },
+          "type": {
+            "enum": [
+              "SOURCE_EXCERPT",
+              "PRODUCT_MANAGER_DECISION",
+              "AI_PROPOSAL"
+            ]
+          },
+          "domainId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "domainIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "createdAt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recordedBy": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "SOURCE_EXCERPT"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "sourceId",
+                "snapshotPath",
+                "snapshotSha256",
+                "location",
+                "excerpt",
+                "verified"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "PRODUCT_MANAGER_DECISION"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "questionId",
+                "decision",
+                "exactUserMessage"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

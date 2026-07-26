@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "status",
+    "applicationName",
+    "entryPoint",
+    "startCommand",
+    "stopCommand",
+    "healthCheck",
+    "runbookPath",
+    "dataSourceRef",
+    "seedCommand",
+    "resetCommand",
+    "requiredEnvironmentVariables",
+    "configurationFiles",
+    "ports",
+    "testAccounts",
+    "verificationCommand"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "status": {
+      "enum": [
+        "NOT_STARTED",
+        "IN_PROGRESS",
+        "READY"
+      ]
+    },
+    "applicationName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "entryPoint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "startCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stopCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "healthCheck": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runbookPath": {
+      "const": "prototype/PROTOTYPE-RUNBOOK.md"
+    },
+    "dataSourceRef": {
+      "const": "product/prototype-data-source.json"
+    },
+    "seedCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resetCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requiredEnvironmentVariables": {
+      "type": "array"
+    },
+    "configurationFiles": {
+      "type": "array"
+    },
+    "ports": {
+      "type": "array"
+    },
+    "testAccounts": {
+      "type": "array"
+    },
+    "verificationCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "platformCommands": {
+      "type": "object",
+      "required": [
+        "windows",
+        "macosLinux"
+      ],
+      "properties": {
+        "windows": {
+          "type": "object",
+          "required": [
+            "start",
+            "stop"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "minLength": 1
+            },
+            "stop": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "macosLinux": {
+          "type": "object",
+          "required": [
+            "start",
+            "stop"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "minLength": 1
+            },
+            "stop": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

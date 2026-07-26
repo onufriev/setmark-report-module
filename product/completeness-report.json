@@ -1,0 +1,1178 @@
+{
+  "schemaVersion": "4.3",
+  "evaluatedAt": "2026-07-26T16:24:28.344295+00:00",
+  "detectedProfiles": [
+    "BASE"
+  ],
+  "domains": [
+    {
+      "id": "productContext",
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Продуктовый контекст",
+          "file": "requirements/01-base/product-context.md",
+          "line": 3,
+          "questionId": "Q-001",
+          "domainId": "productContext",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "goalsScope",
+      "title": "Цели и границы первой версии",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Цели и границы первой версии",
+          "file": "requirements/01-base/goals-and-scope.md",
+          "line": 3,
+          "questionId": "Q-002",
+          "domainId": "goalsScope",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "functionalRequirements",
+      "title": "Функциональные требования",
+      "file": "requirements/02-system/system-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Функциональные требования",
+          "file": "requirements/02-system/system-requirements.md",
+          "line": 3,
+          "questionId": "Q-004",
+          "domainId": "functionalRequirements",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "businessObjects",
+      "title": "Бизнес-объекты, сущности и состояния",
+      "file": "requirements/02-system/entities-and-data.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Бизнес-объекты, сущности и данные",
+          "file": "requirements/02-system/entities-and-data.md",
+          "line": 3,
+          "questionId": "Q-005",
+          "domainId": "businessObjects",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "rolesPermissions",
+      "title": "Роли и права доступа",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Роли и права доступа",
+          "file": "requirements/02-system/roles-and-permissions.md",
+          "line": 3,
+          "questionId": "Q-007",
+          "domainId": "rolesPermissions",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "businessRules",
+      "title": "Бизнес-правила",
+      "file": "requirements/02-system/business-rules.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Бизнес-правила",
+          "file": "requirements/02-system/business-rules.md",
+          "line": 3,
+          "questionId": "Q-006",
+          "domainId": "businessRules",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "statesErrors",
+      "title": "Ошибки, пустые и недоступные состояния",
+      "file": "requirements/02-system/states-and-errors.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Ошибки, пустые и недоступные состояния",
+          "file": "requirements/02-system/states-and-errors.md",
+          "line": 3,
+          "questionId": "Q-008",
+          "domainId": "statesErrors",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "dataRequirements",
+      "title": "Данные, телеметрия, свежесть и полнота",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Данные, телеметрия, свежесть и полнота",
+          "file": "requirements/05-integrations/data-requirements.md",
+          "line": 3,
+          "questionId": "Q-015",
+          "domainId": "dataRequirements",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "mainJourney",
+      "title": "Основной пользовательский путь",
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Пользовательские пути",
+          "file": "requirements/07-scenarios/user-journeys.md",
+          "line": 3,
+          "questionId": "Q-020",
+          "domainId": "mainJourney",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "acceptanceCriteria",
+      "title": "Критерии приёмки",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Критерии приёмки",
+          "file": "requirements/08-acceptance/acceptance-criteria.md",
+          "line": 3,
+          "questionId": "Q-021",
+          "domainId": "acceptanceCriteria",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "successSignal",
+      "title": "Критерий успешной проверки прототипа",
+      "file": "requirements/08-acceptance/validation-success.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Критерий успешной проверки прототипа",
+          "file": "requirements/08-acceptance/validation-success.md",
+          "line": 3,
+          "questionId": "Q-022",
+          "domainId": "successSignal",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "uiSource",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Источник интерфейса и компонентов",
+          "file": "requirements/03-architecture/component-source.md",
+          "line": 3,
+          "questionId": "Q-009",
+          "domainId": "uiSource",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "salesObjects",
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Объекты продаж и их иерархия",
+          "file": "requirements/01-base/sales-objects.md",
+          "line": 3,
+          "questionId": "Q-003",
+          "domainId": "salesObjects",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "hardware",
+      "title": "Оборудование",
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Оборудование",
+          "file": "requirements/03-architecture/hardware-requirements.md",
+          "line": 3,
+          "questionId": "Q-010",
+          "domainId": "hardware",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "integrations",
+      "title": "Интеграции",
+      "file": "requirements/05-integrations/integrations.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Интеграции",
+          "file": "requirements/05-integrations/integrations.md",
+          "line": 3,
+          "questionId": "Q-016",
+          "domainId": "integrations",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "systemScenarios",
+      "title": "Системные сценарии",
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Системные сценарии",
+          "file": "requirements/06-system-scenarios/system-scenarios.md",
+          "line": 3,
+          "questionId": "Q-017",
+          "domainId": "systemScenarios",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "exceptionScenarios",
+      "title": "Исключительные сценарии",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Исключительные сценарии",
+          "file": "requirements/06-system-scenarios/exception-scenarios.md",
+          "line": 3,
+          "questionId": "Q-018",
+          "domainId": "exceptionScenarios",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "operationalScenarios",
+      "title": "Эксплуатационные сценарии жизненного цикла",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Эксплуатационные сценарии жизненного цикла",
+          "file": "requirements/06-system-scenarios/operational-scenarios.md",
+          "line": 3,
+          "questionId": "Q-OPS-001",
+          "domainId": "operationalScenarios",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "businessScenarios",
+      "title": "Бизнес-сценарии",
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Бизнес-сценарии",
+          "file": "requirements/07-scenarios/business-scenarios.md",
+          "line": 3,
+          "questionId": "Q-019",
+          "domainId": "businessScenarios",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "technicalConstraints",
+      "title": "Технические ограничения прототипа",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Технические ограничения прототипа",
+          "file": "requirements/03-architecture/technical-constraints.md",
+          "line": 3,
+          "questionId": "Q-011",
+          "domainId": "technicalConstraints",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "quality",
+      "title": "Нефункциональные требования",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Нефункциональные требования",
+          "file": "requirements/04-quality/quality-requirements.md",
+          "line": 3,
+          "questionId": "Q-012",
+          "domainId": "quality",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "localization",
+      "title": "Локализация и форматы",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Локализация и форматы",
+          "file": "requirements/04-quality/localization-requirements.md",
+          "line": 3,
+          "questionId": "Q-013",
+          "domainId": "localization",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "accessibility",
+      "title": "Доступность интерфейса",
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Доступность интерфейса",
+          "file": "requirements/04-quality/accessibility-requirements.md",
+          "line": 3,
+          "questionId": "Q-014",
+          "domainId": "accessibility",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "traceability",
+      "title": "Трассировка требований",
+      "file": "requirements/09-traceability/traceability.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Трассировка требований",
+          "file": "requirements/09-traceability/traceability.md",
+          "line": 3,
+          "questionId": "Q-023",
+          "domainId": "traceability",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    },
+    {
+      "id": "prototypeDataSource",
+      "title": "Источник данных рабочего прототипа",
+      "file": "requirements/10-prototype/prototype-data-source.md",
+      "requiredBeforePhase": "WORKING_PROTOTYPE",
+      "profileHintMatched": false,
+      "status": "BLOCKED",
+      "requirementRefs": [],
+      "needsInput": [
+        {
+          "title": "Источник данных рабочего прототипа",
+          "file": "requirements/10-prototype/prototype-data-source.md",
+          "line": 3,
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "status": "Требуется решение"
+        }
+      ],
+      "validationNotes": []
+    }
+  ],
+  "gates": {
+    "VISUAL_PROTOTYPE": {
+      "status": "BLOCKED",
+      "blockingQuestions": [
+        {
+          "questionId": "Q-001",
+          "domainId": "productContext",
+          "title": "Продуктовый контекст",
+          "file": "requirements/01-base/product-context.md"
+        },
+        {
+          "questionId": "Q-002",
+          "domainId": "goalsScope",
+          "title": "Цели и границы первой версии",
+          "file": "requirements/01-base/goals-and-scope.md"
+        },
+        {
+          "questionId": "Q-004",
+          "domainId": "functionalRequirements",
+          "title": "Функциональные требования",
+          "file": "requirements/02-system/system-requirements.md"
+        },
+        {
+          "questionId": "Q-005",
+          "domainId": "businessObjects",
+          "title": "Бизнес-объекты, сущности и данные",
+          "file": "requirements/02-system/entities-and-data.md"
+        },
+        {
+          "questionId": "Q-007",
+          "domainId": "rolesPermissions",
+          "title": "Роли и права доступа",
+          "file": "requirements/02-system/roles-and-permissions.md"
+        },
+        {
+          "questionId": "Q-006",
+          "domainId": "businessRules",
+          "title": "Бизнес-правила",
+          "file": "requirements/02-system/business-rules.md"
+        },
+        {
+          "questionId": "Q-008",
+          "domainId": "statesErrors",
+          "title": "Ошибки, пустые и недоступные состояния",
+          "file": "requirements/02-system/states-and-errors.md"
+        },
+        {
+          "questionId": "Q-015",
+          "domainId": "dataRequirements",
+          "title": "Данные, телеметрия, свежесть и полнота",
+          "file": "requirements/05-integrations/data-requirements.md"
+        },
+        {
+          "questionId": "Q-020",
+          "domainId": "mainJourney",
+          "title": "Пользовательские пути",
+          "file": "requirements/07-scenarios/user-journeys.md"
+        },
+        {
+          "questionId": "Q-021",
+          "domainId": "acceptanceCriteria",
+          "title": "Критерии приёмки",
+          "file": "requirements/08-acceptance/acceptance-criteria.md"
+        },
+        {
+          "questionId": "Q-022",
+          "domainId": "successSignal",
+          "title": "Критерий успешной проверки прототипа",
+          "file": "requirements/08-acceptance/validation-success.md"
+        },
+        {
+          "questionId": "Q-009",
+          "domainId": "uiSource",
+          "title": "Источник интерфейса и компонентов",
+          "file": "requirements/03-architecture/component-source.md"
+        },
+        {
+          "questionId": "Q-003",
+          "domainId": "salesObjects",
+          "title": "Объекты продаж и их иерархия",
+          "file": "requirements/01-base/sales-objects.md"
+        },
+        {
+          "questionId": "Q-010",
+          "domainId": "hardware",
+          "title": "Оборудование",
+          "file": "requirements/03-architecture/hardware-requirements.md"
+        },
+        {
+          "questionId": "Q-016",
+          "domainId": "integrations",
+          "title": "Интеграции",
+          "file": "requirements/05-integrations/integrations.md"
+        },
+        {
+          "questionId": "Q-017",
+          "domainId": "systemScenarios",
+          "title": "Системные сценарии",
+          "file": "requirements/06-system-scenarios/system-scenarios.md"
+        },
+        {
+          "questionId": "Q-018",
+          "domainId": "exceptionScenarios",
+          "title": "Исключительные сценарии",
+          "file": "requirements/06-system-scenarios/exception-scenarios.md"
+        },
+        {
+          "questionId": "Q-OPS-001",
+          "domainId": "operationalScenarios",
+          "title": "Эксплуатационные сценарии жизненного цикла",
+          "file": "requirements/06-system-scenarios/operational-scenarios.md"
+        },
+        {
+          "questionId": "Q-019",
+          "domainId": "businessScenarios",
+          "title": "Бизнес-сценарии",
+          "file": "requirements/07-scenarios/business-scenarios.md"
+        },
+        {
+          "questionId": "Q-011",
+          "domainId": "technicalConstraints",
+          "title": "Технические ограничения прототипа",
+          "file": "requirements/03-architecture/technical-constraints.md"
+        },
+        {
+          "questionId": "Q-012",
+          "domainId": "quality",
+          "title": "Нефункциональные требования",
+          "file": "requirements/04-quality/quality-requirements.md"
+        },
+        {
+          "questionId": "Q-013",
+          "domainId": "localization",
+          "title": "Локализация и форматы",
+          "file": "requirements/04-quality/localization-requirements.md"
+        },
+        {
+          "questionId": "Q-014",
+          "domainId": "accessibility",
+          "title": "Доступность интерфейса",
+          "file": "requirements/04-quality/accessibility-requirements.md"
+        },
+        {
+          "questionId": "Q-023",
+          "domainId": "traceability",
+          "title": "Трассировка требований",
+          "file": "requirements/09-traceability/traceability.md"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Не выбран допустимый источник UI",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Источник UI не выбран или не проверен",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Не указано расположение источника UI",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Источник UI не подтверждён решением Product Manager",
+          "file": "product/ui-source.json"
+        }
+      ]
+    },
+    "WORKING_PROTOTYPE": {
+      "status": "BLOCKED",
+      "blockingQuestions": [
+        {
+          "questionId": "Q-001",
+          "domainId": "productContext",
+          "title": "Продуктовый контекст",
+          "file": "requirements/01-base/product-context.md"
+        },
+        {
+          "questionId": "Q-002",
+          "domainId": "goalsScope",
+          "title": "Цели и границы первой версии",
+          "file": "requirements/01-base/goals-and-scope.md"
+        },
+        {
+          "questionId": "Q-004",
+          "domainId": "functionalRequirements",
+          "title": "Функциональные требования",
+          "file": "requirements/02-system/system-requirements.md"
+        },
+        {
+          "questionId": "Q-005",
+          "domainId": "businessObjects",
+          "title": "Бизнес-объекты, сущности и данные",
+          "file": "requirements/02-system/entities-and-data.md"
+        },
+        {
+          "questionId": "Q-007",
+          "domainId": "rolesPermissions",
+          "title": "Роли и права доступа",
+          "file": "requirements/02-system/roles-and-permissions.md"
+        },
+        {
+          "questionId": "Q-006",
+          "domainId": "businessRules",
+          "title": "Бизнес-правила",
+          "file": "requirements/02-system/business-rules.md"
+        },
+        {
+          "questionId": "Q-008",
+          "domainId": "statesErrors",
+          "title": "Ошибки, пустые и недоступные состояния",
+          "file": "requirements/02-system/states-and-errors.md"
+        },
+        {
+          "questionId": "Q-015",
+          "domainId": "dataRequirements",
+          "title": "Данные, телеметрия, свежесть и полнота",
+          "file": "requirements/05-integrations/data-requirements.md"
+        },
+        {
+          "questionId": "Q-020",
+          "domainId": "mainJourney",
+          "title": "Пользовательские пути",
+          "file": "requirements/07-scenarios/user-journeys.md"
+        },
+        {
+          "questionId": "Q-021",
+          "domainId": "acceptanceCriteria",
+          "title": "Критерии приёмки",
+          "file": "requirements/08-acceptance/acceptance-criteria.md"
+        },
+        {
+          "questionId": "Q-022",
+          "domainId": "successSignal",
+          "title": "Критерий успешной проверки прототипа",
+          "file": "requirements/08-acceptance/validation-success.md"
+        },
+        {
+          "questionId": "Q-009",
+          "domainId": "uiSource",
+          "title": "Источник интерфейса и компонентов",
+          "file": "requirements/03-architecture/component-source.md"
+        },
+        {
+          "questionId": "Q-003",
+          "domainId": "salesObjects",
+          "title": "Объекты продаж и их иерархия",
+          "file": "requirements/01-base/sales-objects.md"
+        },
+        {
+          "questionId": "Q-010",
+          "domainId": "hardware",
+          "title": "Оборудование",
+          "file": "requirements/03-architecture/hardware-requirements.md"
+        },
+        {
+          "questionId": "Q-016",
+          "domainId": "integrations",
+          "title": "Интеграции",
+          "file": "requirements/05-integrations/integrations.md"
+        },
+        {
+          "questionId": "Q-017",
+          "domainId": "systemScenarios",
+          "title": "Системные сценарии",
+          "file": "requirements/06-system-scenarios/system-scenarios.md"
+        },
+        {
+          "questionId": "Q-018",
+          "domainId": "exceptionScenarios",
+          "title": "Исключительные сценарии",
+          "file": "requirements/06-system-scenarios/exception-scenarios.md"
+        },
+        {
+          "questionId": "Q-OPS-001",
+          "domainId": "operationalScenarios",
+          "title": "Эксплуатационные сценарии жизненного цикла",
+          "file": "requirements/06-system-scenarios/operational-scenarios.md"
+        },
+        {
+          "questionId": "Q-019",
+          "domainId": "businessScenarios",
+          "title": "Бизнес-сценарии",
+          "file": "requirements/07-scenarios/business-scenarios.md"
+        },
+        {
+          "questionId": "Q-011",
+          "domainId": "technicalConstraints",
+          "title": "Технические ограничения прототипа",
+          "file": "requirements/03-architecture/technical-constraints.md"
+        },
+        {
+          "questionId": "Q-012",
+          "domainId": "quality",
+          "title": "Нефункциональные требования",
+          "file": "requirements/04-quality/quality-requirements.md"
+        },
+        {
+          "questionId": "Q-013",
+          "domainId": "localization",
+          "title": "Локализация и форматы",
+          "file": "requirements/04-quality/localization-requirements.md"
+        },
+        {
+          "questionId": "Q-014",
+          "domainId": "accessibility",
+          "title": "Доступность интерфейса",
+          "file": "requirements/04-quality/accessibility-requirements.md"
+        },
+        {
+          "questionId": "Q-023",
+          "domainId": "traceability",
+          "title": "Трассировка требований",
+          "file": "requirements/09-traceability/traceability.md"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Источник данных рабочего прототипа",
+          "file": "requirements/10-prototype/prototype-data-source.md"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Не выбран допустимый источник UI",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Источник UI не выбран или не проверен",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Не указано расположение источника UI",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "AUTO-UI-SOURCE",
+          "domainId": "uiSource",
+          "title": "Источник UI не подтверждён решением Product Manager",
+          "file": "product/ui-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Источник данных рабочего прототипа не подтверждён Product Manager",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Не выбран допустимый тип источника данных рабочего прототипа",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Не указано расположение или подключение к данным",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Не описан способ подготовки и наполнения данными",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Не описана проверка корректной загрузки данных",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "Q-PROTO-DATA-001",
+          "domainId": "prototypeDataSource",
+          "title": "Источник данных не подтверждён решением по области prototypeDataSource",
+          "file": "product/prototype-data-source.json"
+        },
+        {
+          "questionId": "AUTO-TECH-STACK",
+          "domainId": "technologyStack",
+          "title": "Технологический стек рабочего прототипа не подтверждён Product Manager",
+          "file": "product/technology-stack.json"
+        },
+        {
+          "questionId": "AUTO-TECH-STACK",
+          "domainId": "technologyStack",
+          "title": "Не зафиксирован выбранный стек",
+          "file": "product/technology-stack.json"
+        }
+      ]
+    }
+  },
+  "gateStatus": "BLOCKED",
+  "blockingQuestions": [
+    {
+      "questionId": "Q-001",
+      "domainId": "productContext",
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md"
+    },
+    {
+      "questionId": "Q-002",
+      "domainId": "goalsScope",
+      "title": "Цели и границы первой версии",
+      "file": "requirements/01-base/goals-and-scope.md"
+    },
+    {
+      "questionId": "Q-004",
+      "domainId": "functionalRequirements",
+      "title": "Функциональные требования",
+      "file": "requirements/02-system/system-requirements.md"
+    },
+    {
+      "questionId": "Q-005",
+      "domainId": "businessObjects",
+      "title": "Бизнес-объекты, сущности и данные",
+      "file": "requirements/02-system/entities-and-data.md"
+    },
+    {
+      "questionId": "Q-007",
+      "domainId": "rolesPermissions",
+      "title": "Роли и права доступа",
+      "file": "requirements/02-system/roles-and-permissions.md"
+    },
+    {
+      "questionId": "Q-006",
+      "domainId": "businessRules",
+      "title": "Бизнес-правила",
+      "file": "requirements/02-system/business-rules.md"
+    },
+    {
+      "questionId": "Q-008",
+      "domainId": "statesErrors",
+      "title": "Ошибки, пустые и недоступные состояния",
+      "file": "requirements/02-system/states-and-errors.md"
+    },
+    {
+      "questionId": "Q-015",
+      "domainId": "dataRequirements",
+      "title": "Данные, телеметрия, свежесть и полнота",
+      "file": "requirements/05-integrations/data-requirements.md"
+    },
+    {
+      "questionId": "Q-020",
+      "domainId": "mainJourney",
+      "title": "Пользовательские пути",
+      "file": "requirements/07-scenarios/user-journeys.md"
+    },
+    {
+      "questionId": "Q-021",
+      "domainId": "acceptanceCriteria",
+      "title": "Критерии приёмки",
+      "file": "requirements/08-acceptance/acceptance-criteria.md"
+    },
+    {
+      "questionId": "Q-022",
+      "domainId": "successSignal",
+      "title": "Критерий успешной проверки прототипа",
+      "file": "requirements/08-acceptance/validation-success.md"
+    },
+    {
+      "questionId": "Q-009",
+      "domainId": "uiSource",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md"
+    },
+    {
+      "questionId": "Q-003",
+      "domainId": "salesObjects",
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md"
+    },
+    {
+      "questionId": "Q-010",
+      "domainId": "hardware",
+      "title": "Оборудование",
+      "file": "requirements/03-architecture/hardware-requirements.md"
+    },
+    {
+      "questionId": "Q-016",
+      "domainId": "integrations",
+      "title": "Интеграции",
+      "file": "requirements/05-integrations/integrations.md"
+    },
+    {
+      "questionId": "Q-017",
+      "domainId": "systemScenarios",
+      "title": "Системные сценарии",
+      "file": "requirements/06-system-scenarios/system-scenarios.md"
+    },
+    {
+      "questionId": "Q-018",
+      "domainId": "exceptionScenarios",
+      "title": "Исключительные сценарии",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md"
+    },
+    {
+      "questionId": "Q-OPS-001",
+      "domainId": "operationalScenarios",
+      "title": "Эксплуатационные сценарии жизненного цикла",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md"
+    },
+    {
+      "questionId": "Q-019",
+      "domainId": "businessScenarios",
+      "title": "Бизнес-сценарии",
+      "file": "requirements/07-scenarios/business-scenarios.md"
+    },
+    {
+      "questionId": "Q-011",
+      "domainId": "technicalConstraints",
+      "title": "Технические ограничения прототипа",
+      "file": "requirements/03-architecture/technical-constraints.md"
+    },
+    {
+      "questionId": "Q-012",
+      "domainId": "quality",
+      "title": "Нефункциональные требования",
+      "file": "requirements/04-quality/quality-requirements.md"
+    },
+    {
+      "questionId": "Q-013",
+      "domainId": "localization",
+      "title": "Локализация и форматы",
+      "file": "requirements/04-quality/localization-requirements.md"
+    },
+    {
+      "questionId": "Q-014",
+      "domainId": "accessibility",
+      "title": "Доступность интерфейса",
+      "file": "requirements/04-quality/accessibility-requirements.md"
+    },
+    {
+      "questionId": "Q-023",
+      "domainId": "traceability",
+      "title": "Трассировка требований",
+      "file": "requirements/09-traceability/traceability.md"
+    },
+    {
+      "questionId": "AUTO-UI-SOURCE",
+      "domainId": "uiSource",
+      "title": "Не выбран допустимый источник UI",
+      "file": "product/ui-source.json"
+    },
+    {
+      "questionId": "AUTO-UI-SOURCE",
+      "domainId": "uiSource",
+      "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
+      "file": "product/ui-source.json"
+    },
+    {
+      "questionId": "AUTO-UI-SOURCE",
+      "domainId": "uiSource",
+      "title": "Источник UI не выбран или не проверен",
+      "file": "product/ui-source.json"
+    },
+    {
+      "questionId": "AUTO-UI-SOURCE",
+      "domainId": "uiSource",
+      "title": "Не указано расположение источника UI",
+      "file": "product/ui-source.json"
+    },
+    {
+      "questionId": "AUTO-UI-SOURCE",
+      "domainId": "uiSource",
+      "title": "Источник UI не подтверждён решением Product Manager",
+      "file": "product/ui-source.json"
+    }
+  ],
+  "uiSource": {
+    "schemaVersion": "4.3",
+    "strategy": "UNKNOWN",
+    "usageMode": "UNDECIDED",
+    "status": "UNKNOWN",
+    "location": null,
+    "evidenceRefs": [],
+    "inspectedComponents": [],
+    "neutralFallbackApproved": false,
+    "notes": null,
+    "candidates": [],
+    "selectedCandidateId": null,
+    "temporary": false,
+    "validationBlockers": [
+      "Не выбран допустимый источник UI",
+      "Найденный материал не выбран как источник, принятый или создаваемый прототип",
+      "Источник UI не выбран или не проверен",
+      "Не указано расположение источника UI",
+      "Источник UI не подтверждён решением Product Manager"
+    ]
+  },
+  "prototypeDataSource": {
+    "schemaVersion": "4.3",
+    "status": "Требуется решение",
+    "sourceType": "UNKNOWN",
+    "location": null,
+    "dataClassification": null,
+    "setupMethod": null,
+    "seedCommand": null,
+    "resetCommand": null,
+    "verificationMethod": null,
+    "evidenceRefs": [],
+    "notes": null,
+    "validationBlockers": [
+      "Источник данных рабочего прототипа не подтверждён Product Manager",
+      "Не выбран допустимый тип источника данных рабочего прототипа",
+      "Не указано расположение или подключение к данным",
+      "Не описан способ подготовки и наполнения данными",
+      "Не описана проверка корректной загрузки данных",
+      "Источник данных не подтверждён решением по области prototypeDataSource"
+    ]
+  },
+  "technologyStack": {
+    "schemaVersion": "4.3",
+    "decisionPoint": "WORKING_PROTOTYPE",
+    "status": "Требуется решение",
+    "selectedStack": null,
+    "standardRecommendation": {
+      "name": "Стандартный стек CSI",
+      "backend": [
+        "Java 21",
+        "Spring Boot 4.x",
+        "Gradle Wrapper"
+      ],
+      "frontend": [
+        "React 18/19",
+        "TypeScript 6.0.x"
+      ],
+      "database": [
+        "PostgreSQL 18",
+        "Flyway"
+      ],
+      "infrastructure": [
+        "Docker",
+        "Docker Compose"
+      ],
+      "api": [
+        "OpenAPI"
+      ]
+    },
+    "evidenceRefs": [],
+    "question": "Используем стандартный стек CSI или требуется другой стек?",
+    "notes": "Рекомендация не применяется без отдельного ответа Product Manager.",
+    "validationBlockers": [
+      "Технологический стек рабочего прототипа не подтверждён Product Manager",
+      "Не зафиксирован выбранный стек"
+    ]
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "schemaVersion": "4.3",
+  "requirementsSha256": "cd657041610b2ca58e703640cb8c412b1e315e0be9ea2da376411f4f49c1cafa",
+  "requirements": [],
+  "needsInput": [
+    {
+      "title": "Цели и границы первой версии",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "line": 3,
+      "questionId": "Q-002",
+      "domainId": "goalsScope",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md",
+      "line": 3,
+      "questionId": "Q-001",
+      "domainId": "productContext",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md",
+      "line": 3,
+      "questionId": "Q-003",
+      "domainId": "salesObjects",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Бизнес-правила",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 3,
+      "questionId": "Q-006",
+      "domainId": "businessRules",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Бизнес-объекты, сущности и данные",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 3,
+      "questionId": "Q-005",
+      "domainId": "businessObjects",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Роли и права доступа",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "line": 3,
+      "questionId": "Q-007",
+      "domainId": "rolesPermissions",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Ошибки, пустые и недоступные состояния",
+      "file": "requirements/02-system/states-and-errors.md",
+      "line": 3,
+      "questionId": "Q-008",
+      "domainId": "statesErrors",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Функциональные требования",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 3,
+      "questionId": "Q-004",
+      "domainId": "functionalRequirements",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "line": 3,
+      "questionId": "Q-009",
+      "domainId": "uiSource",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Оборудование",
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "line": 3,
+      "questionId": "Q-010",
+      "domainId": "hardware",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Технические ограничения прототипа",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 3,
+      "questionId": "Q-011",
+      "domainId": "technicalConstraints",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Доступность интерфейса",
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "line": 3,
+      "questionId": "Q-014",
+      "domainId": "accessibility",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Локализация и форматы",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "line": 3,
+      "questionId": "Q-013",
+      "domainId": "localization",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Нефункциональные требования",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "line": 3,
+      "questionId": "Q-012",
+      "domainId": "quality",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Данные, телеметрия, свежесть и полнота",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 3,
+      "questionId": "Q-015",
+      "domainId": "dataRequirements",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Интеграции",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 3,
+      "questionId": "Q-016",
+      "domainId": "integrations",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Исключительные сценарии",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "line": 3,
+      "questionId": "Q-018",
+      "domainId": "exceptionScenarios",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Эксплуатационные сценарии жизненного цикла",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "line": 3,
+      "questionId": "Q-OPS-001",
+      "domainId": "operationalScenarios",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Системные сценарии",
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "line": 3,
+      "questionId": "Q-017",
+      "domainId": "systemScenarios",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Бизнес-сценарии",
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "line": 3,
+      "questionId": "Q-019",
+      "domainId": "businessScenarios",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Пользовательские пути",
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "line": 3,
+      "questionId": "Q-020",
+      "domainId": "mainJourney",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Критерии приёмки",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "line": 3,
+      "questionId": "Q-021",
+      "domainId": "acceptanceCriteria",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Критерий успешной проверки прототипа",
+      "file": "requirements/08-acceptance/validation-success.md",
+      "line": 3,
+      "questionId": "Q-022",
+      "domainId": "successSignal",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Трассировка требований",
+      "file": "requirements/09-traceability/traceability.md",
+      "line": 3,
+      "questionId": "Q-023",
+      "domainId": "traceability",
+      "status": "Требуется решение"
+    },
+    {
+      "title": "Источник данных рабочего прототипа",
+      "file": "requirements/10-prototype/prototype-data-source.md",
+      "line": 3,
+      "questionId": "Q-PROTO-DATA-001",
+      "domainId": "prototypeDataSource",
+      "status": "Требуется решение"
+    }
+  ],
+  "errors": [],
+  "diagnostics": [
+    {
+      "file": "requirements/01-base/goals-and-scope.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/01-base/product-context.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/01-base/sales-objects.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/02-system/business-rules.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/02-system/entities-and-data.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/02-system/states-and-errors.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/02-system/system-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/03-architecture/component-source.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/04-quality/localization-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/04-quality/quality-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/05-integrations/data-requirements.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/05-integrations/integrations.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/08-acceptance/validation-success.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/09-traceability/traceability.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    },
+    {
+      "file": "requirements/10-prototype/prototype-data-source.md",
+      "requirements": 0,
+      "needsInput": 1,
+      "candidateSections": 1
+    }
+  ]
+}

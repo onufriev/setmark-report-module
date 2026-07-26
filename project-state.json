@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "4.3",
+  "productName": "Product Compiler",
+  "productVersion": "4.3",
+  "projectName": null,
+  "currentPhase": "SOURCE_SETUP",
+  "status": "NOT_STARTED",
+  "nextAction": "Спросить Product Manager об источнике материалов.",
+  "blockingQuestionId": null,
+  "sourceSetup": {
+    "status": "NOT_STARTED",
+    "inputMode": "UNSET"
+  },
+  "phaseReview": {
+    "phase": null,
+    "status": "NOT_PREPARED",
+    "reviewId": null,
+    "markdownReport": null,
+    "pdfReport": null,
+    "shownToProductManagerAt": null,
+    "nextPhase": null
+  },
+  "artifactStatus": {
+    "requirements": "IN_PROGRESS",
+    "visualPrototype": "NOT_STARTED",
+    "workingPrototype": "NOT_STARTED",
+    "handoff": "NOT_STARTED"
+  }
+}

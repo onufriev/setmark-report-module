@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "status",
+    "entryPoint",
+    "startCommand",
+    "dataMode",
+    "dataLocation",
+    "runbookPath",
+    "verificationCommand",
+    "sourceType",
+    "sourceReference",
+    "interactionLevel",
+    "materializedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "status": {
+      "enum": [
+        "NOT_STARTED",
+        "READY"
+      ]
+    },
+    "interactionLevel": {
+      "enum": [
+        null,
+        "CLICKABLE",
+        "STATIC_SCREENSHOTS"
+      ]
+    },
+    "sourceType": {
+      "enum": [
+        null,
+        "DIRECTORY",
+        "HTML_FILE",
+        "SCREENSHOTS"
+      ]
+    }
+  }
+}

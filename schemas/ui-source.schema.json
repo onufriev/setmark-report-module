@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "strategy",
+    "usageMode",
+    "status",
+    "candidates",
+    "evidenceRefs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "strategy": {
+      "enum": [
+        "UNKNOWN",
+        "EXISTING_PRODUCT",
+        "FIGMA",
+        "STORYBOOK",
+        "COMPONENT_LIBRARY",
+        "GENERATED_NEUTRAL_UI"
+      ]
+    },
+    "usageMode": {
+      "enum": [
+        "UNDECIDED",
+        "SELECTED_UI_SOURCE",
+        "ADOPTED_PROTOTYPE",
+        "GENERATED_PROTOTYPE"
+      ]
+    },
+    "status": {
+      "enum": [
+        "UNKNOWN",
+        "SELECTED",
+        "INSPECTED"
+      ]
+    },
+    "location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "selectedCandidateId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectedComponents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neutralFallbackApproved": {
+      "type": "boolean"
+    },
+    "temporary": {
+      "type": "boolean"
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidates": {
+      "type": "array"
+    }
+  }
+}

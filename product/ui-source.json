@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "4.3",
+  "strategy": "UNKNOWN",
+  "usageMode": "UNDECIDED",
+  "status": "UNKNOWN",
+  "location": null,
+  "evidenceRefs": [],
+  "inspectedComponents": [],
+  "neutralFallbackApproved": false,
+  "notes": null,
+  "candidates": [],
+  "selectedCandidateId": null,
+  "temporary": false
+}

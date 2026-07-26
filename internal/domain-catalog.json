@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "4.3",
+  "profiles": {
+    "BASE": {
+      "keywords": []
+    },
+    "RETAIL": {
+      "keywords": [
+        "retail",
+        "магазин",
+        "торговая сеть",
+        "точка продаж"
+      ]
+    },
+    "POS_SCO": {
+      "keywords": [
+        "pos",
+        "sco",
+        "ксо",
+        "касса",
+        "самообслуж"
+      ]
+    },
+    "ANALYTICS": {
+      "keywords": [
+        "аналитик",
+        "дашборд",
+        "метрик",
+        "отчёт",
+        "telemetry",
+        "телеметр"
+      ]
+    }
+  },
+  "domains": [
+    {
+      "id": "productContext",
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "goalsScope",
+      "title": "Цели и границы первой версии",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "functionalRequirements",
+      "title": "Функциональные требования",
+      "file": "requirements/02-system/system-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "businessObjects",
+      "title": "Бизнес-объекты, сущности и состояния",
+      "file": "requirements/02-system/entities-and-data.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "rolesPermissions",
+      "title": "Роли и права доступа",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "businessRules",
+      "title": "Бизнес-правила",
+      "file": "requirements/02-system/business-rules.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "statesErrors",
+      "title": "Ошибки, пустые и недоступные состояния",
+      "file": "requirements/02-system/states-and-errors.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "dataRequirements",
+      "title": "Данные, телеметрия, свежесть и полнота",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "mainJourney",
+      "title": "Основной пользовательский путь",
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "acceptanceCriteria",
+      "title": "Критерии приёмки",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "successSignal",
+      "title": "Критерий успешной проверки прототипа",
+      "file": "requirements/08-acceptance/validation-success.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "uiSource",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "salesObjects",
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": [
+        "RETAIL",
+        "POS_SCO"
+      ]
+    },
+    {
+      "id": "hardware",
+      "title": "Оборудование",
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": [
+        "RETAIL",
+        "POS_SCO"
+      ]
+    },
+    {
+      "id": "integrations",
+      "title": "Интеграции",
+      "file": "requirements/05-integrations/integrations.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": [
+        "ANALYTICS",
+        "POS_SCO"
+      ]
+    },
+    {
+      "id": "systemScenarios",
+      "title": "Системные сценарии",
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": [
+        "ANALYTICS",
+        "POS_SCO"
+      ]
+    },
+    {
+      "id": "exceptionScenarios",
+      "title": "Исключительные сценарии",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "operationalScenarios",
+      "title": "Эксплуатационные сценарии жизненного цикла",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "businessScenarios",
+      "title": "Бизнес-сценарии",
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "technicalConstraints",
+      "title": "Технические ограничения прототипа",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "quality",
+      "title": "Нефункциональные требования",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "localization",
+      "title": "Локализация и форматы",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "accessibility",
+      "title": "Доступность интерфейса",
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "traceability",
+      "title": "Трассировка требований",
+      "file": "requirements/09-traceability/traceability.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "prototypeDataSource",
+      "title": "Источник данных рабочего прототипа",
+      "file": "requirements/10-prototype/prototype-data-source.md",
+      "requiredBeforePhase": "WORKING_PROTOTYPE",
+      "profileHint": []
+    }
+  ]
+}

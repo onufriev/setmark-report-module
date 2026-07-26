@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "reviews"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reviewId",
+          "phase",
+          "revision",
+          "status",
+          "markdownReport",
+          "pdfReport",
+          "nextPhase"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "4.3",
+  "decisionPoint": "WORKING_PROTOTYPE",
+  "status": "Требуется решение",
+  "selectedStack": null,
+  "standardRecommendation": {
+    "name": "Стандартный стек CSI",
+    "backend": [
+      "Java 21",
+      "Spring Boot 4.x",
+      "Gradle Wrapper"
+    ],
+    "frontend": [
+      "React 18/19",
+      "TypeScript 6.0.x"
+    ],
+    "database": [
+      "PostgreSQL 18",
+      "Flyway"
+    ],
+    "infrastructure": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "api": [
+      "OpenAPI"
+    ]
+  },
+  "evidenceRefs": [],
+  "question": "Используем стандартный стек CSI или требуется другой стек?",
+  "notes": "Рекомендация не применяется без отдельного ответа Product Manager."
+}

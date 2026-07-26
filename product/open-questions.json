@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "4.3",
+  "questions": [
+    {
+      "id": "Q-002",
+      "domainId": "goalsScope",
+      "title": "Цели и границы первой версии",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-001",
+      "domainId": "productContext",
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-003",
+      "domainId": "salesObjects",
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-006",
+      "domainId": "businessRules",
+      "title": "Бизнес-правила",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-005",
+      "domainId": "businessObjects",
+      "title": "Бизнес-объекты, сущности и данные",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-007",
+      "domainId": "rolesPermissions",
+      "title": "Роли и права доступа",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-008",
+      "domainId": "statesErrors",
+      "title": "Ошибки, пустые и недоступные состояния",
+      "file": "requirements/02-system/states-and-errors.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-004",
+      "domainId": "functionalRequirements",
+      "title": "Функциональные требования",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-009",
+      "domainId": "uiSource",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-010",
+      "domainId": "hardware",
+      "title": "Оборудование",
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-011",
+      "domainId": "technicalConstraints",
+      "title": "Технические ограничения прототипа",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-014",
+      "domainId": "accessibility",
+      "title": "Доступность интерфейса",
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-013",
+      "domainId": "localization",
+      "title": "Локализация и форматы",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-012",
+      "domainId": "quality",
+      "title": "Нефункциональные требования",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-015",
+      "domainId": "dataRequirements",
+      "title": "Данные, телеметрия, свежесть и полнота",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-016",
+      "domainId": "integrations",
+      "title": "Интеграции",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-018",
+      "domainId": "exceptionScenarios",
+      "title": "Исключительные сценарии",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-OPS-001",
+      "domainId": "operationalScenarios",
+      "title": "Эксплуатационные сценарии жизненного цикла",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-017",
+      "domainId": "systemScenarios",
+      "title": "Системные сценарии",
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-019",
+      "domainId": "businessScenarios",
+      "title": "Бизнес-сценарии",
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-020",
+      "domainId": "mainJourney",
+      "title": "Пользовательские пути",
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-021",
+      "domainId": "acceptanceCriteria",
+      "title": "Критерии приёмки",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-022",
+      "domainId": "successSignal",
+      "title": "Критерий успешной проверки прототипа",
+      "file": "requirements/08-acceptance/validation-success.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-023",
+      "domainId": "traceability",
+      "title": "Трассировка требований",
+      "file": "requirements/09-traceability/traceability.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    },
+    {
+      "id": "Q-PROTO-DATA-001",
+      "domainId": "prototypeDataSource",
+      "title": "Источник данных рабочего прототипа",
+      "file": "requirements/10-prototype/prototype-data-source.md",
+      "line": 3,
+      "status": "OPEN",
+      "answerEvidenceRef": null,
+      "answeredAt": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "4.3",
+  "status": "NOT_STARTED",
+  "applicationName": null,
+  "entryPoint": null,
+  "startCommand": null,
+  "stopCommand": null,
+  "healthCheck": null,
+  "runbookPath": "prototype/PROTOTYPE-RUNBOOK.md",
+  "dataSourceRef": "product/prototype-data-source.json",
+  "seedCommand": null,
+  "resetCommand": null,
+  "requiredEnvironmentVariables": [],
+  "configurationFiles": [],
+  "ports": [],
+  "testAccounts": [],
+  "verificationCommand": null,
+  "notes": null
+}

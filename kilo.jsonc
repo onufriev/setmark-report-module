@@ -1,0 +1,4 @@
+{
+  // Product Compiler 4.3 uses .kilo/rules/product-compiler.md
+  "projectRules": [".kilo/rules/product-compiler.md"]
+}

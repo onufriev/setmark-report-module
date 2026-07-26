@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "status",
+    "currentBaselineId",
+    "baselines"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.3"
+    },
+    "status": {
+      "enum": [
+        "NOT_COMMITTED",
+        "COMMITTED"
+      ]
+    },
+    "currentBaselineId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "baselines": {
+      "type": "array"
+    }
+  }
+}
