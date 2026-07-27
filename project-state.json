@@ -4,21 +4,21 @@
   "productVersion": "4.4",
   "projectName": null,
   "currentPhase": "INTAKE",
-  "status": "IN_PROGRESS",
-  "nextAction": "Продолжить этап INTAKE по правилам PRODUCT-COMPILER.md.",
+  "status": "WAITING_FOR_APPROVAL",
+  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": null,
-    "status": "NOT_PREPARED",
-    "reviewId": null,
-    "markdownReport": null,
-    "pdfReport": null,
-    "shownToProductManagerAt": null,
-    "nextPhase": null
+    "phase": "INTAKE",
+    "status": "READY_FOR_REVIEW",
+    "reviewId": "INTAKE-R1",
+    "markdownReport": "reports/intake-v0.1.md",
+    "pdfReport": "reports/intake-v0.1.pdf",
+    "shownToProductManagerAt": "2026-07-27T23:41:48.129578+00:00",
+    "nextPhase": "PRODUCT_DEFINITION"
   },
   "artifactStatus": {
     "requirements": "IN_PROGRESS",

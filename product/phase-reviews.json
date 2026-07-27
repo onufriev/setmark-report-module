@@ -23,6 +23,29 @@
       "presentationPdfReport": "reports/source-setup-v0.1.pdf",
       "presentationMarkdownSha256": "df854b15deea960fc45699b776598e10e6aa45821fee290393129877f88346f3",
       "presentationPdfSha256": "a7d651f32ffa8a34cf754a3c990b6796291b1fe2bfa15d0c296c89bc4c143f62"
+    },
+    {
+      "reviewId": "INTAKE-R1",
+      "phase": "INTAKE",
+      "revision": 1,
+      "status": "READY_FOR_REVIEW",
+      "preparedAt": "2026-07-27T23:41:39.388286+00:00",
+      "registeredBy": "finalize_phase_review.py",
+      "shownToProductManagerAt": "2026-07-27T23:41:48.129578+00:00",
+      "markdownReport": "reports/intake-v0.1.md",
+      "markdownSha256": "6dcf39305ef73ce408a432d3fa171c5263d7c92a6b9943cbe8248ef9d9aab897",
+      "pdfReport": "reports/intake-v0.1.pdf",
+      "pdfSha256": "9a3604ffb815354304114972dd1b67ea2475a717a56cf74ccdc4c0f33791cb65",
+      "nextPhase": "PRODUCT_DEFINITION",
+      "approvedAt": null,
+      "approvedBy": null,
+      "decisionText": null,
+      "exactUserMessage": null,
+      "presentationPreparedAt": "2026-07-27T23:41:43.619790+00:00",
+      "presentationMarkdownReport": "reports/intake-v0.1.md",
+      "presentationPdfReport": "reports/intake-v0.1.pdf",
+      "presentationMarkdownSha256": "6dcf39305ef73ce408a432d3fa171c5263d7c92a6b9943cbe8248ef9d9aab897",
+      "presentationPdfSha256": "9a3604ffb815354304114972dd1b67ea2475a717a56cf74ccdc4c0f33791cb65"
     }
   ]
 }
