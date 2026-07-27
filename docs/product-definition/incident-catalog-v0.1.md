@@ -3,6 +3,7 @@
 **Продукт:** модуль контроля нарушений Set Mark
 **Версия:** 0.1
 **Статус:** предзаполненный рабочий каталог для проверки Product Manager
+**Ревью:** вынесено на внешнее согласование в ветке `review/product-definition-v0.1`
 **Связанные артефакты:** [Domain Model v0.1](domain-model-v0.1.md), [Decision Model v0.1](decision-model-v0.1.md)
 
 ## 1. Назначение
