@@ -3,22 +3,22 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "SOURCE_SETUP",
-  "status": "WAITING_FOR_APPROVAL",
-  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
+  "currentPhase": "INTAKE",
+  "status": "IN_PROGRESS",
+  "nextAction": "Продолжить этап INTAKE по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "SOURCE_SETUP",
-    "status": "READY_FOR_REVIEW",
-    "reviewId": "SOURCE_SETUP-R1",
-    "markdownReport": "reports/source-setup-v0.1.md",
-    "pdfReport": "reports/source-setup-v0.1.pdf",
-    "shownToProductManagerAt": "2026-07-27T23:23:50.759005+00:00",
-    "nextPhase": "INTAKE"
+    "phase": null,
+    "status": "NOT_PREPARED",
+    "reviewId": null,
+    "markdownReport": null,
+    "pdfReport": null,
+    "shownToProductManagerAt": null,
+    "nextPhase": null
   },
   "artifactStatus": {
     "requirements": "IN_PROGRESS",
