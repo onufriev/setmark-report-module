@@ -3,6 +3,7 @@
 **Продукт:** модуль контроля нарушений Set Mark
 **Версия:** 0.1
 **Статус:** рабочий артефакт для проверки Product Manager
+**Ревью:** вынесено на внешнее согласование в ветке `review/product-definition-v0.1`
 **Этап Product Compiler:** PRODUCT_DEFINITION (подготовка)
 **Связанные артефакты:** [Decision Model v0.1](decision-model-v0.1.md), [Каталог инцидентов v0.1](incident-catalog-v0.1.md)
 
