@@ -1,4 +1,28 @@
 {
   "schemaVersion": "4.4",
-  "reviews": []
+  "reviews": [
+    {
+      "reviewId": "SOURCE_SETUP-R1",
+      "phase": "SOURCE_SETUP",
+      "revision": 1,
+      "status": "READY_FOR_REVIEW",
+      "preparedAt": "2026-07-27T23:23:50.176821+00:00",
+      "registeredBy": "finalize_phase_review.py",
+      "shownToProductManagerAt": "2026-07-27T23:23:50.759005+00:00",
+      "markdownReport": "reports/source-setup-v0.1.md",
+      "markdownSha256": "df854b15deea960fc45699b776598e10e6aa45821fee290393129877f88346f3",
+      "pdfReport": "reports/source-setup-v0.1.pdf",
+      "pdfSha256": "a7d651f32ffa8a34cf754a3c990b6796291b1fe2bfa15d0c296c89bc4c143f62",
+      "nextPhase": "INTAKE",
+      "approvedAt": null,
+      "approvedBy": null,
+      "decisionText": null,
+      "exactUserMessage": null,
+      "presentationPreparedAt": "2026-07-27T23:23:50.479363+00:00",
+      "presentationMarkdownReport": "reports/source-setup-v0.1.md",
+      "presentationPdfReport": "reports/source-setup-v0.1.pdf",
+      "presentationMarkdownSha256": "df854b15deea960fc45699b776598e10e6aa45821fee290393129877f88346f3",
+      "presentationPdfSha256": "a7d651f32ffa8a34cf754a3c990b6796291b1fe2bfa15d0c296c89bc4c143f62"
+    }
+  ]
 }

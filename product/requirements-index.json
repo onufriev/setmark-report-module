@@ -1,7 +1,255 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "cd657041610b2ca58e703640cb8c412b1e315e0be9ea2da376411f4f49c1cafa",
-  "requirements": [],
+  "requirementsSha256": "8a32b0278afa965e00938bef195fc50bd1da1ea6f325a16ccef18bd6e4d05782",
+  "requirements": [
+    {
+      "id": "REQ-GS-001",
+      "title": "Целевой результат",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "line": 14,
+      "domainId": "goalsScope",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-001",
+        "SRC-EV-002"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-PC-001",
+      "title": "Назначение продукта",
+      "file": "requirements/01-base/product-context.md",
+      "line": 26,
+      "domainId": "productContext",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-001",
+        "SRC-EV-002"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-PC-002",
+      "title": "Контекст Set Mark",
+      "file": "requirements/01-base/product-context.md",
+      "line": 39,
+      "domainId": "productContext",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-011"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-BR-001",
+      "title": "Корреляция отклонений",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 14,
+      "domainId": "businessRules",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-007"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-BR-002",
+      "title": "Последовательность онлайн- и офлайн-проверки",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 27,
+      "domainId": "businessRules",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-013",
+        "SRC-EV-015"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-BR-003",
+      "title": "Справочник отклонений",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 40,
+      "domainId": "businessRules",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-016"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-001",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 53,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-001"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-BO-001",
+      "title": "Связь отклонения с внутренними данными",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 14,
+      "domainId": "businessObjects",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-007"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-002",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 27,
+      "domainId": "businessObjects",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-002"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-FR-001",
+      "title": "Централизованный мониторинг",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 14,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-003"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-FR-002",
+      "title": "Выгрузка данных",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 27,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-004"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-FR-003",
+      "title": "Ежедневные уведомления",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 40,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-005"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-NFR-001",
+      "title": "Отсутствие влияния на продажу",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "line": 28,
+      "domainId": "quality",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-008"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-NFR-002",
+      "title": "Масштабируемость",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "line": 41,
+      "domainId": "quality",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-009"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-NFR-003",
+      "title": "Доставка после восстановления связи",
+      "file": "requirements/04-quality/quality-requirements.md",
+      "line": 54,
+      "domainId": "quality",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-010"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DATA-001",
+      "title": "Данные отклонения Честного знака",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 14,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-006",
+        "SRC-EV-016"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DATA-002",
+      "title": "Данные для корреляции",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 27,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-007",
+        "SRC-EV-012"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-INT-001",
+      "title": "Получение отклонений True API",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 27,
+      "domainId": "integrations",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-006"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-INT-002",
+      "title": "Получение событий Set Mark",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 40,
+      "domainId": "integrations",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-012"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-INT-003",
+      "title": "Контекст разрешительного режима",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 53,
+      "domainId": "integrations",
+      "status": "Подтверждено источником",
+      "evidenceRefs": [
+        "SRC-EV-013",
+        "SRC-EV-014",
+        "SRC-EV-015"
+      ],
+      "applicability": "MVP1"
+    }
+  ],
   "needsInput": [
     {
       "title": "Цели и границы первой версии",
@@ -208,15 +456,15 @@
   "diagnostics": [
     {
       "file": "requirements/01-base/goals-and-scope.md",
-      "requirements": 0,
+      "requirements": 1,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 2
     },
     {
       "file": "requirements/01-base/product-context.md",
-      "requirements": 0,
+      "requirements": 2,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 3
     },
     {
       "file": "requirements/01-base/sales-objects.md",
@@ -226,15 +474,15 @@
     },
     {
       "file": "requirements/02-system/business-rules.md",
-      "requirements": 0,
+      "requirements": 4,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 5
     },
     {
       "file": "requirements/02-system/entities-and-data.md",
-      "requirements": 0,
+      "requirements": 2,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 3
     },
     {
       "file": "requirements/02-system/roles-and-permissions.md",
@@ -250,9 +498,9 @@
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 0,
+      "requirements": 3,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 4
     },
     {
       "file": "requirements/03-architecture/component-source.md",
@@ -286,21 +534,21 @@
     },
     {
       "file": "requirements/04-quality/quality-requirements.md",
-      "requirements": 0,
+      "requirements": 3,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 4
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 0,
+      "requirements": 2,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 3
     },
     {
       "file": "requirements/05-integrations/integrations.md",
-      "requirements": 0,
+      "requirements": 3,
       "needsInput": 1,
-      "candidateSections": 1
+      "candidateSections": 4
     },
     {
       "file": "requirements/06-system-scenarios/exception-scenarios.md",

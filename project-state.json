@@ -4,21 +4,21 @@
   "productVersion": "4.4",
   "projectName": null,
   "currentPhase": "SOURCE_SETUP",
-  "status": "NOT_STARTED",
-  "nextAction": "Спросить Product Manager об источнике материалов.",
+  "status": "WAITING_FOR_APPROVAL",
+  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
   "blockingQuestionId": null,
   "sourceSetup": {
-    "status": "NOT_STARTED",
-    "inputMode": "UNSET"
+    "status": "COMPLETED",
+    "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": null,
-    "status": "NOT_PREPARED",
-    "reviewId": null,
-    "markdownReport": null,
-    "pdfReport": null,
-    "shownToProductManagerAt": null,
-    "nextPhase": null
+    "phase": "SOURCE_SETUP",
+    "status": "READY_FOR_REVIEW",
+    "reviewId": "SOURCE_SETUP-R1",
+    "markdownReport": "reports/source-setup-v0.1.md",
+    "pdfReport": "reports/source-setup-v0.1.pdf",
+    "shownToProductManagerAt": "2026-07-27T23:23:50.759005+00:00",
+    "nextPhase": "INTAKE"
   },
   "artifactStatus": {
     "requirements": "IN_PROGRESS",

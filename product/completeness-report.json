@@ -1,8 +1,11 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-27T09:15:20.024696+00:00",
+  "evaluatedAt": "2026-07-27T23:23:51.265211+00:00",
   "detectedProfiles": [
-    "BASE"
+    "BASE",
+    "RETAIL",
+    "POS_SCO",
+    "ANALYTICS"
   ],
   "domains": [
     {
@@ -12,7 +15,10 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-PC-001",
+        "REQ-PC-002"
+      ],
       "needsInput": [
         {
           "title": "Продуктовый контекст",
@@ -32,7 +38,9 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-GS-001"
+      ],
       "needsInput": [
         {
           "title": "Цели и границы первой версии",
@@ -52,7 +60,11 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-FR-001",
+        "REQ-FR-002",
+        "REQ-FR-003"
+      ],
       "needsInput": [
         {
           "title": "Функциональные требования",
@@ -72,7 +84,10 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-BO-001",
+        "REQ-DEC-002"
+      ],
       "needsInput": [
         {
           "title": "Бизнес-объекты, сущности и данные",
@@ -112,7 +127,12 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-BR-001",
+        "REQ-BR-002",
+        "REQ-BR-003",
+        "REQ-DEC-001"
+      ],
       "needsInput": [
         {
           "title": "Бизнес-правила",
@@ -152,7 +172,10 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-DATA-001",
+        "REQ-DATA-002"
+      ],
       "needsInput": [
         {
           "title": "Данные, телеметрия, свежесть и полнота",
@@ -250,7 +273,7 @@
       "title": "Объекты продаж и их иерархия",
       "file": "requirements/01-base/sales-objects.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
-      "profileHintMatched": false,
+      "profileHintMatched": true,
       "status": "BLOCKED",
       "requirementRefs": [],
       "needsInput": [
@@ -270,7 +293,7 @@
       "title": "Оборудование",
       "file": "requirements/03-architecture/hardware-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
-      "profileHintMatched": false,
+      "profileHintMatched": true,
       "status": "BLOCKED",
       "requirementRefs": [],
       "needsInput": [
@@ -290,9 +313,13 @@
       "title": "Интеграции",
       "file": "requirements/05-integrations/integrations.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
-      "profileHintMatched": false,
+      "profileHintMatched": true,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-INT-001",
+        "REQ-INT-002",
+        "REQ-INT-003"
+      ],
       "needsInput": [
         {
           "title": "Интеграции",
@@ -310,7 +337,7 @@
       "title": "Системные сценарии",
       "file": "requirements/06-system-scenarios/system-scenarios.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
-      "profileHintMatched": false,
+      "profileHintMatched": true,
       "status": "BLOCKED",
       "requirementRefs": [],
       "needsInput": [
@@ -412,7 +439,11 @@
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
       "status": "BLOCKED",
-      "requirementRefs": [],
+      "requirementRefs": [
+        "REQ-NFR-001",
+        "REQ-NFR-002",
+        "REQ-NFR-003"
+      ],
       "needsInput": [
         {
           "title": "Нефункциональные требования",

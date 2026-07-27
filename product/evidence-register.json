@@ -1,4 +1,289 @@
 {
   "schemaVersion": "4.4",
-  "evidence": []
+  "evidence": [
+    {
+      "id": "SRC-EV-001",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "goalsScope",
+        "productContext"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Проблематика",
+      "excerpt": "Ключевой риск: с запуском автоматического назначения штрафов за нарушения в сфере маркировки ритейлер может узнавать о проблемах слишком поздно — уже после возникновения серьезных финансовых последствий.",
+      "createdAt": "2026-07-27T23:18:52.160490+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-002",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "goalsScope",
+        "productContext"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Предлагаемое решение",
+      "excerpt": "Идея решения: предоставить ритейлеру централизованный инструмент мониторинга нарушений маркировки, оперативных уведомлений и рекомендаций по исправлению, чтобы предотвращать автоштрафы до их значительного накопления.",
+      "createdAt": "2026-07-27T23:18:52.629031+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-003",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Предлагаемое решение",
+      "excerpt": "Централизованный мониторинг — агрегированное отображение нарушений по сети магазинов, торговым точкам, кассам, товарным категориям и типам ошибок.",
+      "createdAt": "2026-07-27T23:18:53.095924+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-004",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Мониторинг и детализация",
+      "excerpt": "Возможность выгрузить любые сведения в CSV.",
+      "createdAt": "2026-07-27T23:18:53.568572+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-005",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Уведомления",
+      "excerpt": "Цель: обеспечить информирование ответственных лиц о критичных нарушениях в ежедневном режиме",
+      "createdAt": "2026-07-27T23:18:54.032057+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-006",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "dataRequirements",
+        "integrations"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Интеграция с API «Честный знак»",
+      "excerpt": "Реализовать периодический опрос API ЧЗ по методу 8.3.15.1 «Выгрузка сведений об отклонениях» для получения списка нарушений, зарегистрированных регулятором для ИНН клиента.",
+      "createdAt": "2026-07-27T23:18:54.509034+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-007",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessObjects",
+        "businessRules",
+        "dataRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Интеграция с API «Честный знак»",
+      "excerpt": "Сопоставлять отклонения из ЧЗ с записями журнала нарушений SetMark по коду маркировки (КМ) и временно́й метке: если отклонение имеет соответствие в журнале SetMark — связать записи; если отклонение не имеет соответствия — получить последний успешный результат проверки в ЧЗ (онлайн или офлайн)",
+      "createdAt": "2026-07-27T23:18:54.974265+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-008",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Производительность: обработка событий от касс без заметного влияния на работу продажи.",
+      "createdAt": "2026-07-27T23:18:55.461701+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-009",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Масштабируемость: поддержка сетей с большим количеством магазинов и кассовых узлов.",
+      "createdAt": "2026-07-27T23:18:55.929679+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-010",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Надёжность: сохранение событий при временных сбоях связи и последующая доставка данных в центральный контур.",
+      "createdAt": "2026-07-27T23:18:56.400742+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-011",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "productContext"
+      ],
+      "sourceId": "SRC-002",
+      "snapshotPath": "sources/snapshots/confluence-3045457980.md",
+      "snapshotSha256": "ae82f0594024fd89c87cfff046a0397a0e47120aed3a192f9380a7e6527663fe",
+      "location": "Описание продукта",
+      "excerpt": "Set Mark - модуль экосистемы продукта Set Retail 10, предназначенный для контроля розничной продажи маркированного товара, в том числе акцизного алкоголя.",
+      "createdAt": "2026-07-27T23:18:56.884578+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "productContext"
+    },
+    {
+      "id": "SRC-EV-012",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "dataRequirements",
+        "integrations"
+      ],
+      "sourceId": "SRC-003",
+      "snapshotPath": "sources/snapshots/confluence-785842250.md",
+      "snapshotSha256": "a6a7eda147996c7dec7488acde3ea8bf0d914ae84da6a678e00850318308ec87",
+      "location": "Настройка подключения",
+      "excerpt": "Сообщения о возможных нарушениях загружаются в журнал нарушений Set Mark Centrum, и далее могут быть выгружены во внешнюю учетную систему.",
+      "createdAt": "2026-07-27T23:18:57.354242+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-013",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations"
+      ],
+      "sourceId": "SRC-004",
+      "snapshotPath": "sources/snapshots/confluence-4094230539.md",
+      "snapshotSha256": "fad9fba15acc5272f8294cd308b504fabbceebbc43609e02db7d5cb216295c11",
+      "location": "Описание разрешительного режима",
+      "excerpt": "Разрешительный режим — обязательная онлайн/офлайн проверка кода маркировки в системе «Честный знак» при продаже товара на кассе.",
+      "createdAt": "2026-07-27T23:18:57.824746+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-014",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations",
+        "statesErrors"
+      ],
+      "sourceId": "SRC-005",
+      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
+      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "location": "Нет связи с ИМ ЧЗ",
+      "excerpt": "Если флажок не установлен - продажа запрещена при отсутствии ответа от онлайн и офлайн сервисов, на кассе отображается сообщение \"Сервис проверки марок ЧЗ недоступен. Продажа запрещена. Заберите товар у покупателя\".",
+      "createdAt": "2026-07-27T23:18:58.291828+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-015",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations"
+      ],
+      "sourceId": "SRC-005",
+      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
+      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "location": "Сценарий проверки",
+      "excerpt": "Касса попыталась выполнить проверку КМ2 в онлайн-сервисе ЧЗ. После последнего возможного запроса к CDN касса не получила ответ.",
+      "createdAt": "2026-07-27T23:18:58.763470+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-016",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "dataRequirements"
+      ],
+      "sourceId": "SRC-006",
+      "snapshotPath": "sources/snapshots/true-api-v704-pages-1229-1234.txt",
+      "snapshotSha256": "4e52511e55e0676587797ded13906a76c8769fae57994e0d421b465be1caa6c0",
+      "location": "Справочники категорий, видов и результатов отклонений, стр. 1229–1234",
+      "excerpt": "Справочник «Виды отклонений»",
+      "createdAt": "2026-07-27T23:19:17.597636+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "PM-DEC-001",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-RETAIL-SCOPE",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "давай так, согласен",
+      "createdAt": "2026-07-27T23:22:51.257988+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-002",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BO-REMEDIATION-SCOPE",
+      "domainId": "businessObjects",
+      "domainIds": [
+        "businessObjects"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "давай использовать Контур устранения",
+      "createdAt": "2026-07-27T23:22:51.870770+00:00",
+      "recordedBy": "record_pm_decision.py"
+    }
+  ]
 }
