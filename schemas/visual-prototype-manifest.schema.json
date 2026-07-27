@@ -6,6 +6,7 @@
     "status",
     "entryPoint",
     "startCommand",
+    "url",
     "dataMode",
     "dataLocation",
     "runbookPath",
@@ -13,11 +14,15 @@
     "sourceType",
     "sourceReference",
     "interactionLevel",
-    "materializedAt"
+    "requiredUserPath",
+    "smokeTest",
+    "materializedAt",
+    "uiSourceMode",
+    "applicationMode"
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.3"
+      "const": "4.4"
     },
     "status": {
       "enum": [
@@ -28,16 +33,43 @@
     "interactionLevel": {
       "enum": [
         null,
-        "CLICKABLE",
-        "STATIC_SCREENSHOTS"
+        "CLICKABLE"
       ]
     },
     "sourceType": {
       "enum": [
         null,
         "DIRECTORY",
-        "HTML_FILE",
-        "SCREENSHOTS"
+        "HTML_FILE"
+      ]
+    },
+    "sourceMode": {
+      "description": "Deprecated compatibility alias for applicationMode",
+      "enum": [
+        null,
+        "EXISTING_CLICKABLE_APP",
+        "GENERATED_PROTOTYPE"
+      ]
+    },
+    "requiredUserPath": {
+      "type": "array"
+    },
+    "smokeTest": {
+      "type": "object"
+    },
+    "uiSourceMode": {
+      "enum": [
+        null,
+        "FIGMA",
+        "COMPONENT_LIBRARY",
+        "STORYBOOK"
+      ]
+    },
+    "applicationMode": {
+      "enum": [
+        null,
+        "EXISTING_CLICKABLE_APP",
+        "GENERATED_PROTOTYPE"
       ]
     }
   }

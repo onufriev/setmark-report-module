@@ -4,23 +4,22 @@
   "required": [
     "schemaVersion",
     "strategy",
-    "usageMode",
+    "sourceMode",
+    "applicationMode",
     "status",
     "candidates",
     "evidenceRefs"
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.3"
+      "const": "4.4"
     },
     "strategy": {
       "enum": [
         "UNKNOWN",
-        "EXISTING_PRODUCT",
         "FIGMA",
-        "STORYBOOK",
         "COMPONENT_LIBRARY",
-        "GENERATED_NEUTRAL_UI"
+        "STORYBOOK"
       ]
     },
     "usageMode": {
@@ -29,6 +28,14 @@
         "SELECTED_UI_SOURCE",
         "ADOPTED_PROTOTYPE",
         "GENERATED_PROTOTYPE"
+      ]
+    },
+    "sourceMode": {
+      "enum": [
+        "UNDECIDED",
+        "FIGMA",
+        "COMPONENT_LIBRARY",
+        "STORYBOOK"
       ]
     },
     "status": {
@@ -70,6 +77,13 @@
     },
     "candidates": {
       "type": "array"
+    },
+    "applicationMode": {
+      "enum": [
+        "UNDECIDED",
+        "EXISTING_CLICKABLE_APP",
+        "GENERATED_PROTOTYPE"
+      ]
     }
   }
 }

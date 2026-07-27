@@ -1,14 +1,16 @@
 {
-  "schemaVersion": "4.3",
+  "schemaVersion": "4.4",
   "strategy": "UNKNOWN",
   "usageMode": "UNDECIDED",
   "status": "UNKNOWN",
   "location": null,
   "evidenceRefs": [],
   "inspectedComponents": [],
-  "neutralFallbackApproved": false,
   "notes": null,
   "candidates": [],
   "selectedCandidateId": null,
-  "temporary": false
+  "temporary": false,
+  "sourceMode": "UNDECIDED",
+  "applicationMode": "UNDECIDED",
+  "neutralFallbackApproved": false
 }

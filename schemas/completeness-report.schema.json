@@ -8,7 +8,7 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.3"
+      "const": "4.4"
     },
     "domains": {
       "type": "array"

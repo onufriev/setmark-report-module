@@ -13,13 +13,13 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.3"
+      "const": "4.4"
     },
     "productName": {
       "const": "Product Compiler"
     },
     "productVersion": {
-      "const": "4.3"
+      "const": "4.4"
     }
   }
 }

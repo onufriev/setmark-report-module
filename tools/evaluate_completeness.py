@@ -146,11 +146,11 @@ for domain in catalog.get('domains', []):
 
 ui_source = load('product/ui-source.json')
 ui_blockers = []
-allowed_ui_strategies = {'EXISTING_PRODUCT', 'FIGMA', 'STORYBOOK', 'COMPONENT_LIBRARY', 'GENERATED_NEUTRAL_UI'}
-allowed_usage_modes = {'SELECTED_UI_SOURCE', 'ADOPTED_PROTOTYPE', 'GENERATED_PROTOTYPE'}
+allowed_ui_strategies = {'FIGMA', 'STORYBOOK', 'COMPONENT_LIBRARY'}
+allowed_application_modes = {'EXISTING_CLICKABLE_APP', 'GENERATED_PROTOTYPE'}
 if ui_source.get('strategy') not in allowed_ui_strategies:
     ui_blockers.append('Не выбран допустимый источник UI')
-if ui_source.get('usageMode') not in allowed_usage_modes:
+if ui_source.get('applicationMode') not in allowed_application_modes:
     ui_blockers.append('Найденный материал не выбран как источник, принятый или создаваемый прототип')
 if ui_source.get('status') not in {'SELECTED', 'INSPECTED'}:
     ui_blockers.append('Источник UI не выбран или не проверен')
@@ -162,9 +162,6 @@ if not ui_source.get('evidenceRefs') or not all(
     ui_blockers.append('Источник UI не подтверждён решением Product Manager')
 if ui_source.get('strategy') == 'STORYBOOK' and not load('product/ui-component-inventory.json').get('components'):
     ui_blockers.append('Storybook выбран, но реальные stories/components не зафиксированы')
-if ui_source.get('strategy') == 'GENERATED_NEUTRAL_UI' and ui_source.get('neutralFallbackApproved') is not True:
-    ui_blockers.append('Нейтральный UI не подтверждён Product Manager')
-
 prototype_data = load('product/prototype-data-source.json')
 data_blockers = []
 allowed_data_sources = {'REAL_OBJECT', 'MANUAL_INPUT', 'DATABASE_SCRIPT', 'CSV', 'EMULATOR', 'POSTMAN_COLLECTION', 'API', 'OTHER'}

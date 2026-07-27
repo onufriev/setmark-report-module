@@ -1,198 +1,101 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-
-import argparse
-import html
-import shutil
+import argparse, shutil
 from pathlib import Path
+from common import ROOT, load, mark_phase_reviews_stale, now, run_tool, save
 
-from common import ROOT, load, now, run_tool, save
+TARGET=(ROOT/'visual-prototype').resolve()
+PATH=[
+ {'id':'dashboard','label':'Дашборд','href':'index.html#dashboard'},
+ {'id':'outsiders','label':'Аутсайдеры','href':'index.html#outsiders'},
+ {'id':'store-card','label':'Карточка магазина','href':'index.html#store-card'},
+ {'id':'downtime-reason','label':'Причина простоя','href':'index.html#downtime-reason'},
+ {'id':'create-task','label':'Создание задачи','href':'index.html#create-task'},
+]
 
-IMAGE_SUFFIXES = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
-TARGET = ROOT / 'visual-prototype'
-CONTENT = TARGET / 'content'
+def ext(value):
+ p=Path(value).expanduser().resolve()
+ if not p.exists(): raise SystemExit(f'Источник не найден: {p}')
+ return p
 
+def clear_target():
+ expected=(ROOT/'visual-prototype').resolve()
+ if TARGET!=expected or TARGET.parent!=ROOT.resolve(): raise SystemExit('Небезопасная целевая директория очистки')
+ for item in TARGET.iterdir():
+  if item.name=='README.md': continue
+  shutil.rmtree(item) if item.is_dir() else item.unlink()
 
-def external_path(value: str) -> Path:
-    path = Path(value).expanduser()
-    if not path.is_absolute():
-        path = (Path.cwd() / path).resolve()
-    else:
-        path = path.resolve()
-    if not path.exists():
-        raise SystemExit(f'Источник не найден: {path}')
-    return path
+def storybook(path):
+ names=' '.join(x.relative_to(path).as_posix().lower() for x in path.rglob('*'))
+ return [m for m in ('storybook-static','stories.json','iframe.html','@storybook','__storybook_') if m in names]
 
-
-def clear_content() -> None:
-    if CONTENT.exists():
-        shutil.rmtree(CONTENT)
-    index = TARGET / 'index.html'
-    if index.exists():
-        index.unlink()
-    CONTENT.mkdir(parents=True, exist_ok=True)
-
-
-def make_screenshot_gallery(images: list[Path]) -> None:
-    cards = '\n'.join(
-        f'<figure><img src="content/{html.escape(image.name)}" alt="Экран {position}"><figcaption>Экран {position}: {html.escape(image.stem)}</figcaption></figure>'
-        for position, image in enumerate(images, start=1)
-    )
-    (TARGET / 'index.html').write_text(
-        '<!doctype html><html lang="ru"><head><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        '<title>Visual prototype</title><style>'
-        'body{font-family:Arial,sans-serif;margin:0;padding:24px;background:#f5f6f8;color:#18202a}'
-        'main{max-width:1200px;margin:auto}figure{background:white;padding:16px;border-radius:12px;margin:0 0 24px}'
-        'img{display:block;max-width:100%;height:auto;margin:auto}figcaption{margin-top:10px;color:#52606d}'
-        '</style></head><body><main><h1>Локальный визуальный прототип</h1>' + cards + '</main></body></html>',
-        encoding='utf-8',
-        newline='\n',
-    )
-
-
-def write_runbook(source_reference: str, mode: str, entrypoint: str) -> None:
-    (TARGET / 'PROTOTYPE-RUNBOOK.md').write_text(f'''# Инструкция по визуальному прототипу
+def runbook(source,ui_source_mode,application_mode,entry,start,url):
+ steps='\n'.join(f'{i}. {x["label"]}: `{x["href"]}`' for i,x in enumerate(PATH,1))
+ (TARGET/'PROTOTYPE-RUNBOOK.md').write_text(f'''# Инструкция по визуальному прототипу
 
 ## 1. Состав прототипа
-
-Локальная копия получена из `{source_reference}` в режиме `{mode}`. Точка входа: `{entrypoint}`.
+Источник UI: `{ui_source_mode}`. Источник приложения: `{application_mode}`. Материализованный источник: `{source}`. Реальный entryPoint: `{entry}`.
 
 ## 2. Предварительные требования
-
-- Python 3.10 или новее.
-- Свободный локальный порт 8000.
-- Команды одинаковы для Windows PowerShell, cmd, macOS и Linux.
+- Python 3.10+ на Windows, macOS или Linux.
+- Свободный порт 8000.
 
 ## 3. Запуск
-
-Из корня проекта выполните:
-
-```text
-python -m http.server 8000 --directory visual-prototype
-```
-
-Если команда `python` недоступна в Windows, используйте `py` с теми же аргументами.
-Откройте `http://localhost:8000/`.
+Из корня проекта: `{start}`. Открыть `{url}`.
 
 ## 4. Демонстрационные данные
-
-Источник визуального материала: `{source_reference}`. Локальные файлы находятся в `visual-prototype/content/`.
-Изменение реальных систем и баз данных для просмотра не требуется.
+Используются локальные статические данные внутри `visual-prototype/`.
 
 ## 5. Проверка основного сценария
+{steps}
 
-1. Запустите локальный сервер.
-2. Откройте главную страницу.
-3. Проверьте наличие всех импортированных экранов или переходов.
-4. Выполните `python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE`.
+Проверка: `python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE`.
 
 ## 6. Устранение проблем
+Проверьте entryPoint, относительные ссылки и отсутствие Storybook-зависимостей.
+''',encoding='utf-8',newline='\n')
 
-- Ошибка порта: замените `8000` на свободный порт.
-- Не загружаются ресурсы: повторите экспорт вместе с папкой assets и снова выполните materialize.
-- Кириллица повреждена: убедитесь, что HTML содержит `<meta charset="utf-8">`.
-- Внешняя ссылка недоступна: используйте локальные файлы из `visual-prototype/`.
-''', encoding='utf-8', newline='\n')
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser(description='Экспортировать внешний визуальный прототип в visual-prototype/')
-    parser.add_argument('--phase', required=True, choices=['VISUAL_PROTOTYPE'])
-    parser.add_argument('--mode', required=True, choices=['DIRECTORY', 'HTML_FILE', 'SCREENSHOTS'])
-    parser.add_argument('--source', required=True, help='Локальный экспорт: каталог, HTML или изображения')
-    parser.add_argument('--entrypoint', help='Относительный index.html внутри импортируемого каталога')
-    parser.add_argument('--source-reference', help='Исходная Confluence/Figma/Storybook/другая ссылка или ID')
-    parser.add_argument('--skip-evidence', action='store_true', help='Не регистрировать ART-EV автоматически')
-    args = parser.parse_args()
-
-    source = external_path(args.source)
-    ui_source = load('product/ui-source.json')
-    source_reference = args.source_reference or ui_source.get('location')
-    if not source_reference:
-        raise SystemExit('Укажите --source-reference или сначала выберите product/ui-source.json')
-    clear_content()
-
-    if args.mode == 'DIRECTORY':
-        if not source.is_dir():
-            raise SystemExit('Для DIRECTORY --source должен быть каталогом')
-        shutil.copytree(source, CONTENT, dirs_exist_ok=True)
-        entry_rel = args.entrypoint or 'index.html'
-        imported_entry = CONTENT / entry_rel
-        if not imported_entry.is_file():
-            candidates = sorted(CONTENT.rglob('index.html'))
-            if len(candidates) == 1:
-                imported_entry = candidates[0]
-            else:
-                raise SystemExit('Не найден однозначный index.html; укажите --entrypoint')
-        entrypoint = imported_entry.relative_to(ROOT).as_posix()
-        data_location = 'visual-prototype/content/'
-        interaction = 'CLICKABLE'
-    elif args.mode == 'HTML_FILE':
-        if not source.is_file() or source.suffix.lower() not in {'.html', '.htm'}:
-            raise SystemExit('Для HTML_FILE нужен файл .html или .htm')
-        shutil.copy2(source, TARGET / 'index.html')
-        entrypoint = 'visual-prototype/index.html'
-        data_location = 'visual-prototype/index.html'
-        interaction = 'CLICKABLE'
-    else:
-        candidates = [source] if source.is_file() else sorted(
-            item for item in source.iterdir() if item.is_file() and item.suffix.lower() in IMAGE_SUFFIXES
-        )
-        images = [item for item in candidates if item.suffix.lower() in IMAGE_SUFFIXES]
-        if not images:
-            raise SystemExit('Не найдены PNG/JPG/JPEG/WEBP/GIF скриншоты')
-        copied = []
-        for position, image in enumerate(images, start=1):
-            destination = CONTENT / f'{position:02d}-{image.name}'
-            shutil.copy2(image, destination)
-            copied.append(destination)
-        make_screenshot_gallery(copied)
-        entrypoint = 'visual-prototype/index.html'
-        data_location = 'visual-prototype/content/'
-        interaction = 'STATIC_SCREENSHOTS'
-
-    write_runbook(source_reference, args.mode, entrypoint)
-    manifest = load('visual-prototype/prototype-manifest.json')
-    manifest.update({
-        'status': 'READY',
-        'entryPoint': entrypoint,
-        'startCommand': 'python -m http.server 8000 --directory visual-prototype',
-        'dataMode': 'STATIC_FILE',
-        'dataLocation': data_location,
-        'runbookPath': 'visual-prototype/PROTOTYPE-RUNBOOK.md',
-        'verificationCommand': 'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE',
-        'sourceType': args.mode,
-        'sourceReference': source_reference,
-        'interactionLevel': interaction,
-        'materializedAt': now(),
-        'notes': 'Локальный экспорт. Внешняя ссылка не является единственным артефактом.',
-    })
-    save('visual-prototype/prototype-manifest.json', manifest)
-    validation = run_tool('validate_visual_prototype.py', ['--phase', args.phase], allowed_returncodes={0, 1})
-    if validation.returncode:
-        print(validation.stdout, end='')
-        print(validation.stderr, end='')
-        return validation.returncode
-    evidence_id = None
-    if not args.skip_evidence:
-        evidence = run_tool('register_artifact_evidence.py', [
-            '--phase', 'VISUAL_PROTOTYPE',
-            '--path', 'visual-prototype',
-            '--type', 'visual-prototype',
-            '--runbook', 'visual-prototype/PROTOTYPE-RUNBOOK.md',
-            '--check', 'Создана локальная точка входа и сохранён источник прототипа',
-            '--result', 'PASSED',
-            '--command', 'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE',
-            '--notes', f'Материализация из {source_reference} в режиме {args.mode}',
-        ])
-        evidence_id = evidence.stdout.strip().splitlines()[-1] if evidence.stdout.strip() else None
-    else:
-        run_tool('sync_workspace.py')
-    suffix = f'; evidence={evidence_id}' if evidence_id else ''
-    print(f'OK: визуальный прототип материализован; entryPoint={entrypoint}{suffix}')
-    return 0
-
-
-if __name__ == '__main__':
-    raise SystemExit(main())
+def main():
+ ap=argparse.ArgumentParser(description='Материализовать кликабельное приложение')
+ ap.add_argument('--phase',required=True,choices=['VISUAL_PROTOTYPE'])
+ ap.add_argument('--mode',required=True,choices=['DIRECTORY','HTML_FILE'])
+ ap.add_argument('--application-mode',choices=['EXISTING_CLICKABLE_APP','GENERATED_PROTOTYPE'])
+ ap.add_argument('--source',required=True);ap.add_argument('--entrypoint');ap.add_argument('--source-reference');ap.add_argument('--skip-evidence',action='store_true')
+ a=ap.parse_args();source=ext(a.source);ui=load('product/ui-source.json')
+ ui_source_mode=ui.get('sourceMode')
+ application_mode=a.application_mode or ui.get('applicationMode')
+ if ui_source_mode not in {'FIGMA','COMPONENT_LIBRARY','STORYBOOK'}:
+  raise SystemExit('Сначала выберите источник UI: FIGMA, COMPONENT_LIBRARY или STORYBOOK')
+ if application_mode not in {'EXISTING_CLICKABLE_APP','GENERATED_PROTOTYPE'}:
+  raise SystemExit('Укажите --application-mode или зарегистрируйте applicationMode в product/ui-source.json')
+ reference=a.source_reference or str(source)
+ manifest=load('visual-prototype/prototype-manifest.json')
+ markers=storybook(source if source.is_dir() else source.parent)
+ if markers:
+  raise SystemExit('ПРЕДУПРЕЖДЕНИЕ: материализуемый каталог похож на Storybook/каталог компонентов, а не на готовое приложение. Storybook допустим только как источник UI; передайте отдельное кликабельное приложение.')
+ clear_target();assets=TARGET/'assets';assets.mkdir()
+ if a.mode=='HTML_FILE':
+  if source.suffix.lower() not in {'.html','.htm'}: raise SystemExit('Нужен HTML-файл')
+  shutil.copy2(source,TARGET/'index.html');entry='visual-prototype/index.html'
+ else:
+  if not source.is_dir(): raise SystemExit('Нужен каталог')
+  shutil.copytree(source,TARGET/'app',dirs_exist_ok=True)
+  candidate=TARGET/'app'/(a.entrypoint or 'index.html')
+  if not candidate.is_file():
+   found=list((TARGET/'app').rglob('index.html'))
+   if len(found)!=1: raise SystemExit('Не найден однозначный entrypoint; укажите --entrypoint')
+   candidate=found[0]
+  entry=candidate.relative_to(ROOT).as_posix()
+ start='python -m http.server 8000 --directory visual-prototype';url='http://localhost:8000/'+entry.removeprefix('visual-prototype/')
+ runbook(reference,ui_source_mode,application_mode,entry,start,url)
+ m=manifest;m.update({'status':'READY','entryPoint':entry,'startCommand':start,'url':url,'dataMode':'STATIC_FILE','dataLocation':'visual-prototype/','runbookPath':'visual-prototype/PROTOTYPE-RUNBOOK.md','verificationCommand':'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE','sourceType':a.mode,'uiSourceMode':ui_source_mode,'applicationMode':application_mode,'sourceMode':application_mode,'sourceReference':reference,'interactionLevel':'CLICKABLE','requiredUserPath':PATH,'storybookDetected':False,'materializedAt':now(),'smokeTest':{'status':'PENDING','checkedAt':None,'details':[]}});save('visual-prototype/prototype-manifest.json',m)
+ stale=mark_phase_reviews_stale('VISUAL_PROTOTYPE','Артефакт visual-prototype переработан')
+ result=run_tool('validate_visual_prototype.py',['--phase','VISUAL_PROTOTYPE'],allowed_returncodes={0,1});print(result.stdout,end='')
+ if result.returncode:return result.returncode
+ m=load('visual-prototype/prototype-manifest.json')
+ if not a.skip_evidence: run_tool('register_artifact_evidence.py',['--phase','VISUAL_PROTOTYPE','--path','visual-prototype','--type','visual-prototype','--runbook','visual-prototype/PROTOTYPE-RUNBOOK.md','--check','Обязательный путь кликабелен','--result','PASSED','--command','python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE'])
+ else: run_tool('sync_workspace.py')
+ print(f'Источник UI: {ui_source_mode}\nИсточник приложения: {application_mode}\nentryPoint: {m["entryPoint"]}\nКоманда запуска: {m["startCommand"]}\nURL: {m["url"]}\nОбязательный путь: '+ ' → '.join(x['label'] for x in m['requiredUserPath'])+f'\nSmoke-test: {m["smokeTest"]["status"]}')
+ if stale: print('Устаревшие ревью: '+', '.join(stale))
+ return 0
+if __name__=='__main__': raise SystemExit(main())

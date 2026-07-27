@@ -66,6 +66,8 @@ def normalize_special_document(rel: str, doc: dict) -> dict:
     if rel == 'product/ui-source.json':
         doc.setdefault('strategy', 'UNKNOWN')
         doc.setdefault('usageMode', 'UNDECIDED')
+        doc.setdefault('sourceMode', doc.get('strategy') if doc.get('strategy') in {'FIGMA','COMPONENT_LIBRARY','STORYBOOK'} else 'UNDECIDED')
+        doc.setdefault('applicationMode', 'UNDECIDED')
         doc.setdefault('status', 'UNKNOWN')
         doc.setdefault('location', None)
         doc.setdefault('selectedCandidateId', None)
@@ -155,14 +157,14 @@ def ensure_domain_files() -> None:
             f"**ID вопроса:** {question_id}\n"
             f"**Область:** {domain['id']}\n"
             "**Статус:** Требуется решение\n\n"
-            "Product Compiler 4.3 создал этот блок при миграции старого проекта. "
+            "Product Compiler 4.4 создал этот блок при миграции старого проекта. "
             "Замените его подтверждённым требованием, решением о неприменимости или точным ответом Product Manager.\n",
             encoding='utf-8',
             newline='\n',
         )
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description='Привести JSON Product Compiler к контракту 4.3')
+    parser = argparse.ArgumentParser(description='Привести JSON Product Compiler к контракту 4.4')
     parser.add_argument('--strict', action='store_true', help='Завершиться ошибкой при неполной структуре записей')
     args = parser.parse_args()
 

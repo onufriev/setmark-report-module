@@ -3,7 +3,7 @@
   "type": "object",
   "required": ["schemaVersion", "profiles", "domains"],
   "properties": {
-    "schemaVersion": {"const": "4.3"},
+    "schemaVersion": {"const": "4.4"},
     "profiles": {
       "type": "object",
       "additionalProperties": {

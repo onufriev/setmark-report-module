@@ -1,4 +1,4 @@
-# Начало работы с Product Compiler 4.3
+# Начало работы с Product Compiler 4.4
 
 ## 1. Запуск
 

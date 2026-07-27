@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+node_modules/
+visual-prototype/node_modules/
+prototype/node_modules/
+reports/_tmp/

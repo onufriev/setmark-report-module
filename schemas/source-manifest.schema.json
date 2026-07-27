@@ -3,7 +3,7 @@
   "type": "object",
   "required": ["schemaVersion", "setupStatus", "inputMode", "entries"],
   "properties": {
-    "schemaVersion": {"const": "4.3"},
+    "schemaVersion": {"const": "4.4"},
     "setupStatus": {"enum": ["NOT_STARTED", "IN_PROGRESS", "COMPLETED"]},
     "inputMode": {"enum": ["UNSET", "FILES", "LINKS", "MIXED", "CONVERSATION_ONLY"]},
     "entries": {

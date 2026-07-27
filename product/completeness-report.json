@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "4.3",
-  "evaluatedAt": "2026-07-26T16:24:28.344295+00:00",
+  "schemaVersion": "4.4",
+  "evaluatedAt": "2026-07-27T09:15:20.024696+00:00",
   "detectedProfiles": [
     "BASE"
   ],
@@ -1098,18 +1098,20 @@
     }
   ],
   "uiSource": {
-    "schemaVersion": "4.3",
+    "schemaVersion": "4.4",
     "strategy": "UNKNOWN",
     "usageMode": "UNDECIDED",
     "status": "UNKNOWN",
     "location": null,
     "evidenceRefs": [],
     "inspectedComponents": [],
-    "neutralFallbackApproved": false,
     "notes": null,
     "candidates": [],
     "selectedCandidateId": null,
     "temporary": false,
+    "sourceMode": "UNDECIDED",
+    "applicationMode": "UNDECIDED",
+    "neutralFallbackApproved": false,
     "validationBlockers": [
       "Не выбран допустимый источник UI",
       "Найденный материал не выбран как источник, принятый или создаваемый прототип",
@@ -1119,7 +1121,7 @@
     ]
   },
   "prototypeDataSource": {
-    "schemaVersion": "4.3",
+    "schemaVersion": "4.4",
     "status": "Требуется решение",
     "sourceType": "UNKNOWN",
     "location": null,
@@ -1140,7 +1142,7 @@
     ]
   },
   "technologyStack": {
-    "schemaVersion": "4.3",
+    "schemaVersion": "4.4",
     "decisionPoint": "WORKING_PROTOTYPE",
     "status": "Требуется решение",
     "selectedStack": null,

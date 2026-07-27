@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "4.4",
+  "status": "NOT_STARTED",
+  "entryPoint": null,
+  "startCommand": null,
+  "dataMode": null,
+  "dataLocation": null,
+  "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+  "verificationCommand": null,
+  "notes": null,
+  "sourceType": null,
+  "sourceReference": null,
+  "interactionLevel": null,
+  "materializedAt": null,
+  "url": null,
+  "sourceMode": null,
+  "requiredUserPath": [],
+  "smokeTest": {
+    "status": "NOT_RUN",
+    "checkedAt": null,
+    "details": []
+  },
+  "uiSourceMode": null,
+  "applicationMode": null
+}

@@ -1,4 +1,4 @@
-# Product Compiler 4.3
+# Product Compiler 4.4
 
 Сразу прочитай `PRODUCT-COMPILER.md`.
 

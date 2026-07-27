@@ -1,4 +1,4 @@
-# Product Compiler 4.3 для Claude Code
+# Product Compiler 4.4 для Claude Code
 
 Прочитай `PRODUCT-COMPILER.md` до начала работы.
 

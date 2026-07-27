@@ -7,7 +7,7 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.3"
+      "const": "4.4"
     },
     "reviews": {
       "type": "array",
@@ -21,7 +21,18 @@
           "markdownReport",
           "pdfReport",
           "nextPhase"
-        ]
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "READY_FOR_REVIEW",
+              "APPROVED",
+              "REJECTED",
+              "SUPERSEDED",
+              "STALE_REVIEW"
+            ]
+          }
+        }
       }
     }
   }
