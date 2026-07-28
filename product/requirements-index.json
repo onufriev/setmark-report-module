@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "df63cb0a0c1088c046b5816691500486ad1586c7ba8d6a0f2b508dff9c3c9443",
+  "requirementsSha256": "ba10df6234b5a34e61ed9a88af8a080dd4a6c36aeed81b0cd4a90af296b7206d",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -511,17 +511,21 @@
         "PM-DEC-023"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-024",
+      "title": "Решение Product Manager",
+      "file": "requirements/07-scenarios/user-journeys.md",
+      "line": 3,
+      "domainId": "mainJourney",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-024"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Пользовательские пути",
-      "file": "requirements/07-scenarios/user-journeys.md",
-      "line": 3,
-      "questionId": "Q-020",
-      "domainId": "mainJourney",
-      "status": "Требуется решение"
-    },
     {
       "title": "Критерии приёмки",
       "file": "requirements/08-acceptance/acceptance-criteria.md",
@@ -679,8 +683,8 @@
     },
     {
       "file": "requirements/07-scenarios/user-journeys.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

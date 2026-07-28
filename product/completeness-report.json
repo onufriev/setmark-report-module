@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T15:29:59.510544+00:00",
+  "evaluatedAt": "2026-07-28T15:39:45.005475+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -132,18 +132,11 @@
       "file": "requirements/07-scenarios/user-journeys.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Пользовательские пути",
-          "file": "requirements/07-scenarios/user-journeys.md",
-          "line": 3,
-          "questionId": "Q-020",
-          "domainId": "mainJourney",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-024"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -395,12 +388,6 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
-          "questionId": "Q-020",
-          "domainId": "mainJourney",
-          "title": "Пользовательские пути",
-          "file": "requirements/07-scenarios/user-journeys.md"
-        },
-        {
           "questionId": "Q-021",
           "domainId": "acceptanceCriteria",
           "title": "Критерии приёмки",
@@ -423,12 +410,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-020",
-          "domainId": "mainJourney",
-          "title": "Пользовательские пути",
-          "file": "requirements/07-scenarios/user-journeys.md"
-        },
         {
           "questionId": "Q-021",
           "domainId": "acceptanceCriteria",
@@ -506,12 +487,6 @@
   },
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
-    {
-      "questionId": "Q-020",
-      "domainId": "mainJourney",
-      "title": "Пользовательские пути",
-      "file": "requirements/07-scenarios/user-journeys.md"
-    },
     {
       "questionId": "Q-021",
       "domainId": "acceptanceCriteria",
