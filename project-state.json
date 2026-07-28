@@ -3,22 +3,22 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "PRODUCT_DEFINITION",
-  "status": "WAITING_FOR_APPROVAL",
-  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
+  "currentPhase": "VISUAL_PROTOTYPE",
+  "status": "IN_PROGRESS",
+  "nextAction": "Продолжить этап VISUAL_PROTOTYPE по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "PRODUCT_DEFINITION",
-    "status": "READY_FOR_REVIEW",
-    "reviewId": "PRODUCT_DEFINITION-R3",
-    "markdownReport": "reports/product-definition-v0.3.md",
-    "pdfReport": "reports/product-definition-v0.3.pdf",
-    "shownToProductManagerAt": "2026-07-28T17:10:51.388855+00:00",
-    "nextPhase": "VISUAL_PROTOTYPE"
+    "phase": null,
+    "status": "NOT_PREPARED",
+    "reviewId": null,
+    "markdownReport": null,
+    "pdfReport": null,
+    "shownToProductManagerAt": null,
+    "nextPhase": null
   },
   "artifactStatus": {
     "requirements": "COMMITTED",
