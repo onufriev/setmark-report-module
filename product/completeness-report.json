@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T11:21:47.090051+00:00",
+  "evaluatedAt": "2026-07-28T11:30:59.945070+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -112,18 +112,11 @@
       "file": "requirements/02-system/states-and-errors.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Ошибки, пустые и недоступные состояния",
-          "file": "requirements/02-system/states-and-errors.md",
-          "line": 3,
-          "questionId": "Q-008",
-          "domainId": "statesErrors",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-009"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -502,12 +495,6 @@
           "file": "requirements/02-system/system-requirements.md"
         },
         {
-          "questionId": "Q-008",
-          "domainId": "statesErrors",
-          "title": "Ошибки, пустые и недоступные состояния",
-          "file": "requirements/02-system/states-and-errors.md"
-        },
-        {
           "questionId": "Q-015",
           "domainId": "dataRequirements",
           "title": "Данные, телеметрия, свежесть и полнота",
@@ -643,12 +630,6 @@
           "domainId": "functionalRequirements",
           "title": "Функциональные требования",
           "file": "requirements/02-system/system-requirements.md"
-        },
-        {
-          "questionId": "Q-008",
-          "domainId": "statesErrors",
-          "title": "Ошибки, пустые и недоступные состояния",
-          "file": "requirements/02-system/states-and-errors.md"
         },
         {
           "questionId": "Q-015",
@@ -840,12 +821,6 @@
       "domainId": "functionalRequirements",
       "title": "Функциональные требования",
       "file": "requirements/02-system/system-requirements.md"
-    },
-    {
-      "questionId": "Q-008",
-      "domainId": "statesErrors",
-      "title": "Ошибки, пустые и недоступные состояния",
-      "file": "requirements/02-system/states-and-errors.md"
     },
     {
       "questionId": "Q-015",

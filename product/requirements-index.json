@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "178bfc3aef34e2199f810696f7467e7eae7b26b9af2885cc15d1f6893f9baad6",
+  "requirementsSha256": "18f32c77d8bf441c8eb86410a56e0224208c6e0a30a08f02445de53a390e685c",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -186,6 +186,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-009",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/states-and-errors.md",
+      "line": 3,
+      "domainId": "statesErrors",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-009"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-FR-001",
       "title": "Централизованный мониторинг",
       "file": "requirements/02-system/system-requirements.md",
@@ -323,14 +335,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Ошибки, пустые и недоступные состояния",
-      "file": "requirements/02-system/states-and-errors.md",
-      "line": 3,
-      "questionId": "Q-008",
-      "domainId": "statesErrors",
-      "status": "Требуется решение"
-    },
     {
       "title": "Функциональные требования",
       "file": "requirements/02-system/system-requirements.md",
@@ -516,8 +520,8 @@
     },
     {
       "file": "requirements/02-system/states-and-errors.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
