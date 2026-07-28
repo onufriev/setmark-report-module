@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T14:11:29.173550+00:00",
+  "evaluatedAt": "2026-07-28T14:18:26.457695+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -357,22 +357,14 @@
       "file": "requirements/04-quality/quality-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-017",
         "REQ-NFR-001",
         "REQ-NFR-002",
         "REQ-NFR-003"
       ],
-      "needsInput": [
-        {
-          "title": "Нефункциональные требования",
-          "file": "requirements/04-quality/quality-requirements.md",
-          "line": 3,
-          "questionId": "Q-012",
-          "domainId": "quality",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -501,12 +493,6 @@
           "file": "requirements/07-scenarios/business-scenarios.md"
         },
         {
-          "questionId": "Q-012",
-          "domainId": "quality",
-          "title": "Нефункциональные требования",
-          "file": "requirements/04-quality/quality-requirements.md"
-        },
-        {
           "questionId": "Q-023",
           "domainId": "traceability",
           "title": "Трассировка требований",
@@ -570,12 +556,6 @@
           "domainId": "businessScenarios",
           "title": "Бизнес-сценарии",
           "file": "requirements/07-scenarios/business-scenarios.md"
-        },
-        {
-          "questionId": "Q-012",
-          "domainId": "quality",
-          "title": "Нефункциональные требования",
-          "file": "requirements/04-quality/quality-requirements.md"
         },
         {
           "questionId": "Q-023",
@@ -695,12 +675,6 @@
       "domainId": "businessScenarios",
       "title": "Бизнес-сценарии",
       "file": "requirements/07-scenarios/business-scenarios.md"
-    },
-    {
-      "questionId": "Q-012",
-      "domainId": "quality",
-      "title": "Нефункциональные требования",
-      "file": "requirements/04-quality/quality-requirements.md"
     },
     {
       "questionId": "Q-023",

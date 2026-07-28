@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-012",
-      "domainId": "quality",
-      "title": "Нефункциональные требования",
-      "file": "requirements/04-quality/quality-requirements.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-015",
       "domainId": "dataRequirements",
       "title": "Данные, телеметрия, свежесть и полнота",
