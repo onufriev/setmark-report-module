@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "330629c37236afa7881e2a0eca0eb7ee5983ea117922973f60c44d60c1aa94fc",
+  "requirementsSha256": "d222815924c09f86cdcda49df05f9e7a51c66ac7f06b240727bc7a07a15ad3b3",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -77,10 +77,22 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-007",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 3,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-007"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-BR-001",
       "title": "Корреляция отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 14,
+      "line": 30,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -92,7 +104,7 @@
       "id": "REQ-BR-002",
       "title": "Последовательность онлайн- и офлайн-проверки",
       "file": "requirements/02-system/business-rules.md",
-      "line": 27,
+      "line": 43,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -105,7 +117,7 @@
       "id": "REQ-BR-003",
       "title": "Справочник отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 40,
+      "line": 56,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -117,7 +129,7 @@
       "id": "REQ-DEC-001",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 53,
+      "line": 69,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -299,14 +311,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Бизнес-правила",
-      "file": "requirements/02-system/business-rules.md",
-      "line": 3,
-      "questionId": "Q-006",
-      "domainId": "businessRules",
-      "status": "Требуется решение"
-    },
     {
       "title": "Роли и права доступа",
       "file": "requirements/02-system/roles-and-permissions.md",
@@ -490,8 +494,8 @@
     },
     {
       "file": "requirements/02-system/business-rules.md",
-      "requirements": 4,
-      "needsInput": 1,
+      "requirements": 5,
+      "needsInput": 0,
       "candidateSections": 5
     },
     {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T11:00:16.894991+00:00",
+  "evaluatedAt": "2026-07-28T11:12:01.370124+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -102,23 +102,15 @@
       "file": "requirements/02-system/business-rules.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-007",
         "REQ-BR-001",
         "REQ-BR-002",
         "REQ-BR-003",
         "REQ-DEC-001"
       ],
-      "needsInput": [
-        {
-          "title": "Бизнес-правила",
-          "file": "requirements/02-system/business-rules.md",
-          "line": 3,
-          "questionId": "Q-006",
-          "domainId": "businessRules",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -523,12 +515,6 @@
           "file": "requirements/02-system/roles-and-permissions.md"
         },
         {
-          "questionId": "Q-006",
-          "domainId": "businessRules",
-          "title": "Бизнес-правила",
-          "file": "requirements/02-system/business-rules.md"
-        },
-        {
           "questionId": "Q-008",
           "domainId": "statesErrors",
           "title": "Ошибки, пустые и недоступные состояния",
@@ -676,12 +662,6 @@
           "domainId": "rolesPermissions",
           "title": "Роли и права доступа",
           "file": "requirements/02-system/roles-and-permissions.md"
-        },
-        {
-          "questionId": "Q-006",
-          "domainId": "businessRules",
-          "title": "Бизнес-правила",
-          "file": "requirements/02-system/business-rules.md"
         },
         {
           "questionId": "Q-008",
@@ -885,12 +865,6 @@
       "domainId": "rolesPermissions",
       "title": "Роли и права доступа",
       "file": "requirements/02-system/roles-and-permissions.md"
-    },
-    {
-      "questionId": "Q-006",
-      "domainId": "businessRules",
-      "title": "Бизнес-правила",
-      "file": "requirements/02-system/business-rules.md"
     },
     {
       "questionId": "Q-008",

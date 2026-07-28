@@ -336,6 +336,19 @@
       "exactUserMessage": "верно",
       "createdAt": "2026-07-28T10:59:44.965809+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-007",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-006",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "да",
+      "createdAt": "2026-07-28T11:12:00.388515+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
