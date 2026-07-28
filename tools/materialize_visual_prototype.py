@@ -6,11 +6,11 @@ from common import ROOT, load, mark_phase_reviews_stale, now, run_tool, save
 
 TARGET=(ROOT/'visual-prototype').resolve()
 PATH=[
- {'id':'dashboard','label':'Дашборд','href':'index.html#dashboard'},
- {'id':'outsiders','label':'Аутсайдеры','href':'index.html#outsiders'},
- {'id':'store-card','label':'Карточка магазина','href':'index.html#store-card'},
- {'id':'downtime-reason','label':'Причина простоя','href':'index.html#downtime-reason'},
- {'id':'create-task','label':'Создание задачи','href':'index.html#create-task'},
+ {'id':'overview','label':'Обзор сети','href':'#overview'},
+ {'id':'priority','label':'Критические инциденты с риском автоштрафа','href':'#priority'},
+ {'id':'incidents','label':'Список инцидентов','href':'#incidents'},
+ {'id':'incident','label':'Карточка инцидента','href':'#incident/INC-10482'},
+ {'id':'analytics','label':'Аналитика и выгрузка','href':'#analytics'},
 ]
 
 def ext(value):

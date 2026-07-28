@@ -119,6 +119,29 @@
       "presentationPdfReport": "reports/product-definition-v0.3.pdf",
       "presentationMarkdownSha256": "6dd8fcf0de4ea898ccf0b0ce38407cf35ca1566b022bcd60a4fda6281876588e",
       "presentationPdfSha256": "ed75e6cb6c20cca5eea6cd485619024814f164a07ffdc7b0a434c6b04bf38e9c"
+    },
+    {
+      "reviewId": "VISUAL_PROTOTYPE-R1",
+      "phase": "VISUAL_PROTOTYPE",
+      "revision": 1,
+      "status": "READY_FOR_REVIEW",
+      "preparedAt": "2026-07-28T17:30:29.013201+00:00",
+      "registeredBy": "finalize_phase_review.py",
+      "shownToProductManagerAt": "2026-07-28T17:30:53.017027+00:00",
+      "markdownReport": "reports/visual-prototype-v0.1.md",
+      "markdownSha256": "e66232f0e37eaf70328d458a6ef001a98b58a7e9ae36aa4db1d414762252fc10",
+      "pdfReport": "reports/visual-prototype-v0.1.pdf",
+      "pdfSha256": "f87283316b8e7b2c03de3b5a38ecd59363acb046a01ec6a9db7cd658a9762a8c",
+      "nextPhase": "VISUAL_VALIDATION",
+      "approvedAt": null,
+      "approvedBy": null,
+      "decisionText": null,
+      "exactUserMessage": null,
+      "presentationPreparedAt": "2026-07-28T17:30:52.725141+00:00",
+      "presentationMarkdownReport": "reports/visual-prototype-v0.1.md",
+      "presentationPdfReport": "reports/visual-prototype-v0.1.pdf",
+      "presentationMarkdownSha256": "e66232f0e37eaf70328d458a6ef001a98b58a7e9ae36aa4db1d414762252fc10",
+      "presentationPdfSha256": "f87283316b8e7b2c03de3b5a38ecd59363acb046a01ec6a9db7cd658a9762a8c"
     }
   ]
 }
