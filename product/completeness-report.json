@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T10:53:19.083577+00:00",
+  "evaluatedAt": "2026-07-28T11:00:16.894991+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -67,21 +67,13 @@
       "file": "requirements/02-system/entities-and-data.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-006",
         "REQ-BO-001",
         "REQ-DEC-002"
       ],
-      "needsInput": [
-        {
-          "title": "Бизнес-объекты, сущности и данные",
-          "file": "requirements/02-system/entities-and-data.md",
-          "line": 3,
-          "questionId": "Q-005",
-          "domainId": "businessObjects",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -525,12 +517,6 @@
           "file": "requirements/02-system/system-requirements.md"
         },
         {
-          "questionId": "Q-005",
-          "domainId": "businessObjects",
-          "title": "Бизнес-объекты, сущности и данные",
-          "file": "requirements/02-system/entities-and-data.md"
-        },
-        {
           "questionId": "Q-007",
           "domainId": "rolesPermissions",
           "title": "Роли и права доступа",
@@ -684,12 +670,6 @@
           "domainId": "functionalRequirements",
           "title": "Функциональные требования",
           "file": "requirements/02-system/system-requirements.md"
-        },
-        {
-          "questionId": "Q-005",
-          "domainId": "businessObjects",
-          "title": "Бизнес-объекты, сущности и данные",
-          "file": "requirements/02-system/entities-and-data.md"
         },
         {
           "questionId": "Q-007",
@@ -899,12 +879,6 @@
       "domainId": "functionalRequirements",
       "title": "Функциональные требования",
       "file": "requirements/02-system/system-requirements.md"
-    },
-    {
-      "questionId": "Q-005",
-      "domainId": "businessObjects",
-      "title": "Бизнес-объекты, сущности и данные",
-      "file": "requirements/02-system/entities-and-data.md"
     },
     {
       "questionId": "Q-007",

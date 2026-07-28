@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "f51da032d268a59af0ff87ffb98ae6689e31c8d8ed02cd55d3d3a783a3ba3192",
+  "requirementsSha256": "330629c37236afa7881e2a0eca0eb7ee5983ea117922973f60c44d60c1aa94fc",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -126,10 +126,22 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-006",
+      "title": "Модель сущностей и состояний",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 3,
+      "domainId": "businessObjects",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-006"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-BO-001",
       "title": "Связь отклонения с внутренними данными",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 14,
+      "line": 32,
       "domainId": "businessObjects",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -141,7 +153,7 @@
       "id": "REQ-DEC-002",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 27,
+      "line": 45,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -293,14 +305,6 @@
       "line": 3,
       "questionId": "Q-006",
       "domainId": "businessRules",
-      "status": "Требуется решение"
-    },
-    {
-      "title": "Бизнес-объекты, сущности и данные",
-      "file": "requirements/02-system/entities-and-data.md",
-      "line": 3,
-      "questionId": "Q-005",
-      "domainId": "businessObjects",
       "status": "Требуется решение"
     },
     {
@@ -492,8 +496,8 @@
     },
     {
       "file": "requirements/02-system/entities-and-data.md",
-      "requirements": 2,
-      "needsInput": 1,
+      "requirements": 3,
+      "needsInput": 0,
       "candidateSections": 3
     },
     {

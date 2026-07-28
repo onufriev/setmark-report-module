@@ -12,16 +12,6 @@
       "answeredAt": null
     },
     {
-      "id": "Q-005",
-      "domainId": "businessObjects",
-      "title": "Бизнес-объекты, сущности и данные",
-      "file": "requirements/02-system/entities-and-data.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-007",
       "domainId": "rolesPermissions",
       "title": "Роли и права доступа",
