@@ -1,16 +1,42 @@
 {
   "schemaVersion": "4.4",
-  "strategy": "UNKNOWN",
-  "usageMode": "UNDECIDED",
-  "status": "UNKNOWN",
-  "location": null,
-  "evidenceRefs": [],
-  "inspectedComponents": [],
-  "notes": null,
-  "candidates": [],
-  "selectedCandidateId": null,
+  "strategy": "COMPONENT_LIBRARY",
+  "usageMode": "GENERATED_PROTOTYPE",
+  "status": "INSPECTED",
+  "location": "npm:@crystalservice/csi_ui@1.30.3; usage reference: Set Mark application/ui/modules/frontend",
+  "evidenceRefs": [
+    "PM-DEC-011"
+  ],
+  "inspectedComponents": [
+    "AppBar",
+    "Breadcrumbs",
+    "Drawer",
+    "Table",
+    "TablePagination",
+    "Autocomplete",
+    "DateTimePicker",
+    "SelectInput",
+    "Chip",
+    "Dialog",
+    "CircularProgress",
+    "ContentBox"
+  ],
+  "notes": "Новый модуль продолжает визуальный язык актуального frontend Set Mark. @crystalservice/csi_ui — основной источник компонентов; application/ui/modules/frontend — референс их применения; старый frontend — только дополнительный источник сценариев. Разрешено переиспользование подтверждённых компонентов и паттернов. Изменение библиотечных компонентов и создание отсутствующих компонентов требуют отдельного решения Product Manager.",
+  "candidates": [
+    {
+      "id": "UI-CAND-001",
+      "type": "COMPONENT_LIBRARY",
+      "sourceMode": "COMPONENT_LIBRARY",
+      "location": "npm:@crystalservice/csi_ui@1.30.3; usage reference: Set Mark application/ui/modules/frontend",
+      "status": "DISCOVERED_REFERENCE",
+      "notes": "Кандидат подтверждён анализом актуального React frontend Set Mark; старый frontend используется только как дополнительный источник сценариев.",
+      "discoveredAt": "2026-07-28T12:43:46.947487+00:00"
+    }
+  ],
+  "selectedCandidateId": "UI-CAND-001",
   "temporary": false,
-  "sourceMode": "UNDECIDED",
-  "applicationMode": "UNDECIDED",
-  "neutralFallbackApproved": false
+  "sourceMode": "COMPONENT_LIBRARY",
+  "applicationMode": "GENERATED_PROTOTYPE",
+  "neutralFallbackApproved": false,
+  "selectedAt": "2026-07-28T12:43:47.336783+00:00"
 }

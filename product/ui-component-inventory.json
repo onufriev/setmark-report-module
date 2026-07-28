@@ -1,6 +1,55 @@
 {
   "schemaVersion": "4.4",
-  "sourceStrategy": "UNKNOWN",
-  "components": [],
-  "inspectedAt": null
+  "sourceStrategy": "COMPONENT_LIBRARY",
+  "components": [
+    {
+      "name": "AppBar",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Breadcrumbs",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Drawer",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Table",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "TablePagination",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Autocomplete",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "DateTimePicker",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "SelectInput",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Chip",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "Dialog",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "CircularProgress",
+      "status": "INSPECTED"
+    },
+    {
+      "name": "ContentBox",
+      "status": "INSPECTED"
+    }
+  ],
+  "inspectedAt": "2026-07-28T12:43:47.344941+00:00"
 }

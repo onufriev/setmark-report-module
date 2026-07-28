@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-009",
-      "domainId": "uiSource",
-      "title": "Источник интерфейса и компонентов",
-      "file": "requirements/03-architecture/component-source.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-010",
       "domainId": "hardware",
       "title": "Оборудование",

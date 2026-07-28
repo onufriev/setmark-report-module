@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "7a79683d2e668ffec2f416e3c5f4cb212d48523be48fd9e83af6bab15e3a69ef",
+  "requirementsSha256": "f74bf90ccf8046e76b79810addda63a5b0bdc6d86c321da17c60b308aae140e2",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -248,6 +248,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-011",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "line": 3,
+      "domainId": "uiSource",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-011"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -349,14 +361,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Источник интерфейса и компонентов",
-      "file": "requirements/03-architecture/component-source.md",
-      "line": 3,
-      "questionId": "Q-009",
-      "domainId": "uiSource",
-      "status": "Требуется решение"
-    },
     {
       "title": "Оборудование",
       "file": "requirements/03-architecture/hardware-requirements.md",
@@ -538,8 +542,8 @@
     },
     {
       "file": "requirements/03-architecture/component-source.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

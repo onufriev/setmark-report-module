@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T12:09:13.716941+00:00",
+  "evaluatedAt": "2026-07-28T12:44:51.378222+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -200,18 +200,11 @@
       "file": "requirements/03-architecture/component-source.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Источник интерфейса и компонентов",
-          "file": "requirements/03-architecture/component-source.md",
-          "line": 3,
-          "questionId": "Q-009",
-          "domainId": "uiSource",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-011"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -505,12 +498,6 @@
           "file": "requirements/08-acceptance/validation-success.md"
         },
         {
-          "questionId": "Q-009",
-          "domainId": "uiSource",
-          "title": "Источник интерфейса и компонентов",
-          "file": "requirements/03-architecture/component-source.md"
-        },
-        {
           "questionId": "Q-010",
           "domainId": "hardware",
           "title": "Оборудование",
@@ -575,36 +562,6 @@
           "domainId": "traceability",
           "title": "Трассировка требований",
           "file": "requirements/09-traceability/traceability.md"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Не выбран допустимый источник UI",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Источник UI не выбран или не проверен",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Не указано расположение источника UI",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Источник UI не подтверждён решением Product Manager",
-          "file": "product/ui-source.json"
         }
       ]
     },
@@ -634,12 +591,6 @@
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
           "file": "requirements/08-acceptance/validation-success.md"
-        },
-        {
-          "questionId": "Q-009",
-          "domainId": "uiSource",
-          "title": "Источник интерфейса и компонентов",
-          "file": "requirements/03-architecture/component-source.md"
         },
         {
           "questionId": "Q-010",
@@ -712,36 +663,6 @@
           "domainId": "prototypeDataSource",
           "title": "Источник данных рабочего прототипа",
           "file": "requirements/10-prototype/prototype-data-source.md"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Не выбран допустимый источник UI",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Источник UI не выбран или не проверен",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Не указано расположение источника UI",
-          "file": "product/ui-source.json"
-        },
-        {
-          "questionId": "AUTO-UI-SOURCE",
-          "domainId": "uiSource",
-          "title": "Источник UI не подтверждён решением Product Manager",
-          "file": "product/ui-source.json"
         },
         {
           "questionId": "Q-PROTO-DATA-001",
@@ -821,12 +742,6 @@
       "file": "requirements/08-acceptance/validation-success.md"
     },
     {
-      "questionId": "Q-009",
-      "domainId": "uiSource",
-      "title": "Источник интерфейса и компонентов",
-      "file": "requirements/03-architecture/component-source.md"
-    },
-    {
       "questionId": "Q-010",
       "domainId": "hardware",
       "title": "Оборудование",
@@ -891,60 +806,50 @@
       "domainId": "traceability",
       "title": "Трассировка требований",
       "file": "requirements/09-traceability/traceability.md"
-    },
-    {
-      "questionId": "AUTO-UI-SOURCE",
-      "domainId": "uiSource",
-      "title": "Не выбран допустимый источник UI",
-      "file": "product/ui-source.json"
-    },
-    {
-      "questionId": "AUTO-UI-SOURCE",
-      "domainId": "uiSource",
-      "title": "Найденный материал не выбран как источник, принятый или создаваемый прототип",
-      "file": "product/ui-source.json"
-    },
-    {
-      "questionId": "AUTO-UI-SOURCE",
-      "domainId": "uiSource",
-      "title": "Источник UI не выбран или не проверен",
-      "file": "product/ui-source.json"
-    },
-    {
-      "questionId": "AUTO-UI-SOURCE",
-      "domainId": "uiSource",
-      "title": "Не указано расположение источника UI",
-      "file": "product/ui-source.json"
-    },
-    {
-      "questionId": "AUTO-UI-SOURCE",
-      "domainId": "uiSource",
-      "title": "Источник UI не подтверждён решением Product Manager",
-      "file": "product/ui-source.json"
     }
   ],
   "uiSource": {
     "schemaVersion": "4.4",
-    "strategy": "UNKNOWN",
-    "usageMode": "UNDECIDED",
-    "status": "UNKNOWN",
-    "location": null,
-    "evidenceRefs": [],
-    "inspectedComponents": [],
-    "notes": null,
-    "candidates": [],
-    "selectedCandidateId": null,
+    "strategy": "COMPONENT_LIBRARY",
+    "usageMode": "GENERATED_PROTOTYPE",
+    "status": "INSPECTED",
+    "location": "npm:@crystalservice/csi_ui@1.30.3; usage reference: Set Mark application/ui/modules/frontend",
+    "evidenceRefs": [
+      "PM-DEC-011"
+    ],
+    "inspectedComponents": [
+      "AppBar",
+      "Breadcrumbs",
+      "Drawer",
+      "Table",
+      "TablePagination",
+      "Autocomplete",
+      "DateTimePicker",
+      "SelectInput",
+      "Chip",
+      "Dialog",
+      "CircularProgress",
+      "ContentBox"
+    ],
+    "notes": "Новый модуль продолжает визуальный язык актуального frontend Set Mark. @crystalservice/csi_ui — основной источник компонентов; application/ui/modules/frontend — референс их применения; старый frontend — только дополнительный источник сценариев. Разрешено переиспользование подтверждённых компонентов и паттернов. Изменение библиотечных компонентов и создание отсутствующих компонентов требуют отдельного решения Product Manager.",
+    "candidates": [
+      {
+        "id": "UI-CAND-001",
+        "type": "COMPONENT_LIBRARY",
+        "sourceMode": "COMPONENT_LIBRARY",
+        "location": "npm:@crystalservice/csi_ui@1.30.3; usage reference: Set Mark application/ui/modules/frontend",
+        "status": "DISCOVERED_REFERENCE",
+        "notes": "Кандидат подтверждён анализом актуального React frontend Set Mark; старый frontend используется только как дополнительный источник сценариев.",
+        "discoveredAt": "2026-07-28T12:43:46.947487+00:00"
+      }
+    ],
+    "selectedCandidateId": "UI-CAND-001",
     "temporary": false,
-    "sourceMode": "UNDECIDED",
-    "applicationMode": "UNDECIDED",
+    "sourceMode": "COMPONENT_LIBRARY",
+    "applicationMode": "GENERATED_PROTOTYPE",
     "neutralFallbackApproved": false,
-    "validationBlockers": [
-      "Не выбран допустимый источник UI",
-      "Найденный материал не выбран как источник, принятый или создаваемый прототип",
-      "Источник UI не выбран или не проверен",
-      "Не указано расположение источника UI",
-      "Источник UI не подтверждён решением Product Manager"
-    ]
+    "selectedAt": "2026-07-28T12:43:47.336783+00:00",
+    "validationBlockers": []
   },
   "prototypeDataSource": {
     "schemaVersion": "4.4",

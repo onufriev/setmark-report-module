@@ -390,6 +390,19 @@
       "exactUserMessage": "да",
       "createdAt": "2026-07-28T12:08:42.122907+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-011",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-009",
+      "domainId": "uiSource",
+      "decision": "Выбран источник UI COMPONENT_LIBRARY; приложение GENERATED_PROTOTYPE",
+      "exactUserMessage": "да",
+      "createdAt": "2026-07-28T12:43:47.312703+00:00",
+      "recordedBy": "record_ui_source.py",
+      "domainIds": [
+        "uiSource"
+      ]
     }
   ]
 }
