@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "bd56b694c4768b07e9fc75c570e65a20d7bdd4338e36eaa24b5f612ba11ecf65",
+  "requirementsSha256": "5553ef3eccf69ee0f7ea0ef5785e7d2ace792427fc40ca49ec7fdf298088a4b4",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -259,6 +259,18 @@
       "status": "Подтверждено источником",
       "evidenceRefs": [
         "SRC-EV-005"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-033",
+      "title": "Произвольный диапазон дат",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 69,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-033"
       ],
       "applicability": "MVP1"
     },
@@ -657,9 +669,9 @@
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 4,
+      "requirements": 5,
       "needsInput": 0,
-      "candidateSections": 4
+      "candidateSections": 5
     },
     {
       "file": "requirements/03-architecture/component-source.md",

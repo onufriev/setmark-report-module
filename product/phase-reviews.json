@@ -124,7 +124,7 @@
       "reviewId": "VISUAL_PROTOTYPE-R1",
       "phase": "VISUAL_PROTOTYPE",
       "revision": 1,
-      "status": "READY_FOR_REVIEW",
+      "status": "STALE_REVIEW",
       "preparedAt": "2026-07-28T17:30:29.013201+00:00",
       "registeredBy": "finalize_phase_review.py",
       "shownToProductManagerAt": "2026-07-28T17:30:53.017027+00:00",
@@ -141,7 +141,9 @@
       "presentationMarkdownReport": "reports/visual-prototype-v0.1.md",
       "presentationPdfReport": "reports/visual-prototype-v0.1.pdf",
       "presentationMarkdownSha256": "e66232f0e37eaf70328d458a6ef001a98b58a7e9ae36aa4db1d414762252fc10",
-      "presentationPdfSha256": "f87283316b8e7b2c03de3b5a38ecd59363acb046a01ec6a9db7cd658a9762a8c"
+      "presentationPdfSha256": "f87283316b8e7b2c03de3b5a38ecd59363acb046a01ec6a9db7cd658a9762a8c",
+      "staleAt": "2026-07-28T22:42:33.619988+00:00",
+      "staleReason": "Замечания Product Manager к визуальному прототипу: добавить произвольный диапазон дат на вкладках Дашборд и Инциденты."
     }
   ]
 }

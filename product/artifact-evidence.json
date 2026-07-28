@@ -18,6 +18,25 @@
       "dataSourceRef": null,
       "notes": "",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-002",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-07-28T22:45:34.668739+00:00",
+      "checks": [
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Фильтрация по датам и проверка границ периода реализованы",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
+      ],
+      "result": "PASSED",
+      "sha256": "f7dfd787a0e7314cacdf9f079393052d125f4e9ca4cd93f96cad8f1f34984eb7",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }

@@ -4,21 +4,21 @@
   "productVersion": "4.4",
   "projectName": null,
   "currentPhase": "VISUAL_PROTOTYPE",
-  "status": "WAITING_FOR_APPROVAL",
-  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
+  "status": "IN_PROGRESS",
+  "nextAction": "Продолжить этап VISUAL_PROTOTYPE по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "VISUAL_PROTOTYPE",
-    "status": "READY_FOR_REVIEW",
-    "reviewId": "VISUAL_PROTOTYPE-R1",
-    "markdownReport": "reports/visual-prototype-v0.1.md",
-    "pdfReport": "reports/visual-prototype-v0.1.pdf",
-    "shownToProductManagerAt": "2026-07-28T17:30:53.017027+00:00",
-    "nextPhase": "VISUAL_VALIDATION"
+    "phase": null,
+    "status": "NOT_PREPARED",
+    "reviewId": null,
+    "markdownReport": null,
+    "pdfReport": null,
+    "shownToProductManagerAt": null,
+    "nextPhase": null
   },
   "artifactStatus": {
     "requirements": "COMMITTED",

@@ -697,6 +697,21 @@
       "exactUserMessage": "Ты опять упоминаешь текущую интеграцию Set Mark c Честным знаком, а ее вообще не существует. С Честным знаком интегрирована только касса напрямую. Верно, это последнее замечание.",
       "createdAt": "2026-07-28T17:08:08.790442+00:00",
       "recordedBy": "manual_revision_after_pm_feedback"
+    },
+    {
+      "id": "PM-DEC-033",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-VP-001",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "functionalRequirements",
+        "mainJourney"
+      ],
+      "decision": "На вкладках «Дашборд» и «Инциденты» пользователь должен иметь возможность указать произвольный диапазон дат.",
+      "exactUserMessage": "Дай возможность указывать произвольный набор дат на вкладках Дашборд и Инциденты",
+      "createdAt": "2026-07-28T22:45:00+00:00",
+      "recordedBy": "manual_revision_after_pm_feedback"
     }
   ]
 }
