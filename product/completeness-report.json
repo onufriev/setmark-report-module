@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T15:15:35.440093+00:00",
+  "evaluatedAt": "2026-07-28T15:23:47.831878+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -273,18 +273,11 @@
       "file": "requirements/06-system-scenarios/operational-scenarios.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Эксплуатационные сценарии жизненного цикла",
-          "file": "requirements/06-system-scenarios/operational-scenarios.md",
-          "line": 3,
-          "questionId": "Q-OPS-001",
-          "domainId": "operationalScenarios",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-022"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -427,12 +420,6 @@
           "file": "requirements/08-acceptance/validation-success.md"
         },
         {
-          "questionId": "Q-OPS-001",
-          "domainId": "operationalScenarios",
-          "title": "Эксплуатационные сценарии жизненного цикла",
-          "file": "requirements/06-system-scenarios/operational-scenarios.md"
-        },
-        {
           "questionId": "Q-019",
           "domainId": "businessScenarios",
           "title": "Бизнес-сценарии",
@@ -466,12 +453,6 @@
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
           "file": "requirements/08-acceptance/validation-success.md"
-        },
-        {
-          "questionId": "Q-OPS-001",
-          "domainId": "operationalScenarios",
-          "title": "Эксплуатационные сценарии жизненного цикла",
-          "file": "requirements/06-system-scenarios/operational-scenarios.md"
         },
         {
           "questionId": "Q-019",
@@ -561,12 +542,6 @@
       "domainId": "successSignal",
       "title": "Критерий успешной проверки прототипа",
       "file": "requirements/08-acceptance/validation-success.md"
-    },
-    {
-      "questionId": "Q-OPS-001",
-      "domainId": "operationalScenarios",
-      "title": "Эксплуатационные сценарии жизненного цикла",
-      "file": "requirements/06-system-scenarios/operational-scenarios.md"
     },
     {
       "questionId": "Q-019",

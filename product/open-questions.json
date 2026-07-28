@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-OPS-001",
-      "domainId": "operationalScenarios",
-      "title": "Эксплуатационные сценарии жизненного цикла",
-      "file": "requirements/06-system-scenarios/operational-scenarios.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-019",
       "domainId": "businessScenarios",
       "title": "Бизнес-сценарии",

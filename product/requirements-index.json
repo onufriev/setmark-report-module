@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "8187147895e0ca0c643252dedeea32161bb9bb1685f93b4f01ad5e4fb806009c",
+  "requirementsSha256": "cea05c5ad9c73b325d8424450bf342506cae1e85f190079928ea1d628eab8f2c",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -477,6 +477,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-022",
+      "title": "Решение Product Manager",
+      "file": "requirements/06-system-scenarios/operational-scenarios.md",
+      "line": 3,
+      "domainId": "operationalScenarios",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-022"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-DEC-021",
       "title": "Решение Product Manager",
       "file": "requirements/06-system-scenarios/system-scenarios.md",
@@ -490,14 +502,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Эксплуатационные сценарии жизненного цикла",
-      "file": "requirements/06-system-scenarios/operational-scenarios.md",
-      "line": 3,
-      "questionId": "Q-OPS-001",
-      "domainId": "operationalScenarios",
-      "status": "Требуется решение"
-    },
     {
       "title": "Бизнес-сценарии",
       "file": "requirements/07-scenarios/business-scenarios.md",
@@ -653,8 +657,8 @@
     },
     {
       "file": "requirements/06-system-scenarios/operational-scenarios.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
