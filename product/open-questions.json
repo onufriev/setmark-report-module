@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-003",
-      "domainId": "salesObjects",
-      "title": "Объекты продаж и их иерархия",
-      "file": "requirements/01-base/sales-objects.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-006",
       "domainId": "businessRules",
       "title": "Бизнес-правила",

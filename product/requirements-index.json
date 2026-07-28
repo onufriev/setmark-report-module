@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "5680bf5ec4e7caee5711e0d73b6f220b6f963e00b05fce224412444f7514b1d7",
+  "requirementsSha256": "f51da032d268a59af0ff87ffb98ae6689e31c8d8ed02cd55d3d3a783a3ba3192",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -61,6 +61,18 @@
       "status": "Подтверждено источником",
       "evidenceRefs": [
         "SRC-EV-011"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-005",
+      "title": "Объекты продаж и их иерархия",
+      "file": "requirements/01-base/sales-objects.md",
+      "line": 3,
+      "domainId": "salesObjects",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-005"
       ],
       "applicability": "MVP1"
     },
@@ -276,14 +288,6 @@
   ],
   "needsInput": [
     {
-      "title": "Объекты продаж и их иерархия",
-      "file": "requirements/01-base/sales-objects.md",
-      "line": 3,
-      "questionId": "Q-003",
-      "domainId": "salesObjects",
-      "status": "Требуется решение"
-    },
-    {
       "title": "Бизнес-правила",
       "file": "requirements/02-system/business-rules.md",
       "line": 3,
@@ -476,8 +480,8 @@
     },
     {
       "file": "requirements/01-base/sales-objects.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T10:49:00.635534+00:00",
+  "evaluatedAt": "2026-07-28T10:53:19.083577+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -258,18 +258,11 @@
       "file": "requirements/01-base/sales-objects.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Объекты продаж и их иерархия",
-          "file": "requirements/01-base/sales-objects.md",
-          "line": 3,
-          "questionId": "Q-003",
-          "domainId": "salesObjects",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-005"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -586,12 +579,6 @@
           "file": "requirements/03-architecture/component-source.md"
         },
         {
-          "questionId": "Q-003",
-          "domainId": "salesObjects",
-          "title": "Объекты продаж и их иерархия",
-          "file": "requirements/01-base/sales-objects.md"
-        },
-        {
           "questionId": "Q-010",
           "domainId": "hardware",
           "title": "Оборудование",
@@ -751,12 +738,6 @@
           "domainId": "uiSource",
           "title": "Источник интерфейса и компонентов",
           "file": "requirements/03-architecture/component-source.md"
-        },
-        {
-          "questionId": "Q-003",
-          "domainId": "salesObjects",
-          "title": "Объекты продаж и их иерархия",
-          "file": "requirements/01-base/sales-objects.md"
         },
         {
           "questionId": "Q-010",
@@ -972,12 +953,6 @@
       "domainId": "uiSource",
       "title": "Источник интерфейса и компонентов",
       "file": "requirements/03-architecture/component-source.md"
-    },
-    {
-      "questionId": "Q-003",
-      "domainId": "salesObjects",
-      "title": "Объекты продаж и их иерархия",
-      "file": "requirements/01-base/sales-objects.md"
     },
     {
       "questionId": "Q-010",
