@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T15:52:10.420801+00:00",
+  "evaluatedAt": "2026-07-28T16:06:34.776544+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -334,18 +334,11 @@
       "file": "requirements/09-traceability/traceability.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Трассировка требований",
-          "file": "requirements/09-traceability/traceability.md",
-          "line": 3,
-          "questionId": "Q-023",
-          "domainId": "traceability",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-027"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -371,25 +364,12 @@
   ],
   "gates": {
     "VISUAL_PROTOTYPE": {
-      "status": "BLOCKED",
-      "blockingQuestions": [
-        {
-          "questionId": "Q-023",
-          "domainId": "traceability",
-          "title": "Трассировка требований",
-          "file": "requirements/09-traceability/traceability.md"
-        }
-      ]
+      "status": "PASSED",
+      "blockingQuestions": []
     },
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-023",
-          "domainId": "traceability",
-          "title": "Трассировка требований",
-          "file": "requirements/09-traceability/traceability.md"
-        },
         {
           "questionId": "Q-PROTO-DATA-001",
           "domainId": "prototypeDataSource",
@@ -447,15 +427,8 @@
       ]
     }
   },
-  "gateStatus": "BLOCKED",
-  "blockingQuestions": [
-    {
-      "questionId": "Q-023",
-      "domainId": "traceability",
-      "title": "Трассировка требований",
-      "file": "requirements/09-traceability/traceability.md"
-    }
-  ],
+  "gateStatus": "PASSED",
+  "blockingQuestions": [],
   "uiSource": {
     "schemaVersion": "4.4",
     "strategy": "COMPONENT_LIBRARY",

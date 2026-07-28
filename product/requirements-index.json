@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "aceb25b77a477ab0f09ea19026e39705c2244aef0c94527dcd0f1a7e50d662dc",
+  "requirementsSha256": "cb693623b28149faba743a0d20272a624d33d736b2d78a00ef46863b171c2787",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -547,17 +547,21 @@
         "PM-DEC-026"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-027",
+      "title": "Решение Product Manager",
+      "file": "requirements/09-traceability/traceability.md",
+      "line": 3,
+      "domainId": "traceability",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-027"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Трассировка требований",
-      "file": "requirements/09-traceability/traceability.md",
-      "line": 3,
-      "questionId": "Q-023",
-      "domainId": "traceability",
-      "status": "Требуется решение"
-    },
     {
       "title": "Источник данных рабочего прототипа",
       "file": "requirements/10-prototype/prototype-data-source.md",
@@ -709,8 +713,8 @@
     },
     {
       "file": "requirements/09-traceability/traceability.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

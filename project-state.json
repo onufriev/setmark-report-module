@@ -4,8 +4,8 @@
   "productVersion": "4.4",
   "projectName": null,
   "currentPhase": "PRODUCT_DEFINITION",
-  "status": "WAITING_FOR_INPUT",
-  "nextAction": "Закрыть все требования или явно зафиксировать NEEDS_INPUT до визуального прототипа.",
+  "status": "IN_PROGRESS",
+  "nextAction": "Продолжить этап PRODUCT_DEFINITION по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",

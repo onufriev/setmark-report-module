@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-023",
-      "domainId": "traceability",
-      "title": "Трассировка требований",
-      "file": "requirements/09-traceability/traceability.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-PROTO-DATA-001",
       "domainId": "prototypeDataSource",
       "title": "Источник данных рабочего прототипа",
