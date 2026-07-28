@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T15:39:45.005475+00:00",
+  "evaluatedAt": "2026-07-28T15:46:54.840071+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -145,18 +145,11 @@
       "file": "requirements/08-acceptance/acceptance-criteria.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Критерии приёмки",
-          "file": "requirements/08-acceptance/acceptance-criteria.md",
-          "line": 3,
-          "questionId": "Q-021",
-          "domainId": "acceptanceCriteria",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-025"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -388,12 +381,6 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
-          "questionId": "Q-021",
-          "domainId": "acceptanceCriteria",
-          "title": "Критерии приёмки",
-          "file": "requirements/08-acceptance/acceptance-criteria.md"
-        },
-        {
           "questionId": "Q-022",
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
@@ -410,12 +397,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-021",
-          "domainId": "acceptanceCriteria",
-          "title": "Критерии приёмки",
-          "file": "requirements/08-acceptance/acceptance-criteria.md"
-        },
         {
           "questionId": "Q-022",
           "domainId": "successSignal",
@@ -487,12 +468,6 @@
   },
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
-    {
-      "questionId": "Q-021",
-      "domainId": "acceptanceCriteria",
-      "title": "Критерии приёмки",
-      "file": "requirements/08-acceptance/acceptance-criteria.md"
-    },
     {
       "questionId": "Q-022",
       "domainId": "successSignal",

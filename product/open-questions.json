@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-021",
-      "domainId": "acceptanceCriteria",
-      "title": "Критерии приёмки",
-      "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-022",
       "domainId": "successSignal",
       "title": "Критерий успешной проверки прототипа",

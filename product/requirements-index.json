@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "ba10df6234b5a34e61ed9a88af8a080dd4a6c36aeed81b0cd4a90af296b7206d",
+  "requirementsSha256": "2e13ee789fe13718634a661bd026435c340604d6f12bdd47034a82c4a8d7c6d0",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -523,17 +523,21 @@
         "PM-DEC-024"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-025",
+      "title": "Решение Product Manager",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "line": 3,
+      "domainId": "acceptanceCriteria",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-025"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Критерии приёмки",
-      "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "line": 3,
-      "questionId": "Q-021",
-      "domainId": "acceptanceCriteria",
-      "status": "Требуется решение"
-    },
     {
       "title": "Критерий успешной проверки прототипа",
       "file": "requirements/08-acceptance/validation-success.md",
@@ -689,8 +693,8 @@
     },
     {
       "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
