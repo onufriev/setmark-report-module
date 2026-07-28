@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-27T23:46:28.406380+00:00",
+  "evaluatedAt": "2026-07-28T10:42:06.051479+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -37,20 +37,12 @@
       "file": "requirements/01-base/goals-and-scope.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-003",
         "REQ-GS-001"
       ],
-      "needsInput": [
-        {
-          "title": "Цели и границы первой версии",
-          "file": "requirements/01-base/goals-and-scope.md",
-          "line": 3,
-          "questionId": "Q-002",
-          "domainId": "goalsScope",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -548,12 +540,6 @@
           "file": "requirements/01-base/product-context.md"
         },
         {
-          "questionId": "Q-002",
-          "domainId": "goalsScope",
-          "title": "Цели и границы первой версии",
-          "file": "requirements/01-base/goals-and-scope.md"
-        },
-        {
           "questionId": "Q-004",
           "domainId": "functionalRequirements",
           "title": "Функциональные требования",
@@ -725,12 +711,6 @@
           "domainId": "productContext",
           "title": "Продуктовый контекст",
           "file": "requirements/01-base/product-context.md"
-        },
-        {
-          "questionId": "Q-002",
-          "domainId": "goalsScope",
-          "title": "Цели и границы первой версии",
-          "file": "requirements/01-base/goals-and-scope.md"
         },
         {
           "questionId": "Q-004",
@@ -958,12 +938,6 @@
       "domainId": "productContext",
       "title": "Продуктовый контекст",
       "file": "requirements/01-base/product-context.md"
-    },
-    {
-      "questionId": "Q-002",
-      "domainId": "goalsScope",
-      "title": "Цели и границы первой версии",
-      "file": "requirements/01-base/goals-and-scope.md"
     },
     {
       "questionId": "Q-004",

@@ -284,6 +284,19 @@
       "exactUserMessage": "давай использовать Контур устранения",
       "createdAt": "2026-07-27T23:22:51.870770+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-003",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-002",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "goalsScope"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "да, утверждаем",
+      "createdAt": "2026-07-28T10:41:42.302448+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
