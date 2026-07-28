@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "b5c8a0ae8db328e24f6e220717989cc09555932b0c2ed100e214fa6fc06a6131",
+  "requirementsSha256": "9329baa5fc279a863e197e7fc4f57c088a46bb408ae1376c8ea8b6fa9d386463",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -284,6 +284,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-014",
+      "title": "Решение Product Manager",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 15,
+      "domainId": "technicalConstraints",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-014"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -562,9 +574,9 @@
     },
     {
       "file": "requirements/03-architecture/technical-constraints.md",
-      "requirements": 1,
+      "requirements": 2,
       "needsInput": 0,
-      "candidateSections": 1
+      "candidateSections": 2
     },
     {
       "file": "requirements/04-quality/accessibility-requirements.md",

@@ -429,6 +429,19 @@
       "exactUserMessage": "все верно",
       "createdAt": "2026-07-28T13:04:38.503382+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-014",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-011A",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "Визуальный прототип должен запускаться в браузере на телефоне. Нативное приложение для iOS или Android не требуется.",
+      "exactUserMessage": "давай еще зафиксируем требование запуска на телефоне",
+      "createdAt": "2026-07-28T13:16:49.254938+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
