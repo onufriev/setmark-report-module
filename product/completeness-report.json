@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T11:12:01.370124+00:00",
+  "evaluatedAt": "2026-07-28T11:21:47.090051+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -82,18 +82,11 @@
       "file": "requirements/02-system/roles-and-permissions.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Роли и права доступа",
-          "file": "requirements/02-system/roles-and-permissions.md",
-          "line": 3,
-          "questionId": "Q-007",
-          "domainId": "rolesPermissions",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-008"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -509,12 +502,6 @@
           "file": "requirements/02-system/system-requirements.md"
         },
         {
-          "questionId": "Q-007",
-          "domainId": "rolesPermissions",
-          "title": "Роли и права доступа",
-          "file": "requirements/02-system/roles-and-permissions.md"
-        },
-        {
           "questionId": "Q-008",
           "domainId": "statesErrors",
           "title": "Ошибки, пустые и недоступные состояния",
@@ -656,12 +643,6 @@
           "domainId": "functionalRequirements",
           "title": "Функциональные требования",
           "file": "requirements/02-system/system-requirements.md"
-        },
-        {
-          "questionId": "Q-007",
-          "domainId": "rolesPermissions",
-          "title": "Роли и права доступа",
-          "file": "requirements/02-system/roles-and-permissions.md"
         },
         {
           "questionId": "Q-008",
@@ -859,12 +840,6 @@
       "domainId": "functionalRequirements",
       "title": "Функциональные требования",
       "file": "requirements/02-system/system-requirements.md"
-    },
-    {
-      "questionId": "Q-007",
-      "domainId": "rolesPermissions",
-      "title": "Роли и права доступа",
-      "file": "requirements/02-system/roles-and-permissions.md"
     },
     {
       "questionId": "Q-008",
