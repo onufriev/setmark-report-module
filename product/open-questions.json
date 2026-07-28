@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-010",
-      "domainId": "hardware",
-      "title": "Оборудование",
-      "file": "requirements/03-architecture/hardware-requirements.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-011",
       "domainId": "technicalConstraints",
       "title": "Технические ограничения прототипа",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "f74bf90ccf8046e76b79810addda63a5b0bdc6d86c321da17c60b308aae140e2",
+  "requirementsSha256": "ec3a1ce1a99841f35236ddf5609a2fb5c0e839f5468621a47a38d8505ddd5e72",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -260,6 +260,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-012",
+      "title": "Решение Product Manager",
+      "file": "requirements/03-architecture/hardware-requirements.md",
+      "line": 3,
+      "domainId": "hardware",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-012"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -361,14 +373,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Оборудование",
-      "file": "requirements/03-architecture/hardware-requirements.md",
-      "line": 3,
-      "questionId": "Q-010",
-      "domainId": "hardware",
-      "status": "Требуется решение"
-    },
     {
       "title": "Технические ограничения прототипа",
       "file": "requirements/03-architecture/technical-constraints.md",
@@ -548,8 +552,8 @@
     },
     {
       "file": "requirements/03-architecture/hardware-requirements.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

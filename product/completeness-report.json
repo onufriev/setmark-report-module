@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T12:44:51.378222+00:00",
+  "evaluatedAt": "2026-07-28T12:56:10.122859+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -226,18 +226,11 @@
       "file": "requirements/03-architecture/hardware-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Оборудование",
-          "file": "requirements/03-architecture/hardware-requirements.md",
-          "line": 3,
-          "questionId": "Q-010",
-          "domainId": "hardware",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-012"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -498,12 +491,6 @@
           "file": "requirements/08-acceptance/validation-success.md"
         },
         {
-          "questionId": "Q-010",
-          "domainId": "hardware",
-          "title": "Оборудование",
-          "file": "requirements/03-architecture/hardware-requirements.md"
-        },
-        {
           "questionId": "Q-016",
           "domainId": "integrations",
           "title": "Интеграции",
@@ -591,12 +578,6 @@
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
           "file": "requirements/08-acceptance/validation-success.md"
-        },
-        {
-          "questionId": "Q-010",
-          "domainId": "hardware",
-          "title": "Оборудование",
-          "file": "requirements/03-architecture/hardware-requirements.md"
         },
         {
           "questionId": "Q-016",
@@ -740,12 +721,6 @@
       "domainId": "successSignal",
       "title": "Критерий успешной проверки прототипа",
       "file": "requirements/08-acceptance/validation-success.md"
-    },
-    {
-      "questionId": "Q-010",
-      "domainId": "hardware",
-      "title": "Оборудование",
-      "file": "requirements/03-architecture/hardware-requirements.md"
     },
     {
       "questionId": "Q-016",
