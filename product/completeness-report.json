@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T10:42:06.051479+00:00",
+  "evaluatedAt": "2026-07-28T10:49:00.635534+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -14,21 +14,13 @@
       "file": "requirements/01-base/product-context.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-004",
         "REQ-PC-001",
         "REQ-PC-002"
       ],
-      "needsInput": [
-        {
-          "title": "Продуктовый контекст",
-          "file": "requirements/01-base/product-context.md",
-          "line": 3,
-          "questionId": "Q-001",
-          "domainId": "productContext",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -534,12 +526,6 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
-          "questionId": "Q-001",
-          "domainId": "productContext",
-          "title": "Продуктовый контекст",
-          "file": "requirements/01-base/product-context.md"
-        },
-        {
           "questionId": "Q-004",
           "domainId": "functionalRequirements",
           "title": "Функциональные требования",
@@ -706,12 +692,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-001",
-          "domainId": "productContext",
-          "title": "Продуктовый контекст",
-          "file": "requirements/01-base/product-context.md"
-        },
         {
           "questionId": "Q-004",
           "domainId": "functionalRequirements",
@@ -933,12 +913,6 @@
   },
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
-    {
-      "questionId": "Q-001",
-      "domainId": "productContext",
-      "title": "Продуктовый контекст",
-      "file": "requirements/01-base/product-context.md"
-    },
     {
       "questionId": "Q-004",
       "domainId": "functionalRequirements",

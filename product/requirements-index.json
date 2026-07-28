@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "71528505b5accf2eee6d6746e3be351e27bc54cfbab11525ccb65cb1f5d182cb",
+  "requirementsSha256": "5680bf5ec4e7caee5711e0d73b6f220b6f963e00b05fce224412444f7514b1d7",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -28,10 +28,22 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-004",
+      "title": "Продуктовый контекст",
+      "file": "requirements/01-base/product-context.md",
+      "line": 3,
+      "domainId": "productContext",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-004"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-PC-001",
       "title": "Назначение продукта",
       "file": "requirements/01-base/product-context.md",
-      "line": 26,
+      "line": 36,
       "domainId": "productContext",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -44,7 +56,7 @@
       "id": "REQ-PC-002",
       "title": "Контекст Set Mark",
       "file": "requirements/01-base/product-context.md",
-      "line": 39,
+      "line": 49,
       "domainId": "productContext",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -264,14 +276,6 @@
   ],
   "needsInput": [
     {
-      "title": "Продуктовый контекст",
-      "file": "requirements/01-base/product-context.md",
-      "line": 3,
-      "questionId": "Q-001",
-      "domainId": "productContext",
-      "status": "Требуется решение"
-    },
-    {
       "title": "Объекты продаж и их иерархия",
       "file": "requirements/01-base/sales-objects.md",
       "line": 3,
@@ -466,8 +470,8 @@
     },
     {
       "file": "requirements/01-base/product-context.md",
-      "requirements": 2,
-      "needsInput": 1,
+      "requirements": 3,
+      "needsInput": 0,
       "candidateSections": 3
     },
     {
