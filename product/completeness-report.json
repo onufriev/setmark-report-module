@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T13:16:56.759831+00:00",
+  "evaluatedAt": "2026-07-28T13:43:21.943653+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -401,18 +401,11 @@
       "file": "requirements/04-quality/accessibility-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Доступность интерфейса",
-          "file": "requirements/04-quality/accessibility-requirements.md",
-          "line": 3,
-          "questionId": "Q-014",
-          "domainId": "accessibility",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-015"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -527,12 +520,6 @@
           "file": "requirements/04-quality/localization-requirements.md"
         },
         {
-          "questionId": "Q-014",
-          "domainId": "accessibility",
-          "title": "Доступность интерфейса",
-          "file": "requirements/04-quality/accessibility-requirements.md"
-        },
-        {
           "questionId": "Q-023",
           "domainId": "traceability",
           "title": "Трассировка требований",
@@ -608,12 +595,6 @@
           "domainId": "localization",
           "title": "Локализация и форматы",
           "file": "requirements/04-quality/localization-requirements.md"
-        },
-        {
-          "questionId": "Q-014",
-          "domainId": "accessibility",
-          "title": "Доступность интерфейса",
-          "file": "requirements/04-quality/accessibility-requirements.md"
         },
         {
           "questionId": "Q-023",
@@ -745,12 +726,6 @@
       "domainId": "localization",
       "title": "Локализация и форматы",
       "file": "requirements/04-quality/localization-requirements.md"
-    },
-    {
-      "questionId": "Q-014",
-      "domainId": "accessibility",
-      "title": "Доступность интерфейса",
-      "file": "requirements/04-quality/accessibility-requirements.md"
     },
     {
       "questionId": "Q-023",

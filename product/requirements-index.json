@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "9329baa5fc279a863e197e7fc4f57c088a46bb408ae1376c8ea8b6fa9d386463",
+  "requirementsSha256": "f4cc575cdc2e9b33551deb24662d69cac02522da5f12e5340cce1323b40aa07b",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -296,6 +296,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-015",
+      "title": "Решение Product Manager",
+      "file": "requirements/04-quality/accessibility-requirements.md",
+      "line": 3,
+      "domainId": "accessibility",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-015"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -397,14 +409,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Доступность интерфейса",
-      "file": "requirements/04-quality/accessibility-requirements.md",
-      "line": 3,
-      "questionId": "Q-014",
-      "domainId": "accessibility",
-      "status": "Требуется решение"
-    },
     {
       "title": "Локализация и форматы",
       "file": "requirements/04-quality/localization-requirements.md",
@@ -580,8 +584,8 @@
     },
     {
       "file": "requirements/04-quality/accessibility-requirements.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-014",
-      "domainId": "accessibility",
-      "title": "Доступность интерфейса",
-      "file": "requirements/04-quality/accessibility-requirements.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-013",
       "domainId": "localization",
       "title": "Локализация и форматы",
