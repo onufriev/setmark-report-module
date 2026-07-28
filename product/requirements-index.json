@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "ec3a1ce1a99841f35236ddf5609a2fb5c0e839f5468621a47a38d8505ddd5e72",
+  "requirementsSha256": "b5c8a0ae8db328e24f6e220717989cc09555932b0c2ed100e214fa6fc06a6131",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -272,6 +272,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-013",
+      "title": "Решение Product Manager",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 3,
+      "domainId": "technicalConstraints",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-013"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -373,14 +385,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Технические ограничения прототипа",
-      "file": "requirements/03-architecture/technical-constraints.md",
-      "line": 3,
-      "questionId": "Q-011",
-      "domainId": "technicalConstraints",
-      "status": "Требуется решение"
-    },
     {
       "title": "Доступность интерфейса",
       "file": "requirements/04-quality/accessibility-requirements.md",
@@ -558,8 +562,8 @@
     },
     {
       "file": "requirements/03-architecture/technical-constraints.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

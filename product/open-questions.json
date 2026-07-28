@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-011",
-      "domainId": "technicalConstraints",
-      "title": "Технические ограничения прототипа",
-      "file": "requirements/03-architecture/technical-constraints.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-014",
       "domainId": "accessibility",
       "title": "Доступность интерфейса",

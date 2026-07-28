@@ -416,6 +416,19 @@
       "exactUserMessage": "верно, хотя это странные требования для такого модуля",
       "createdAt": "2026-07-28T12:56:02.990504+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-013",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-011",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "Визуальный прототип запускается локально в браузере без установки в Set Mark, Set Centrum или Set Retail. Реальные интеграции и backend на этом этапе не создаются; используются подготовленные демонстрационные данные без клиентских данных и секретов. Интерфейс воспроизводит компоненты и паттерны актуального Set Mark, а отсутствие доступа к корпоративному npm-реестру не блокирует создание прототипа. Production-стек, развёртывание и источник данных рабочего прототипа утверждаются отдельно позднее.",
+      "exactUserMessage": "все верно",
+      "createdAt": "2026-07-28T13:04:38.503382+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }

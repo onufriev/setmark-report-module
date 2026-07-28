@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T12:56:10.122859+00:00",
+  "evaluatedAt": "2026-07-28T13:05:39.299629+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -343,18 +343,11 @@
       "file": "requirements/03-architecture/technical-constraints.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Технические ограничения прототипа",
-          "file": "requirements/03-architecture/technical-constraints.md",
-          "line": 3,
-          "questionId": "Q-011",
-          "domainId": "technicalConstraints",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-013"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -521,12 +514,6 @@
           "file": "requirements/07-scenarios/business-scenarios.md"
         },
         {
-          "questionId": "Q-011",
-          "domainId": "technicalConstraints",
-          "title": "Технические ограничения прототипа",
-          "file": "requirements/03-architecture/technical-constraints.md"
-        },
-        {
           "questionId": "Q-012",
           "domainId": "quality",
           "title": "Нефункциональные требования",
@@ -608,12 +595,6 @@
           "domainId": "businessScenarios",
           "title": "Бизнес-сценарии",
           "file": "requirements/07-scenarios/business-scenarios.md"
-        },
-        {
-          "questionId": "Q-011",
-          "domainId": "technicalConstraints",
-          "title": "Технические ограничения прототипа",
-          "file": "requirements/03-architecture/technical-constraints.md"
         },
         {
           "questionId": "Q-012",
@@ -751,12 +732,6 @@
       "domainId": "businessScenarios",
       "title": "Бизнес-сценарии",
       "file": "requirements/07-scenarios/business-scenarios.md"
-    },
-    {
-      "questionId": "Q-011",
-      "domainId": "technicalConstraints",
-      "title": "Технические ограничения прототипа",
-      "file": "requirements/03-architecture/technical-constraints.md"
     },
     {
       "questionId": "Q-012",
