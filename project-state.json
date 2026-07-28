@@ -4,24 +4,24 @@
   "productVersion": "4.4",
   "projectName": null,
   "currentPhase": "PRODUCT_DEFINITION",
-  "status": "IN_PROGRESS",
-  "nextAction": "Продолжить этап PRODUCT_DEFINITION по правилам PRODUCT-COMPILER.md.",
+  "status": "WAITING_FOR_APPROVAL",
+  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": null,
-    "status": "NOT_PREPARED",
-    "reviewId": null,
-    "markdownReport": null,
-    "pdfReport": null,
-    "shownToProductManagerAt": null,
-    "nextPhase": null
+    "phase": "PRODUCT_DEFINITION",
+    "status": "READY_FOR_REVIEW",
+    "reviewId": "PRODUCT_DEFINITION-R1",
+    "markdownReport": "reports/product-definition-v0.1.md",
+    "pdfReport": "reports/product-definition-v0.1.pdf",
+    "shownToProductManagerAt": "2026-07-28T16:31:53.621224+00:00",
+    "nextPhase": "VISUAL_PROTOTYPE"
   },
   "artifactStatus": {
-    "requirements": "IN_PROGRESS",
+    "requirements": "COMMITTED",
     "visualPrototype": "NOT_STARTED",
     "workingPrototype": "NOT_STARTED",
     "handoff": "NOT_STARTED"

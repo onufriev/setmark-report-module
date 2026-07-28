@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T16:06:34.776544+00:00",
+  "evaluatedAt": "2026-07-28T16:31:54.471309+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -347,18 +347,11 @@
       "file": "requirements/10-prototype/prototype-data-source.md",
       "requiredBeforePhase": "WORKING_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Источник данных рабочего прототипа",
-          "file": "requirements/10-prototype/prototype-data-source.md",
-          "line": 3,
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-028"
       ],
+      "needsInput": [],
       "validationNotes": []
     }
   ],
@@ -370,12 +363,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Источник данных рабочего прототипа",
-          "file": "requirements/10-prototype/prototype-data-source.md"
-        },
         {
           "questionId": "Q-PROTO-DATA-001",
           "domainId": "prototypeDataSource",

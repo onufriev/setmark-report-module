@@ -46,6 +46,29 @@
       "presentationPdfReport": "reports/intake-v0.1.pdf",
       "presentationMarkdownSha256": "6dcf39305ef73ce408a432d3fa171c5263d7c92a6b9943cbe8248ef9d9aab897",
       "presentationPdfSha256": "9a3604ffb815354304114972dd1b67ea2475a717a56cf74ccdc4c0f33791cb65"
+    },
+    {
+      "reviewId": "PRODUCT_DEFINITION-R1",
+      "phase": "PRODUCT_DEFINITION",
+      "revision": 1,
+      "status": "READY_FOR_REVIEW",
+      "preparedAt": "2026-07-28T16:31:53.019051+00:00",
+      "registeredBy": "finalize_phase_review.py",
+      "shownToProductManagerAt": "2026-07-28T16:31:53.621224+00:00",
+      "markdownReport": "reports/product-definition-v0.1.md",
+      "markdownSha256": "53cfb2d63cb3b36f5579f8ddc1971e421d048acf25866a2069bbfa93df5e5283",
+      "pdfReport": "reports/product-definition-v0.1.pdf",
+      "pdfSha256": "c163b4d480126e42df976175e1a1d2dd5ecec4004c68c645250cddfbac11c319",
+      "nextPhase": "VISUAL_PROTOTYPE",
+      "approvedAt": null,
+      "approvedBy": null,
+      "decisionText": null,
+      "exactUserMessage": null,
+      "presentationPreparedAt": "2026-07-28T16:31:53.321719+00:00",
+      "presentationMarkdownReport": "reports/product-definition-v0.1.md",
+      "presentationPdfReport": "reports/product-definition-v0.1.pdf",
+      "presentationMarkdownSha256": "53cfb2d63cb3b36f5579f8ddc1971e421d048acf25866a2069bbfa93df5e5283",
+      "presentationPdfSha256": "c163b4d480126e42df976175e1a1d2dd5ecec4004c68c645250cddfbac11c319"
     }
   ]
 }

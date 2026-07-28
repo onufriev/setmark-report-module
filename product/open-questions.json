@@ -1,15 +1,4 @@
 {
   "schemaVersion": "4.4",
-  "questions": [
-    {
-      "id": "Q-PROTO-DATA-001",
-      "domainId": "prototypeDataSource",
-      "title": "Источник данных рабочего прототипа",
-      "file": "requirements/10-prototype/prototype-data-source.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    }
-  ]
+  "questions": []
 }

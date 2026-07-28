@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "cb693623b28149faba743a0d20272a624d33d736b2d78a00ef46863b171c2787",
+  "requirementsSha256": "232873fa419e97758c5d33b2a9beca1bcd03cddc086bc1dae92ecb51d5d742a6",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -559,18 +559,21 @@
         "PM-DEC-027"
       ],
       "applicability": "MVP1"
-    }
-  ],
-  "needsInput": [
+    },
     {
-      "title": "Источник данных рабочего прототипа",
+      "id": "REQ-DEC-028",
+      "title": "Решение Product Manager",
       "file": "requirements/10-prototype/prototype-data-source.md",
       "line": 3,
-      "questionId": "Q-PROTO-DATA-001",
       "domainId": "prototypeDataSource",
-      "status": "Требуется решение"
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-028"
+      ],
+      "applicability": "MVP1"
     }
   ],
+  "needsInput": [],
   "errors": [],
   "diagnostics": [
     {
@@ -719,8 +722,8 @@
     },
     {
       "file": "requirements/10-prototype/prototype-data-source.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     }
   ]
