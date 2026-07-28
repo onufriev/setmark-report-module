@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "93090370769a4b78a1971f5d8a6516109b096250146989bed79caced23de01e6",
+  "requirementsSha256": "47a4b001068cc79f5fd3fb6df82d9ae36531ba92baa09b54bc76b6bf57563333",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -463,17 +463,21 @@
         "SRC-EV-015"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-020",
+      "title": "Решение Product Manager",
+      "file": "requirements/06-system-scenarios/exception-scenarios.md",
+      "line": 3,
+      "domainId": "exceptionScenarios",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-020"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Исключительные сценарии",
-      "file": "requirements/06-system-scenarios/exception-scenarios.md",
-      "line": 3,
-      "questionId": "Q-018",
-      "domainId": "exceptionScenarios",
-      "status": "Требуется решение"
-    },
     {
       "title": "Эксплуатационные сценарии жизненного цикла",
       "file": "requirements/06-system-scenarios/operational-scenarios.md",
@@ -639,8 +643,8 @@
     },
     {
       "file": "requirements/06-system-scenarios/exception-scenarios.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {

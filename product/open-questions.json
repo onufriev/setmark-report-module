@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-018",
-      "domainId": "exceptionScenarios",
-      "title": "Исключительные сценарии",
-      "file": "requirements/06-system-scenarios/exception-scenarios.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-OPS-001",
       "domainId": "operationalScenarios",
       "title": "Эксплуатационные сценарии жизненного цикла",
