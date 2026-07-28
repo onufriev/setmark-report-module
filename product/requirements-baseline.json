@@ -1,7 +1,7 @@
 {
   "schemaVersion": "4.4",
   "status": "COMMITTED",
-  "currentBaselineId": "REQ-BASELINE-002",
+  "currentBaselineId": "REQ-BASELINE-003",
   "baselines": [
     {
       "baselineId": "REQ-BASELINE-001",
@@ -291,6 +291,171 @@
         {
           "path": "requirements/05-integrations/integrations.md",
           "sha256": "49eac01f712ed9a8da1535c28b6afe48bcd1a74515ebdb12500494ae1c9cd12a"
+        },
+        {
+          "path": "requirements/06-system-scenarios/exception-scenarios.md",
+          "sha256": "8bb24ae54ed79bebf602dd1b554749c06620e110c83c0ae7c9515647374b17cb"
+        },
+        {
+          "path": "requirements/06-system-scenarios/operational-scenarios.md",
+          "sha256": "660b22c3c9bf1b1871503b6b3f6f278815e7f4a2d157d34ec423b0e87c17db13"
+        },
+        {
+          "path": "requirements/06-system-scenarios/system-scenarios.md",
+          "sha256": "d6d60c480e5c987dd2778a2d3b4cb43e75679b8f1366f9029f6f85ce95443977"
+        },
+        {
+          "path": "requirements/07-scenarios/business-scenarios.md",
+          "sha256": "b85a0ff731bcabc0fee4ca166ef2aceef3024ca009ba69b6390296223bde8f8e"
+        },
+        {
+          "path": "requirements/07-scenarios/user-journeys.md",
+          "sha256": "9565635ea7a04f29d920302c0e893ffbe80fcdc5ac593d03e07d61d6d63a1b4c"
+        },
+        {
+          "path": "requirements/08-acceptance/acceptance-criteria.md",
+          "sha256": "d15da73a1813b20dc56307439edfeba5e549900ec80dbe33b0db5174477188f6"
+        },
+        {
+          "path": "requirements/08-acceptance/validation-success.md",
+          "sha256": "4ec87f160a6e6a79e7823122315757d01842f364422ce81a39de3c0f19251ec6"
+        },
+        {
+          "path": "requirements/09-traceability/traceability.md",
+          "sha256": "8300810d37b107bc33e3c920715e4d6e96e1b12127c6519d82a860c90581c4f4"
+        },
+        {
+          "path": "requirements/10-prototype/prototype-data-source.md",
+          "sha256": "c3dc3f1fc53a07935bd59f7d0a778349b384e7ee9759853e6e75889c4bed2fa8"
+        }
+      ]
+    },
+    {
+      "baselineId": "REQ-BASELINE-003",
+      "committedAt": "2026-07-28T17:09:21.089379+00:00",
+      "gate": "VISUAL_PROTOTYPE",
+      "gateStatus": "PASSED",
+      "requirementCount": 49,
+      "needsInputCount": 0,
+      "openFutureQuestions": [],
+      "requirementRefs": [
+        "REQ-DEC-003",
+        "REQ-GS-001",
+        "REQ-DEC-004",
+        "REQ-PC-001",
+        "REQ-PC-002",
+        "REQ-DEC-005",
+        "REQ-DEC-031",
+        "REQ-DEC-007",
+        "REQ-BR-001",
+        "REQ-BR-002",
+        "REQ-BR-003",
+        "REQ-DEC-001",
+        "REQ-DEC-006",
+        "REQ-BO-001",
+        "REQ-DEC-002",
+        "REQ-DEC-008",
+        "REQ-DEC-009",
+        "REQ-DEC-010",
+        "REQ-FR-001",
+        "REQ-FR-002",
+        "REQ-FR-003",
+        "REQ-DEC-011",
+        "REQ-DEC-012",
+        "REQ-DEC-013",
+        "REQ-DEC-014",
+        "REQ-DEC-015",
+        "REQ-DEC-016",
+        "REQ-DEC-017",
+        "REQ-NFR-001",
+        "REQ-NFR-002",
+        "REQ-NFR-003",
+        "REQ-DEC-018",
+        "REQ-DATA-001",
+        "REQ-DATA-002",
+        "REQ-DEC-032",
+        "REQ-DEC-019",
+        "REQ-INT-001",
+        "REQ-INT-002",
+        "REQ-INT-003",
+        "REQ-DEC-020",
+        "REQ-DEC-022",
+        "REQ-DEC-021",
+        "REQ-DEC-030",
+        "REQ-DEC-023",
+        "REQ-DEC-024",
+        "REQ-DEC-025",
+        "REQ-DEC-026",
+        "REQ-DEC-027",
+        "REQ-DEC-028"
+      ],
+      "requirementsSha256": "bd56b694c4768b07e9fc75c570e65a20d7bdd4338e36eaa24b5f612ba11ecf65",
+      "indexSha256": "4f4d29a74f2b72a2ece452f115282fa5724483294376128e708521919a813ba5",
+      "referencedEvidenceSha256": "dd54d3f5825316289f24aaddde20b7080b1e6084b64725efd6c046c07fd0f470",
+      "files": [
+        {
+          "path": "requirements/01-base/goals-and-scope.md",
+          "sha256": "1bb511c5a0799083f0be45798da18b793b656074d8b64d2115a9e469ee3b0583"
+        },
+        {
+          "path": "requirements/01-base/product-context.md",
+          "sha256": "83617401ae6083899f70e12d92565827eaba3769b85225c32de8c015c62cd8f9"
+        },
+        {
+          "path": "requirements/01-base/sales-objects.md",
+          "sha256": "eda22514c1efdcfbfe03624053890ae8e8baa2bf31d03b16d920e1819f2ea23e"
+        },
+        {
+          "path": "requirements/02-system/business-rules.md",
+          "sha256": "94702267723f73ffb3778db9966bc95cb03e4696a38d01577a34f687fe4a667c"
+        },
+        {
+          "path": "requirements/02-system/entities-and-data.md",
+          "sha256": "bda67f6c5ef38a17412f0a95b572849360d3dc8db3e13cd21e188ac58353632e"
+        },
+        {
+          "path": "requirements/02-system/roles-and-permissions.md",
+          "sha256": "efee1bf69634221ed0c6cd67f15c395820475ebf2f280fe3caab63f07e7b5e2f"
+        },
+        {
+          "path": "requirements/02-system/states-and-errors.md",
+          "sha256": "0d6ad73d5bac330b98ef7605ea6958201c40d0651d288e31fcc492682a5bbfa3"
+        },
+        {
+          "path": "requirements/02-system/system-requirements.md",
+          "sha256": "5d1756aeebc5f5f5a8befcaae4dccb9e4773aa747bc0afd83e221d02ad2a69aa"
+        },
+        {
+          "path": "requirements/03-architecture/component-source.md",
+          "sha256": "5815adf1c9bc852de6bdccd0a48aeb2e691db0c13bacf8132ed043b6f05aa26c"
+        },
+        {
+          "path": "requirements/03-architecture/hardware-requirements.md",
+          "sha256": "f9de1894fc837b4f4cde999291379e0d9821d2964b52e1c747b27356e2c944c3"
+        },
+        {
+          "path": "requirements/03-architecture/technical-constraints.md",
+          "sha256": "682bce91f7baea6a40da770c1e63a3a61238b40d9616e2c240cb572e7bce044d"
+        },
+        {
+          "path": "requirements/04-quality/accessibility-requirements.md",
+          "sha256": "d320576de2b487325f6827396a4613d82acbdbaf51c991bdd3acf006672e0bdf"
+        },
+        {
+          "path": "requirements/04-quality/localization-requirements.md",
+          "sha256": "5b21907b75c7b67d08bf937fb476b5347239212e0e9866941b180453da2cebf2"
+        },
+        {
+          "path": "requirements/04-quality/quality-requirements.md",
+          "sha256": "621a6f6602ad4c2a680635dd668f976706fb07ed3df93e38ead89f962876c737"
+        },
+        {
+          "path": "requirements/05-integrations/data-requirements.md",
+          "sha256": "38ceaed3cb35fce4d7f9bda16cacdaea8c02b08ca99f287ca78af4656b9b125f"
+        },
+        {
+          "path": "requirements/05-integrations/integrations.md",
+          "sha256": "5b7144b000eb6979c7a994961fb1f0b0fbd7406e6cc5ef27b6bb56b414cc1de3"
         },
         {
           "path": "requirements/06-system-scenarios/exception-scenarios.md",

@@ -14,10 +14,10 @@
   "phaseReview": {
     "phase": "PRODUCT_DEFINITION",
     "status": "READY_FOR_REVIEW",
-    "reviewId": "PRODUCT_DEFINITION-R2",
-    "markdownReport": "reports/product-definition-v0.2.md",
-    "pdfReport": "reports/product-definition-v0.2.pdf",
-    "shownToProductManagerAt": "2026-07-28T16:57:09.179862+00:00",
+    "reviewId": "PRODUCT_DEFINITION-R3",
+    "markdownReport": "reports/product-definition-v0.3.md",
+    "pdfReport": "reports/product-definition-v0.3.pdf",
+    "shownToProductManagerAt": "2026-07-28T17:10:51.388855+00:00",
     "nextPhase": "VISUAL_PROTOTYPE"
   },
   "artifactStatus": {

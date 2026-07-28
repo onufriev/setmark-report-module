@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "4615e3ecbc96f9e7a28eacc8b8ca0b9e6bd4f2d20b46cc4073b89aa68abe8318",
+  "requirementsSha256": "bd56b694c4768b07e9fc75c570e65a20d7bdd4338e36eaa24b5f612ba11ecf65",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -428,14 +428,14 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-029",
+      "id": "REQ-DEC-032",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/integrations.md",
       "line": 3,
       "domainId": "integrations",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-029"
+        "PM-DEC-032"
       ],
       "applicability": "MVP1"
     },
