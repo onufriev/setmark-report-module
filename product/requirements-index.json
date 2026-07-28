@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "2a62f7a873f7e2625ea8b0a89cff77b2bbe05aa2f4a7208f97da16196398a0d8",
+  "requirementsSha256": "93090370769a4b78a1971f5d8a6516109b096250146989bed79caced23de01e6",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -35,7 +35,8 @@
       "domainId": "productContext",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-004"
+        "PM-DEC-004",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -183,7 +184,8 @@
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
         "PM-DEC-008",
-        "PM-DEC-010"
+        "PM-DEC-010",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -255,7 +257,8 @@
       "domainId": "uiSource",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-011"
+        "PM-DEC-011",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -267,7 +270,8 @@
       "domainId": "hardware",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-012"
+        "PM-DEC-012",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -279,7 +283,8 @@
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-013"
+        "PM-DEC-013",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -291,7 +296,8 @@
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-014"
+        "PM-DEC-014",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -315,7 +321,8 @@
       "domainId": "localization",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-016"
+        "PM-DEC-016",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -327,7 +334,8 @@
       "domainId": "quality",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-017"
+        "PM-DEC-017",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -375,7 +383,8 @@
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-018"
+        "PM-DEC-018",
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -402,6 +411,18 @@
       "evidenceRefs": [
         "SRC-EV-007",
         "SRC-EV-012"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-019",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 3,
+      "domainId": "integrations",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -445,14 +466,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Интеграции",
-      "file": "requirements/05-integrations/integrations.md",
-      "line": 3,
-      "questionId": "Q-016",
-      "domainId": "integrations",
-      "status": "Требуется решение"
-    },
     {
       "title": "Исключительные сценарии",
       "file": "requirements/06-system-scenarios/exception-scenarios.md",
@@ -620,8 +633,8 @@
     },
     {
       "file": "requirements/05-integrations/integrations.md",
-      "requirements": 3,
-      "needsInput": 1,
+      "requirements": 4,
+      "needsInput": 0,
       "candidateSections": 4
     },
     {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T14:28:49.687466+00:00",
+  "evaluatedAt": "2026-07-28T14:48:12.804974+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -231,22 +231,14 @@
       "file": "requirements/05-integrations/integrations.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-019",
         "REQ-INT-001",
         "REQ-INT-002",
         "REQ-INT-003"
       ],
-      "needsInput": [
-        {
-          "title": "Интеграции",
-          "file": "requirements/05-integrations/integrations.md",
-          "line": 3,
-          "questionId": "Q-016",
-          "domainId": "integrations",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -449,12 +441,6 @@
           "file": "requirements/08-acceptance/validation-success.md"
         },
         {
-          "questionId": "Q-016",
-          "domainId": "integrations",
-          "title": "Интеграции",
-          "file": "requirements/05-integrations/integrations.md"
-        },
-        {
           "questionId": "Q-017",
           "domainId": "systemScenarios",
           "title": "Системные сценарии",
@@ -506,12 +492,6 @@
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
           "file": "requirements/08-acceptance/validation-success.md"
-        },
-        {
-          "questionId": "Q-016",
-          "domainId": "integrations",
-          "title": "Интеграции",
-          "file": "requirements/05-integrations/integrations.md"
         },
         {
           "questionId": "Q-017",
@@ -619,12 +599,6 @@
       "domainId": "successSignal",
       "title": "Критерий успешной проверки прототипа",
       "file": "requirements/08-acceptance/validation-success.md"
-    },
-    {
-      "questionId": "Q-016",
-      "domainId": "integrations",
-      "title": "Интеграции",
-      "file": "requirements/05-integrations/integrations.md"
     },
     {
       "questionId": "Q-017",

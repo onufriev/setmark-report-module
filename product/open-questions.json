@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-016",
-      "domainId": "integrations",
-      "title": "Интеграции",
-      "file": "requirements/05-integrations/integrations.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-018",
       "domainId": "exceptionScenarios",
       "title": "Исключительные сценарии",
