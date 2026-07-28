@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "20f158349b9d8f4e5750609106e054e466c79872e4f0e6e579c563e1889a715c",
+  "requirementsSha256": "2a62f7a873f7e2625ea8b0a89cff77b2bbe05aa2f4a7208f97da16196398a0d8",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -368,6 +368,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-018",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 3,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-018"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
@@ -433,14 +445,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Данные, телеметрия, свежесть и полнота",
-      "file": "requirements/05-integrations/data-requirements.md",
-      "line": 3,
-      "questionId": "Q-015",
-      "domainId": "dataRequirements",
-      "status": "Требуется решение"
-    },
     {
       "title": "Интеграции",
       "file": "requirements/05-integrations/integrations.md",
@@ -610,8 +614,8 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 2,
-      "needsInput": 1,
+      "requirements": 3,
+      "needsInput": 0,
       "candidateSections": 3
     },
     {

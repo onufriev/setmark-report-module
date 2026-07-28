@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T14:18:26.457695+00:00",
+  "evaluatedAt": "2026-07-28T14:28:49.687466+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -117,21 +117,13 @@
       "file": "requirements/05-integrations/data-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-018",
         "REQ-DATA-001",
         "REQ-DATA-002"
       ],
-      "needsInput": [
-        {
-          "title": "Данные, телеметрия, свежесть и полнота",
-          "file": "requirements/05-integrations/data-requirements.md",
-          "line": 3,
-          "questionId": "Q-015",
-          "domainId": "dataRequirements",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -439,12 +431,6 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
-          "questionId": "Q-015",
-          "domainId": "dataRequirements",
-          "title": "Данные, телеметрия, свежесть и полнота",
-          "file": "requirements/05-integrations/data-requirements.md"
-        },
-        {
           "questionId": "Q-020",
           "domainId": "mainJourney",
           "title": "Пользовательские пути",
@@ -503,12 +489,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-015",
-          "domainId": "dataRequirements",
-          "title": "Данные, телеметрия, свежесть и полнота",
-          "file": "requirements/05-integrations/data-requirements.md"
-        },
         {
           "questionId": "Q-020",
           "domainId": "mainJourney",
@@ -622,12 +602,6 @@
   },
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
-    {
-      "questionId": "Q-015",
-      "domainId": "dataRequirements",
-      "title": "Данные, телеметрия, свежесть и полнота",
-      "file": "requirements/05-integrations/data-requirements.md"
-    },
     {
       "questionId": "Q-020",
       "domainId": "mainJourney",

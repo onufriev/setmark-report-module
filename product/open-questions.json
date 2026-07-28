@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-015",
-      "domainId": "dataRequirements",
-      "title": "Данные, телеметрия, свежесть и полнота",
-      "file": "requirements/05-integrations/data-requirements.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-016",
       "domainId": "integrations",
       "title": "Интеграции",
