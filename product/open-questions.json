@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-022",
-      "domainId": "successSignal",
-      "title": "Критерий успешной проверки прототипа",
-      "file": "requirements/08-acceptance/validation-success.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-023",
       "domainId": "traceability",
       "title": "Трассировка требований",

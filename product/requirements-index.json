@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "2e13ee789fe13718634a661bd026435c340604d6f12bdd47034a82c4a8d7c6d0",
+  "requirementsSha256": "aceb25b77a477ab0f09ea19026e39705c2244aef0c94527dcd0f1a7e50d662dc",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -535,17 +535,21 @@
         "PM-DEC-025"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-026",
+      "title": "Решение Product Manager",
+      "file": "requirements/08-acceptance/validation-success.md",
+      "line": 3,
+      "domainId": "successSignal",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-026"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Критерий успешной проверки прототипа",
-      "file": "requirements/08-acceptance/validation-success.md",
-      "line": 3,
-      "questionId": "Q-022",
-      "domainId": "successSignal",
-      "status": "Требуется решение"
-    },
     {
       "title": "Трассировка требований",
       "file": "requirements/09-traceability/traceability.md",
@@ -699,8 +703,8 @@
     },
     {
       "file": "requirements/08-acceptance/validation-success.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
