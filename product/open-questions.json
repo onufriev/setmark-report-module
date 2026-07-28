@@ -12,16 +12,6 @@
       "answeredAt": null
     },
     {
-      "id": "Q-017",
-      "domainId": "systemScenarios",
-      "title": "Системные сценарии",
-      "file": "requirements/06-system-scenarios/system-scenarios.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-019",
       "domainId": "businessScenarios",
       "title": "Бизнес-сценарии",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T14:53:31.021684+00:00",
+  "evaluatedAt": "2026-07-28T15:15:35.440093+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -247,18 +247,11 @@
       "file": "requirements/06-system-scenarios/system-scenarios.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Системные сценарии",
-          "file": "requirements/06-system-scenarios/system-scenarios.md",
-          "line": 3,
-          "questionId": "Q-017",
-          "domainId": "systemScenarios",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-021"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -434,12 +427,6 @@
           "file": "requirements/08-acceptance/validation-success.md"
         },
         {
-          "questionId": "Q-017",
-          "domainId": "systemScenarios",
-          "title": "Системные сценарии",
-          "file": "requirements/06-system-scenarios/system-scenarios.md"
-        },
-        {
           "questionId": "Q-OPS-001",
           "domainId": "operationalScenarios",
           "title": "Эксплуатационные сценарии жизненного цикла",
@@ -479,12 +466,6 @@
           "domainId": "successSignal",
           "title": "Критерий успешной проверки прототипа",
           "file": "requirements/08-acceptance/validation-success.md"
-        },
-        {
-          "questionId": "Q-017",
-          "domainId": "systemScenarios",
-          "title": "Системные сценарии",
-          "file": "requirements/06-system-scenarios/system-scenarios.md"
         },
         {
           "questionId": "Q-OPS-001",
@@ -580,12 +561,6 @@
       "domainId": "successSignal",
       "title": "Критерий успешной проверки прототипа",
       "file": "requirements/08-acceptance/validation-success.md"
-    },
-    {
-      "questionId": "Q-017",
-      "domainId": "systemScenarios",
-      "title": "Системные сценарии",
-      "file": "requirements/06-system-scenarios/system-scenarios.md"
     },
     {
       "questionId": "Q-OPS-001",

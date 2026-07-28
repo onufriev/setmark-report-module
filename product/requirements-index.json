@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "47a4b001068cc79f5fd3fb6df82d9ae36531ba92baa09b54bc76b6bf57563333",
+  "requirementsSha256": "8187147895e0ca0c643252dedeea32161bb9bb1685f93b4f01ad5e4fb806009c",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -475,6 +475,18 @@
         "PM-DEC-020"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-021",
+      "title": "Решение Product Manager",
+      "file": "requirements/06-system-scenarios/system-scenarios.md",
+      "line": 3,
+      "domainId": "systemScenarios",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-021"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
@@ -484,14 +496,6 @@
       "line": 3,
       "questionId": "Q-OPS-001",
       "domainId": "operationalScenarios",
-      "status": "Требуется решение"
-    },
-    {
-      "title": "Системные сценарии",
-      "file": "requirements/06-system-scenarios/system-scenarios.md",
-      "line": 3,
-      "questionId": "Q-017",
-      "domainId": "systemScenarios",
       "status": "Требуется решение"
     },
     {
@@ -655,8 +659,8 @@
     },
     {
       "file": "requirements/06-system-scenarios/system-scenarios.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
