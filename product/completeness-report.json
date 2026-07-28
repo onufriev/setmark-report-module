@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T13:43:21.943653+00:00",
+  "evaluatedAt": "2026-07-28T14:11:29.173550+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -381,18 +381,11 @@
       "file": "requirements/04-quality/localization-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
-      "requirementRefs": [],
-      "needsInput": [
-        {
-          "title": "Локализация и форматы",
-          "file": "requirements/04-quality/localization-requirements.md",
-          "line": 3,
-          "questionId": "Q-013",
-          "domainId": "localization",
-          "status": "Требуется решение"
-        }
+      "status": "CONFIRMED",
+      "requirementRefs": [
+        "REQ-DEC-016"
       ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -514,12 +507,6 @@
           "file": "requirements/04-quality/quality-requirements.md"
         },
         {
-          "questionId": "Q-013",
-          "domainId": "localization",
-          "title": "Локализация и форматы",
-          "file": "requirements/04-quality/localization-requirements.md"
-        },
-        {
           "questionId": "Q-023",
           "domainId": "traceability",
           "title": "Трассировка требований",
@@ -589,12 +576,6 @@
           "domainId": "quality",
           "title": "Нефункциональные требования",
           "file": "requirements/04-quality/quality-requirements.md"
-        },
-        {
-          "questionId": "Q-013",
-          "domainId": "localization",
-          "title": "Локализация и форматы",
-          "file": "requirements/04-quality/localization-requirements.md"
         },
         {
           "questionId": "Q-023",
@@ -720,12 +701,6 @@
       "domainId": "quality",
       "title": "Нефункциональные требования",
       "file": "requirements/04-quality/quality-requirements.md"
-    },
-    {
-      "questionId": "Q-013",
-      "domainId": "localization",
-      "title": "Локализация и форматы",
-      "file": "requirements/04-quality/localization-requirements.md"
     },
     {
       "questionId": "Q-023",

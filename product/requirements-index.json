@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "f4cc575cdc2e9b33551deb24662d69cac02522da5f12e5340cce1323b40aa07b",
+  "requirementsSha256": "33dcd64ce59e84bc3e7bc8ec78334dcadbb5d7966987c792d7d3f99ae00f7140",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -308,6 +308,18 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-016",
+      "title": "Решение Product Manager",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "line": 3,
+      "domainId": "localization",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-016"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-NFR-001",
       "title": "Отсутствие влияния на продажу",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -409,14 +421,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Локализация и форматы",
-      "file": "requirements/04-quality/localization-requirements.md",
-      "line": 3,
-      "questionId": "Q-013",
-      "domainId": "localization",
-      "status": "Требуется решение"
-    },
     {
       "title": "Нефункциональные требования",
       "file": "requirements/04-quality/quality-requirements.md",
@@ -590,8 +594,8 @@
     },
     {
       "file": "requirements/04-quality/localization-requirements.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
