@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T11:30:59.945070+00:00",
+  "evaluatedAt": "2026-07-28T12:09:13.716941+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -43,22 +43,14 @@
       "file": "requirements/02-system/system-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "BLOCKED",
+      "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-010",
         "REQ-FR-001",
         "REQ-FR-002",
         "REQ-FR-003"
       ],
-      "needsInput": [
-        {
-          "title": "Функциональные требования",
-          "file": "requirements/02-system/system-requirements.md",
-          "line": 3,
-          "questionId": "Q-004",
-          "domainId": "functionalRequirements",
-          "status": "Требуется решение"
-        }
-      ],
+      "needsInput": [],
       "validationNotes": []
     },
     {
@@ -489,12 +481,6 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
-          "questionId": "Q-004",
-          "domainId": "functionalRequirements",
-          "title": "Функциональные требования",
-          "file": "requirements/02-system/system-requirements.md"
-        },
-        {
           "questionId": "Q-015",
           "domainId": "dataRequirements",
           "title": "Данные, телеметрия, свежесть и полнота",
@@ -625,12 +611,6 @@
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
-        {
-          "questionId": "Q-004",
-          "domainId": "functionalRequirements",
-          "title": "Функциональные требования",
-          "file": "requirements/02-system/system-requirements.md"
-        },
         {
           "questionId": "Q-015",
           "domainId": "dataRequirements",
@@ -816,12 +796,6 @@
   },
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
-    {
-      "questionId": "Q-004",
-      "domainId": "functionalRequirements",
-      "title": "Функциональные требования",
-      "file": "requirements/02-system/system-requirements.md"
-    },
     {
       "questionId": "Q-015",
       "domainId": "dataRequirements",

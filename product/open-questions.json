@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-004",
-      "domainId": "functionalRequirements",
-      "title": "Функциональные требования",
-      "file": "requirements/02-system/system-requirements.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-009",
       "domainId": "uiSource",
       "title": "Источник интерфейса и компонентов",

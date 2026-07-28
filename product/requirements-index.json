@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "18f32c77d8bf441c8eb86410a56e0224208c6e0a30a08f02445de53a390e685c",
+  "requirementsSha256": "7a79683d2e668ffec2f416e3c5f4cb212d48523be48fd9e83af6bab15e3a69ef",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -145,7 +145,8 @@
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-006"
+        "PM-DEC-006",
+        "PM-DEC-010"
       ],
       "applicability": "MVP1"
     },
@@ -153,7 +154,7 @@
       "id": "REQ-BO-001",
       "title": "Связь отклонения с внутренними данными",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 32,
+      "line": 33,
       "domainId": "businessObjects",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -165,7 +166,7 @@
       "id": "REQ-DEC-002",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 45,
+      "line": 46,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -181,7 +182,8 @@
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-008"
+        "PM-DEC-008",
+        "PM-DEC-010"
       ],
       "applicability": "MVP1"
     },
@@ -198,10 +200,22 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-010",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 3,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-010"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-FR-001",
       "title": "Централизованный мониторинг",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 14,
+      "line": 30,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -213,7 +227,7 @@
       "id": "REQ-FR-002",
       "title": "Выгрузка данных",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 27,
+      "line": 43,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -225,7 +239,7 @@
       "id": "REQ-FR-003",
       "title": "Ежедневные уведомления",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 40,
+      "line": 56,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -335,14 +349,6 @@
     }
   ],
   "needsInput": [
-    {
-      "title": "Функциональные требования",
-      "file": "requirements/02-system/system-requirements.md",
-      "line": 3,
-      "questionId": "Q-004",
-      "domainId": "functionalRequirements",
-      "status": "Требуется решение"
-    },
     {
       "title": "Источник интерфейса и компонентов",
       "file": "requirements/03-architecture/component-source.md",
@@ -526,8 +532,8 @@
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 3,
-      "needsInput": 1,
+      "requirements": 4,
+      "needsInput": 0,
       "candidateSections": 4
     },
     {

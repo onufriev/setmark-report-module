@@ -375,6 +375,21 @@
       "exactUserMessage": "выглядит все корректно",
       "createdAt": "2026-07-28T11:30:51.330740+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-010",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-004",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "businessObjects",
+        "functionalRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "да",
+      "createdAt": "2026-07-28T12:08:42.122907+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
