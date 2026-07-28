@@ -2,16 +2,6 @@
   "schemaVersion": "4.4",
   "questions": [
     {
-      "id": "Q-019",
-      "domainId": "businessScenarios",
-      "title": "Бизнес-сценарии",
-      "file": "requirements/07-scenarios/business-scenarios.md",
-      "line": 3,
-      "status": "OPEN",
-      "answerEvidenceRef": null,
-      "answeredAt": null
-    },
-    {
       "id": "Q-020",
       "domainId": "mainJourney",
       "title": "Пользовательские пути",

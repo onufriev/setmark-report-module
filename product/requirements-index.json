@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "cea05c5ad9c73b325d8424450bf342506cae1e85f190079928ea1d628eab8f2c",
+  "requirementsSha256": "df63cb0a0c1088c046b5816691500486ad1586c7ba8d6a0f2b508dff9c3c9443",
   "requirements": [
     {
       "id": "REQ-DEC-003",
@@ -499,17 +499,21 @@
         "PM-DEC-021"
       ],
       "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-023",
+      "title": "Решение Product Manager",
+      "file": "requirements/07-scenarios/business-scenarios.md",
+      "line": 3,
+      "domainId": "businessScenarios",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-023"
+      ],
+      "applicability": "MVP1"
     }
   ],
   "needsInput": [
-    {
-      "title": "Бизнес-сценарии",
-      "file": "requirements/07-scenarios/business-scenarios.md",
-      "line": 3,
-      "questionId": "Q-019",
-      "domainId": "businessScenarios",
-      "status": "Требуется решение"
-    },
     {
       "title": "Пользовательские пути",
       "file": "requirements/07-scenarios/user-journeys.md",
@@ -669,8 +673,8 @@
     },
     {
       "file": "requirements/07-scenarios/business-scenarios.md",
-      "requirements": 0,
-      "needsInput": 1,
+      "requirements": 1,
+      "needsInput": 0,
       "candidateSections": 1
     },
     {
