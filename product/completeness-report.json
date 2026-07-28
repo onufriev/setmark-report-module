@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-28T16:31:54.471309+00:00",
+  "evaluatedAt": "2026-07-28T16:57:10.078161+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -89,6 +89,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-031",
         "REQ-DEC-007",
         "REQ-BR-001",
         "REQ-BR-002",
@@ -212,6 +213,7 @@
       "profileHintMatched": true,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-029",
         "REQ-DEC-019",
         "REQ-INT-001",
         "REQ-INT-002",
@@ -267,6 +269,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-030",
         "REQ-DEC-023"
       ],
       "needsInput": [],
