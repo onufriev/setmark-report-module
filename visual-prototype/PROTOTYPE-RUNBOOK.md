@@ -1,13 +1,14 @@
 # Инструкция по визуальному прототипу
 
 ## 1. Состав прототипа
-Источник UI: `COMPONENT_LIBRARY`. Переиспользуемая визуальная основа: `visual-prototype/prototype-kit/csi_ui-prototype-kit/`, собранная по `@crystalservice/csi_ui` v1.31.2 и Storybook. Источник приложения: `GENERATED_PROTOTYPE`. Реальный entryPoint: `visual-prototype/app/index.html`.
+Источник UI: `COMPONENT_LIBRARY`. Источник приложения: `GENERATED_PROTOTYPE`. Материализованный источник: `Сгенерированный прототип на основе @crystalservice/csi_ui и актуального frontend Set Mark`. Реальный entryPoint: `visual-prototype/app/index.html`. Визуальная основа: `visual-prototype/prototype-kit/csi_ui-prototype-kit/`.
 
 ## 2. Предварительные требования
-- Современный браузер.
+- Python 3.10+ на Windows, macOS или Linux.
+- Свободный порт 8000.
 
 ## 3. Запуск
-`Открыть файл visual-prototype/app/index.html двойным кликом`.
+Из корня проекта: `python -m http.server 8000 --directory visual-prototype`. Открыть `http://localhost:8000/app/index.html`.
 
 ## 4. Демонстрационные данные
 Используются локальные статические данные внутри `visual-prototype/`.
@@ -22,4 +23,4 @@
 Проверка: `python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE`.
 
 ## 6. Устранение проблем
-Проверьте entryPoint, относительные ссылки и соответствие `visual-prototype/prototype-kit/csi_ui-prototype-kit/source-manifest.json` версии CSI UI.
+Проверьте entryPoint, относительные ссылки и отсутствие Storybook-зависимостей.

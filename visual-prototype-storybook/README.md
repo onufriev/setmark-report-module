@@ -1,6 +1,6 @@
 # visual-prototype-storybook
 
-Автономная копия Storybook из `CSI_UI` v1.31.2 с добавленным экраном Set Mark.
+Автономная копия Storybook из `CSI_UI` v1.31.2 с экранными stories Set Mark: обзор, инциденты, необходимые действия, аналитика и настройки.
 
 ## Запуск
 

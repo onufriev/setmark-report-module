@@ -6,6 +6,11 @@ const incidents = [
     ['INC-10471', 'Магазин № 052', 'Продажа при запрете кассы', 'RA-01', 'Риск автоштрафа'],
     ['INC-10423', 'Магазин № 317', 'Нарушена последовательность проверки', 'RA-01', 'Риск автоштрафа'],
 ]
+const actions = [
+    ['Проверить правила запрета продажи в кассовом ПО', 'Магазин № 184 · Касса 04', '3 критических инцидента'],
+    ['Проверить последовательность проверки маркировки', 'Магазин № 052 · Касса 11', '2 критических инцидента'],
+    ['Обновить правила анализа', 'Сеть «Север»', '7 связанных инцидентов'],
+]
 
 export default { title: 'Set Mark / Screens' }
 
@@ -25,7 +30,7 @@ const ScreenShell = ({ active, children }: { active: string; children: React.Rea
         <Box display="flex" flex={1}>
             <Box component="aside" width={228} bgcolor="background.paper" borderRight="1px solid #D0D3D6" p={2} flexShrink={0}>
                 <Box mb={3} px={1}><Typography variant="caption" color="textSecondary">НАВИГАЦИЯ</Typography></Box>
-                {['overview', 'incidents', 'analytics', 'settings'].map(item => <Box key={item} mb={0.5}><Button fullWidth onClick={() => { window.location.search = `?id=set-mark-screens--${item}&viewMode=story` }} color={active === item ? 'primary' : 'default'} style={{ justifyContent: 'flex-start', textTransform: 'none' }}>{item === 'overview' ? '▦  Обзор' : item === 'incidents' ? '≡  Инциденты' : item === 'analytics' ? '⌁  Аналитика' : '⚙  Настройки'}</Button></Box>)}
+                {['overview', 'incidents', 'actions', 'analytics', 'settings'].map(item => <Box key={item} mb={0.5}><Button fullWidth onClick={() => { window.location.search = `?id=set-mark-screens--${item}&viewMode=story` }} color={active === item ? 'primary' : 'default'} style={{ justifyContent: 'flex-start', textTransform: 'none' }}>{item === 'overview' ? '▦  Обзор' : item === 'incidents' ? '≡  Инциденты' : item === 'actions' ? '✓  Необходимые действия' : item === 'analytics' ? '⌁  Аналитика' : '⚙  Настройки'}</Button></Box>)}
                 <Box mt={4} p={1.5} bgcolor="#F6F8F9" borderRadius={4}><Typography variant="caption">● Данные актуальны</Typography><Typography variant="caption" color="textSecondary" display="block">сегодня, 18:40</Typography></Box>
             </Box>
             <Box flex={1} minWidth={0}>{children}</Box>
@@ -95,6 +100,15 @@ export const Analytics = () => (
         <Box mb={3}><Typography variant="h4">Аналитика</Typography><Typography color="textSecondary">Динамика нарушений по выбранному часовому поясу сети</Typography></Box>
         <Grid container spacing={2} mb={3}>{[['Инциденты за период', '1 248'], ['Критические', '64'], ['С риском автоштрафа', '12'], ['Магазины выше порога', '7']].map(([label, value]) => <Grid item xs={12} sm={6} md={3} key={label}><Paper elevation={1} style={{ padding: 16 }}><Typography color="textSecondary">{label}</Typography><Typography variant="h4">{value}</Typography></Paper></Grid>)}</Grid>
         <Grid container spacing={2}><Grid item xs={12} md={7}><Paper elevation={1} style={{ padding: 20, height: 300 }}><Typography variant="h6">Динамика инцидентов</Typography><Box display="flex" alignItems="flex-end" height={220} gridGap={12} pt={3}>{[45, 60, 52, 76, 68, 90, 82].map((height, index) => <Box key={index} bgcolor={index === 5 ? '#EB5757' : '#66BCE8'} width="12%" height={`${height}%`} borderRadius="4px 4px 0 0" />)}</Box></Paper></Grid><Grid item xs={12} md={5}><Paper elevation={1} style={{ padding: 20, height: 300 }}><Typography variant="h6">Распределение результатов</Typography><Box mt={3} display="grid" gridGap={16}>{[['RA-01 · Нарушение', 48], ['RA-02 · Корректный сценарий', 21], ['RA-04 · Недостаточно данных', 17]].map(([label, value]) => <Box key={label}><Box display="flex" justifyContent="space-between"><Typography>{label}</Typography><Typography>{value}%</Typography></Box><Box bgcolor="#F1F3F4" height={8} mt={1}><Box bgcolor="#0091EA" width={`${value}%`} height="100%" /></Box></Box>)}</Box></Paper></Grid></Grid>
+    </Box></ScreenShell>
+)
+
+export const Actions = () => (
+    <ScreenShell active="actions"><Box bgcolor="background.default" minHeight="100vh" p={3}>
+        <Box mb={3}><Typography variant="h4">Необходимые действия</Typography><Typography color="textSecondary">Действия для предотвращения повторения нарушений в следующем периоде</Typography></Box>
+        <Paper elevation={1} style={{ padding: 20 }}><Box mb={2}><Typography variant="h6">Приоритетные действия</Typography><Typography color="textSecondary">Сначала — действия, предотвращающие критические инциденты</Typography></Box>
+            {actions.map(item => <Box key={item[0]} p={2} borderTop="1px solid #D0D3D6" display="flex" justifyContent="space-between" alignItems="center"><Box><Typography variant="subtitle1">{item[0]}</Typography><Typography color="textSecondary">{item[1]}</Typography></Box><Chip label={item[2]} color="error" /></Box>)}
+        </Paper>
     </Box></ScreenShell>
 )
 

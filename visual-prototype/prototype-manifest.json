@@ -2,17 +2,17 @@
   "schemaVersion": "4.4",
   "status": "READY",
   "entryPoint": "visual-prototype/app/index.html",
-  "startCommand": "Открыть файл visual-prototype/app/index.html двойным кликом",
+  "startCommand": "python -m http.server 8000 --directory visual-prototype",
   "dataMode": "STATIC_FILE",
   "dataLocation": "visual-prototype/",
   "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
   "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
   "notes": null,
   "sourceType": "DIRECTORY",
-  "sourceReference": "csi_ui-prototype-kit на основе @crystalservice/csi_ui v1.31.2 и Storybook; прикладная композиция Set Mark",
+  "sourceReference": "Сгенерированный прототип на основе @crystalservice/csi_ui и актуального frontend Set Mark; визуальная основа visual-prototype/prototype-kit/csi_ui-prototype-kit",
   "interactionLevel": "CLICKABLE",
   "materializedAt": "2026-07-28T17:27:02.303252+00:00",
-  "url": "visual-prototype/app/index.html",
+  "url": "http://localhost:8000/app/index.html",
   "sourceMode": "GENERATED_PROTOTYPE",
   "requiredUserPath": [
     {
@@ -43,13 +43,13 @@
   ],
   "smokeTest": {
     "status": "PASSED",
-    "checkedAt": "2026-07-29T09:13:39.757307+00:00",
+    "checkedAt": "2026-07-28T17:27:02.335349+00:00",
     "details": [
       "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
     ]
   },
   "uiSourceMode": "COMPONENT_LIBRARY",
   "applicationMode": "GENERATED_PROTOTYPE",
-  "storybookDetected": true,
+  "storybookDetected": false,
   "prototypeKit": "visual-prototype/prototype-kit/csi_ui-prototype-kit/"
 }
