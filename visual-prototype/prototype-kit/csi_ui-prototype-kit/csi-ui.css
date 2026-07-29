@@ -1,0 +1,26 @@
+@import url('./tokens.css');
+@import url('./icons.css');
+
+/* Static HTML equivalents of CSI UI / Material UI primitives. */
+html, body { font-family: var(--csi-font-family); color: var(--csi-text-primary); background: var(--csi-bg-default); }
+button, input, select { font-family: inherit; }
+.csi-control { min-height: var(--csi-control-height); border: 0; border-radius: var(--csi-radius); background: var(--csi-overlay-2); color: var(--csi-text-primary); padding: 8px 12px; }
+.csi-control:hover { background: var(--csi-overlay-hover); }
+.csi-control:focus-visible { outline: 1px solid var(--csi-primary); outline-offset: 1px; }
+.csi-appbar { min-height: 64px; display: flex; align-items: center; background: var(--csi-appbar); color: #fff; box-shadow: 0 2px 6px rgba(0, 75, 135, .24); }
+.csi-button { cursor: pointer; font-weight: 500; }
+.csi-button--contained { color: #fff; background: var(--csi-primary); }
+.csi-button--contained:hover { background: #007fcf; }
+.csi-card { background: var(--csi-bg-paper); border: 1px solid var(--csi-divider); border-radius: var(--csi-radius); box-shadow: var(--csi-shadow-1); }
+.csi-chip { display: inline-flex; align-items: center; min-height: 24px; padding: 4px 8px; border-radius: var(--csi-radius); font-size: 12px; font-weight: 500; }
+.csi-chip--primary { color: #0077bf; background: #e1f3fd; }
+.csi-chip--success { color: #328b5c; background: #e8f6ee; }
+.csi-chip--error { color: #c23f47; background: #fdeaea; }
+.csi-chip--neutral { color: var(--csi-text-secondary); background: var(--csi-overlay-2); }
+.csi-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--csi-divider); background: var(--csi-overlay-3); }
+.csi-tab { border: 0; border-bottom: 2px solid transparent; padding: 11px 12px; color: var(--csi-text-secondary); background: transparent; cursor: pointer; }
+.csi-tab.is-active { color: var(--csi-primary); border-bottom-color: var(--csi-primary); }
+.csi-table { width: 100%; border-collapse: collapse; background: var(--csi-bg-paper); }
+.csi-table th, .csi-table td { min-height: 48px; padding: 12px 14px; border-bottom: 1px solid var(--csi-divider); text-align: left; }
+.csi-table th { color: var(--csi-text-secondary); background: var(--csi-overlay-3); font-weight: 500; }
+.csi-table tbody tr:hover { background: var(--csi-overlay-3); }

@@ -1,0 +1,58 @@
+export const en = {
+    table: {
+        sortByAsc: 'Sort by ASC',
+        sortByDesc: 'Sort by DESC',
+        hideColumn: 'Hide',
+        showColumns: 'Show columns',
+        hideAll: 'Hide all',
+        showAll: 'Show all',
+        page: 'Page',
+        rowsOnPage: 'Rows on page',
+        outOf: 'out of',
+        selectAll: 'Select all',
+        selectAllOnPage: 'Select all on page',
+        deselectAll: 'Deselect all',
+    },
+    datePicker: {
+        apply: 'Apply'
+    },
+    autocomplete: {
+        noOption: 'No options',
+        notFound: 'Not found',
+    },
+    treeView: {
+        all: 'All',
+        noOption: 'No options',
+        collapseAll: 'Collapse all',
+        expandAll: 'Expand all',
+    },
+    listInput: {
+        back: 'Back',
+        cancel: 'Cancel',
+        apply: 'Apply',
+        close: 'Close',
+        abort: 'Abort',
+        add: 'Add',
+        added: 'Added: {{ count }} {{ type }}',
+        notAdded: 'Not added: {{ count }} {{ type }}',
+        duplicates: 'Duplicates: {{ count }}',
+        notValid: 'Didn\'t pass the test: {{ count }} {{ type }}',
+        showNotAdded: 'Show not added',
+        validateProcess: 'Validation of entered data',
+        validationError: 'Validation error',
+        nowOnList: 'Now on list: {{ count }}',
+        selected: 'Selected: {{ count }}',
+        listInputHelper: 'Form a list. Separate values with a line break',
+        clearList: 'Clear list',
+        listDialogTitle: 'List {{ type }}',
+        validationDialogTitle: 'Validation result',
+        postProcessingDialogTitle: 'List {{ type }}',
+        postProcessingDialogAlreadyAddedTitle: 'already added: {{ count }}',
+    },
+    empty: {
+        message: 'Empty',
+    },
+    select: {
+        noOption: 'No options',
+    },
+}

@@ -1,0 +1,17 @@
+import { useCallback, useEffect, useRef } from 'react'
+
+function useMounted() {
+    const mounted = useRef(false)
+
+    useEffect(() => {
+        mounted.current = true
+
+        return () => {
+            mounted.current = false
+        }
+    }, [])
+
+    return useCallback(() => mounted.current, [])
+}
+
+export default useMounted

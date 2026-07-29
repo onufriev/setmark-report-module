@@ -1,0 +1,8 @@
+.csi-icon { display: inline-grid; place-items: center; width: 20px; height: 20px; line-height: 1; font-style: normal; }
+.csi-icon::before { display: block; }
+.csi-icon--grid::before { content: '▦'; }
+.csi-icon--list::before { content: '≡'; }
+.csi-icon--chart::before { content: '⌁'; }
+.csi-icon--settings::before { content: '⚙'; }
+.csi-icon--notifications::before { content: '◔'; }
+.csi-icon--arrow-right::before { content: '›'; }

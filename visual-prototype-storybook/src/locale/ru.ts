@@ -1,0 +1,58 @@
+export const ru = {
+    table: {
+        sortByAsc: 'Сортировать по возрастанию',
+        sortByDesc: 'Сортировать по убыванию',
+        hideColumn: 'Скрыть',
+        showColumns: 'Показать колонки',
+        hideAll: 'Скрыть все',
+        showAll: 'Показать все',
+        page: 'Страница',
+        rowsOnPage: 'Строк на странице',
+        outOf: 'из',
+        selectAll: 'Выбрать всё',
+        selectAllOnPage: 'Выбрать всё на странице',
+        deselectAll: 'Снять выделение',
+    },
+    datePicker: {
+        apply: 'Применить'
+    },
+    autocomplete: {
+        noOption: 'Нет вариантов',
+        notFound: 'Не найдено',
+    },
+    treeView: {
+        all: 'Все',
+        noOption: 'Нет вариантов',
+        collapseAll: 'Свернуть всё',
+        expandAll: 'Развернуть всё',
+    },
+    listInput: {
+        back: 'Назад',
+        cancel: 'Отмена',
+        apply: 'Применить',
+        close: 'Закрыть',
+        abort: 'Прервать',
+        add: 'Добавить',
+        added: 'Добавлено: {{ count }} {{ type }}',
+        notAdded: 'Не добавлено: {{ count }} {{ type }}',
+        duplicates: 'Дубликатов: {{ count }}',
+        notValid: 'Не прошли проверку: {{ count }} {{ type }}',
+        showNotAdded: 'Показать не добавленные',
+        validateProcess: 'Валидация введенных данных',
+        validationError: 'Ошибка валидации',
+        nowOnList: 'Сейчас в списке: {{ count }}',
+        selected: 'Выбрано: {{ count }}',
+        listInputHelper: 'Формируйте список. Разделяйте значения переносом строки',
+        clearList: 'Очистить список',
+        listDialogTitle: 'Список {{ type }}',
+        validationDialogTitle: 'Результат валидации',
+        postProcessingDialogTitle: 'Список {{ type }}',
+        postProcessingDialogAlreadyAddedTitle: 'уже добавлено: {{ count }}',
+    },
+    empty: {
+        message: 'Пусто',
+    },
+    select: {
+        noOption: 'Нет вариантов',
+    },
+}

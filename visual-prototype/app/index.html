@@ -4,13 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Set Mark — Мониторинг нарушений</title>
+  <link rel="stylesheet" href="../prototype-kit/csi_ui-prototype-kit/csi-ui.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">К основному содержимому</a>
   <header class="topbar">
     <div class="brand"><span class="brand-mark">S</span><span>Set Mark</span></div>
-    <button class="network-switch" type="button">Сеть «Север» <span aria-hidden="true">⌄</span></button>
+    <label class="network-switch-wrap">
+      <span class="sr-only">Выбор сети</span>
+      <select class="network-switch" data-network aria-label="Выбор сети">
+        <option value="north">Сеть «Север»</option>
+        <option value="center">Сеть «Центр»</option>
+        <option value="south">Сеть «Юг»</option>
+      </select>
+    </label>
     <div class="topbar-spacer"></div>
     <button class="icon-button" type="button" aria-label="Уведомления"><span aria-hidden="true">◔</span><b>3</b></button>
     <button class="user-button" type="button" aria-label="Профиль пользователя">АИ</button>

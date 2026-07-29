@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "jsx": "react",
+        "module": "ESNext",
+        "declaration": true,
+        "declarationDir": "types",
+        "sourceMap": true,
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        // "emitDeclarationOnly": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "downlevelIteration": true,
+    },
+    "include": [
+        "src",
+    ],
+    "exclude": [
+        "dist",
+        "docs",
+        "storybook-static",
+        "src/**/*.stories.*",
+        "src/**/*.test.*",
+        "src/**/*.cy.*",
+    ],
+    "references": [
+        // {
+        //     "path": "./tsconfig.cypress.json"
+        // },
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}

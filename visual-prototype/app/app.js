@@ -174,8 +174,8 @@ function renderAnalytics(){
       `<select class="select"><option>Последние 7 дней</option></select><button class="button" data-export>Выгрузить CSV</button>`)}
     <div class="metrics"><article class="metric"><span>Инциденты за период</span><strong>1 248</strong><small class="up">↑ 8%</small></article><article class="metric"><span>Критические</span><strong>64</strong><small>5,1%</small></article><article class="metric"><span>С риском автоштрафа</span><strong>12</strong><small class="up">↑ 3</small></article><article class="metric"><span>Магазины выше порога</span><strong>7</strong><small>из 412</small></article></div>
     <div class="grid-2">
-      <section class="panel"><div class="section-head"><div><h2>Динамика инцидентов</h2><p class="subtle">Всего и критические по дням</p></div></div><div class="chart">${[54,68,61,82,74,91,87].map((h,i)=>`<div class="col ${i===5?"critical":""}" style="height:${h}%"><span>${22+i}.07</span></div>`).join("")}</div><div class="legend"><span><i style="background:#7695eb"></i>Все инциденты</span><span><i style="background:#ca4c59"></i>Максимум критических</span></div></section>
-      <section class="panel"><h2>Распределение результатов</h2><div class="store-list">${[["RA-01 · Нарушение",48,"danger"],["RA-02 · Корректный сценарий",21,"ok"],["RA-03 · Вне процессов",9,"neutral"],["RA-04 · Недостаточно данных",17,"warn"],["RA-05 · Нужны правила",5,"warn"]].map(x=>`<div class="store-row"><div><strong>${x[0]}</strong></div><div class="bar"><i style="width:${x[1]}%;background:${x[2]==="danger"?"#ca4c59":"#7695eb"}"></i></div><div>${x[1]}%</div><span></span></div>`).join("")}</div></section>
+      <section class="panel"><div class="section-head"><div><h2>Динамика инцидентов</h2><p class="subtle">Всего и критические по дням</p></div></div><div class="chart">${[54,68,61,82,74,91,87].map((h,i)=>`<div class="col ${i===5?"critical":""}" style="height:${h}%"><span>${22+i}.07</span></div>`).join("")}</div><div class="legend"><span><i style="background:#66bce8"></i>Все инциденты</span><span><i style="background:var(--csi-error)"></i>Максимум критических</span></div></section>
+      <section class="panel"><h2>Распределение результатов</h2><div class="store-list">${[["RA-01 · Нарушение",48,"danger"],["RA-02 · Корректный сценарий",21,"ok"],["RA-03 · Вне процессов",9,"neutral"],["RA-04 · Недостаточно данных",17,"warn"],["RA-05 · Нужны правила",5,"warn"]].map(x=>`<div class="store-row"><div><strong>${x[0]}</strong></div><div class="bar"><i style="width:${x[1]}%;background:${x[2]==="danger"?"var(--csi-error)":"#66bce8"}"></i></div><div>${x[1]}%</div><span></span></div>`).join("")}</div></section>
     </div>`;
 }
 function renderSettings(){
@@ -196,6 +196,7 @@ function bindIncidentFilters(){
   const reset=qs("#reset-filters"); if(reset)reset.onclick=()=>{state.query="";state.store="Все магазины";state.priorityOnly=false;renderIncidents()};
 }
 function bindGlobal(){
+  qsa("[data-network]").forEach(select=>select.onchange=e=>toast(`Выбрана ${e.target.options[e.target.selectedIndex].text}`));
   qsa("[data-export]").forEach(b=>b.onclick=exportCsv);
   qsa("[data-apply-range]").forEach(b=>b.onclick=()=>{
     const container=b.closest(".date-range");

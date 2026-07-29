@@ -1,0 +1,21 @@
+:root {
+  /* @crystalservice/csi_ui lightTheme */
+  --csi-primary: #0091ea;
+  --csi-appbar: #0091ea;
+  --csi-success: #51b97d;
+  --csi-error: #eb5757;
+  --csi-bg-default: #eceef0;
+  --csi-bg-paper: #ffffff;
+  --csi-divider: #d0d3d6;
+  --csi-text-primary: #1d2023;
+  --csi-text-secondary: #7a7c7e;
+  --csi-text-disabled: #c0c3c6;
+  --csi-overlay-1: #dee0e3;
+  --csi-overlay-2: #f1f3f4;
+  --csi-overlay-3: #f6f8f9;
+  --csi-overlay-hover: #eaf0f3;
+  --csi-radius: 4px;
+  --csi-shadow-1: 0 2px 6px rgba(29, 32, 35, .12);
+  --csi-font-family: Roboto, Arial, sans-serif;
+  --csi-control-height: 38px;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "csi_ui-prototype-kit",
+  "source": "D:/WorkGitHub/CSI_UI",
+  "package": "@crystalservice/csi_ui",
+  "version": "1.31.2",
+  "storybook": "http://localhost:6006/",
+  "themeFiles": [
+    "src/themes/light-theme.ts",
+    "src/themes/base-theme.ts",
+    ".storybook/preview.js",
+    ".storybook/storybook.css"
+  ],
+  "componentSources": [
+    "src/stories/Button/Button.tsx",
+    "src/stories/Input/Input.tsx",
+    "src/stories/Tabs/Tabs.tsx",
+    "src/stories/Table/Table.tsx"
+  ],
+  "generatedAt": "2026-07-29",
+  "consumers": [
+    "visual-prototype/",
+    "visual-prototype-storybook/"
+  ],
+  "roles": {
+    "visual-prototype": "HTML/CSS/JS-прототип без Storybook",
+    "visual-prototype-storybook": "Автономная копия CSI_UI со stories экранов",
+    "prototype": "Рабочий frontend/backend/БД; kit не является runtime-зависимостью"
+  },
+  "notes": "Статическая адаптация токенов и визуальных правил для HTML-прототипа. React-компоненты и Storybook живут в отдельной папке visual-prototype-storybook."
+}
