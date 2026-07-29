@@ -7,18 +7,10 @@ const incidents = [
   {id:"INC-10277",critical:false,fine:false,store:"Магазин № 052",city:"Пермь",cash:"Касса 03",type:"Неизвестный тип отклонения",group:"Обувь",time:"27.07.2026, 18:21",ra:"RA-05",result:"Требуется обновление правил",risk:"Риск не установлен",contour:"Правила анализа",status:"Анализ завершён"},
   {id:"INC-10201",critical:false,fine:false,store:"Магазин № 241",city:"Уфа",cash:"Касса 09",type:"Выбытие вне розничной продажи",group:"Вода",time:"27.07.2026, 13:39",ra:"RA-03",result:"Вне поддерживаемых процессов",risk:"Риск не установлен",contour:"Внешний процесс",status:"Анализ завершён"}
 ];
-const state = {
-  query:"",
-  priorityOnly:false,
-  store:"Все магазины",
-  tab:"analysis",
-  rangeStart:"2026-07-22",
-  rangeEnd:"2026-07-28"
-};
+const state = {query:"", priorityOnly:false, store:"Все магазины", tab:"analysis"};
 const qs = s => document.querySelector(s);
 const qsa = s => [...document.querySelectorAll(s)];
 const fmt = n => new Intl.NumberFormat("ru-RU").format(n);
-const DAY = 86400000;
 
 function pageHead(title,subtitle,actions="") {
   return `<div class="page-head"><div><h1>${title}</h1><p>${subtitle}</p><span class="freshness">Обновлено сегодня в 18:40 · UTC+05:00</span></div><div class="controls">${actions}</div></div>`;
@@ -26,51 +18,22 @@ function pageHead(title,subtitle,actions="") {
 function badge(text, cls="neutral"){ return `<span class="badge ${cls}">${text}</span>`; }
 function toast(text){ const el=qs("#toast"); el.textContent=text; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"),2200); }
 function navigate(hash){ location.hash=hash; }
-function dateAtStart(value){ return new Date(`${value}T00:00:00`); }
-function incidentDate(value){
-  const [date] = value.split(","), [day,month,year] = date.split(".").map(Number);
-  return new Date(year,month-1,day);
-}
-function dateRangeLabel(){
-  const format = new Intl.DateTimeFormat("ru-RU",{day:"numeric",month:"long",year:"numeric"});
-  return `${format.format(dateAtStart(state.rangeStart))} — ${format.format(dateAtStart(state.rangeEnd))}`;
-}
-function dateRangeControl(){
-  return `<div class="date-range" role="group" aria-label="Диапазон дат">
-    <label><span>С</span><input class="input date-input" data-range-start type="date" value="${state.rangeStart}"></label>
-    <span class="date-separator" aria-hidden="true">—</span>
-    <label><span>По</span><input class="input date-input" data-range-end type="date" value="${state.rangeEnd}"></label>
-    <button class="button" data-apply-range>Применить</button>
-  </div>`;
-}
-function metricsForRange(){
-  const start=Math.max(dateAtStart(state.rangeStart),dateAtStart("2026-07-22"));
-  const end=Math.min(dateAtStart(state.rangeEnd),dateAtStart("2026-07-28"));
-  const overlap=end<start?0:Math.floor((end-start)/DAY)+1;
-  const scale=overlap/7;
-  return {
-    total:Math.round(1248*scale),
-    critical:Math.round(64*scale),
-    fine:Math.round(12*scale),
-    incomplete:Math.round(37*scale)
-  };
-}
 
 function renderOverview() {
-  const metrics=metricsForRange();
   qs("#overview-view").innerHTML = `
-    ${pageHead("Мониторинг нарушений",`Сводка по сети «Север» за ${dateRangeLabel()}`,
-      `${dateRangeControl()}<button class="button" data-export>Выгрузить CSV</button>`)}
+    ${pageHead("Мониторинг нарушений","Сводка по сети «Север» за 22–28 июля 2026",
+      `<select class="select" aria-label="Период"><option>Последние 7 дней</option><option>Сегодня</option><option>Последние 30 дней</option></select>
+       <button class="button" data-export>Выгрузить CSV</button>`)}
     <section class="priority-banner" id="priority" aria-labelledby="priority-title">
       <div class="priority-icon" aria-hidden="true">!</div>
       <div><h2 id="priority-title">Критические инциденты с риском автоштрафа</h2><p>Требуют первоочередного анализа · 3 магазина, 3 кассы</p></div>
-      <div><span class="priority-count">${metrics.fine}</span><button class="priority-action" data-priority>Перейти к инцидентам →</button></div>
+      <div><span class="priority-count">12</span><button class="priority-action" data-priority>Перейти к инцидентам →</button></div>
     </section>
     <div class="metrics">
-      <article class="metric"><span>Всего инцидентов</span><strong>${fmt(metrics.total)}</strong><small>За выбранный период</small></article>
-      <article class="metric"><span>Критические</span><strong>${fmt(metrics.critical)}</strong><small>${metrics.total?Math.round(metrics.critical/metrics.total*1000)/10:0}% от общего числа</small></article>
-      <article class="metric"><span>С риском автоштрафа</span><strong>${fmt(metrics.fine)}</strong><small class="up">Требуют внимания</small></article>
-      <article class="metric"><span>Недостаточно данных</span><strong>${fmt(metrics.incomplete)}</strong><small>За выбранный период</small></article>
+      <article class="metric"><span>Всего инцидентов</span><strong>${fmt(1248)}</strong><small class="up">↑ 8% к прошлой неделе</small></article>
+      <article class="metric"><span>Критические</span><strong>64</strong><small>5,1% от общего числа</small></article>
+      <article class="metric"><span>С риском автоштрафа</span><strong>12</strong><small class="up">Требуют внимания</small></article>
+      <article class="metric"><span>Недостаточно данных</span><strong>37</strong><small class="down">↓ 6 за неделю</small></article>
     </div>
     <div class="grid-2">
       <section class="panel">
@@ -98,18 +61,15 @@ function renderOverview() {
 
 function filteredIncidents() {
   return incidents.filter(i => (!state.priorityOnly || i.fine) &&
-    incidentDate(i.time)>=dateAtStart(state.rangeStart) &&
-    incidentDate(i.time)<=dateAtStart(state.rangeEnd) &&
     (state.store==="Все магазины" || i.store===state.store) &&
     (!state.query || `${i.id} ${i.store} ${i.cash} ${i.type} ${i.group}`.toLowerCase().includes(state.query.toLowerCase())));
 }
 function renderIncidents() {
   const rows=filteredIncidents();
   qs("#incidents-view").innerHTML=`
-    ${pageHead("Инциденты",`Системные результаты анализа отклонений за ${dateRangeLabel()}`,
+    ${pageHead("Инциденты","Системные результаты анализа отклонений",
       `<button class="button" data-export>Выгрузить CSV</button>`)}
     <div class="filterbar">
-      ${dateRangeControl()}
       <input class="input search" id="search" type="search" placeholder="Поиск по номеру, магазину, кассе или нарушению" value="${state.query}" aria-label="Поиск инцидентов">
       <select class="select" id="store-filter" aria-label="Магазин">${["Все магазины",...new Set(incidents.map(i=>i.store))].map(x=>`<option ${x===state.store?"selected":""}>${x}</option>`).join("")}</select>
       <button class="filter-chip ${state.priorityOnly?"active":""}" id="priority-filter" aria-pressed="${state.priorityOnly}">! Риск автоштрафа</button>
@@ -197,15 +157,6 @@ function bindIncidentFilters(){
 }
 function bindGlobal(){
   qsa("[data-export]").forEach(b=>b.onclick=exportCsv);
-  qsa("[data-apply-range]").forEach(b=>b.onclick=()=>{
-    const container=b.closest(".date-range");
-    const start=container.querySelector("[data-range-start]").value;
-    const end=container.querySelector("[data-range-end]").value;
-    if(!start||!end){toast("Укажите обе даты периода");return}
-    if(start>end){toast("Дата начала не может быть позже даты окончания");return}
-    state.rangeStart=start;state.rangeEnd=end;route();
-    toast(`Период применён: ${dateRangeLabel()}`);
-  });
   qsa("[data-priority]").forEach(b=>b.onclick=()=>{state.priorityOnly=true;navigate("incidents")});
   qsa("[data-store]").forEach(el=>{const go=()=>{state.store=el.dataset.store;navigate("incidents")};el.onclick=go;el.onkeydown=e=>{if(e.key==="Enter")go()}});
   qsa("[data-incident]").forEach(el=>{const go=()=>navigate("incident/"+el.dataset.incident);el.onclick=go;el.onkeydown=e=>{if(e.key==="Enter")go()}});
