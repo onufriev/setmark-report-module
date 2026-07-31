@@ -14,7 +14,6 @@
     <div class="topbar-spacer"></div>
     <button class="user-button" type="button" aria-label="Профиль пользователя">АИ</button>
   </header>
-
   <div class="shell">
     <aside class="sidebar" aria-label="Основная навигация">
       <nav>
@@ -24,12 +23,8 @@
         <a href="#analytics" data-nav="analytics"><span>⌁</span>Аналитика</a>
         <a href="#settings" data-nav="settings"><span>⚙</span>Настройки</a>
       </nav>
-      <div class="sidebar-foot">
-        <span class="source-dot ok"></span>
-        <div><strong>Данные актуальны</strong><small>сегодня, 18:40</small></div>
-      </div>
+      <div class="sidebar-foot"><span class="source-dot ok"></span><div><strong>Данные актуальны</strong><small>сегодня, 18:40</small></div></div>
     </aside>
-
     <main id="main" tabindex="-1">
       <section id="overview-view" class="view"></section>
       <section id="incidents-view" class="view" hidden></section>
@@ -39,14 +34,11 @@
       <section id="settings-view" class="view" hidden></section>
     </main>
   </div>
-
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <nav hidden aria-hidden="true">
     <a href="#priority">Критические инциденты</a>
     <a href="#incident/INC-10621">Карточка демонстрационного инцидента</a>
   </nav>
-  <script src="reviewed-data.js"></script>
   <script src="app.js"></script>
-  <script src="reviewed-overrides.js"></script>
 </body>
 </html>
