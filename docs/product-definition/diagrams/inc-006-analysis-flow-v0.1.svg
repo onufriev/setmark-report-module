@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <style>
+    .title{font:700 48px Arial;fill:#0b2f6b}.subtitle{font:32px Arial;fill:#324e73}.box{fill:#fff;stroke:#1e5bb8;stroke-width:3;rx:18}.decision{fill:#fff;stroke:#1e5bb8;stroke-width:3}.ok{fill:#f1fbf5;stroke:#24884d;stroke-width:3}.action{fill:#f4f8ff;stroke:#1e5bb8;stroke-width:3}.unknown{fill:#f7f7f7;stroke:#777;stroke-width:3}.txt{font:24px Arial;fill:#12223a}.bold{font:700 24px Arial;fill:#12223a}.small{font:20px Arial;fill:#12223a}.label{font:700 22px Arial;fill:#0b2f6b}.arrow{stroke:#1e5bb8;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1e5bb8"/></marker></defs>
+  <text x="600" y="70" text-anchor="middle" class="title">Алгоритм разбора INC-006</text>
+  <text x="600" y="115" text-anchor="middle" class="subtitle">Продажа товара без проверки КМ</text>
+
+  <rect x="260" y="155" width="680" height="105" class="box"/>
+  <text x="600" y="195" text-anchor="middle" class="bold">Честный Знак сообщил отклонение:</text>
+  <text x="600" y="230" text-anchor="middle" class="txt">«Продажа товара без проверки КМ»</text>
+  <path d="M600 260 L600 315" class="arrow"/>
+
+  <polygon points="600,315 930,420 600,525 270,420" class="decision"/>
+  <text x="600" y="395" text-anchor="middle" class="bold">Проверить наш кассовый чек:</text>
+  <text x="600" y="430" text-anchor="middle" class="txt">есть ли в позиции маркированного товара</text>
+  <text x="600" y="465" text-anchor="middle" class="txt">квитанция проверки КМ?</text>
+
+  <path d="M270 420 L120 420 L120 560" class="arrow"/>
+  <text x="170" y="400" class="label">Квитанции нет</text>
+  <rect x="40" y="560" width="430" height="135" class="ok"/>
+  <text x="255" y="605" text-anchor="middle" class="bold">Нарушение подтверждено</text>
+  <text x="255" y="642" text-anchor="middle" class="txt">Критичность: некритическое</text>
+  <text x="255" y="677" text-anchor="middle" class="txt">Риск автоштрафа: нет</text>
+
+  <path d="M930 420 L1080 420 L1080 560" class="arrow"/>
+  <text x="935" y="400" class="label">Квитанция есть</text>
+  <rect x="730" y="560" width="430" height="165" class="ok"/>
+  <text x="945" y="602" text-anchor="middle" class="bold">По данным SetRetail проверка выполнена</text>
+  <text x="945" y="640" text-anchor="middle" class="txt">Нарушение ритейлера не подтверждено</text>
+  <text x="945" y="678" text-anchor="middle" class="txt">Причина расхождения не определена</text>
+
+  <path d="M945 725 L945 790" class="arrow"/>
+  <rect x="730" y="790" width="430" height="185" class="action"/>
+  <text x="945" y="835" text-anchor="middle" class="bold">Необходимое действие</text>
+  <text x="945" y="875" text-anchor="middle" class="txt">Обратиться в техническую поддержку</text>
+  <text x="945" y="910" text-anchor="middle" class="txt">Честного Знака и приложить чек, КМ</text>
+  <text x="945" y="945" text-anchor="middle" class="txt">и сохранённую квитанцию проверки</text>
+
+  <path d="M255 695 L255 760" class="arrow"/>
+  <polygon points="255,760 470,840 255,920 40,840" class="decision"/>
+  <text x="255" y="825" text-anchor="middle" class="bold">Включена проверка</text>
+  <text x="255" y="860" text-anchor="middle" class="txt">товарной группы?</text>
+
+  <path d="M40 840 L20 840 L20 1030" class="arrow"/>
+  <text x="45" y="815" class="label">Нет</text>
+  <rect x="35" y="1030" width="330" height="210" class="action"/>
+  <text x="200" y="1075" text-anchor="middle" class="bold">Причина</text>
+  <text x="200" y="1115" text-anchor="middle" class="txt">Отключена обязательная</text>
+  <text x="200" y="1150" text-anchor="middle" class="txt">проверка товарной группы</text>
+  <text x="200" y="1200" text-anchor="middle" class="bold">Действие</text>
+  <text x="200" y="1235" text-anchor="middle" class="txt">Включить валидацию группы</text>
+
+  <path d="M470 840 L570 840 L570 1030" class="arrow"/>
+  <text x="475" y="815" class="label">Да</text>
+  <polygon points="570,1030 790,1110 570,1190 350,1110" class="decision"/>
+  <text x="570" y="1095" text-anchor="middle" class="bold">Разрешена продажа при</text>
+  <text x="570" y="1130" text-anchor="middle" class="txt">отсутствии ответа от ЧЗ?</text>
+
+  <path d="M350 1110 L300 1110 L300 1320" class="arrow"/>
+  <text x="360" y="1085" class="label">Да</text>
+  <rect x="255" y="1320" width="360" height="210" class="action"/>
+  <text x="435" y="1365" text-anchor="middle" class="bold">Причина</text>
+  <text x="435" y="1405" text-anchor="middle" class="txt">Разрешена продажа без ответа</text>
+  <text x="435" y="1455" text-anchor="middle" class="bold">Действие</text>
+  <text x="435" y="1490" text-anchor="middle" class="txt">Отключить настройку разрешения</text>
+
+  <path d="M790 1110 L860 1110 L860 1320" class="arrow"/>
+  <text x="795" y="1085" class="label">Нет</text>
+  <rect x="690" y="1320" width="430" height="210" class="unknown"/>
+  <text x="905" y="1365" text-anchor="middle" class="bold">Причина не определена достоверно</text>
+  <text x="905" y="1420" text-anchor="middle" class="bold">Необходимое действие</text>
+  <text x="905" y="1460" text-anchor="middle" class="txt">Обратиться в техническую поддержку CSI</text>
+
+  <text x="600" y="1570" text-anchor="middle" class="small">Примечание v0.1: кассовые логи и проверка чека в ОФД не используются.</text>
+</svg>
