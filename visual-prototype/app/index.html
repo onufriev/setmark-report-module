@@ -19,7 +19,7 @@
     <aside class="sidebar" aria-label="Основная навигация">
       <nav>
         <a href="#overview" data-nav="overview"><span>▦</span>Обзор</a>
-        <a href="#incidents" data-nav="incidents"><span>≡</span>Инциденты <b>7</b></a>
+        <a href="#incidents" data-nav="incidents"><span>≡</span>Инциденты <b>9</b></a>
         <a href="#actions" data-nav="actions"><span>✓</span>Необходимые действия</a>
         <a href="#analytics" data-nav="analytics"><span>⌁</span>Аналитика</a>
         <a href="#settings" data-nav="settings"><span>⚙</span>Настройки</a>
@@ -31,81 +31,7 @@
     </aside>
 
     <main id="main" tabindex="-1">
-      <section id="overview-view" class="view">
-        <div class="page-head">
-          <div>
-            <h1>Мониторинг нарушений</h1>
-            <p>Сводка по сети «Север» за 22–28 июля 2026</p>
-            <span class="freshness">Обновлено сегодня в 18:40 · UTC+05:00</span>
-          </div>
-          <div class="controls">
-            <select class="select" aria-label="Период">
-              <option>Последние 7 дней</option>
-            </select>
-            <button class="button" type="button">Выгрузить CSV</button>
-          </div>
-        </div>
-        <section class="priority-banner" id="priority" aria-labelledby="priority-title">
-          <div class="priority-icon" aria-hidden="true">!</div>
-          <div>
-            <h2 id="priority-title">Критические инциденты с риском автоштрафа</h2>
-            <p>Требуют первоочередного анализа · 3 магазина, 3 кассы</p>
-          </div>
-          <div>
-            <span class="priority-count">12</span>
-            <a class="priority-action" href="#incidents">Перейти к инцидентам →</a>
-          </div>
-        </section>
-        <div class="metrics">
-          <article class="metric">
-            <span>Всего инцидентов</span><strong>1 248</strong>
-            <small class="up">↑ 8% к прошлой неделе</small>
-          </article>
-          <article class="metric">
-            <span>Критические</span><strong>64</strong>
-            <small>5,1% от общего числа</small>
-          </article>
-          <article class="metric">
-            <span>С риском автоштрафа</span><strong>12</strong>
-            <small class="up">Требуют внимания</small>
-          </article>
-          <article class="metric">
-            <span>Недостаточно данных</span><strong>37</strong>
-            <small class="down">↓ 6 за неделю</small>
-          </article>
-        </div>
-        <section class="panel">
-          <div class="section-head">
-            <div>
-              <h2>Объекты с наибольшим риском</h2>
-              <p class="subtle">Сортировка по критическим инцидентам</p>
-            </div>
-          </div>
-          <div class="store-list">
-            <div class="store-row">
-              <div><strong>Магазин № 184</strong><small>Екатеринбург · 8 касс</small></div>
-              <div class="bar"><i style="width:100%"></i></div>
-              <div><span class="badge danger">8 с риском</span></div><span>›</span>
-            </div>
-            <div class="store-row">
-              <div><strong>Магазин № 052</strong><small>Пермь · 12 касс</small></div>
-              <div class="bar"><i style="width:74%"></i></div>
-              <div><span class="badge danger">5 с риском</span></div><span>›</span>
-            </div>
-            <div class="store-row">
-              <div><strong>Магазин № 317</strong><small>Тюмень · 6 касс</small></div>
-              <div class="bar"><i style="width:58%"></i></div>
-              <div><span class="badge danger">3 с риском</span></div><span>›</span>
-            </div>
-          </div>
-        </section>
-        <noscript>
-          <p class="panel" style="margin-top:14px;padding:17px">
-            Просмотрщик отключил интерактивность. Для переходов откройте файл в браузере
-            или запустите прототип по инструкции.
-          </p>
-        </noscript>
-      </section>
+      <section id="overview-view" class="view"></section>
       <section id="incidents-view" class="view" hidden></section>
       <section id="incident-view" class="view" hidden></section>
       <section id="actions-view" class="view" hidden></section>
@@ -117,8 +43,10 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <nav hidden aria-hidden="true">
     <a href="#priority">Критические инциденты</a>
-    <a href="#incident/INC-10482">Карточка демонстрационного инцидента</a>
+    <a href="#incident/INC-10621">Карточка демонстрационного инцидента</a>
   </nav>
+  <script src="reviewed-data.js"></script>
   <script src="app.js"></script>
+  <script src="reviewed-overrides.js"></script>
 </body>
 </html>
