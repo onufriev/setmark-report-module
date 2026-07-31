@@ -1,6 +1,14 @@
 incidents.splice(0,incidents.length,...window.prototypeIncidents);
 actions.splice(0,actions.length,...window.prototypeActions);
-state.query="";state.priorityOnly=false;state.confirmedOnly=false;state.result="";state.store="Все магазины";state.types=[];
+state.query="";state.priorityOnly=false;state.confirmedOnly=false;state.result="";state.store="Все магазины";state.types=[];state.actionIncidentIds=[];
+
+const baseFilteredIncidents=filteredIncidents;
+filteredIncidents=function(){
+  const rows=baseFilteredIncidents();
+  return state.actionIncidentIds.length?rows.filter(i=>state.actionIncidentIds.includes(i.id)):rows;
+};
+
+actionRow=function(a){return `<article class="action-row ${a.critical?"priority":""}" tabindex="0" role="button" data-action-id="${a.id}" aria-label="Показать связанные инциденты"><div><strong>${a.text}</strong><span class="action-meta">${a.critical?badge("Предотвращает критические инциденты","danger"):""} Связано: ${fmt(a.count)} инцидентов за выбранный период</span></div><span aria-hidden="true">›</span></article>`};
 
 renderIncident=function(id){
   const i=incidents.find(x=>x.id===id)||incidents[0];
@@ -45,6 +53,10 @@ renderIncidents=function(){
     const sub=row.querySelector(".cell-sub");
     if(i&&sub)sub.textContent=`${i.rule} · ${i.group}`;
   });
+  if(state.actionIncidentIds.length){
+    const bar=qs("#incidents-view .filterbar");
+    if(bar)bar.insertAdjacentHTML("afterend",`<div class="panel" style="margin:0 0 14px;padding:12px 16px"><strong>Показаны инциденты, связанные с выбранным необходимым действием.</strong> <button class="button ghost" data-clear-action-filter>Показать все инциденты</button></div>`);
+  }
 };
 
 const originalRenderOverview=renderOverview;
@@ -54,6 +66,26 @@ renderOverview=function(){
   if(subtitle)subtitle.textContent="Только разобранные типы отклонений: INC-001, INC-002 и INC-006";
   const banner=qs("#priority-title")?.nextElementSibling;
   if(banner)banner.textContent="Инциденты, для которых возможен автоштраф";
+};
+
+const originalBindGlobal=bindGlobal;
+bindGlobal=function(){
+  originalBindGlobal();
+  qsa("[data-action-id]").forEach(el=>{
+    const go=()=>{
+      const action=actions.find(a=>a.id===el.dataset.actionId);
+      if(!action)return;
+      state.actionIncidentIds=[...action.incidentIds];
+      state.query="";state.priorityOnly=false;state.confirmedOnly=false;state.result="";state.store="Все магазины";state.types=[];
+      navigate("incidents");
+    };
+    el.onclick=go;
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};
+  });
+  qsa("[data-clear-action-filter]").forEach(b=>b.onclick=()=>{state.actionIncidentIds=[];renderIncidents();bindGlobal();});
+  qsa("[data-nav]").forEach(a=>{
+    if(a.dataset.nav!=="incidents")a.addEventListener("click",()=>{state.actionIncidentIds=[];},{once:true});
+  });
 };
 
 route();
