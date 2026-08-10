@@ -3,13 +3,13 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "SOURCE_SETUP",
-  "status": "NOT_STARTED",
-  "nextAction": "Спросить Product Manager об источнике материалов.",
+  "currentPhase": "VISUAL_PROTOTYPE",
+  "status": "IN_PROGRESS",
+  "nextAction": "Продолжить этап VISUAL_PROTOTYPE по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
-    "status": "NOT_STARTED",
-    "inputMode": "UNSET"
+    "status": "COMPLETED",
+    "inputMode": "MIXED"
   },
   "phaseReview": {
     "phase": null,
@@ -21,8 +21,8 @@
     "nextPhase": null
   },
   "artifactStatus": {
-    "requirements": "IN_PROGRESS",
-    "visualPrototype": "NOT_STARTED",
+    "requirements": "COMMITTED",
+    "visualPrototype": "VERIFIED",
     "workingPrototype": "NOT_STARTED",
     "handoff": "NOT_STARTED"
   }

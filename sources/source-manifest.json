@@ -1,6 +1,74 @@
 {
   "schemaVersion": "4.4",
-  "setupStatus": "NOT_STARTED",
-  "inputMode": "UNSET",
-  "entries": []
+  "setupStatus": "COMPLETED",
+  "inputMode": "MIXED",
+  "entries": [
+    {
+      "id": "SRC-001",
+      "name": "Исходная постановка: Журнал нарушений Set Mark",
+      "type": "CONFLUENCE",
+      "origin": "https://crystals.atlassian.net/wiki/spaces/SR10/pages/6419775498/Set+Mark+-",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:18:18.243829+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    },
+    {
+      "id": "SRC-002",
+      "name": "SetMark — описание продукта",
+      "type": "CONFLUENCE",
+      "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/3045457980/SetMark",
+      "snapshotPath": "sources/snapshots/confluence-3045457980.md",
+      "snapshotSha256": "ae82f0594024fd89c87cfff046a0397a0e47120aed3a192f9380a7e6527663fe",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:18:18.727778+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    },
+    {
+      "id": "SRC-003",
+      "name": "Настройка подключения кассы к SetMark",
+      "type": "CONFLUENCE",
+      "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/785842250/SetMark+SetMark",
+      "snapshotPath": "sources/snapshots/confluence-785842250.md",
+      "snapshotSha256": "a6a7eda147996c7dec7488acde3ea8bf0d914ae84da6a678e00850318308ec87",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:18:19.200225+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    },
+    {
+      "id": "SRC-004",
+      "name": "Разрешительный режим на кассе",
+      "type": "CONFLUENCE",
+      "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/4094230539",
+      "snapshotPath": "sources/snapshots/confluence-4094230539.md",
+      "snapshotSha256": "fad9fba15acc5272f8294cd308b504fabbceebbc43609e02db7d5cb216295c11",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:18:19.665498+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    },
+    {
+      "id": "SRC-005",
+      "name": "Офлайн-проверка в Интеграционном модуле Честный знак",
+      "type": "CONFLUENCE",
+      "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/4839243914/-",
+      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
+      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:18:20.123707+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    },
+    {
+      "id": "SRC-006",
+      "name": "True API v704.0 — справочники отклонений, стр. 1229–1234",
+      "type": "PDF",
+      "origin": "reference-materials/true-api/True API v704.0.pdf",
+      "snapshotPath": "sources/snapshots/true-api-v704-pages-1229-1234.txt",
+      "snapshotSha256": "4e52511e55e0676587797ded13906a76c8769fae57994e0d421b465be1caa6c0",
+      "accessStatus": "SNAPSHOT_VERIFIED",
+      "registeredAt": "2026-07-27T23:19:17.288224+00:00",
+      "registeredBy": "register_source_snapshot.py"
+    }
+  ],
+  "completedAt": "2026-07-27T23:19:17.288239+00:00"
 }

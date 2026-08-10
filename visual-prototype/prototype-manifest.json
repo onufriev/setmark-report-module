@@ -1,25 +1,54 @@
 {
   "schemaVersion": "4.4",
-  "status": "NOT_STARTED",
-  "entryPoint": null,
-  "startCommand": null,
-  "dataMode": null,
-  "dataLocation": null,
+  "status": "READY",
+  "entryPoint": "visual-prototype/app/index.html",
+  "startCommand": "python -m http.server 8000 --directory visual-prototype",
+  "dataMode": "STATIC_FILE",
+  "dataLocation": "visual-prototype/",
   "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
-  "verificationCommand": null,
+  "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
   "notes": null,
-  "sourceType": null,
-  "sourceReference": null,
-  "interactionLevel": null,
-  "materializedAt": null,
-  "url": null,
-  "sourceMode": null,
-  "requiredUserPath": [],
+  "sourceType": "DIRECTORY",
+  "sourceReference": "Сгенерированный прототип на основе @crystalservice/csi_ui и актуального frontend Set Mark",
+  "interactionLevel": "CLICKABLE",
+  "materializedAt": "2026-07-28T17:27:02.303252+00:00",
+  "url": "http://localhost:8000/app/index.html",
+  "sourceMode": "GENERATED_PROTOTYPE",
+  "requiredUserPath": [
+    {
+      "id": "overview",
+      "label": "Обзор сети",
+      "href": "#overview"
+    },
+    {
+      "id": "priority",
+      "label": "Критические инциденты с риском автоштрафа",
+      "href": "#priority"
+    },
+    {
+      "id": "incidents",
+      "label": "Список инцидентов",
+      "href": "#incidents"
+    },
+    {
+      "id": "incident",
+      "label": "Карточка инцидента",
+      "href": "#incident/INC-10482"
+    },
+    {
+      "id": "analytics",
+      "label": "Аналитика и выгрузка",
+      "href": "#analytics"
+    }
+  ],
   "smokeTest": {
-    "status": "NOT_RUN",
-    "checkedAt": null,
-    "details": []
+    "status": "PASSED",
+    "checkedAt": "2026-07-28T17:27:02.335349+00:00",
+    "details": [
+      "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
+    ]
   },
-  "uiSourceMode": null,
-  "applicationMode": null
+  "uiSourceMode": "COMPONENT_LIBRARY",
+  "applicationMode": "GENERATED_PROTOTYPE",
+  "storybookDetected": false
 }

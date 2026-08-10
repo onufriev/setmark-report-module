@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Mark — Мониторинг нарушений</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержимому</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">S</span><span>Set Mark</span></div>
+    <button class="network-switch" type="button">Сеть «Север» <span aria-hidden="true">⌄</span></button>
+    <div class="topbar-spacer"></div>
+    <button class="user-button" type="button" aria-label="Профиль пользователя">АИ</button>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Основная навигация">
+      <nav>
+        <a href="#overview" data-nav="overview"><span>▦</span>Обзор</a>
+        <a href="#incidents" data-nav="incidents"><span>≡</span>Инциденты <b>9</b></a>
+        <a href="#actions" data-nav="actions"><span>✓</span>Необходимые действия</a>
+        <a href="#analytics" data-nav="analytics"><span>⌁</span>Аналитика</a>
+        <a href="#settings" data-nav="settings"><span>⚙</span>Настройки</a>
+      </nav>
+      <div class="sidebar-foot"><span class="source-dot ok"></span><div><strong>Данные актуальны</strong><small>сегодня, 18:40</small></div></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <section id="overview-view" class="view"></section>
+      <section id="incidents-view" class="view" hidden></section>
+      <section id="incident-view" class="view" hidden></section>
+      <section id="actions-view" class="view" hidden></section>
+      <section id="analytics-view" class="view" hidden></section>
+      <section id="settings-view" class="view" hidden></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <nav hidden aria-hidden="true">
+    <a href="#priority">Критические инциденты</a>
+    <a href="#incident/INC-10621">Карточка демонстрационного инцидента</a>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
