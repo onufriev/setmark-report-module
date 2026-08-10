@@ -13,13 +13,14 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.4"
+      "$ref": "schema-version.schema.json"
     },
     "productName": {
       "const": "Product Compiler"
     },
     "productVersion": {
-      "const": "4.4"
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(?:\\.\\d+)?$"
     }
   }
 }

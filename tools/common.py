@@ -13,8 +13,19 @@ from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA_VERSION = '4.4'
-PRODUCT_VERSION = '4.4'
+def _read_product_version() -> str:
+    return (ROOT / 'VERSION').read_text(encoding='utf-8').strip()
+
+
+def _read_schema_contract() -> tuple[str, tuple[str, ...]]:
+    contract = json.loads((ROOT / 'schemas/schema-version.schema.json').read_text(encoding='utf-8'))
+    current = str(contract['x-currentVersion'])
+    supported = tuple(str(item) for item in contract.get('enum', [current]))
+    return current, supported
+
+
+PRODUCT_VERSION = _read_product_version()
+SCHEMA_VERSION, SUPPORTED_SCHEMA_VERSIONS = _read_schema_contract()
 PHASE_SEQUENCE = [
     'SOURCE_SETUP',
     'INTAKE',

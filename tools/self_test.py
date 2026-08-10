@@ -11,7 +11,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from common import ROOT, sha256
+from common import PRODUCT_VERSION, ROOT, SCHEMA_VERSION, sha256
 
 
 def run(
@@ -75,7 +75,7 @@ def make_workspace(temp: str, name: str) -> Path:
 
 
 def core_suite() -> None:
-    with tempfile.TemporaryDirectory(prefix='product-compiler-4.4-core-') as temp:
+    with tempfile.TemporaryDirectory(prefix=f'product-compiler-{PRODUCT_VERSION}-core-') as temp:
         workspace = make_workspace(temp, 'workspace with spaces')
         assert_ok(run(workspace, 'validate_workspace.py'), 'initial validation')
 
@@ -86,7 +86,7 @@ def core_suite() -> None:
         assert_ok(run(workspace, 'normalize_workspace_json.py'), 'legacy JSON migration')
         migrated = read_json(workspace / 'product/evidence-register.json')
         assert 'evidence' in migrated and 'evidenceEntries' not in migrated
-        assert migrated['schemaVersion'] == '4.4'
+        assert migrated['schemaVersion'] == SCHEMA_VERSION
 
         snapshot = workspace / 'sources/snapshots/тестовый источник.md'
         snapshot.parent.mkdir(parents=True, exist_ok=True)
@@ -159,11 +159,11 @@ def core_suite() -> None:
         assert state.get('sourceSetup', {}).get('status') == 'COMPLETED'
 
         assert_ok(run(workspace, 'validate_json_documents.py'), 'final JSON validation')
-    print('OK: self-test 4.4 core')
+    print(f'OK: self-test {PRODUCT_VERSION} core')
 
 
 def report_generation_suite() -> None:
-    with tempfile.TemporaryDirectory(prefix='product-compiler-4.4-report-generation-') as temp:
+    with tempfile.TemporaryDirectory(prefix=f'product-compiler-{PRODUCT_VERSION}-report-generation-') as temp:
         workspace = make_workspace(temp, 'workspace report generation')
         assert_ok(
             run(workspace, 'set_source_mode.py', '--mode', 'CONVERSATION_ONLY'),
@@ -193,16 +193,16 @@ def report_generation_suite() -> None:
         reviews = read_json(workspace / 'product/phase-reviews.json').get('reviews', [])
         assert reviews and reviews[-1].get('phase') == 'SOURCE_SETUP'
         assert reviews[-1].get('registeredBy') == 'finalize_phase_review.py'
-    print('OK: self-test 4.4 report-generation')
+    print(f'OK: self-test {PRODUCT_VERSION} report-generation')
 
 
 def review_lifecycle_suite() -> None:
-    with tempfile.TemporaryDirectory(prefix='product-compiler-4.4-review-lifecycle-') as temp:
+    with tempfile.TemporaryDirectory(prefix=f'product-compiler-{PRODUCT_VERSION}-review-lifecycle-') as temp:
         workspace = make_workspace(temp, 'workspace review lifecycle')
         manifest_path = workspace / 'sources/source-manifest.json'
         manifest = read_json(manifest_path)
         manifest.update({
-            'schemaVersion': '4.4',
+            'schemaVersion': SCHEMA_VERSION,
             'setupStatus': 'COMPLETED',
             'inputMode': 'CONVERSATION_ONLY',
             'entries': [],
@@ -238,7 +238,7 @@ def review_lifecycle_suite() -> None:
             'presentationPdfSha256': None,
         }
         (workspace / 'product/phase-reviews.json').write_text(
-            json.dumps({'schemaVersion': '4.4', 'reviews': [review]}, ensure_ascii=False, indent=2) + '\n',
+            json.dumps({'schemaVersion': SCHEMA_VERSION, 'reviews': [review]}, ensure_ascii=False, indent=2) + '\n',
             encoding='utf-8',
         )
         assert_ok(run(workspace, 'sync_workspace.py'), 'prepare review state')
@@ -284,10 +284,10 @@ def review_lifecycle_suite() -> None:
         approved.stderr.decode('utf-8')
         state = read_json(workspace / 'project-state.json')
         assert state.get('currentPhase') == 'INTAKE'
-    print('OK: self-test 4.4 review-lifecycle')
+    print(f'OK: self-test {PRODUCT_VERSION} review-lifecycle')
 
 def prototype_suite() -> None:
-    with tempfile.TemporaryDirectory(prefix='product-compiler-4.4-prototype-') as temp:
+    with tempfile.TemporaryDirectory(prefix=f'product-compiler-{PRODUCT_VERSION}-prototype-') as temp:
         workspace = make_workspace(temp, 'workspace prototype')
         source = workspace / '_clickable app with spaces'
         source.mkdir()
@@ -341,18 +341,90 @@ def prototype_suite() -> None:
         assert_ok(run(workspace, 'sync_workspace.py', '--strict-json'), 'strict synchronization')
         assert_ok(run(workspace, 'validate_json_documents.py'), 'JSON validation')
         assert_ok(run(workspace, 'validate_workspace.py'), 'workspace validation')
-    print('OK: self-test 4.4 prototype')
+    print(f'OK: self-test {PRODUCT_VERSION} prototype')
 
+
+
+def restart_suite() -> None:
+    with tempfile.TemporaryDirectory(prefix=f'product-compiler-{PRODUCT_VERSION}-restart-') as temp:
+        workspace = make_workspace(temp, 'workspace restart process')
+        reviews_path = workspace / 'product/phase-reviews.json'
+        reviews = []
+        for index, phase in enumerate(['SOURCE_SETUP', 'INTAKE', 'PRODUCT_DEFINITION', 'VISUAL_PROTOTYPE', 'WORKING_PROTOTYPE', 'HANDOFF_READY'], start=1):
+            reviews.append({
+                'reviewId': f'{phase}-R1',
+                'phase': phase,
+                'revision': 1,
+                'status': 'APPROVED',
+                'preparedAt': '2026-01-01T00:00:00+00:00',
+                'registeredBy': 'self-test',
+                'shownToProductManagerAt': '2026-01-01T00:00:00+00:00',
+                'markdownReport': f'reports/{phase.lower()}.md',
+                'markdownSha256': '0' * 64,
+                'pdfReport': f'reports/{phase.lower()}.pdf',
+                'pdfSha256': '0' * 64,
+                'nextPhase': None,
+                'approvedAt': '2026-01-01T00:00:00+00:00',
+                'approvedBy': 'PRODUCT_MANAGER',
+                'decisionText': 'approved',
+                'exactUserMessage': 'approved',
+            })
+        reviews_path.write_text(json.dumps({'schemaVersion': SCHEMA_VERSION, 'reviews': reviews}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        baseline_path = workspace / 'product/requirements-baseline.json'
+        baseline = read_json(baseline_path)
+        baseline.update({'status': 'COMMITTED', 'currentBaselineId': 'REQ-BASELINE-001', 'baselines': []})
+        baseline_path.write_text(json.dumps(baseline, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+        result = run(
+            workspace,
+            'restart_process.py',
+            '--change-type', 'REQUIREMENTS',
+            '--reason', 'Я внёс изменения в требования, перезапусти процесс',
+        )
+        assert_ok(result, 'restart after requirements change')
+        updated = read_json(reviews_path).get('reviews', [])
+        status = {item['phase']: item['status'] for item in updated}
+        assert status['SOURCE_SETUP'] == 'APPROVED'
+        assert status['INTAKE'] == 'APPROVED'
+        assert status['PRODUCT_DEFINITION'] == 'STALE_REVIEW'
+        assert status['VISUAL_PROTOTYPE'] == 'STALE_REVIEW'
+        assert status['WORKING_PROTOTYPE'] == 'STALE_REVIEW'
+        assert status['HANDOFF_READY'] == 'STALE_REVIEW'
+        assert read_json(baseline_path).get('status') == 'STALE'
+        state = read_json(workspace / 'project-state.json')
+        assert state.get('currentPhase') == 'PRODUCT_DEFINITION'
+        impact_reports = list((workspace / 'reports').glob('restart-impact-*.md'))
+        assert impact_reports and 'REQUIREMENTS' in impact_reports[-1].read_text(encoding='utf-8')
+
+        ui_workspace = make_workspace(temp, 'workspace ui restart')
+        ui_reviews_path = ui_workspace / 'product/phase-reviews.json'
+        ui_reviews_path.write_text(json.dumps({'schemaVersion': SCHEMA_VERSION, 'reviews': reviews}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        result = run(
+            ui_workspace,
+            'restart_process.py',
+            '--change-type', 'UI_SOURCE',
+            '--reason', 'Я изменил библиотеку компонентов, перезапусти процесс',
+        )
+        assert_ok(result, 'restart after UI source change')
+        updated = read_json(ui_reviews_path).get('reviews', [])
+        status = {item['phase']: item['status'] for item in updated}
+        assert status['PRODUCT_DEFINITION'] == 'APPROVED'
+        assert status['VISUAL_PROTOTYPE'] == 'STALE_REVIEW'
+        assert status['WORKING_PROTOTYPE'] == 'STALE_REVIEW'
+        state = read_json(ui_workspace / 'project-state.json')
+        assert state.get('currentPhase') == 'VISUAL_PROTOTYPE'
+    print(f'OK: self-test {PRODUCT_VERSION} restart')
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description='Изолированная самопроверка Product Compiler 4.4')
-    parser.add_argument('--suite', choices=['core', 'report-generation', 'review-lifecycle', 'prototype', 'all'], default='core')
+    parser = argparse.ArgumentParser(description=f'Изолированная самопроверка Product Compiler {PRODUCT_VERSION}')
+    parser.add_argument('--suite', choices=['core', 'report-generation', 'review-lifecycle', 'prototype', 'restart', 'all'], default='core')
     args = parser.parse_args()
     suites = {
         'core': core_suite,
         'report-generation': report_generation_suite,
         'review-lifecycle': review_lifecycle_suite,
         'prototype': prototype_suite,
+        'restart': restart_suite,
     }
     selected = list(suites) if args.suite == 'all' else [args.suite]
     for name in selected:

@@ -1,4 +1,4 @@
-# Инструменты Product Compiler 4.4
+# Инструменты Product Compiler
 
 Инструменты рассчитаны на Python 3.10+ и не зависят от конкретной оболочки или операционной системы.
 
@@ -65,6 +65,16 @@ python tools/validate_workspace.py
 ```
 
 `project-state.json`, индекс и отчёт полноты не редактируются вручную.
+
+## Повторный запуск после изменений
+
+Product Manager не запускает эту команду вручную. Её вызывает агент, когда получает короткое сообщение о внесённых изменениях и просьбу перезапустить процесс.
+
+```text
+python tools/restart_process.py --change-type REQUIREMENTS --reason "Я внёс изменения в требования, перезапусти процесс"
+```
+
+Инструмент определяет первый затронутый этап по типу изменения, переводит зависимые утверждённые ревью в `STALE_REVIEW`, делает baseline требований устаревшим при изменении требований, пересчитывает workspace и создаёт impact-отчёт в `reports/`.
 
 ## Источники
 
@@ -182,6 +192,16 @@ python tools/materialize_visual_prototype.py --phase VISUAL_PROTOTYPE --mode DIR
 ```text
 python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE
 ```
+
+### Опциональный Storybook-прототип
+
+После успешного `VISUAL_PROTOTYPE` Product Manager может указать исходники, из которых собирается Storybook. Это не обязательный этап: если исходников нет, его можно пропустить.
+
+```text
+python tools/prepare_visual_prototype_storybook.py --source <каталог-исходников> --source-reference "<описание источника>"
+```
+
+Инструмент проверяет `.storybook`, `package.json`, `src` и наличие stories, создаёт `visual-prototype-storybook/`, исключает `node_modules`, сборки, документацию и тестовые каталоги, а также обновляет `csi_ui-prototype-kit/source-manifest.json`. Экранные stories продукта добавляются в `visual-prototype-storybook/src/product/`.
 
 
 ## Рабочий прототип

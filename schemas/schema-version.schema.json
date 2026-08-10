@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-version.schema.json",
+  "title": "Product Compiler data contract version",
+  "description": "Independent from the Product Compiler release version. Add a new value only when the JSON contract changes.",
+  "type": "string",
+  "enum": [
+    "1.0",
+    "4.0",
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+  ],
+  "x-currentVersion": "1.0"
+}

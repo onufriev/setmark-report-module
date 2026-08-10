@@ -1,4 +1,4 @@
-# JSON-схемы Product Compiler 4.3
+# JSON-схемы Product Compiler
 
 Каждый изменяемый JSON-документ Product Compiler имеет JSON Schema Draft 2020-12 в этой папке.
 Исключение — `kilo.jsonc`: это внешняя конфигурация клиента с комментариями, а не реестр Product Compiler.

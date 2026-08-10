@@ -4,8 +4,15 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-VERSION = '4.4'
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _schema_contract() -> tuple[str, tuple[str, ...]]:
+    contract = json.loads((ROOT / 'schemas/schema-version.schema.json').read_text(encoding='utf-8'))
+    return str(contract['x-currentVersion']), tuple(str(item) for item in contract.get('enum', []))
+
+
+VERSION, SUPPORTED_VERSIONS = _schema_contract()
 
 SCHEMA_FILES = {
     'internal/domain-catalog.json': 'schemas/domain-catalog.schema.json',
@@ -60,7 +67,15 @@ def _validator_for(schema_rel: str):
         schema = json.loads(schema_path.read_text(encoding='utf-8-sig'))
     except (OSError, json.JSONDecodeError) as exc:
         raise RuntimeError(f'Некорректна JSON Schema {schema_rel}: {exc}') from exc
-    return Draft202012Validator(schema)
+    try:
+        from referencing import Registry, Resource
+    except ImportError as exc:
+        raise RuntimeError('Не установлен referencing. Он устанавливается вместе с jsonschema.') from exc
+    registry = Registry()
+    for candidate in (ROOT / 'schemas').glob('*.schema.json'):
+        candidate_schema = json.loads(candidate.read_text(encoding='utf-8-sig'))
+        registry = registry.with_resource(candidate.name, Resource.from_contents(candidate_schema))
+    return Draft202012Validator(schema, registry=registry)
 
 
 def _schema_errors(rel: str, obj) -> list[str]:
@@ -83,8 +98,8 @@ def validate_document(rel: str, obj, *, strict_items: bool = True, use_schema: b
     errors: list[str] = []
     if not isinstance(obj, dict):
         return ['Корневое значение должно быть JSON-объектом']
-    if obj.get('schemaVersion') != VERSION:
-        errors.append(f'schemaVersion должен быть {VERSION}')
+    if obj.get('schemaVersion') not in SUPPORTED_VERSIONS:
+        errors.append(f'schemaVersion должен быть одним из: {", ".join(SUPPORTED_VERSIONS)}')
     list_key = TOP_LEVEL_LISTS.get(rel)
     if list_key and not isinstance(obj.get(list_key), list):
         errors.append(f'Поле {list_key} должно быть массивом')

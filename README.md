@@ -1,4 +1,4 @@
-# Product Compiler 4.4
+# Product Compiler
 
 Product Compiler переводит неструктурированные материалы и ответы Product Manager в проверяемые требования, визуальный прототип, рабочий прототип и комплект передачи в разработку.
 
@@ -9,6 +9,8 @@ Product Compiler переводит неструктурированные ма�
 - до визуального прототипа закрываются все области с `requiredBeforePhase: VISUAL_PROTOTYPE`, включая нефункциональные требования, локализацию, доступность, оборудование и эксплуатационные сценарии;
 - требования фиксируются в `product/requirements-baseline.json` через `tools/commit_requirements.py`;
 - Figma, ссылка на библиотеку компонентов или Storybook сначала считаются только `DISCOVERED_REFERENCE`; они задают источник UI, но не считаются готовым приложением;
+- после готовности `visual-prototype` можно опционально собрать `visual-prototype-storybook` из указанных Product Manager исходников компонентов; это не обязательный этап и без исходников его можно пропустить;
+- для HTML-прототипа создаётся переиспользуемый `csi_ui-prototype-kit`, а исходный код UI-библиотеки не хранится в шаблоне;
 - визуальный и рабочий прототипы имеют локальную точку входа, манифест и заполненную инструкцию запуска;
 - для рабочего прототипа отдельно подтверждается источник данных: реальный объект, ручной ввод, SQL-скрипт, CSV, эмулятор, Postman, API или другой вариант;
 - контрольные отчёты создаются только в `reports/` через `tools/finalize_phase_review.py`;
@@ -31,3 +33,20 @@ python -m pip install -r requirements-tooling.txt
 5. Просматривайте контрольный PDF и отдельным сообщением подтверждайте переход.
 
 Подробный порядок: `START-HERE.md` и `PRODUCT-COMPILER.md`.
+
+## Критики и Codex
+
+В состав проекта включены 11 специализированных critic agents:
+
+- читаемые исходники: `critics/agents/`;
+- отчёты критиков: `critics/reports/`;
+- правила встраивания в этапы: `critics/PROCESS-INTEGRATION.md`;
+- готовый Local Developer Plugin для Codex: `codex/csi-critic-agents/`;
+
+Критики не являются обязательными gate-проверками. Агент предлагает их отдельным вопросом, а Product Manager сам решает, запускать ли проверку и кого выбрать.
+- подключение без терминала: `codex/README.md`.
+
+Критики не заменяют штатные phase reviews и подтверждение Product Manager. Они добавляют независимую проверку рисков до перехода этапа.
+## Поддержка критиков в Claude
+
+Для Claude Code критики включены как project skills в `.claude/skills/`. Для Claude Desktop/Cowork предусмотрены `CLAUDE.md`, `claude-desktop/PROJECT-INSTRUCTIONS.md` и универсальный fallback через `critics/agents/`. Ни один критик не запускается автоматически: Product Compiler сначала спрашивает согласие Product Manager.

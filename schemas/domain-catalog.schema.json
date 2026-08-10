@@ -1,16 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schemaVersion", "profiles", "domains"],
+  "required": [
+    "schemaVersion",
+    "profiles",
+    "domains"
+  ],
   "properties": {
-    "schemaVersion": {"const": "4.4"},
+    "schemaVersion": {
+      "$ref": "schema-version.schema.json"
+    },
     "profiles": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
-        "required": ["keywords"],
+        "required": [
+          "keywords"
+        ],
         "properties": {
-          "keywords": {"type": "array", "items": {"type": "string"}}
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         }
       }
     },
@@ -19,13 +32,38 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "title", "file", "requiredBeforePhase", "profileHint"],
+        "required": [
+          "id",
+          "title",
+          "file",
+          "requiredBeforePhase",
+          "profileHint"
+        ],
         "properties": {
-          "id": {"type": "string", "minLength": 1},
-          "title": {"type": "string", "minLength": 1},
-          "file": {"type": "string", "pattern": "^requirements/.+\\.md$"},
-          "requiredBeforePhase": {"enum": ["VISUAL_PROTOTYPE", "WORKING_PROTOTYPE"]},
-          "profileHint": {"type": "array", "items": {"type": "string"}}
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string",
+            "pattern": "^requirements/.+\\.md$"
+          },
+          "requiredBeforePhase": {
+            "enum": [
+              "VISUAL_PROTOTYPE",
+              "WORKING_PROTOTYPE"
+            ]
+          },
+          "profileHint": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         }
       }
     }

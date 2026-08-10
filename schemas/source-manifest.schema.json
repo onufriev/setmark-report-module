@@ -1,45 +1,133 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schemaVersion", "setupStatus", "inputMode", "entries"],
+  "required": [
+    "schemaVersion",
+    "setupStatus",
+    "inputMode",
+    "entries"
+  ],
   "properties": {
-    "schemaVersion": {"const": "4.4"},
-    "setupStatus": {"enum": ["NOT_STARTED", "IN_PROGRESS", "COMPLETED"]},
-    "inputMode": {"enum": ["UNSET", "FILES", "LINKS", "MIXED", "CONVERSATION_ONLY"]},
+    "schemaVersion": {
+      "$ref": "schema-version.schema.json"
+    },
+    "setupStatus": {
+      "enum": [
+        "NOT_STARTED",
+        "IN_PROGRESS",
+        "COMPLETED"
+      ]
+    },
+    "inputMode": {
+      "enum": [
+        "UNSET",
+        "FILES",
+        "LINKS",
+        "MIXED",
+        "CONVERSATION_ONLY"
+      ]
+    },
     "entries": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "type", "origin", "accessStatus"],
+        "required": [
+          "id",
+          "name",
+          "type",
+          "origin",
+          "accessStatus"
+        ],
         "properties": {
-          "id": {"type": "string", "minLength": 1},
-          "name": {"type": "string", "minLength": 1},
-          "type": {"type": "string", "minLength": 1},
-          "origin": {"type": "string", "minLength": 1},
-          "snapshotPath": {"type": ["string", "null"]},
-          "snapshotSha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
-          "accessStatus": {"enum": ["SNAPSHOT_VERIFIED", "ACCESS_REQUIRED", "FAILED"]},
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "origin": {
+            "type": "string",
+            "minLength": 1
+          },
+          "snapshotPath": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "snapshotSha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "accessStatus": {
+            "enum": [
+              "SNAPSHOT_VERIFIED",
+              "ACCESS_REQUIRED",
+              "FAILED"
+            ]
+          },
           "descendants": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["id", "title", "snapshotPath", "snapshotSha256"],
+              "required": [
+                "id",
+                "title",
+                "snapshotPath",
+                "snapshotSha256"
+              ],
               "properties": {
-                "id": {"type": "string", "minLength": 1},
-                "title": {"type": "string", "minLength": 1},
-                "snapshotPath": {"type": "string", "minLength": 1},
-                "snapshotSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "snapshotPath": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "snapshotSha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
               }
             }
           }
         },
         "allOf": [
           {
-            "if": {"properties": {"accessStatus": {"const": "SNAPSHOT_VERIFIED"}}},
+            "if": {
+              "properties": {
+                "accessStatus": {
+                  "const": "SNAPSHOT_VERIFIED"
+                }
+              }
+            },
             "then": {
               "anyOf": [
-                {"required": ["snapshotPath", "snapshotSha256"]},
-                {"required": ["descendants"]}
+                {
+                  "required": [
+                    "snapshotPath",
+                    "snapshotSha256"
+                  ]
+                },
+                {
+                  "required": [
+                    "descendants"
+                  ]
+                }
               ]
             }
           }

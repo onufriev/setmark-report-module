@@ -6,11 +6,11 @@ from common import ROOT, load, mark_phase_reviews_stale, now, run_tool, save
 
 TARGET=(ROOT/'visual-prototype').resolve()
 PATH=[
- {'id':'overview','label':'Обзор сети','href':'#overview'},
- {'id':'priority','label':'Критические инциденты с риском автоштрафа','href':'#priority'},
- {'id':'incidents','label':'Список инцидентов','href':'#incidents'},
- {'id':'incident','label':'Карточка инцидента','href':'#incident/INC-10482'},
- {'id':'analytics','label':'Аналитика и выгрузка','href':'#analytics'},
+ {'id':'dashboard','label':'Дашборд','href':'index.html#dashboard'},
+ {'id':'outsiders','label':'Аутсайдеры','href':'index.html#outsiders'},
+ {'id':'store-card','label':'Карточка магазина','href':'index.html#store-card'},
+ {'id':'downtime-reason','label':'Причина простоя','href':'index.html#downtime-reason'},
+ {'id':'create-task','label':'Создание задачи','href':'index.html#create-task'},
 ]
 
 def ext(value):
@@ -22,7 +22,7 @@ def clear_target():
  expected=(ROOT/'visual-prototype').resolve()
  if TARGET!=expected or TARGET.parent!=ROOT.resolve(): raise SystemExit('Небезопасная целевая директория очистки')
  for item in TARGET.iterdir():
-  if item.name=='README.md': continue
+  if item.name in {'README.md', 'prototype-kit'}: continue
   shutil.rmtree(item) if item.is_dir() else item.unlink()
 
 def storybook(path):
@@ -35,6 +35,7 @@ def runbook(source,ui_source_mode,application_mode,entry,start,url):
 
 ## 1. Состав прототипа
 Источник UI: `{ui_source_mode}`. Источник приложения: `{application_mode}`. Материализованный источник: `{source}`. Реальный entryPoint: `{entry}`.
+Переиспользуемая визуальная основа: `visual-prototype/prototype-kit/csi_ui-prototype-kit/`.
 
 ## 2. Предварительные требования
 - Python 3.10+ на Windows, macOS или Linux.
@@ -52,7 +53,7 @@ def runbook(source,ui_source_mode,application_mode,entry,start,url):
 Проверка: `python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE`.
 
 ## 6. Устранение проблем
-Проверьте entryPoint, относительные ссылки и отсутствие Storybook-зависимостей.
+Проверьте entryPoint, относительные ссылки и отсутствие Storybook-зависимостей. После готовности можно отдельно собрать `visual-prototype-storybook`, если Product Manager указал исходники Storybook.
 ''',encoding='utf-8',newline='\n')
 
 def main():
@@ -88,7 +89,7 @@ def main():
   entry=candidate.relative_to(ROOT).as_posix()
  start='python -m http.server 8000 --directory visual-prototype';url='http://localhost:8000/'+entry.removeprefix('visual-prototype/')
  runbook(reference,ui_source_mode,application_mode,entry,start,url)
- m=manifest;m.update({'status':'READY','entryPoint':entry,'startCommand':start,'url':url,'dataMode':'STATIC_FILE','dataLocation':'visual-prototype/','runbookPath':'visual-prototype/PROTOTYPE-RUNBOOK.md','verificationCommand':'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE','sourceType':a.mode,'uiSourceMode':ui_source_mode,'applicationMode':application_mode,'sourceMode':application_mode,'sourceReference':reference,'interactionLevel':'CLICKABLE','requiredUserPath':PATH,'storybookDetected':False,'materializedAt':now(),'smokeTest':{'status':'PENDING','checkedAt':None,'details':[]}});save('visual-prototype/prototype-manifest.json',m)
+ m=manifest;m.update({'status':'READY','entryPoint':entry,'startCommand':start,'url':url,'dataMode':'STATIC_FILE','dataLocation':'visual-prototype/','runbookPath':'visual-prototype/PROTOTYPE-RUNBOOK.md','verificationCommand':'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE','sourceType':a.mode,'uiSourceMode':ui_source_mode,'applicationMode':application_mode,'sourceMode':application_mode,'sourceReference':reference,'interactionLevel':'CLICKABLE','requiredUserPath':PATH,'storybookDetected':False,'prototypeKit':'visual-prototype/prototype-kit/csi_ui-prototype-kit/','materializedAt':now(),'smokeTest':{'status':'PENDING','checkedAt':None,'details':[]}});save('visual-prototype/prototype-manifest.json',m)
  stale=mark_phase_reviews_stale('VISUAL_PROTOTYPE','Артефакт visual-prototype переработан')
  result=run_tool('validate_visual_prototype.py',['--phase','VISUAL_PROTOTYPE'],allowed_returncodes={0,1});print(result.stdout,end='')
  if result.returncode:return result.returncode

@@ -157,14 +157,14 @@ def ensure_domain_files() -> None:
             f"**ID вопроса:** {question_id}\n"
             f"**Область:** {domain['id']}\n"
             "**Статус:** Требуется решение\n\n"
-            "Product Compiler 4.4 создал этот блок при миграции старого проекта. "
+            "Product Compiler создал этот блок при миграции старого проекта. "
             "Замените его подтверждённым требованием, решением о неприменимости или точным ответом Product Manager.\n",
             encoding='utf-8',
             newline='\n',
         )
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description='Привести JSON Product Compiler к контракту 4.4')
+    parser = argparse.ArgumentParser(description=f'Привести JSON Product Compiler к контракту {SCHEMA_VERSION}')
     parser.add_argument('--strict', action='store_true', help='Завершиться ошибкой при неполной структуре записей')
     args = parser.parse_args()
 

@@ -9,12 +9,13 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "4.4"
+      "$ref": "schema-version.schema.json"
     },
     "status": {
       "enum": [
         "NOT_COMMITTED",
-        "COMMITTED"
+        "COMMITTED",
+        "STALE"
       ]
     },
     "currentBaselineId": {
@@ -25,6 +26,18 @@
     },
     "baselines": {
       "type": "array"
+    },
+    "staleAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "staleReason": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "4.4",
+  "schemaVersion": "1.0",
   "profiles": {
     "BASE": {
       "keywords": []
@@ -119,7 +119,7 @@
     },
     {
       "id": "salesObjects",
-      "title": "Объекты продаж и их иерархия",
+      "title": "Объекты продаж и источник выручки",
       "file": "requirements/01-base/sales-objects.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHint": [
@@ -189,6 +189,13 @@
       "id": "quality",
       "title": "Нефункциональные требования",
       "file": "requirements/04-quality/quality-requirements.md",
+      "requiredBeforePhase": "VISUAL_PROTOTYPE",
+      "profileHint": []
+    },
+    {
+      "id": "scaleProfile",
+      "title": "Масштаб и плотность объектов",
+      "file": "requirements/04-quality/scale-profile.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHint": []
     },
