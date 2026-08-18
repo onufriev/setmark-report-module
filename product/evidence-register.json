@@ -909,6 +909,19 @@
       "exactUserMessage": "Уточнение Вилка по цене от 5000 до 9000 р",
       "createdAt": "2026-08-18T08:08:48.851Z",
       "recordedBy": "codex-github-update"
+    },
+    {
+      "id": "PM-DEC-049",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "AMEND-FREE-LICENSE-ELIGIBILITY-2026-08-18",
+      "domainId": "salesObjects",
+      "domainIds": [
+        "salesObjects"
+      ],
+      "decision": "По согласованию с Product Manager лицензия может быть предоставлена на безвозмездной основе как действующим, так и новым клиентам. Решение уточняет PM-DEC-047.",
+      "exactUserMessage": "уточнение По согласованию с Product Manager действующим и новым клиентам лицензия может быть предоставлена на безвозмездной основе.",
+      "createdAt": "2026-08-18T08:12:03.391Z",
+      "recordedBy": "codex-github-update"
     }
   ]
 }
