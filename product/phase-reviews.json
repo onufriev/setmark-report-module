@@ -144,6 +144,29 @@
       "presentationPdfSha256": "f87283316b8e7b2c03de3b5a38ecd59363acb046a01ec6a9db7cd658a9762a8c",
       "staleAt": "2026-07-28T22:42:33.619988+00:00",
       "staleReason": "Замечания Product Manager к визуальному прототипу: добавить произвольный диапазон дат на вкладках Дашборд и Инциденты."
+    },
+    {
+      "reviewId": "VISUAL_PROTOTYPE-R2",
+      "phase": "VISUAL_PROTOTYPE",
+      "revision": 2,
+      "status": "READY_FOR_REVIEW",
+      "preparedAt": "2026-08-18T08:50:39.177195+00:00",
+      "registeredBy": "finalize_phase_review.py",
+      "shownToProductManagerAt": "2026-08-18T08:50:41.517346+00:00",
+      "markdownReport": "reports/visual-prototype-v0.2.md",
+      "markdownSha256": "4f755c52d0fe26b3ce791bdc0fc7c9e7157fcb9236cc528233eea8780b8747c5",
+      "pdfReport": "reports/visual-prototype-v0.2.pdf",
+      "pdfSha256": "4c40c5edb0324978b9c57707d4dd524f0e9f62fa8bea178359e58818760e848f",
+      "nextPhase": "VISUAL_VALIDATION",
+      "approvedAt": null,
+      "approvedBy": null,
+      "decisionText": null,
+      "exactUserMessage": null,
+      "presentationPreparedAt": "2026-08-18T08:50:40.416061+00:00",
+      "presentationMarkdownReport": "reports/visual-prototype-v0.2.md",
+      "presentationPdfReport": "reports/visual-prototype-v0.2.pdf",
+      "presentationMarkdownSha256": "4f755c52d0fe26b3ce791bdc0fc7c9e7157fcb9236cc528233eea8780b8747c5",
+      "presentationPdfSha256": "4c40c5edb0324978b9c57707d4dd524f0e9f62fa8bea178359e58818760e848f"
     }
   ]
 }
