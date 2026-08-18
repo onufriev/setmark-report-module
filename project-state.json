@@ -3,7 +3,7 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "VISUAL_PROTOTYPE",
+  "currentPhase": "VISUAL_VALIDATION",
   "status": "WAITING_FOR_APPROVAL",
   "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
   "blockingQuestionId": null,
@@ -12,13 +12,13 @@
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "VISUAL_PROTOTYPE",
+    "phase": "VISUAL_VALIDATION",
     "status": "READY_FOR_REVIEW",
-    "reviewId": "VISUAL_PROTOTYPE-R2",
-    "markdownReport": "reports/visual-prototype-v0.2.md",
-    "pdfReport": "reports/visual-prototype-v0.2.pdf",
-    "shownToProductManagerAt": "2026-08-18T08:50:41.517346+00:00",
-    "nextPhase": "VISUAL_VALIDATION"
+    "reviewId": "VISUAL_VALIDATION-R1",
+    "markdownReport": "reports/visual-validation-v0.1.md",
+    "pdfReport": "reports/visual-validation-v0.1.pdf",
+    "shownToProductManagerAt": "2026-08-18T09:01:41.838637+00:00",
+    "nextPhase": "WORKING_PROTOTYPE"
   },
   "artifactStatus": {
     "requirements": "COMMITTED",
