@@ -162,9 +162,9 @@ tbody tr.critical { box-shadow: inset 3px 0 var(--danger); }
 .type-bar { height:18px; border-radius:4px; background:#edf0f6; overflow:hidden; }
 .type-bar i { display:block; height:100%; background:#7695eb; border-radius:inherit; }
 .actions-list { display:grid; gap:10px; margin-top:15px; }
-.action-row { display:grid; grid-template-columns:1fr auto; gap:14px; align-items:center; padding:14px; border:1px solid var(--line); border-radius:9px; }
+.action-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:center; padding:14px; border:1px solid var(--line); border-radius:9px; }
 .action-row.priority { border-left:4px solid var(--danger); background:#fffafb; }
-.action-row strong { display:block; margin-bottom:6px; }
+.action-row strong { display:block; margin-bottom:6px; overflow-wrap:anywhere; }
 .action-meta { color:var(--muted); font-size:13px; }
 .money { color:#a4222f; font-weight:720; white-space:nowrap; }
 .legend { display: flex; gap: 18px; margin-top: 14px; font-size: 12px; color: var(--muted); }
@@ -194,7 +194,7 @@ tbody tr.critical { box-shadow: inset 3px 0 var(--danger); }
   .brand span:last-child, .network-switch { display: none; }
   .shell { display: block; }
   .sidebar { position: fixed; z-index: 9; top: auto; bottom: 0; left: 0; right: 0; height: 62px; border: 0; border-top: 1px solid var(--line); padding: 6px; }
-  .sidebar nav { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .sidebar nav { display: grid; grid-template-columns: repeat(5, 1fr); }
   .sidebar a { display: grid; gap: 1px; padding: 4px; font-size: 10px; text-align: center; justify-items: center; }
   .sidebar a span { font-size: 16px; }
   .sidebar-foot { display: none; }
@@ -212,6 +212,12 @@ tbody tr.critical { box-shadow: inset 3px 0 var(--danger); }
   .metric strong { font-size: 23px; }
   .store-row { grid-template-columns: 1fr 78px 20px; }
   .store-row .bar { display: none; }
+  .panel { min-width: 0; }
+  .section-head { flex-wrap: wrap; }
+  .action-row > div { min-width: 0; }
+  .action-meta { overflow-wrap: anywhere; }
+  .type-row { grid-template-columns: minmax(0, 1fr) 32px; gap: 8px; width: 100%; }
+  .type-bar { grid-column: 1 / -1; grid-row: 2; }
+  .type-row > span:last-child { grid-column: 2; grid-row: 1; text-align: right; }
   .kv { grid-template-columns: 1fr; gap: 3px; }
 }
-
