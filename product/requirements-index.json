@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "22086606f59713b3c5714524637f43a085266649147fda7f873c4afdd9e4c8f6",
+  "requirementsSha256": "89318561639ec817bce85fe736c6081c9dc4d93e38e14533ffdc121f17947bda",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -79,13 +79,15 @@
     },
     {
       "id": "REQ-DEC-005",
-      "title": "Объекты продаж и их иерархия",
+      "title": "Объект продажи модуля",
       "file": "requirements/01-base/sales-objects.md",
       "line": 3,
       "domainId": "salesObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-005"
+        "PM-DEC-047",
+        "PM-DEC-048",
+        "PM-DEC-049"
       ],
       "applicability": "MVP1"
     },
