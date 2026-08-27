@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-29T00:57:43.110186+00:00",
+  "evaluatedAt": "2026-08-27T09:21:35.406906+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -93,6 +93,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-046",
         "REQ-DEC-036",
         "REQ-DEC-031",
         "REQ-DEC-007",
@@ -195,12 +196,13 @@
       "file": "requirements/01-base/sales-objects.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-005"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-005: основание уточнение Product Manager от 2026-08-11 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "hardware",
@@ -373,12 +375,25 @@
   ],
   "gates": {
     "VISUAL_PROTOTYPE": {
-      "status": "PASSED",
-      "blockingQuestions": []
+      "status": "BLOCKED",
+      "blockingQuestions": [
+        {
+          "questionId": "AUTO-salesObjects-MISSING",
+          "domainId": "salesObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/sales-objects.md"
+        }
+      ]
     },
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
+        {
+          "questionId": "AUTO-salesObjects-MISSING",
+          "domainId": "salesObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/sales-objects.md"
+        },
         {
           "questionId": "Q-PROTO-DATA-001",
           "domainId": "prototypeDataSource",
@@ -430,8 +445,15 @@
       ]
     }
   },
-  "gateStatus": "PASSED",
-  "blockingQuestions": [],
+  "gateStatus": "BLOCKED",
+  "blockingQuestions": [
+    {
+      "questionId": "AUTO-salesObjects-MISSING",
+      "domainId": "salesObjects",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/01-base/sales-objects.md"
+    }
+  ],
   "uiSource": {
     "schemaVersion": "4.4",
     "strategy": "COMPONENT_LIBRARY",
@@ -533,3 +555,4 @@
     ]
   }
 }
+

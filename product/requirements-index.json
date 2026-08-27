@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "22086606f59713b3c5714524637f43a085266649147fda7f873c4afdd9e4c8f6",
+  "requirementsSha256": "2d8df0cb09adcb41fa95872316f5d52deaf17d94df80974bb0210af195744f0f",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -79,13 +79,26 @@
     },
     {
       "id": "REQ-DEC-005",
-      "title": "Объекты продаж и их иерархия",
+      "title": "Объект продажи модуля",
       "file": "requirements/01-base/sales-objects.md",
       "line": 3,
       "domainId": "salesObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-005"
+        "PM-DEC-005",
+        "уточнение Product Manager от 2026-08-11"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-046",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 3,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-047"
       ],
       "applicability": "MVP1"
     },
@@ -93,7 +106,7 @@
       "id": "REQ-DEC-036",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 3,
+      "line": 14,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -105,7 +118,7 @@
       "id": "REQ-DEC-031",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 16,
+      "line": 27,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -117,7 +130,7 @@
       "id": "REQ-DEC-007",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 27,
+      "line": 38,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -130,7 +143,7 @@
       "id": "REQ-BR-001",
       "title": "Корреляция отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 55,
+      "line": 66,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -142,7 +155,7 @@
       "id": "REQ-BR-002",
       "title": "Последовательность онлайн- и офлайн-проверки",
       "file": "requirements/02-system/business-rules.md",
-      "line": 68,
+      "line": 79,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -155,7 +168,7 @@
       "id": "REQ-BR-003",
       "title": "Справочник отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 81,
+      "line": 92,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -167,7 +180,7 @@
       "id": "REQ-DEC-001",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 94,
+      "line": 105,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -789,9 +802,9 @@
     },
     {
       "file": "requirements/02-system/business-rules.md",
-      "requirements": 7,
+      "requirements": 8,
       "needsInput": 0,
-      "candidateSections": 7
+      "candidateSections": 8
     },
     {
       "file": "requirements/02-system/entities-and-data.md",
@@ -921,3 +934,4 @@
     }
   ]
 }
+
