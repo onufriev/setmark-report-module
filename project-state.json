@@ -21,7 +21,7 @@
     "nextPhase": null
   },
   "artifactStatus": {
-    "requirements": "COMMITTED",
+    "requirements": "IN_PROGRESS",
     "visualPrototype": "VERIFIED",
     "workingPrototype": "NOT_STARTED",
     "handoff": "NOT_STARTED"

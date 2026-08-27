@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-07-29T00:57:43.110186+00:00",
+  "evaluatedAt": "2026-08-27T09:54:30.905156+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -44,7 +44,7 @@
       "file": "requirements/02-system/system-requirements.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
+      "status": "BLOCKED",
       "requirementRefs": [
         "REQ-DEC-037",
         "REQ-DEC-010",
@@ -54,7 +54,11 @@
         "REQ-DEC-033"
       ],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-FR-004: основание обратная связь клиента ПетШоп не зарегистрировано",
+        "REQ-FR-005: основание обратная связь клиента ПетШоп не зарегистрировано",
+        "REQ-FR-006: основание обратная связь клиента ПетШоп не зарегистрировано"
+      ]
     },
     {
       "id": "businessObjects",
@@ -62,7 +66,7 @@
       "file": "requirements/02-system/entities-and-data.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
+      "status": "BLOCKED",
       "requirementRefs": [
         "REQ-DEC-035",
         "REQ-DEC-006",
@@ -70,7 +74,9 @@
         "REQ-DEC-002"
       ],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-BO-002: основание обратная связь клиента ПетШоп не зарегистрировано"
+      ]
     },
     {
       "id": "rolesPermissions",
@@ -93,6 +99,10 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-047",
+        "REQ-DEC-049",
+        "REQ-DEC-048",
+        "REQ-DEC-046",
         "REQ-DEC-036",
         "REQ-DEC-031",
         "REQ-DEC-007",
@@ -154,13 +164,15 @@
       "file": "requirements/08-acceptance/acceptance-criteria.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
+      "status": "BLOCKED",
       "requirementRefs": [
         "REQ-DEC-043",
         "REQ-DEC-025"
       ],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-AC-001: основание REQ-FR-004 не зарегистрировано"
+      ]
     },
     {
       "id": "successSignal",
@@ -195,12 +207,13 @@
       "file": "requirements/01-base/sales-objects.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": true,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-005"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-005: основание уточнения Product Manager от 2026-08-11 и 2026-08-26 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "hardware",
@@ -373,12 +386,61 @@
   ],
   "gates": {
     "VISUAL_PROTOTYPE": {
-      "status": "PASSED",
-      "blockingQuestions": []
+      "status": "BLOCKED",
+      "blockingQuestions": [
+        {
+          "questionId": "AUTO-functionalRequirements-MISSING",
+          "domainId": "functionalRequirements",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/02-system/system-requirements.md"
+        },
+        {
+          "questionId": "AUTO-businessObjects-MISSING",
+          "domainId": "businessObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/02-system/entities-and-data.md"
+        },
+        {
+          "questionId": "AUTO-acceptanceCriteria-MISSING",
+          "domainId": "acceptanceCriteria",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/08-acceptance/acceptance-criteria.md"
+        },
+        {
+          "questionId": "AUTO-salesObjects-MISSING",
+          "domainId": "salesObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/sales-objects.md"
+        }
+      ]
     },
     "WORKING_PROTOTYPE": {
       "status": "BLOCKED",
       "blockingQuestions": [
+        {
+          "questionId": "AUTO-functionalRequirements-MISSING",
+          "domainId": "functionalRequirements",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/02-system/system-requirements.md"
+        },
+        {
+          "questionId": "AUTO-businessObjects-MISSING",
+          "domainId": "businessObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/02-system/entities-and-data.md"
+        },
+        {
+          "questionId": "AUTO-acceptanceCriteria-MISSING",
+          "domainId": "acceptanceCriteria",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/08-acceptance/acceptance-criteria.md"
+        },
+        {
+          "questionId": "AUTO-salesObjects-MISSING",
+          "domainId": "salesObjects",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/sales-objects.md"
+        },
         {
           "questionId": "Q-PROTO-DATA-001",
           "domainId": "prototypeDataSource",
@@ -430,8 +492,33 @@
       ]
     }
   },
-  "gateStatus": "PASSED",
-  "blockingQuestions": [],
+  "gateStatus": "BLOCKED",
+  "blockingQuestions": [
+    {
+      "questionId": "AUTO-functionalRequirements-MISSING",
+      "domainId": "functionalRequirements",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/02-system/system-requirements.md"
+    },
+    {
+      "questionId": "AUTO-businessObjects-MISSING",
+      "domainId": "businessObjects",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/02-system/entities-and-data.md"
+    },
+    {
+      "questionId": "AUTO-acceptanceCriteria-MISSING",
+      "domainId": "acceptanceCriteria",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/08-acceptance/acceptance-criteria.md"
+    },
+    {
+      "questionId": "AUTO-salesObjects-MISSING",
+      "domainId": "salesObjects",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/01-base/sales-objects.md"
+    }
+  ],
   "uiSource": {
     "schemaVersion": "4.4",
     "strategy": "COMPONENT_LIBRARY",

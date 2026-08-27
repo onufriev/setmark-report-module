@@ -883,6 +883,58 @@
       "exactUserMessage": "пока я доволен, давай вносить изменения в требования на основе нашей работы с прототипом",
       "createdAt": "2026-07-29T00:52:32.009038+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-047",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-INC-007-008-APPROVAL",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "По статусу согласований, давай зафиксируем факт согласования чтобы решить вопрос.",
+      "createdAt": "2026-08-27T09:21:34.444609+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-048",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-INC-003-APPROVAL",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "согласован, пошли к следующему",
+      "createdAt": "2026-08-27T09:40:04.068572+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-049",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-INC-005-APPROVAL",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "ок. Давай дальше",
+      "createdAt": "2026-08-27T09:40:08.923942+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-050",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-INC-004-APPROVAL",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Согласовано, пошли дальше",
+      "createdAt": "2026-08-27T09:40:24.274405+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
