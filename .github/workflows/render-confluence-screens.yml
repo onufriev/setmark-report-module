@@ -32,13 +32,17 @@ jobs:
       - name: Start prototype
         run: |
           python3 -m http.server 8080 --directory visual-prototype/app >/tmp/setmark-http.log 2>&1 &
-          echo $! > /tmp/setmark-http.pid
-          for i in {1..30}; do curl -fsS http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/setmark-http.log
+          exit 1
 
       - name: Capture screens
         run: |
           mkdir -p docs/confluence-assets/screens
-          cat > /tmp/capture.mjs <<'EOF'
+          cat > capture-confluence.mjs <<'EOF'
           import { chromium } from 'playwright';
           const browser = await chromium.launch({headless:true});
           const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
@@ -52,12 +56,13 @@ jobs:
           ];
           for (const [name,hash] of screens) {
             await page.goto(`http://127.0.0.1:8080/#${hash}`, {waitUntil:'networkidle'});
-            await page.waitForTimeout(400);
+            await page.waitForTimeout(500);
             await page.screenshot({path:`docs/confluence-assets/screens/${name}.png`,fullPage:true});
           }
           await browser.close();
           EOF
-          node /tmp/capture.mjs
+          node capture-confluence.mjs
+          rm capture-confluence.mjs
 
       - name: Commit screenshots
         run: |
