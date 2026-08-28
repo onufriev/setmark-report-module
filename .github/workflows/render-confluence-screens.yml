@@ -6,6 +6,7 @@ on:
       - '.github/workflows/render-confluence-screens.yml'
       - 'visual-prototype/app/**'
       - 'docs/confluence-assets/incident-maps/source/**'
+      - 'docs/product-definition/diagrams/**'
 
 permissions:
   contents: write
@@ -50,6 +51,12 @@ jobs:
       - name: Capture screens and incident maps
         run: |
           mkdir -p docs/confluence-assets/screens docs/confluence-assets/incident-maps
+          cp docs/product-definition/diagrams/inc-003-analysis-flow-v0.4.png docs/confluence-assets/incident-maps/inc-003.png
+          cp docs/product-definition/diagrams/inc-004-analysis-flow-v0.2.png docs/confluence-assets/incident-maps/inc-004.png
+          cp docs/product-definition/diagrams/inc-005-analysis-flow-v0.1.png docs/confluence-assets/incident-maps/inc-005.png
+          cp docs/product-definition/diagrams/inc-007-analysis-flow-v0.4.png docs/confluence-assets/incident-maps/inc-007.png
+          cp docs/product-definition/diagrams/inc-008-analysis-flow-v0.4.png docs/confluence-assets/incident-maps/inc-008.png
+
           cat > capture-confluence.mjs <<'EOF'
           import { chromium } from 'playwright';
           const browser = await chromium.launch({headless:true});
@@ -76,6 +83,10 @@ jobs:
             await mapPage.waitForTimeout(300);
             await mapPage.screenshot({path:`docs/confluence-assets/incident-maps/${name}.png`,fullPage:true});
           }
+
+          await mapPage.goto('http://127.0.0.1:8081/docs/product-definition/diagrams/inc-006-analysis-flow-v0.1.svg', {waitUntil:'networkidle'});
+          await mapPage.waitForTimeout(300);
+          await mapPage.screenshot({path:'docs/confluence-assets/incident-maps/inc-006.png',fullPage:true});
           await mapPage.close();
           await browser.close();
           EOF
