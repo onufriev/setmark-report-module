@@ -1,0 +1,72 @@
+name: Render Confluence screenshots
+
+on:
+  push:
+    paths:
+      - '.github/workflows/render-confluence-screens.yml'
+      - 'visual-prototype/app/**'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start prototype
+        run: |
+          python3 -m http.server 8080 --directory visual-prototype/app >/tmp/setmark-http.log 2>&1 &
+          echo $! > /tmp/setmark-http.pid
+          for i in {1..30}; do curl -fsS http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+
+      - name: Capture screens
+        run: |
+          mkdir -p docs/confluence-assets/screens
+          cat > /tmp/capture.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({headless:true});
+          const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+          const screens = [
+            ['dashboard','overview'],
+            ['incidents','incidents'],
+            ['incident-card','incident/INC-10621'],
+            ['actions','actions'],
+            ['analytics','analytics'],
+            ['settings','settings']
+          ];
+          for (const [name,hash] of screens) {
+            await page.goto(`http://127.0.0.1:8080/#${hash}`, {waitUntil:'networkidle'});
+            await page.waitForTimeout(400);
+            await page.screenshot({path:`docs/confluence-assets/screens/${name}.png`,fullPage:true});
+          }
+          await browser.close();
+          EOF
+          node /tmp/capture.mjs
+
+      - name: Commit screenshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/confluence-assets/screens
+          if git diff --cached --quiet; then
+            echo 'Screenshots unchanged'
+          else
+            git commit -m 'docs: refresh Confluence prototype screenshots'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
