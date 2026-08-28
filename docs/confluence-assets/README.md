@@ -1,0 +1,1 @@
+Confluence external image assets are stored on branch agent/confluence-assets.
