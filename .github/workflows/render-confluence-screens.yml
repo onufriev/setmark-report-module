@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/render-confluence-screens.yml'
       - 'visual-prototype/app/**'
+      - 'docs/confluence-assets/incident-maps/source/**'
 
 permissions:
   contents: write
@@ -29,22 +30,30 @@ jobs:
           npm install playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Start prototype
+      - name: Start local servers
         run: |
           python3 -m http.server 8080 --directory visual-prototype/app >/tmp/setmark-http.log 2>&1 &
-          for i in {1..30}; do
-            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then exit 0; fi
-            sleep 1
+          python3 -m http.server 8081 --directory . >/tmp/assets-http.log 2>&1 &
+          for port in 8080 8081; do
+            ok=0
+            for i in {1..30}; do
+              if curl -fsS http://127.0.0.1:${port}/ >/dev/null; then ok=1; break; fi
+              sleep 1
+            done
+            if [ "$ok" -ne 1 ]; then
+              cat /tmp/setmark-http.log || true
+              cat /tmp/assets-http.log || true
+              exit 1
+            fi
           done
-          cat /tmp/setmark-http.log
-          exit 1
 
-      - name: Capture screens
+      - name: Capture screens and incident maps
         run: |
-          mkdir -p docs/confluence-assets/screens
+          mkdir -p docs/confluence-assets/screens docs/confluence-assets/incident-maps
           cat > capture-confluence.mjs <<'EOF'
           import { chromium } from 'playwright';
           const browser = await chromium.launch({headless:true});
+
           const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
           const screens = [
             ['dashboard','overview'],
@@ -59,19 +68,28 @@ jobs:
             await page.waitForTimeout(500);
             await page.screenshot({path:`docs/confluence-assets/screens/${name}.png`,fullPage:true});
           }
+          await page.close();
+
+          const mapPage = await browser.newPage({viewport:{width:1280,height:900},deviceScaleFactor:1});
+          for (const name of ['inc-001','inc-002']) {
+            await mapPage.goto(`http://127.0.0.1:8081/docs/confluence-assets/incident-maps/source/${name}.html`, {waitUntil:'networkidle'});
+            await mapPage.waitForTimeout(300);
+            await mapPage.screenshot({path:`docs/confluence-assets/incident-maps/${name}.png`,fullPage:true});
+          }
+          await mapPage.close();
           await browser.close();
           EOF
           node capture-confluence.mjs
           rm capture-confluence.mjs
 
-      - name: Commit screenshots
+      - name: Commit rendered assets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/confluence-assets/screens
+          git add docs/confluence-assets/screens docs/confluence-assets/incident-maps
           if git diff --cached --quiet; then
-            echo 'Screenshots unchanged'
+            echo 'Rendered assets unchanged'
           else
-            git commit -m 'docs: refresh Confluence prototype screenshots'
+            git commit -m 'docs: refresh Confluence rendered assets'
             git push origin HEAD:${{ github.ref_name }}
           fi
