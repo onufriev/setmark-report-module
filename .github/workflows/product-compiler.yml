@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install Product Compiler dependencies
+        run: python -m pip install -r requirements-tooling.txt
+
       - name: Register Product Manager decisions
         shell: bash
         run: |
