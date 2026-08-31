@@ -1,0 +1,149 @@
+name: Product Compiler
+
+on:
+  push:
+    branches:
+      - agent/resolve-visual-prototype-gate
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-compiler-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Register Product Manager decisions
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path('product/evidence-register.json')
+          doc = json.loads(path.read_text(encoding='utf-8'))
+          existing = {item.get('id'): item for item in doc.get('evidence', [])}
+          created_at = datetime.now(timezone.utc).isoformat()
+
+          decisions = [
+              {
+                  'id': 'PM-DEC-051',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-CLIENT-PETSHOP-MVP-001',
+                  'domainId': 'functionalRequirements',
+                  'domainIds': ['acceptanceCriteria', 'businessObjects', 'functionalRequirements'],
+                  'decision': 'Для MVP подтверждены поиск по штрихкоду, артикулу и полному коду маркировки; несколько значений через запятую объединяются по ИЛИ с точным совпадением. Фильтр магазинов поддерживает множественный выбор, «Выбрать все» и «Сбросить». В данные инцидента входят штрихкод, артикул, наименование товара, номер чека/идентификатор операции и источник проверки; эти поля доступны для поиска, карточки и CSV.',
+                  'exactUserMessage': 'да, все верно',
+              },
+              {
+                  'id': 'PM-DEC-052',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-SALES-OBJECTS-DEFER-001',
+                  'domainId': 'salesObjects',
+                  'domainIds': ['salesObjects'],
+                  'decision': 'В текущем MVP объект продажи и коммерческая модель функции не определяются. Лицензирование, тарификация, стоимость и включение функции в коммерческое предложение Set Mark отложены и не должны ограничивать требования или прототип. Предметные сущности не считаются объектами продажи.',
+                  'exactUserMessage': 'все верно',
+              },
+              {
+                  'id': 'PM-DEC-053',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-CSV-RISK-COLUMNS-001',
+                  'domainId': 'functionalRequirements',
+                  'domainIds': ['acceptanceCriteria', 'functionalRequirements'],
+                  'decision': 'CSV содержит 21 поле и не содержит отдельный признак «Риск автоштрафа» и потенциальную сумму штрафа. Риск автоштрафа выражается через критичность инцидента.',
+                  'exactUserMessage': 'да',
+              },
+              {
+                  'id': 'PM-DEC-054',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-POTENTIAL-FINE-UI-001',
+                  'domainId': 'functionalRequirements',
+                  'domainIds': ['acceptanceCriteria', 'businessObjects', 'functionalRequirements'],
+                  'decision': 'Потенциальный штраф является важным показателем оценки риска и должен оставаться в пользовательском интерфейсе. Отдельный признак риска не дублирует критичность.',
+                  'exactUserMessage': 'Стоп, потенциальный штраф - это очень важно для оценки риска, его нельзя убирать из интерфейса',
+              },
+              {
+                  'id': 'PM-DEC-055',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-POTENTIAL-FINE-CALC-001',
+                  'domainId': 'businessRules',
+                  'domainIds': ['acceptanceCriteria', 'businessObjects', 'businessRules', 'functionalRequirements'],
+                  'decision': 'Потенциальный штраф рассчитывается точно по формуле применимой действующей нормы. Для фиксированной ставки используется точное значение; для накопительного состава показывается текущая сумма по имеющимся данным и она пересчитывается при поступлении новых инцидентов.',
+                  'exactUserMessage': 'все верно',
+              },
+              {
+                  'id': 'PM-DEC-056',
+                  'type': 'PRODUCT_MANAGER_DECISION',
+                  'questionId': 'Q-POTENTIAL-FINE-AGGREGATION-001',
+                  'domainId': 'businessRules',
+                  'domainIds': ['acceptanceCriteria', 'businessRules', 'functionalRequirements'],
+                  'decision': 'Для накопительных составов потенциальный штраф рассчитывается один раз на нормативный объект и нормативный период. Связанные инциденты участвуют в расчёте порога, но один и тот же штраф не суммируется по каждому инциденту.',
+                  'exactUserMessage': 'да',
+              },
+          ]
+
+          for record in decisions:
+              old = existing.get(record['id'])
+              if old:
+                  if old.get('questionId') != record['questionId']:
+                      raise SystemExit(f"{record['id']} уже занят другим решением")
+                  continue
+              record['createdAt'] = created_at
+              record['recordedBy'] = 'github-actions:product-compiler'
+              doc.setdefault('evidence', []).append(record)
+
+          path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Synchronize workspace and evaluate gates
+        run: python tools/sync_workspace.py --strict-json --verbose
+
+      - name: Commit requirements baseline when changed
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          index = json.loads(Path('product/requirements-index.json').read_text(encoding='utf-8'))
+          report = json.loads(Path('product/completeness-report.json').read_text(encoding='utf-8'))
+          if report.get('gates', {}).get('VISUAL_PROTOTYPE', {}).get('status') != 'PASSED':
+              raise SystemExit('VISUAL_PROTOTYPE gate не прошёл')
+
+          baseline = json.loads(Path('product/requirements-baseline.json').read_text(encoding='utf-8'))
+          current_id = baseline.get('currentBaselineId')
+          current = next((item for item in baseline.get('baselines', []) if item.get('baselineId') == current_id), None)
+          if current and current.get('requirementsSha256') == index.get('requirementsSha256'):
+              print(f'Baseline {current_id} уже соответствует текущим требованиям')
+          else:
+              subprocess.run(['python', 'tools/commit_requirements.py'], check=True)
+          PY
+
+      - name: Commit generated Product Compiler state
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add product/*.json project-state.json
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git commit -m "chore: sync Product Compiler state"
+          git push
