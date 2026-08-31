@@ -1065,6 +1065,19 @@
       "exactUserMessage": "Подтверждаю",
       "createdAt": "2026-08-31T14:14:44.245711+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-061",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LOC-NON-RU-MONITORING",
+      "domainId": "localization",
+      "domainIds": [
+        "localization"
+      ],
+      "decision": "При корректном значении setmark.country, отличном от RU, Мониторинг маркировки полностью отключается: навигация скрывается, страницы и API недоступны, сбор данных и интеграция с «Честным знаком» не запускаются, подключение ЭЦП не показывается. Журнал нарушений Set Mark продолжает работать по собственным правилам.",
+      "exactUserMessage": "подтверждаю",
+      "createdAt": "2026-08-31T14:17:39.640247+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
