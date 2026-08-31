@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "5f87c468957a1127cfcc9d965046281e254c296ca2f6b515b05d098480ca5986",
+  "requirementsSha256": "a8c82ca1168273923dbd852fe5563a5ad66983b202f2b8acdb4cc51530dd0d09",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -588,10 +588,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-039",
+      "id": "REQ-DEC-051",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
       "line": 3,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-052"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-039",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 14,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -603,7 +615,7 @@
       "id": "REQ-DEC-018",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 18,
+      "line": 29,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -616,7 +628,7 @@
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 29,
+      "line": 40,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -629,7 +641,7 @@
       "id": "REQ-DATA-002",
       "title": "Данные для корреляции",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 42,
+      "line": 53,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -1011,9 +1023,9 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 4,
+      "requirements": 5,
       "needsInput": 0,
-      "candidateSections": 4
+      "candidateSections": 5
     },
     {
       "file": "requirements/05-integrations/integrations.md",
