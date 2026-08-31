@@ -935,6 +935,20 @@
       "exactUserMessage": "Согласовано, пошли дальше",
       "createdAt": "2026-08-27T09:40:24.274405+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-051",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-GRACE-DURATION",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "Льготный период после окончания лицензии Set Mark составляет ровно 10 календарных дней и не настраивается клиентом.",
+      "exactUserMessage": "принимается",
+      "createdAt": "2026-08-31T13:39:23.510278+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
+
