@@ -91,5 +91,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore: register VISUAL_PROTOTYPE R4"
+          git reset --hard HEAD
           git pull --rebase origin agent/resolve-visual-prototype-gate
           git push origin HEAD:agent/resolve-visual-prototype-gate
