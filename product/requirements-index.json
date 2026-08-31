@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "08b52c5cb81ae6de47c4a03c3f8fe5d77ae31d4a7966a7ace855cad620474122",
+  "requirementsSha256": "71d8849eb471c728183c0d16b7f8565c3b5074d3eb16a16e5fb91611e817b899",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -349,10 +349,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-062",
+      "id": "REQ-DEC-064",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
       "line": 3,
+      "domainId": "rolesPermissions",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-065"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-062",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "line": 14,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -364,7 +376,7 @@
       "id": "REQ-DEC-061",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
-      "line": 14,
+      "line": 25,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -376,7 +388,7 @@
       "id": "REQ-DEC-008",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
-      "line": 25,
+      "line": 36,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -1113,9 +1125,9 @@
     },
     {
       "file": "requirements/02-system/roles-and-permissions.md",
-      "requirements": 3,
+      "requirements": 4,
       "needsInput": 0,
-      "candidateSections": 3
+      "candidateSections": 4
     },
     {
       "file": "requirements/02-system/states-and-errors.md",
