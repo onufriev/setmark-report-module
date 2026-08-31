@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "830729423f160c114ea916041b76ebb61ceb06adaed5529478e3edf4c3844133",
+  "requirementsSha256": "2972e6e21cc68f29d45150bb9cfe4db0143ac8c032f8655e59b695e27c0fb326",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -624,10 +624,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-057",
+      "id": "REQ-DEC-058",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
       "line": 3,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-059"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-057",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 14,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -639,7 +651,7 @@
       "id": "REQ-DEC-056",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 14,
+      "line": 25,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -651,7 +663,7 @@
       "id": "REQ-DEC-052",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 25,
+      "line": 36,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -663,7 +675,7 @@
       "id": "REQ-DEC-051",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 36,
+      "line": 47,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -675,7 +687,7 @@
       "id": "REQ-DEC-039",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 47,
+      "line": 58,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -687,7 +699,7 @@
       "id": "REQ-DEC-018",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 62,
+      "line": 73,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -700,7 +712,7 @@
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 73,
+      "line": 84,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -713,7 +725,7 @@
       "id": "REQ-DATA-002",
       "title": "Данные для корреляции",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 86,
+      "line": 97,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -1095,9 +1107,9 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 8,
+      "requirements": 9,
       "needsInput": 0,
-      "candidateSections": 8
+      "candidateSections": 9
     },
     {
       "file": "requirements/05-integrations/integrations.md",
