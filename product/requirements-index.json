@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "a8c82ca1168273923dbd852fe5563a5ad66983b202f2b8acdb4cc51530dd0d09",
+  "requirementsSha256": "9c79315da435e2502cb31ae81c65d4091591f799b8a9f5e3fc8880f9d9c65b56",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -588,10 +588,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-051",
+      "id": "REQ-DEC-052",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
       "line": 3,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-053"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-051",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 14,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -603,7 +615,7 @@
       "id": "REQ-DEC-039",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 14,
+      "line": 25,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -615,7 +627,7 @@
       "id": "REQ-DEC-018",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 29,
+      "line": 40,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -628,7 +640,7 @@
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 40,
+      "line": 51,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -641,7 +653,7 @@
       "id": "REQ-DATA-002",
       "title": "Данные для корреляции",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 53,
+      "line": 64,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -1023,9 +1035,9 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 5,
+      "requirements": 6,
       "needsInput": 0,
-      "candidateSections": 5
+      "candidateSections": 6
     },
     {
       "file": "requirements/05-integrations/integrations.md",
