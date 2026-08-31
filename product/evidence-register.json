@@ -1091,6 +1091,19 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T14:31:52.880397+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-063",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-ADMIN-BY-PRIVILEGE",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "rolesPermissions"
+      ],
+      "decision": "Право изменять каждую настройку определяется наличием соответствующей административной привилегии, а не названием роли. Роль «Администратор системы» получает административные привилегии по умолчанию, но их состав может изменяться.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:35:40.478646+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
