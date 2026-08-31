@@ -987,6 +987,19 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T13:57:01.680382+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-055",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-PARTIAL-STORES",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "При частичном лицензировании магазинов полный доступ к функциям и данным Set Mark сохраняется для всех магазинов сети; система показывает неблокирующее предупреждение о необходимости докупить недостающее количество лицензий.",
+      "exactUserMessage": "подтвердить",
+      "createdAt": "2026-08-31T14:00:21.492818+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
