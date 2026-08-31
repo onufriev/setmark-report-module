@@ -974,6 +974,19 @@
       "exactUserMessage": "согласен",
       "createdAt": "2026-08-31T13:53:24.143856+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-054",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-OFFLINE-EXPIRY",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "При недоступности Set Agent система рассчитывает доступ по сохранённой дате окончания последней активной лицензии, применяет льготный период ровно 10 календарных дней и показывает предупреждение о невозможности актуализировать лицензию.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T13:57:01.680382+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
