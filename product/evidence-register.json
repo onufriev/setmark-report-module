@@ -1013,6 +1013,19 @@
       "exactUserMessage": "Подтвердить",
       "createdAt": "2026-08-31T14:02:21.594472+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-057",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-COLLECT-WITHOUT-LICENSE",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Для клиентов RU после настройки Set Mark и подключения ЭЦП сбор данных Мониторинга продолжается независимо от состояния лицензии, включая состояния «лицензии никогда не было» и «льготный период закончился».",
+      "exactUserMessage": "Подтвердить",
+      "createdAt": "2026-08-31T14:04:45.686696+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
