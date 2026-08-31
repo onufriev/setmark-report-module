@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-08-27T09:54:30.905156+00:00",
+  "evaluatedAt": "2026-08-31T13:39:24.799966+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -14,14 +14,15 @@
       "file": "requirements/01-base/product-context.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
+      "status": "BLOCKED",
       "requirementRefs": [
-        "REQ-DEC-004",
         "REQ-PC-001",
         "REQ-PC-002"
       ],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-004: основание уточнение Product Manager от 2026-08-27 не зарегистрировано"
+      ]
     },
     {
       "id": "goalsScope",
@@ -29,14 +30,16 @@
       "file": "requirements/01-base/goals-and-scope.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
+      "status": "BLOCKED",
       "requirementRefs": [
         "REQ-DEC-034",
-        "REQ-DEC-003",
         "REQ-GS-001"
       ],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-003: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-GS-002: основание уточнения Product Manager от 2026-08-27 не зарегистрировано"
+      ]
     },
     {
       "id": "functionalRequirements",
@@ -99,6 +102,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-050",
         "REQ-DEC-047",
         "REQ-DEC-049",
         "REQ-DEC-048",
@@ -150,13 +154,14 @@
       "file": "requirements/07-scenarios/user-journeys.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-042",
-        "REQ-DEC-024"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-042: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-DEC-024: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "acceptanceCriteria",
@@ -180,13 +185,14 @@
       "file": "requirements/08-acceptance/validation-success.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-044",
-        "REQ-DEC-026"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-044: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-DEC-026: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "uiSource",
@@ -291,14 +297,15 @@
       "file": "requirements/07-scenarios/business-scenarios.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-041",
-        "REQ-DEC-030",
-        "REQ-DEC-023"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-041: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-DEC-030: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-DEC-023: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "technicalConstraints",
@@ -362,13 +369,14 @@
       "file": "requirements/09-traceability/traceability.md",
       "requiredBeforePhase": "VISUAL_PROTOTYPE",
       "profileHintMatched": false,
-      "status": "CONFIRMED",
-      "requirementRefs": [
-        "REQ-DEC-045",
-        "REQ-DEC-027"
-      ],
+      "status": "BLOCKED",
+      "requirementRefs": [],
       "needsInput": [],
-      "validationNotes": []
+      "validationNotes": [
+        "REQ-DEC-045: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "REQ-DEC-027: основание уточнение Product Manager от 2026-08-27 не зарегистрировано",
+        "Нет подтверждённого требования, решения о неприменимости или NEEDS_INPUT"
+      ]
     },
     {
       "id": "prototypeDataSource",
@@ -389,6 +397,18 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
+          "questionId": "AUTO-productContext-MISSING",
+          "domainId": "productContext",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/product-context.md"
+        },
+        {
+          "questionId": "AUTO-goalsScope-MISSING",
+          "domainId": "goalsScope",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/goals-and-scope.md"
+        },
+        {
           "questionId": "AUTO-functionalRequirements-MISSING",
           "domainId": "functionalRequirements",
           "title": "Область не зафиксирована явно",
@@ -401,16 +421,40 @@
           "file": "requirements/02-system/entities-and-data.md"
         },
         {
+          "questionId": "AUTO-mainJourney-MISSING",
+          "domainId": "mainJourney",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/07-scenarios/user-journeys.md"
+        },
+        {
           "questionId": "AUTO-acceptanceCriteria-MISSING",
           "domainId": "acceptanceCriteria",
           "title": "Область не зафиксирована явно",
           "file": "requirements/08-acceptance/acceptance-criteria.md"
         },
         {
+          "questionId": "AUTO-successSignal-MISSING",
+          "domainId": "successSignal",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/08-acceptance/validation-success.md"
+        },
+        {
           "questionId": "AUTO-salesObjects-MISSING",
           "domainId": "salesObjects",
           "title": "Область не зафиксирована явно",
           "file": "requirements/01-base/sales-objects.md"
+        },
+        {
+          "questionId": "AUTO-businessScenarios-MISSING",
+          "domainId": "businessScenarios",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/07-scenarios/business-scenarios.md"
+        },
+        {
+          "questionId": "AUTO-traceability-MISSING",
+          "domainId": "traceability",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/09-traceability/traceability.md"
         }
       ]
     },
@@ -418,6 +462,18 @@
       "status": "BLOCKED",
       "blockingQuestions": [
         {
+          "questionId": "AUTO-productContext-MISSING",
+          "domainId": "productContext",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/product-context.md"
+        },
+        {
+          "questionId": "AUTO-goalsScope-MISSING",
+          "domainId": "goalsScope",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/01-base/goals-and-scope.md"
+        },
+        {
           "questionId": "AUTO-functionalRequirements-MISSING",
           "domainId": "functionalRequirements",
           "title": "Область не зафиксирована явно",
@@ -430,16 +486,40 @@
           "file": "requirements/02-system/entities-and-data.md"
         },
         {
+          "questionId": "AUTO-mainJourney-MISSING",
+          "domainId": "mainJourney",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/07-scenarios/user-journeys.md"
+        },
+        {
           "questionId": "AUTO-acceptanceCriteria-MISSING",
           "domainId": "acceptanceCriteria",
           "title": "Область не зафиксирована явно",
           "file": "requirements/08-acceptance/acceptance-criteria.md"
         },
         {
+          "questionId": "AUTO-successSignal-MISSING",
+          "domainId": "successSignal",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/08-acceptance/validation-success.md"
+        },
+        {
           "questionId": "AUTO-salesObjects-MISSING",
           "domainId": "salesObjects",
           "title": "Область не зафиксирована явно",
           "file": "requirements/01-base/sales-objects.md"
+        },
+        {
+          "questionId": "AUTO-businessScenarios-MISSING",
+          "domainId": "businessScenarios",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/07-scenarios/business-scenarios.md"
+        },
+        {
+          "questionId": "AUTO-traceability-MISSING",
+          "domainId": "traceability",
+          "title": "Область не зафиксирована явно",
+          "file": "requirements/09-traceability/traceability.md"
         },
         {
           "questionId": "Q-PROTO-DATA-001",
@@ -495,6 +575,18 @@
   "gateStatus": "BLOCKED",
   "blockingQuestions": [
     {
+      "questionId": "AUTO-productContext-MISSING",
+      "domainId": "productContext",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/01-base/product-context.md"
+    },
+    {
+      "questionId": "AUTO-goalsScope-MISSING",
+      "domainId": "goalsScope",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/01-base/goals-and-scope.md"
+    },
+    {
       "questionId": "AUTO-functionalRequirements-MISSING",
       "domainId": "functionalRequirements",
       "title": "Область не зафиксирована явно",
@@ -507,16 +599,40 @@
       "file": "requirements/02-system/entities-and-data.md"
     },
     {
+      "questionId": "AUTO-mainJourney-MISSING",
+      "domainId": "mainJourney",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/07-scenarios/user-journeys.md"
+    },
+    {
       "questionId": "AUTO-acceptanceCriteria-MISSING",
       "domainId": "acceptanceCriteria",
       "title": "Область не зафиксирована явно",
       "file": "requirements/08-acceptance/acceptance-criteria.md"
     },
     {
+      "questionId": "AUTO-successSignal-MISSING",
+      "domainId": "successSignal",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/08-acceptance/validation-success.md"
+    },
+    {
       "questionId": "AUTO-salesObjects-MISSING",
       "domainId": "salesObjects",
       "title": "Область не зафиксирована явно",
       "file": "requirements/01-base/sales-objects.md"
+    },
+    {
+      "questionId": "AUTO-businessScenarios-MISSING",
+      "domainId": "businessScenarios",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/07-scenarios/business-scenarios.md"
+    },
+    {
+      "questionId": "AUTO-traceability-MISSING",
+      "domainId": "traceability",
+      "title": "Область не зафиксирована явно",
+      "file": "requirements/09-traceability/traceability.md"
     }
   ],
   "uiSource": {
@@ -620,3 +736,4 @@
     ]
   }
 }
+
