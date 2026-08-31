@@ -1130,6 +1130,19 @@
       "exactUserMessage": "Пусть админимстратор имеет право просмотра ЖН",
       "createdAt": "2026-08-31T14:47:43.830081+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-066",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-UI-NO-ECP-EMPTY-STATE",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "decision": "Если лицензии нет, ЭЦП не подключена и данные «Честного знака» отсутствуют, усечённый Обзор показывает отдельное пустое состояние без нулевых метрик. Пользователь с административной привилегией получает действие подключения ЭЦП, остальные — указание обратиться к администратору.",
+      "exactUserMessage": "Да",
+      "createdAt": "2026-08-31T14:54:14.497900+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
