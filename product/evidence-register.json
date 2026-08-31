@@ -1117,6 +1117,19 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T14:43:32.439832+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-065",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-ADMIN-JOURNAL-PREREQ",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "rolesPermissions"
+      ],
+      "decision": "Любой пользователь с административными привилегиями Set Mark должен также иметь базовое право просмотра Журнала нарушений. Комбинация «администратор Set Mark без права просмотра ЖН» не поддерживается.",
+      "exactUserMessage": "Пусть админимстратор имеет право просмотра ЖН",
+      "createdAt": "2026-08-31T14:47:43.830081+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
