@@ -138,12 +138,38 @@ jobs:
               subprocess.run(['python', 'tools/commit_requirements.py'], check=True)
           PY
 
+      - name: Finalize VISUAL_PROTOTYPE-R2 when report is present
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          markdown = Path('reports/visual-prototype-v0.2.md')
+          if not markdown.exists():
+              print('R2 markdown is not present yet; skip review finalization')
+              raise SystemExit(0)
+
+          reviews = json.loads(Path('product/phase-reviews.json').read_text(encoding='utf-8'))
+          if any(item.get('reviewId') == 'VISUAL_PROTOTYPE-R2' for item in reviews.get('reviews', [])):
+              print('VISUAL_PROTOTYPE-R2 already registered')
+              raise SystemExit(0)
+
+          subprocess.run([
+              'python', 'tools/finalize_phase_review.py',
+              '--phase', 'VISUAL_PROTOTYPE',
+              '--markdown', 'reports/visual-prototype-v0.2.md',
+          ], check=True)
+          PY
+
       - name: Commit generated Product Compiler state
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add product/*.json project-state.json
+          git add reports/visual-prototype-v0.2.pdf 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No generated changes"
             exit 0
