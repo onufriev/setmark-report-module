@@ -37,6 +37,26 @@
       "dataSourceRef": null,
       "notes": "",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-003",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T12:22:46.664835+00:00",
+      "checks": [
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями",
+        "Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
+      ],
+      "result": "PASSED",
+      "sha256": "ccab41b8a9ba7a5413c0f4f3b52432c1722c3c05dc4e00105e0d590e8de620f7",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
