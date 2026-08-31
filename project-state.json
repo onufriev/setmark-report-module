@@ -14,9 +14,9 @@
   "phaseReview": {
     "phase": "VISUAL_PROTOTYPE",
     "status": "READY_FOR_REVIEW",
-    "reviewId": "VISUAL_PROTOTYPE-R3",
-    "markdownReport": "reports/visual-prototype-v0.3.md",
-    "pdfReport": "reports/visual-prototype-v0.3.pdf",
+    "reviewId": "VISUAL_PROTOTYPE-R4",
+    "markdownReport": "reports/visual-prototype-v0.4.md",
+    "pdfReport": "reports/visual-prototype-v0.4.pdf",
     "shownToProductManagerAt": null,
     "nextPhase": "VISUAL_VALIDATION"
   },
