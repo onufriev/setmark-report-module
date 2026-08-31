@@ -1052,6 +1052,19 @@
       "exactUserMessage": "Подтвердить",
       "createdAt": "2026-08-31T14:11:52.233666+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-060",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LOC-COUNTRY-DEFAULT-RU",
+      "domainId": "localization",
+      "domainIds": [
+        "localization"
+      ],
+      "decision": "Пустое или некорректное значение setmark.country нормализуется в RU; после нормализации применяется российская модель работы, включая Мониторинг маркировки и возможность подключения к «Честному знаку».",
+      "exactUserMessage": "Подтверждаю",
+      "createdAt": "2026-08-31T14:14:44.245711+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
