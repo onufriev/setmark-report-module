@@ -43,9 +43,9 @@
   ],
   "smokeTest": {
     "status": "PASSED",
-    "checkedAt": "2026-07-28T17:27:02.335349+00:00",
+    "checkedAt": "2026-08-31T13:20:51.984292+00:00",
     "details": [
-      "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
+      "entrypoint, HTML/CSS/JS, ссылки, обязательный путь и ключевые функции Дашборда/Аналитики/Настроек проверены"
     ]
   },
   "uiSourceMode": "COMPONENT_LIBRARY",

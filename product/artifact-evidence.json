@@ -97,6 +97,28 @@
       "dataSourceRef": null,
       "notes": "",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-006",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T13:20:52.590581+00:00",
+      "checks": [
+        "Дашборд содержит объекты риска и ровно два согласованных сигнала состояния данных",
+        "Аналитика содержит два фильтра, четыре показателя и кликабельные дневные/недельные колонки",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля сохранены",
+        "Потенциальный штраф сохранён в UI и защищён от двойного учёта нормативной группы",
+        "Настройки уведомлений и хранения восстановлены; PDF конкретного инцидента имеет рабочий сценарий",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "7419d269f8c9c066eb089ab8d73244f69269b0eb9ce621e0ebfd34dfd70b4b0f",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
