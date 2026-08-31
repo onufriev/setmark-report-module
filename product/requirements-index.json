@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "71353dd5c9b85f36822adff661c4cf5f40a063aa01ccfabf060f5b4e80e2ae11",
+  "requirementsSha256": "ac5c51d2b2f2c7d49f36e20b3ed95cd2e73d340744b5ea3c8005dfa1cb27b51f",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -423,10 +423,34 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-065",
+      "id": "REQ-DEC-068",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
       "line": 3,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-069"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-067",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 14,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-068"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-065",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 25,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -438,7 +462,7 @@
       "id": "REQ-FR-004",
       "title": "Поиск по штрихкодам, артикулам и кодам маркировки",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 14,
+      "line": 36,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -451,7 +475,7 @@
       "id": "REQ-FR-005",
       "title": "Множественный фильтр магазинов",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 27,
+      "line": 49,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -464,7 +488,7 @@
       "id": "REQ-FR-006",
       "title": "Расширенная выгрузка инцидентов в CSV",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 40,
+      "line": 62,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -477,7 +501,7 @@
       "id": "REQ-DEC-037",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 80,
+      "line": 102,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -489,7 +513,7 @@
       "id": "REQ-DEC-010",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 101,
+      "line": 123,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -501,7 +525,7 @@
       "id": "REQ-FR-001",
       "title": "Централизованный мониторинг",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 128,
+      "line": 150,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -513,7 +537,7 @@
       "id": "REQ-FR-002",
       "title": "Выгрузка данных",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 141,
+      "line": 163,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -525,7 +549,7 @@
       "id": "REQ-FR-003",
       "title": "Ежедневные уведомления",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 154,
+      "line": 176,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -537,7 +561,7 @@
       "id": "REQ-DEC-033",
       "title": "Готовые и произвольный диапазоны дат",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 167,
+      "line": 189,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -546,15 +570,28 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-011",
-      "title": "Источник интерфейса и компонентов",
+      "id": "REQ-DEC-066",
+      "title": "Решение Product Manager",
       "file": "requirements/03-architecture/component-source.md",
       "line": 3,
       "domainId": "uiSource",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
+        "PM-DEC-067"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-011",
+      "title": "Источник интерфейса и компонентов",
+      "file": "requirements/03-architecture/component-source.md",
+      "line": 14,
+      "domainId": "uiSource",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
         "PM-DEC-011",
-        "PM-DEC-019"
+        "PM-DEC-019",
+        "PM-DEC-067"
       ],
       "applicability": "MVP1"
     },
@@ -572,10 +609,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-013",
+      "id": "REQ-DEC-069",
       "title": "Решение Product Manager",
       "file": "requirements/03-architecture/technical-constraints.md",
       "line": 3,
+      "domainId": "technicalConstraints",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-070"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-013",
+      "title": "Решение Product Manager",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 14,
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -588,7 +637,7 @@
       "id": "REQ-DEC-014",
       "title": "Решение Product Manager",
       "file": "requirements/03-architecture/technical-constraints.md",
-      "line": 15,
+      "line": 26,
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -838,7 +887,8 @@
       "domainId": "integrations",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-019"
+        "PM-DEC-019",
+        "PM-DEC-064"
       ],
       "applicability": "MVP1"
     },
@@ -1149,15 +1199,15 @@
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 10,
+      "requirements": 12,
       "needsInput": 0,
-      "candidateSections": 10
+      "candidateSections": 12
     },
     {
       "file": "requirements/03-architecture/component-source.md",
-      "requirements": 1,
+      "requirements": 2,
       "needsInput": 0,
-      "candidateSections": 1
+      "candidateSections": 2
     },
     {
       "file": "requirements/03-architecture/hardware-requirements.md",
@@ -1167,9 +1217,9 @@
     },
     {
       "file": "requirements/03-architecture/technical-constraints.md",
-      "requirements": 2,
+      "requirements": 3,
       "needsInput": 0,
-      "candidateSections": 2
+      "candidateSections": 3
     },
     {
       "file": "requirements/04-quality/accessibility-requirements.md",
