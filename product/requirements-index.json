@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "2972e6e21cc68f29d45150bb9cfe4db0143ac8c032f8655e59b695e27c0fb326",
+  "requirementsSha256": "5a6c0fde884c646ddc7489b06c9564055876e107c58314e247f08dadd66001fb",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -562,10 +562,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-016",
+      "id": "REQ-DEC-059",
       "title": "Решение Product Manager",
       "file": "requirements/04-quality/localization-requirements.md",
       "line": 3,
+      "domainId": "localization",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-060"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-016",
+      "title": "Решение Product Manager",
+      "file": "requirements/04-quality/localization-requirements.md",
+      "line": 14,
       "domainId": "localization",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -1095,9 +1107,9 @@
     },
     {
       "file": "requirements/04-quality/localization-requirements.md",
-      "requirements": 1,
+      "requirements": 2,
       "needsInput": 0,
-      "candidateSections": 1
+      "candidateSections": 2
     },
     {
       "file": "requirements/04-quality/quality-requirements.md",
