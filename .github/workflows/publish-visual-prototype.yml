@@ -1,0 +1,53 @@
+name: Publish Visual Prototype
+
+on:
+  push:
+    branches:
+      - main
+      - agent/resolve-visual-prototype-gate
+    paths:
+      - 'visual-prototype/app/**'
+      - 'visual-prototype/generate_demo_pdfs.py'
+      - '.github/workflows/publish-visual-prototype.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages-prototype
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate incident PDFs
+        run: |
+          python -m pip install --disable-pip-version-check reportlab
+          python visual-prototype/generate_demo_pdfs.py
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload prototype
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: visual-prototype/app
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

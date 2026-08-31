@@ -935,6 +935,94 @@
       "exactUserMessage": "Согласовано, пошли дальше",
       "createdAt": "2026-08-27T09:40:24.274405+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-051",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-CLIENT-PETSHOP-MVP-001",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "businessObjects",
+        "functionalRequirements"
+      ],
+      "decision": "Для MVP подтверждены поиск по штрихкоду, артикулу и полному коду маркировки; несколько значений через запятую объединяются по ИЛИ с точным совпадением. Фильтр магазинов поддерживает множественный выбор, «Выбрать все» и «Сбросить». В данные инцидента входят штрихкод, артикул, наименование товара, номер чека/идентификатор операции и источник проверки; эти поля доступны для поиска, карточки и CSV.",
+      "exactUserMessage": "да, все верно",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-052",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-SALES-OBJECTS-DEFER-001",
+      "domainId": "salesObjects",
+      "domainIds": [
+        "salesObjects"
+      ],
+      "decision": "В текущем MVP объект продажи и коммерческая модель функции не определяются. Лицензирование, тарификация, стоимость и включение функции в коммерческое предложение Set Mark отложены и не должны ограничивать требования или прототип. Предметные сущности не считаются объектами продажи.",
+      "exactUserMessage": "все верно",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-053",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-CSV-RISK-COLUMNS-001",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "functionalRequirements"
+      ],
+      "decision": "CSV содержит 21 поле и не содержит отдельный признак «Риск автоштрафа» и потенциальную сумму штрафа. Риск автоштрафа выражается через критичность инцидента.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-054",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-POTENTIAL-FINE-UI-001",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "businessObjects",
+        "functionalRequirements"
+      ],
+      "decision": "Потенциальный штраф является важным показателем оценки риска и должен оставаться в пользовательском интерфейсе. Отдельный признак риска не дублирует критичность.",
+      "exactUserMessage": "Стоп, потенциальный штраф - это очень важно для оценки риска, его нельзя убирать из интерфейса",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-055",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-POTENTIAL-FINE-CALC-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "acceptanceCriteria",
+        "businessObjects",
+        "businessRules",
+        "functionalRequirements"
+      ],
+      "decision": "Потенциальный штраф рассчитывается точно по формуле применимой действующей нормы. Для фиксированной ставки используется точное значение; для накопительного состава показывается текущая сумма по имеющимся данным и она пересчитывается при поступлении новых инцидентов.",
+      "exactUserMessage": "все верно",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-056",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-POTENTIAL-FINE-AGGREGATION-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "acceptanceCriteria",
+        "businessRules",
+        "functionalRequirements"
+      ],
+      "decision": "Для накопительных составов потенциальный штраф рассчитывается один раз на нормативный объект и нормативный период. Связанные инциденты участвуют в расчёте порога, но один и тот же штраф не суммируется по каждому инциденту.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T12:15:13.971404+00:00",
+      "recordedBy": "github-actions:product-compiler"
     }
   ]
 }
