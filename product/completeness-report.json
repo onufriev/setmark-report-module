@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-08-31T14:54:29.623929+00:00",
+  "evaluatedAt": "2026-08-31T15:02:37.982025+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -49,6 +49,8 @@
       "profileHintMatched": false,
       "status": "BLOCKED",
       "requirementRefs": [
+        "REQ-DEC-068",
+        "REQ-DEC-067",
         "REQ-DEC-065",
         "REQ-DEC-037",
         "REQ-DEC-010",
@@ -214,6 +216,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-066",
         "REQ-DEC-011"
       ],
       "needsInput": [],
@@ -328,6 +331,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-069",
         "REQ-DEC-013",
         "REQ-DEC-014"
       ],
