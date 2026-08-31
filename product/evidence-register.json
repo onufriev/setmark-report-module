@@ -961,6 +961,19 @@
       "exactUserMessage": "никак, обязательно нужно иметь исторические данные по последней активной лицензии, чтобы разделить эти состояния",
       "createdAt": "2026-08-31T13:44:36.673345+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-053",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-NEVER-HAD-EVIDENCE",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Состояние «лицензии никогда не было» назначается только при явном достоверном подтверждении Set Agent об отсутствии когда-либо активной лицензии Set Mark.",
+      "exactUserMessage": "согласен",
+      "createdAt": "2026-08-31T13:53:24.143856+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
