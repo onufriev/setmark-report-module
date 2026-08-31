@@ -1104,6 +1104,19 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T14:35:40.478646+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-064",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-ARCH-TRUE-API-OWNER",
+      "domainId": "integrations",
+      "domainIds": [
+        "integrations"
+      ],
+      "decision": "Backend Set Mark остаётся владельцем интеграции с True API, обработки и хранения полученных данных. SetCentrum предоставляет пользовательскую оболочку и интерфейс; перенос UI не переносит интеграционную логику в backend SetCentrum.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:43:32.439832+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
