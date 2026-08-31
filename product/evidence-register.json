@@ -1026,6 +1026,19 @@
       "exactUserMessage": "Подтвердить",
       "createdAt": "2026-08-31T14:04:45.686696+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-058",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-RETENTION-DEFAULT",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Если срок хранения Set Mark не настроен, данные Мониторинга хранятся 30 календарных дней. Настройка меньше 30 дней применяется как есть, а значение больше 30 дней ограничивается 30 днями.",
+      "exactUserMessage": "Подтверждаю",
+      "createdAt": "2026-08-31T14:09:39.877643+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
