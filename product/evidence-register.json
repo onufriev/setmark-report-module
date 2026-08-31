@@ -1078,6 +1078,19 @@
       "exactUserMessage": "подтверждаю",
       "createdAt": "2026-08-31T14:17:39.640247+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-062",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-BASE-AND-FINE-GRAINED",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "rolesPermissions"
+      ],
+      "decision": "Право просмотра Журнала нарушений является обязательным базовым допуском к данным Set Mark. После его проверки отдельные операции дополнительно разрешаются или запрещаются соответствующими привилегиями на просмотр, поиск, экспорт, уведомления и настройки.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:31:52.880397+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
