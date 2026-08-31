@@ -1000,6 +1000,19 @@
       "exactUserMessage": "подтвердить",
       "createdAt": "2026-08-31T14:00:21.492818+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-056",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-CATEGORY-MISMATCH",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "При наличии действующей лицензии Set Mark для другой товарной категории система сохраняет полный доступ ко всем функциям и показывает неблокирующее предупреждение с предложением приобрести лицензию нужной категории.",
+      "exactUserMessage": "Подтвердить",
+      "createdAt": "2026-08-31T14:02:21.594472+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
