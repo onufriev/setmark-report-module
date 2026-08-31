@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "71d8849eb471c728183c0d16b7f8565c3b5074d3eb16a16e5fb91611e817b899",
+  "requirementsSha256": "71353dd5c9b85f36822adff661c4cf5f40a063aa01ccfabf060f5b4e80e2ae11",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -423,10 +423,22 @@
       "applicability": "MVP1"
     },
     {
+      "id": "REQ-DEC-065",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 3,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-066"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-FR-004",
       "title": "Поиск по штрихкодам, артикулам и кодам маркировки",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 3,
+      "line": 14,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -439,7 +451,7 @@
       "id": "REQ-FR-005",
       "title": "Множественный фильтр магазинов",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 16,
+      "line": 27,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -452,7 +464,7 @@
       "id": "REQ-FR-006",
       "title": "Расширенная выгрузка инцидентов в CSV",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 29,
+      "line": 40,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -465,7 +477,7 @@
       "id": "REQ-DEC-037",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 69,
+      "line": 80,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -477,7 +489,7 @@
       "id": "REQ-DEC-010",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 90,
+      "line": 101,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -489,7 +501,7 @@
       "id": "REQ-FR-001",
       "title": "Централизованный мониторинг",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 117,
+      "line": 128,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -501,7 +513,7 @@
       "id": "REQ-FR-002",
       "title": "Выгрузка данных",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 130,
+      "line": 141,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -513,7 +525,7 @@
       "id": "REQ-FR-003",
       "title": "Ежедневные уведомления",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 143,
+      "line": 154,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -525,7 +537,7 @@
       "id": "REQ-DEC-033",
       "title": "Готовые и произвольный диапазоны дат",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 156,
+      "line": 167,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -1137,9 +1149,9 @@
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 9,
+      "requirements": 10,
       "needsInput": 0,
-      "candidateSections": 9
+      "candidateSections": 10
     },
     {
       "file": "requirements/03-architecture/component-source.md",
