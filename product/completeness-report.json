@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-08-31T14:43:46.327753+00:00",
+  "evaluatedAt": "2026-08-31T14:47:59.199750+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -89,6 +89,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-064",
         "REQ-DEC-062",
         "REQ-DEC-061",
         "REQ-DEC-008"
