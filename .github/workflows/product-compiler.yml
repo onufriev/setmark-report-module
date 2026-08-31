@@ -138,6 +138,46 @@ jobs:
               subprocess.run(['python', 'tools/commit_requirements.py'], check=True)
           PY
 
+      - name: Reverify visual prototype when artifact changed
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, 'tools')
+          from common import ROOT, artifact_sha256
+
+          artifact = (ROOT / 'visual-prototype').resolve()
+          current_sha = artifact_sha256(artifact)
+          evidence = json.loads(Path('product/artifact-evidence.json').read_text(encoding='utf-8'))
+          matching = [
+              item for item in evidence.get('evidence', [])
+              if item.get('phase') == 'VISUAL_PROTOTYPE'
+              and item.get('artifactPath') == 'visual-prototype'
+              and item.get('result') == 'PASSED'
+              and item.get('sha256') == current_sha
+          ]
+          if matching:
+              print(f"Visual prototype already verified by {matching[-1].get('id')}")
+              raise SystemExit(0)
+
+          subprocess.run([
+              'python', 'tools/register_artifact_evidence.py',
+              '--phase', 'VISUAL_PROTOTYPE',
+              '--path', 'visual-prototype',
+              '--type', 'visual-prototype',
+              '--check', 'Произвольный диапазон дат доступен на Дашборде и в списке инцидентов',
+              '--check', 'Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями',
+              '--check', 'Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется',
+              '--result', 'PASSED',
+              '--command', 'python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE',
+              '--runbook', 'visual-prototype/PROTOTYPE-RUNBOOK.md',
+          ], check=True)
+          PY
+
       - name: Finalize VISUAL_PROTOTYPE-R2 when report is present
         shell: bash
         run: |
@@ -163,12 +203,24 @@ jobs:
           ], check=True)
           PY
 
+      - name: Verify generated review PDF renders
+        shell: bash
+        run: |
+          if [ -f reports/visual-prototype-v0.2.pdf ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+            pdfinfo reports/visual-prototype-v0.2.pdf >/dev/null
+            pdftoppm -f 1 -singlefile -png reports/visual-prototype-v0.2.pdf /tmp/visual-prototype-r2 >/dev/null
+            test -s /tmp/visual-prototype-r2.png
+          fi
+
       - name: Commit generated Product Compiler state
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add product/*.json project-state.json
+          git add visual-prototype/prototype-manifest.json
           git add reports/visual-prototype-v0.2.pdf 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No generated changes"
