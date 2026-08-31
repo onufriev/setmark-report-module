@@ -40,6 +40,8 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'tools')
           from common import load, mark_phase_reviews_stale, run_tool
 
           doc = load('product/phase-reviews.json')
