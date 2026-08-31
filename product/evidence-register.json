@@ -1143,6 +1143,58 @@
       "exactUserMessage": "Да",
       "createdAt": "2026-08-31T14:54:14.497900+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-067",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-UI-SOURCE",
+      "domainId": "uiSource",
+      "domainIds": [
+        "uiSource"
+      ],
+      "decision": "Применить приоритет визуальных источников из переданного набора требований: оболочка и навигация SetCentrum, действующая визуализация Журнала нарушений для Журнала, CSI UI для новых экранов Мониторинга. Прежнее требование использовать frontend Set Mark как основу всей оболочки заменяется.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T14:58:36.608160+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-068",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-INFORMATION-ARCHITECTURE",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "decision": "Применить информационную архитектуру из переданного набора требований: верхнеуровневые разделы Обзор, Журнал нарушений, Мониторинг маркировки и Настройки; внутри Мониторинга — Инциденты, Необходимые действия и Аналитика.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:00:24.641125+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-069",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LIMITED-ACCESS-UI",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "decision": "Перенести без изменений правила усечённого Обзора, лицензионных заглушек и недоступных сервисов из переданного набора требований с учётом отдельного решения о состоянии без ЭЦП.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:01:10.764374+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-070",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ECP-PROTOTYPE-SCOPE",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "В текущем демонстрационном прототипе реализовать только точку входа в подключение ЭЦП, доступную пользователю с административной привилегией, и понятное объяснение следующего шага. Полный жизненный цикл ЭЦП отложить.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:01:53.083749+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
