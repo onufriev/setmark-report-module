@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "383fa7cc049c2c1682070fb73fa52ac29e53cf13ae500918ed409f71ec2deaf0",
+  "requirementsSha256": "08b52c5cb81ae6de47c4a03c3f8fe5d77ae31d4a7966a7ace855cad620474122",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -783,10 +783,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-032",
+      "id": "REQ-DEC-063",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/integrations.md",
       "line": 3,
+      "domainId": "integrations",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-064"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-032",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 14,
       "domainId": "integrations",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -798,7 +810,7 @@
       "id": "REQ-DEC-019",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 14,
+      "line": 25,
       "domainId": "integrations",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -810,7 +822,7 @@
       "id": "REQ-INT-001",
       "title": "Получение отклонений True API",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 38,
+      "line": 49,
       "domainId": "integrations",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -822,7 +834,7 @@
       "id": "REQ-INT-002",
       "title": "Получение событий Set Mark",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 51,
+      "line": 62,
       "domainId": "integrations",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -834,7 +846,7 @@
       "id": "REQ-INT-003",
       "title": "Контекст разрешительного режима",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 64,
+      "line": 75,
       "domainId": "integrations",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -1161,9 +1173,9 @@
     },
     {
       "file": "requirements/05-integrations/integrations.md",
-      "requirements": 5,
+      "requirements": 6,
       "needsInput": 0,
-      "candidateSections": 5
+      "candidateSections": 6
     },
     {
       "file": "requirements/06-system-scenarios/exception-scenarios.md",
