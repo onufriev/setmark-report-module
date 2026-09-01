@@ -937,12 +937,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-051",
+      "id": "PM-DEC-057",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-GRACE-DURATION",
       "domainId": "businessRules",
       "domainIds": [
-        "businessRules"
+        "businessRules",
+        "dataRequirements"
       ],
       "decision": "Льготный период после окончания лицензии Set Mark составляет ровно 10 календарных дней и не настраивается клиентом.",
       "exactUserMessage": "принимается",
@@ -950,7 +951,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-052",
+      "id": "PM-DEC-058",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-HISTORY-STATE",
       "domainId": "dataRequirements",
@@ -963,7 +964,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-053",
+      "id": "PM-DEC-059",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-NEVER-HAD-EVIDENCE",
       "domainId": "dataRequirements",
@@ -976,12 +977,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-054",
+      "id": "PM-DEC-060",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-OFFLINE-EXPIRY",
       "domainId": "businessRules",
       "domainIds": [
-        "businessRules"
+        "businessRules",
+        "localization"
       ],
       "decision": "При недоступности Set Agent система рассчитывает доступ по сохранённой дате окончания последней активной лицензии, применяет льготный период ровно 10 календарных дней и показывает предупреждение о невозможности актуализировать лицензию.",
       "exactUserMessage": "да",
@@ -989,12 +991,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-055",
+      "id": "PM-DEC-061",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-PARTIAL-STORES",
       "domainId": "businessRules",
       "domainIds": [
-        "businessRules"
+        "businessRules",
+        "localization"
       ],
       "decision": "При частичном лицензировании магазинов полный доступ к функциям и данным Set Mark сохраняется для всех магазинов сети; система показывает неблокирующее предупреждение о необходимости докупить недостающее количество лицензий.",
       "exactUserMessage": "подтвердить",
@@ -1002,12 +1005,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-056",
+      "id": "PM-DEC-062",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LIC-CATEGORY-MISMATCH",
       "domainId": "businessRules",
       "domainIds": [
-        "businessRules"
+        "businessRules",
+        "rolesPermissions"
       ],
       "decision": "При наличии действующей лицензии Set Mark для другой товарной категории система сохраняет полный доступ ко всем функциям и показывает неблокирующее предупреждение с предложением приобрести лицензию нужной категории.",
       "exactUserMessage": "Подтвердить",
@@ -1015,12 +1019,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-057",
+      "id": "PM-DEC-063",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-DATA-COLLECT-WITHOUT-LICENSE",
       "domainId": "dataRequirements",
       "domainIds": [
-        "dataRequirements"
+        "dataRequirements",
+        "rolesPermissions"
       ],
       "decision": "Для клиентов RU после настройки Set Mark и подключения ЭЦП сбор данных Мониторинга продолжается независимо от состояния лицензии, включая состояния «лицензии никогда не было» и «льготный период закончился».",
       "exactUserMessage": "Подтвердить",
@@ -1028,12 +1033,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-058",
+      "id": "PM-DEC-064",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-DATA-RETENTION-DEFAULT",
       "domainId": "dataRequirements",
       "domainIds": [
-        "dataRequirements"
+        "dataRequirements",
+        "integrations"
       ],
       "decision": "Если срок хранения Set Mark не настроен, данные Мониторинга хранятся 30 календарных дней. Настройка меньше 30 дней применяется как есть, а значение больше 30 дней ограничивается 30 днями.",
       "exactUserMessage": "Подтверждаю",
@@ -1041,12 +1047,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-059",
+      "id": "PM-DEC-065",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-DATA-RETENTION-BOUNDARY",
       "domainId": "dataRequirements",
       "domainIds": [
-        "dataRequirements"
+        "dataRequirements",
+        "rolesPermissions"
       ],
       "decision": "Календарный срок хранения рассчитывается в часовом поясе SetCentrum: день события считается первым днём, запись хранится ещё 29 календарных дней и физически удаляется в начале 31-го дня.",
       "exactUserMessage": "Подтвердить",
@@ -1054,11 +1061,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-060",
+      "id": "PM-DEC-066",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LOC-COUNTRY-DEFAULT-RU",
       "domainId": "localization",
       "domainIds": [
+        "functionalRequirements",
         "localization"
       ],
       "decision": "Пустое или некорректное значение setmark.country нормализуется в RU; после нормализации применяется российская модель работы, включая Мониторинг маркировки и возможность подключения к «Честному знаку».",
@@ -1067,12 +1075,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-061",
+      "id": "PM-DEC-067",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-LOC-NON-RU-MONITORING",
       "domainId": "localization",
       "domainIds": [
-        "localization"
+        "localization",
+        "uiSource"
       ],
       "decision": "При корректном значении setmark.country, отличном от RU, Мониторинг маркировки полностью отключается: навигация скрывается, страницы и API недоступны, сбор данных и интеграция с «Честным знаком» не запускаются, подключение ЭЦП не показывается. Журнал нарушений Set Mark продолжает работать по собственным правилам.",
       "exactUserMessage": "подтверждаю",
@@ -1080,11 +1089,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-062",
+      "id": "PM-DEC-068",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-RBAC-BASE-AND-FINE-GRAINED",
       "domainId": "rolesPermissions",
       "domainIds": [
+        "functionalRequirements",
         "rolesPermissions"
       ],
       "decision": "Право просмотра Журнала нарушений является обязательным базовым допуском к данным Set Mark. После его проверки отдельные операции дополнительно разрешаются или запрещаются соответствующими привилегиями на просмотр, поиск, экспорт, уведомления и настройки.",
@@ -1093,11 +1103,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-063",
+      "id": "PM-DEC-069",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-RBAC-ADMIN-BY-PRIVILEGE",
       "domainId": "rolesPermissions",
       "domainIds": [
+        "functionalRequirements",
         "rolesPermissions"
       ],
       "decision": "Право изменять каждую настройку определяется наличием соответствующей административной привилегии, а не названием роли. Роль «Администратор системы» получает административные привилегии по умолчанию, но их состав может изменяться.",
@@ -1106,12 +1117,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-064",
+      "id": "PM-DEC-070",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-ARCH-TRUE-API-OWNER",
       "domainId": "integrations",
       "domainIds": [
-        "integrations"
+        "integrations",
+        "technicalConstraints"
       ],
       "decision": "Backend Set Mark остаётся владельцем интеграции с True API, обработки и хранения полученных данных. SetCentrum предоставляет пользовательскую оболочку и интерфейс; перенос UI не переносит интеграционную логику в backend SetCentrum.",
       "exactUserMessage": "да",
@@ -1119,11 +1131,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-065",
+      "id": "PM-DEC-071",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-RBAC-ADMIN-JOURNAL-PREREQ",
       "domainId": "rolesPermissions",
       "domainIds": [
+        "businessRules",
         "rolesPermissions"
       ],
       "decision": "Любой пользователь с административными привилегиями Set Mark должен также иметь базовое право просмотра Журнала нарушений. Комбинация «администратор Set Mark без права просмотра ЖН» не поддерживается.",
@@ -1132,12 +1145,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-066",
+      "id": "PM-DEC-072",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-UI-NO-ECP-EMPTY-STATE",
       "domainId": "functionalRequirements",
       "domainIds": [
-        "functionalRequirements"
+        "functionalRequirements",
+        "statesErrors"
       ],
       "decision": "Если лицензии нет, ЭЦП не подключена и данные «Честного знака» отсутствуют, усечённый Обзор показывает отдельное пустое состояние без нулевых метрик. Пользователь с административной привилегией получает действие подключения ЭЦП, остальные — указание обратиться к администратору.",
       "exactUserMessage": "Да",
@@ -1145,11 +1159,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-067",
+      "id": "PM-DEC-073",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-UI-SOURCE",
       "domainId": "uiSource",
       "domainIds": [
+        "rolesPermissions",
         "uiSource"
       ],
       "decision": "Применить приоритет визуальных источников из переданного набора требований: оболочка и навигация SetCentrum, действующая визуализация Журнала нарушений для Журнала, CSI UI для новых экранов Мониторинга. Прежнее требование использовать frontend Set Mark как основу всей оболочки заменяется.",
@@ -1158,11 +1173,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-068",
+      "id": "PM-DEC-074",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-INFORMATION-ARCHITECTURE",
       "domainId": "functionalRequirements",
       "domainIds": [
+        "businessRules",
         "functionalRequirements"
       ],
       "decision": "Применить информационную архитектуру из переданного набора требований: верхнеуровневые разделы Обзор, Журнал нарушений, Мониторинг маркировки и Настройки; внутри Мониторинга — Инциденты, Необходимые действия и Аналитика.",
@@ -1171,11 +1187,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-069",
+      "id": "PM-DEC-075",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-LIMITED-ACCESS-UI",
       "domainId": "functionalRequirements",
       "domainIds": [
+        "acceptanceCriteria",
         "functionalRequirements"
       ],
       "decision": "Перенести без изменений правила усечённого Обзора, лицензионных заглушек и недоступных сервисов из переданного набора требований с учётом отдельного решения о состоянии без ЭЦП.",
@@ -1184,7 +1201,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-070",
+      "id": "PM-DEC-076",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-ECP-PROTOTYPE-SCOPE",
       "domainId": "technicalConstraints",
@@ -1197,12 +1214,13 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-071",
+      "id": "PM-DEC-077",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-LICENSE-CORE",
       "domainId": "businessRules",
       "domainIds": [
-        "businessRules"
+        "businessRules",
+        "dataRequirements"
       ],
       "decision": "Перенести базовые правила единой лицензии Set Mark, отсутствия отдельной пробной лицензии и приоритета истечения лицензии над лицензионным несоответствием.",
       "exactUserMessage": "используй эти требования",
@@ -1210,11 +1228,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-072",
+      "id": "PM-DEC-078",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-LICENSE-STATE-MATRIX",
       "domainId": "statesErrors",
       "domainIds": [
+        "goalsScope",
         "statesErrors"
       ],
       "decision": "Зафиксировать единую матрицу доступности по состояниям лицензии с учётом подтверждённых уточнений о достоверной истории и автономном расчёте по дате окончания.",
@@ -1223,11 +1242,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-073",
+      "id": "PM-DEC-079",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-RBAC-VISIBILITY-RECOMMENDATIONS",
       "domainId": "rolesPermissions",
       "domainIds": [
+        "functionalRequirements",
         "rolesPermissions"
       ],
       "decision": "Перенести правила постоянной видимости Set Mark и системных рекомендаций только для чтения.",
@@ -1236,11 +1256,12 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-074",
+      "id": "PM-DEC-080",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-ACCESS-EVALUATION-ORDER",
       "domainId": "businessRules",
       "domainIds": [
+        "businessObjects",
         "businessRules"
       ],
       "decision": "Перенести обязательную последовательность вычисления доступности из нового набора требований, используя административные привилегии вместо проверки названия роли.",
@@ -1249,7 +1270,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-075",
+      "id": "PM-DEC-081",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-ACCESS-ACCEPTANCE",
       "domainId": "acceptanceCriteria",
@@ -1262,7 +1283,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-076",
+      "id": "PM-DEC-082",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-JOURNAL-MIGRATION-DEFERRED",
       "domainId": "technicalConstraints",
@@ -1275,7 +1296,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-077",
+      "id": "PM-DEC-083",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-LICENSE-DATA-CONTRACT",
       "domainId": "dataRequirements",
@@ -1288,7 +1309,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-078",
+      "id": "PM-DEC-084",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-GOAL-PRIORITY",
       "domainId": "goalsScope",
@@ -1301,7 +1322,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-079",
+      "id": "PM-DEC-085",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-PETSHOP-FUNCTIONS",
       "domainId": "functionalRequirements",
@@ -1314,7 +1335,7 @@
       "recordedBy": "record_pm_decision.py"
     },
     {
-      "id": "PM-DEC-080",
+      "id": "PM-DEC-086",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-MERGE-PETSHOP-INCIDENT-FIELDS",
       "domainId": "businessObjects",
@@ -1328,4 +1349,3 @@
     }
   ]
 }
-
