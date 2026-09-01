@@ -17,10 +17,11 @@
 1. Обзор сети: `#overview`
 2. Критические инциденты с риском автоштрафа: `#priority`
 3. Список инцидентов: `#incidents`
-4. Карточка инцидента: `#incident/INC-10482`
+4. Карточка инцидента: `#incident/INC-10621`
 5. Аналитика и выгрузка: `#analytics`
 
 Проверка: `python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE`.
 
 ## 6. Устранение проблем
 Проверьте entryPoint, относительные ссылки и отсутствие Storybook-зависимостей.
+
