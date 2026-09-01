@@ -37,6 +37,26 @@
       "dataSourceRef": null,
       "notes": "",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-003",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-09-01T06:42:44.465498+00:00",
+      "checks": [
+        "Обязательный путь кликабелен, включая карточку инцидента INC-10621",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
+      ],
+      "result": "PASSED",
+      "sha256": "fb7344f9ad93656f277e58db06f1830b252b161d3c48e3505443471162d38cc5",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "Повторная проверка после синхронизации маршрута карточки инцидента.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
+
