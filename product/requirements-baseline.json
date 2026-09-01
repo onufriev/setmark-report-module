@@ -841,14 +841,13 @@
     },
     {
       "baselineId": "REQ-BASELINE-006",
-      "committedAt": "2026-08-31T15:20:35.165546+00:00",
+      "committedAt": "2026-08-31T12:15:15.037831+00:00",
       "gate": "VISUAL_PROTOTYPE",
       "gateStatus": "PASSED",
-      "requirementCount": 102,
+      "requirementCount": 74,
       "needsInputCount": 0,
       "openFutureQuestions": [],
       "requirementRefs": [
-        "REQ-DEC-077",
         "REQ-DEC-034",
         "REQ-DEC-003",
         "REQ-GS-001",
@@ -856,13 +855,8 @@
         "REQ-DEC-004",
         "REQ-PC-001",
         "REQ-PC-002",
-        "REQ-DEC-005",
-        "REQ-DEC-073",
-        "REQ-DEC-070",
-        "REQ-DEC-055",
-        "REQ-DEC-054",
+        "REQ-DEC-052",
         "REQ-DEC-053",
-        "REQ-DEC-050",
         "REQ-DEC-047",
         "REQ-DEC-049",
         "REQ-DEC-048",
@@ -874,59 +868,38 @@
         "REQ-BR-002",
         "REQ-BR-003",
         "REQ-DEC-001",
-        "REQ-DEC-079",
         "REQ-BO-002",
         "REQ-DEC-035",
         "REQ-DEC-006",
         "REQ-BO-001",
         "REQ-DEC-002",
-        "REQ-DEC-072",
-        "REQ-DEC-064",
-        "REQ-DEC-062",
-        "REQ-DEC-061",
         "REQ-DEC-008",
-        "REQ-DEC-071",
         "REQ-DEC-038",
         "REQ-DEC-009",
-        "REQ-DEC-078",
-        "REQ-DEC-068",
-        "REQ-DEC-067",
-        "REQ-DEC-065",
         "REQ-FR-004",
         "REQ-FR-005",
         "REQ-FR-006",
+        "REQ-DEC-051",
         "REQ-DEC-037",
         "REQ-DEC-010",
         "REQ-FR-001",
         "REQ-FR-002",
         "REQ-FR-003",
         "REQ-DEC-033",
-        "REQ-DEC-066",
         "REQ-DEC-011",
         "REQ-DEC-012",
-        "REQ-DEC-075",
-        "REQ-DEC-069",
         "REQ-DEC-013",
         "REQ-DEC-014",
         "REQ-DEC-015",
-        "REQ-DEC-060",
-        "REQ-DEC-059",
         "REQ-DEC-016",
         "REQ-DEC-017",
         "REQ-NFR-001",
         "REQ-NFR-002",
         "REQ-NFR-003",
-        "REQ-DEC-076",
-        "REQ-DEC-058",
-        "REQ-DEC-057",
-        "REQ-DEC-056",
-        "REQ-DEC-052",
-        "REQ-DEC-051",
         "REQ-DEC-039",
         "REQ-DEC-018",
         "REQ-DATA-001",
         "REQ-DATA-002",
-        "REQ-DEC-063",
         "REQ-DEC-032",
         "REQ-DEC-019",
         "REQ-INT-001",
@@ -941,7 +914,6 @@
         "REQ-DEC-023",
         "REQ-DEC-042",
         "REQ-DEC-024",
-        "REQ-DEC-074",
         "REQ-AC-001",
         "REQ-DEC-043",
         "REQ-DEC-025",
@@ -951,45 +923,45 @@
         "REQ-DEC-027",
         "REQ-DEC-028"
       ],
-      "requirementsSha256": "2ce166744ee938c1d652f8397f919904f6d423103360af163c5675d7bcde8e92",
-      "indexSha256": "566f73151694a8945b95a83c42eb90f535e4fa78dfc3b98615571b38164b5924",
-      "referencedEvidenceSha256": "f5824c843d2fc92a5b696fd199952227e7e5eb20abdb5fc6f670261429a10c19",
+      "requirementsSha256": "05f0c50a47572c5c72540f6a09e46b1f7a19e5b90a136def1fc300c252986acc",
+      "indexSha256": "545f4fe4dcac13a7a386c5ac04fe80910273c3845163bf52e620c45b05240d4c",
+      "referencedEvidenceSha256": "52823c8216df1702dd5f385de6facc0a792120e342cffd4afdf0dccdd651f078",
       "files": [
         {
           "path": "requirements/01-base/goals-and-scope.md",
-          "sha256": "e8bfe1690f89eb5565ecfbd1a9b18ebb08845d4bddc9a3ba88b01b8acd456a29"
+          "sha256": "894b7b9c28ce499940111a941da2344889c0bfe8015c8cf78e8a450958e509f8"
         },
         {
           "path": "requirements/01-base/product-context.md",
-          "sha256": "f38d8f9f0e8e7e5b0732d1c385eb7a7412ce4ac8421b1183912521b3dc7a78b6"
+          "sha256": "5fe0c8993e2eaf20a8b5fbadd172c800545385e25ab4b234f887848f8101380e"
         },
         {
           "path": "requirements/01-base/sales-objects.md",
-          "sha256": "02ace02d79012f4b76484273f32e88e4a903cdbffb64b626aed16829e09269e2"
+          "sha256": "7012bd4f905d4ccb6ea18345a8b9731265f9d939bf5a5e46974cd66cb3686097"
         },
         {
           "path": "requirements/02-system/business-rules.md",
-          "sha256": "38431791af1945542482557f3c85794319e86ee230bc5f0c93f15e346a90b39f"
+          "sha256": "4c3b5450ddc681dd3616f3257ea5e9e9dd961b5f04fba0149e032ee81cd3e39f"
         },
         {
           "path": "requirements/02-system/entities-and-data.md",
-          "sha256": "8e41f7891bea5576b1098b2a094e053efa97d2af907b8d4560906e7a59ab4f72"
+          "sha256": "3b236ecfcb4eb2f1470948cb95541f6b01cbf66b81fc256c9182234c0e39e6e4"
         },
         {
           "path": "requirements/02-system/roles-and-permissions.md",
-          "sha256": "f882430fab721a46d73677e40a8f148908ee75bd844549517ab8ce752135a24c"
+          "sha256": "efee1bf69634221ed0c6cd67f15c395820475ebf2f280fe3caab63f07e7b5e2f"
         },
         {
           "path": "requirements/02-system/states-and-errors.md",
-          "sha256": "aa71fb9278a93a9f0ef6ae4789e6f5960fa013aaeaa7f55a0af497617aa705b8"
+          "sha256": "ee63b1807c5176c66a6603426d7ac1c991d285513553a7adb5cb82e25a602064"
         },
         {
           "path": "requirements/02-system/system-requirements.md",
-          "sha256": "c1a8fe8aff832c8c709c5a2aa73b49444a7414d1aab8ddf65145c0ddcba6011f"
+          "sha256": "723a9b780bc9eca1e79409673225af8390572f4cce180fc4d2de18b3feaa225c"
         },
         {
           "path": "requirements/03-architecture/component-source.md",
-          "sha256": "680f77f2aa82bb015d1b1fb75b6797ff97e0a8ad5b8bd2a3545d3d593ed20807"
+          "sha256": "5815adf1c9bc852de6bdccd0a48aeb2e691db0c13bacf8132ed043b6f05aa26c"
         },
         {
           "path": "requirements/03-architecture/hardware-requirements.md",
@@ -997,7 +969,7 @@
         },
         {
           "path": "requirements/03-architecture/technical-constraints.md",
-          "sha256": "24971116bd0f468f3f6f6e72efc4e2455263af195239cec1a5b3b42bd7d13ec0"
+          "sha256": "682bce91f7baea6a40da770c1e63a3a61238b40d9616e2c240cb572e7bce044d"
         },
         {
           "path": "requirements/04-quality/accessibility-requirements.md",
@@ -1005,7 +977,7 @@
         },
         {
           "path": "requirements/04-quality/localization-requirements.md",
-          "sha256": "2074692de05847ae40c4325c99ad28b2e52a18782bc093185aaeb932c4fab940"
+          "sha256": "5b21907b75c7b67d08bf937fb476b5347239212e0e9866941b180453da2cebf2"
         },
         {
           "path": "requirements/04-quality/quality-requirements.md",
@@ -1013,11 +985,11 @@
         },
         {
           "path": "requirements/05-integrations/data-requirements.md",
-          "sha256": "4236b270101a817761546f25d8a13658594cc55b513b929b4e6dfb1e513396b1"
+          "sha256": "3e4b5570efd5dd78688db28a1aeb2a423e8d0c7ff11b7667ec3c3f70815b1103"
         },
         {
           "path": "requirements/05-integrations/integrations.md",
-          "sha256": "249f228525b27edf8184ff42809282f98b0dd7422ef02ddf600e936ac3e476b1"
+          "sha256": "5b7144b000eb6979c7a994961fb1f0b0fbd7406e6cc5ef27b6bb56b414cc1de3"
         },
         {
           "path": "requirements/06-system-scenarios/exception-scenarios.md",
@@ -1033,23 +1005,23 @@
         },
         {
           "path": "requirements/07-scenarios/business-scenarios.md",
-          "sha256": "43bff25240102902a93b2962d0ea2023ce9a42fb3adfa3cc9832254b9725db03"
+          "sha256": "8ca3bc26caedd074e1881b1eea161883cabced49b078faba1622df9752a43a22"
         },
         {
           "path": "requirements/07-scenarios/user-journeys.md",
-          "sha256": "ee31299aa880b88b603ee9143a503bd00c483e137d6693af8233c8cf4edc8b91"
+          "sha256": "00ed603ad30c8146f63d20bec9c45143e8f398f6fbe648cf6281c748cff3197a"
         },
         {
           "path": "requirements/08-acceptance/acceptance-criteria.md",
-          "sha256": "d0ee44c85265be394b79f23f69d819e38422f57bbdff969cd8a4565736371c94"
+          "sha256": "86f1c34a92b2ae07946b27d598ac227cdb6627a8697f10b80f546084e377ebfb"
         },
         {
           "path": "requirements/08-acceptance/validation-success.md",
-          "sha256": "a22661bc738fb62c26e27adbdffdfbeb8f16fa331c2c948820dc21f22984a147"
+          "sha256": "26d2199cb041302f2cbe0ec1cf7ff4c21bf2841921df2c13d7b556903d0f04a1"
         },
         {
           "path": "requirements/09-traceability/traceability.md",
-          "sha256": "d272985abbec80719a2633e692680bf7f437878d913b3231131edcd8dba33d66"
+          "sha256": "2a6541f61e4c9a387489fc88d7c85e7e5254c795b1e47bd6ca5e5865bbf5574c"
         },
         {
           "path": "requirements/10-prototype/prototype-data-source.md",
@@ -1059,14 +1031,14 @@
     },
     {
       "baselineId": "REQ-BASELINE-007",
-      "committedAt": "2026-09-01T06:43:06.510407+00:00",
+      "committedAt": "2026-09-01T07:05:00.299456+00:00",
       "gate": "VISUAL_PROTOTYPE",
       "gateStatus": "PASSED",
-      "requirementCount": 102,
+      "requirementCount": 104,
       "needsInputCount": 0,
       "openFutureQuestions": [],
       "requirementRefs": [
-        "REQ-DEC-077",
+        "REQ-DEC-081",
         "REQ-DEC-034",
         "REQ-DEC-003",
         "REQ-GS-001",
@@ -1074,13 +1046,14 @@
         "REQ-DEC-004",
         "REQ-PC-001",
         "REQ-PC-002",
-        "REQ-DEC-005",
-        "REQ-DEC-073",
-        "REQ-DEC-070",
-        "REQ-DEC-055",
+        "REQ-DEC-052",
+        "REQ-DEC-077",
+        "REQ-DEC-074",
+        "REQ-DEC-059",
+        "REQ-DEC-058",
+        "REQ-DEC-057",
         "REQ-DEC-054",
         "REQ-DEC-053",
-        "REQ-DEC-050",
         "REQ-DEC-047",
         "REQ-DEC-049",
         "REQ-DEC-048",
@@ -1092,59 +1065,60 @@
         "REQ-BR-002",
         "REQ-BR-003",
         "REQ-DEC-001",
-        "REQ-DEC-079",
+        "REQ-DEC-083",
         "REQ-BO-002",
         "REQ-DEC-035",
         "REQ-DEC-006",
         "REQ-BO-001",
         "REQ-DEC-002",
-        "REQ-DEC-072",
-        "REQ-DEC-064",
-        "REQ-DEC-062",
-        "REQ-DEC-061",
+        "REQ-DEC-076",
+        "REQ-DEC-068",
+        "REQ-DEC-066",
+        "REQ-DEC-065",
         "REQ-DEC-008",
-        "REQ-DEC-071",
+        "REQ-DEC-075",
         "REQ-DEC-038",
         "REQ-DEC-009",
-        "REQ-DEC-078",
-        "REQ-DEC-068",
-        "REQ-DEC-067",
-        "REQ-DEC-065",
+        "REQ-DEC-082",
+        "REQ-DEC-072",
+        "REQ-DEC-071",
+        "REQ-DEC-069",
         "REQ-FR-004",
         "REQ-FR-005",
         "REQ-FR-006",
+        "REQ-DEC-051",
         "REQ-DEC-037",
         "REQ-DEC-010",
         "REQ-FR-001",
         "REQ-FR-002",
         "REQ-FR-003",
         "REQ-DEC-033",
-        "REQ-DEC-066",
+        "REQ-DEC-070",
         "REQ-DEC-011",
         "REQ-DEC-012",
-        "REQ-DEC-075",
-        "REQ-DEC-069",
+        "REQ-DEC-079",
+        "REQ-DEC-073",
         "REQ-DEC-013",
         "REQ-DEC-014",
         "REQ-DEC-015",
-        "REQ-DEC-060",
-        "REQ-DEC-059",
+        "REQ-DEC-064",
+        "REQ-DEC-063",
         "REQ-DEC-016",
         "REQ-DEC-017",
         "REQ-NFR-001",
         "REQ-NFR-002",
         "REQ-NFR-003",
-        "REQ-DEC-076",
-        "REQ-DEC-058",
-        "REQ-DEC-057",
+        "REQ-DEC-080",
+        "REQ-DEC-062",
+        "REQ-DEC-061",
+        "REQ-DEC-060",
         "REQ-DEC-056",
-        "REQ-DEC-052",
-        "REQ-DEC-051",
+        "REQ-DEC-055",
         "REQ-DEC-039",
         "REQ-DEC-018",
         "REQ-DATA-001",
         "REQ-DATA-002",
-        "REQ-DEC-063",
+        "REQ-DEC-067",
         "REQ-DEC-032",
         "REQ-DEC-019",
         "REQ-INT-001",
@@ -1159,7 +1133,7 @@
         "REQ-DEC-023",
         "REQ-DEC-042",
         "REQ-DEC-024",
-        "REQ-DEC-074",
+        "REQ-DEC-078",
         "REQ-AC-001",
         "REQ-DEC-043",
         "REQ-DEC-025",
@@ -1169,45 +1143,45 @@
         "REQ-DEC-027",
         "REQ-DEC-028"
       ],
-      "requirementsSha256": "2ce166744ee938c1d652f8397f919904f6d423103360af163c5675d7bcde8e92",
-      "indexSha256": "566f73151694a8945b95a83c42eb90f535e4fa78dfc3b98615571b38164b5924",
-      "referencedEvidenceSha256": "f5824c843d2fc92a5b696fd199952227e7e5eb20abdb5fc6f670261429a10c19",
+      "requirementsSha256": "1ac3029505b905770eea065f50d0d850d28c8dabb6a945bdff8dbbdb86f6849a",
+      "indexSha256": "80515918171bf8b459276f631969459ce2d9ca5a7280221de0a00551851e06ab",
+      "referencedEvidenceSha256": "f4dc75bd2b207c0e108576919b5165fd052a2881bd2f2088d4379c7ba94e5cd0",
       "files": [
         {
           "path": "requirements/01-base/goals-and-scope.md",
-          "sha256": "e8bfe1690f89eb5565ecfbd1a9b18ebb08845d4bddc9a3ba88b01b8acd456a29"
+          "sha256": "fc4c5ff82811e99bc32a5a18ae0d0f19ae727de9786523b85afbc6aa3ee012e0"
         },
         {
           "path": "requirements/01-base/product-context.md",
-          "sha256": "f38d8f9f0e8e7e5b0732d1c385eb7a7412ce4ac8421b1183912521b3dc7a78b6"
+          "sha256": "fd603c00117b08cda1f79a609360fd67d21f0a97c0dc11ee26ab8ce604fcc677"
         },
         {
           "path": "requirements/01-base/sales-objects.md",
-          "sha256": "02ace02d79012f4b76484273f32e88e4a903cdbffb64b626aed16829e09269e2"
+          "sha256": "8a107a91e2870a9e05cbfb61f4da72bb2b4edd7d580ba4751e2f1d95887f8144"
         },
         {
           "path": "requirements/02-system/business-rules.md",
-          "sha256": "38431791af1945542482557f3c85794319e86ee230bc5f0c93f15e346a90b39f"
+          "sha256": "9247441824c5e8d4f1021cb480505439ede5936f15a2f77f7fc513a037390635"
         },
         {
           "path": "requirements/02-system/entities-and-data.md",
-          "sha256": "8e41f7891bea5576b1098b2a094e053efa97d2af907b8d4560906e7a59ab4f72"
+          "sha256": "61b8bffa454497e3f7a00133cc4eb4283a3e613864b5f1bf5a61cddd3ac118a7"
         },
         {
           "path": "requirements/02-system/roles-and-permissions.md",
-          "sha256": "f882430fab721a46d73677e40a8f148908ee75bd844549517ab8ce752135a24c"
+          "sha256": "01d1fac46ffe330677e21f361b789d106020189f48ba67c3bbb07657edf95550"
         },
         {
           "path": "requirements/02-system/states-and-errors.md",
-          "sha256": "aa71fb9278a93a9f0ef6ae4789e6f5960fa013aaeaa7f55a0af497617aa705b8"
+          "sha256": "9cc0b3581346df61c4e2c8521a8201fc8d46bf5c97d5041932b92c8dd88d9970"
         },
         {
           "path": "requirements/02-system/system-requirements.md",
-          "sha256": "c1a8fe8aff832c8c709c5a2aa73b49444a7414d1aab8ddf65145c0ddcba6011f"
+          "sha256": "66f06147a213b89a258b804ae5a451ea2cbb07bf66dd821905edd1ced55f9283"
         },
         {
           "path": "requirements/03-architecture/component-source.md",
-          "sha256": "680f77f2aa82bb015d1b1fb75b6797ff97e0a8ad5b8bd2a3545d3d593ed20807"
+          "sha256": "470292664a657ef235573bfb125b051b9f92c56577cae8db59da7b05555be386"
         },
         {
           "path": "requirements/03-architecture/hardware-requirements.md",
@@ -1215,7 +1189,7 @@
         },
         {
           "path": "requirements/03-architecture/technical-constraints.md",
-          "sha256": "24971116bd0f468f3f6f6e72efc4e2455263af195239cec1a5b3b42bd7d13ec0"
+          "sha256": "85f0cc85235c95236ba87c4dcd36cbf2e6236fa5e59bab2397f477693e94ab0d"
         },
         {
           "path": "requirements/04-quality/accessibility-requirements.md",
@@ -1223,7 +1197,7 @@
         },
         {
           "path": "requirements/04-quality/localization-requirements.md",
-          "sha256": "2074692de05847ae40c4325c99ad28b2e52a18782bc093185aaeb932c4fab940"
+          "sha256": "ebbfd1842d41f18d8339de2625ff914ee75687cadc0fd145d0a136e4743b4555"
         },
         {
           "path": "requirements/04-quality/quality-requirements.md",
@@ -1231,11 +1205,11 @@
         },
         {
           "path": "requirements/05-integrations/data-requirements.md",
-          "sha256": "4236b270101a817761546f25d8a13658594cc55b513b929b4e6dfb1e513396b1"
+          "sha256": "20497155fd8e0f16639d73ffa2caafa19917384bfa0bbdbe6f9277bdf5972f5a"
         },
         {
           "path": "requirements/05-integrations/integrations.md",
-          "sha256": "249f228525b27edf8184ff42809282f98b0dd7422ef02ddf600e936ac3e476b1"
+          "sha256": "bbeaaaef61f1329f084b408055f72c04a1ee34c8ac31d5863ca5b85e0cd4116d"
         },
         {
           "path": "requirements/06-system-scenarios/exception-scenarios.md",
@@ -1251,23 +1225,23 @@
         },
         {
           "path": "requirements/07-scenarios/business-scenarios.md",
-          "sha256": "43bff25240102902a93b2962d0ea2023ce9a42fb3adfa3cc9832254b9725db03"
+          "sha256": "2b39de79b9f40d5fcb31fc452f3602e59234b5702548899dc582350b39494069"
         },
         {
           "path": "requirements/07-scenarios/user-journeys.md",
-          "sha256": "ee31299aa880b88b603ee9143a503bd00c483e137d6693af8233c8cf4edc8b91"
+          "sha256": "8024c393bc579af49dc9233c2e12cf8b1cab354758b0dab19d785fb9c7235844"
         },
         {
           "path": "requirements/08-acceptance/acceptance-criteria.md",
-          "sha256": "d0ee44c85265be394b79f23f69d819e38422f57bbdff969cd8a4565736371c94"
+          "sha256": "39af7ea3130aee796aaf75c23df300c4dacf10e878515cd8e25415b10417fb2d"
         },
         {
           "path": "requirements/08-acceptance/validation-success.md",
-          "sha256": "a22661bc738fb62c26e27adbdffdfbeb8f16fa331c2c948820dc21f22984a147"
+          "sha256": "2581157a1838e7261065bb506944d5aa47bf2ceaca0d01ad2d9f267fdd117faa"
         },
         {
           "path": "requirements/09-traceability/traceability.md",
-          "sha256": "d272985abbec80719a2633e692680bf7f437878d913b3231131edcd8dba33d66"
+          "sha256": "2a6541f61e4c9a387489fc88d7c85e7e5254c795b1e47bd6ca5e5865bbf5574c"
         },
         {
           "path": "requirements/10-prototype/prototype-data-source.md",

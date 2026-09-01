@@ -43,18 +43,119 @@
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "visual-prototype",
-      "verifiedAt": "2026-09-01T06:42:44.465498+00:00",
+      "verifiedAt": "2026-08-31T12:22:46.664835+00:00",
       "checks": [
-        "Обязательный путь кликабелен, включая карточку инцидента INC-10621",
-        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен",
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями",
+        "Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется",
         "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
       ],
       "result": "PASSED",
-      "sha256": "fb7344f9ad93656f277e58db06f1830b252b161d3c48e3505443471162d38cc5",
+      "sha256": "ccab41b8a9ba7a5413c0f4f3b52432c1722c3c05dc4e00105e0d590e8de620f7",
       "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
       "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
       "dataSourceRef": null,
-      "notes": "Повторная проверка после синхронизации маршрута карточки инцидента.",
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-004",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T13:09:45.685009+00:00",
+      "checks": [
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями",
+        "Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
+      ],
+      "result": "PASSED",
+      "sha256": "f8bbd7b464a8ee5bb34eac4ea81dbc24ffbf1c458203827505107cde8503baa5",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-005",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T13:12:42.106823+00:00",
+      "checks": [
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями",
+        "Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь проверен"
+      ],
+      "result": "PASSED",
+      "sha256": "17d66233e3b5e4e674e449e99f6667f5fab51fa9d73f8e938b8ec2eb1fc81878",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-006",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T13:20:52.590581+00:00",
+      "checks": [
+        "Дашборд содержит объекты риска и ровно два согласованных сигнала состояния данных",
+        "Аналитика содержит два фильтра, четыре показателя и кликабельные дневные/недельные колонки",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля сохранены",
+        "Потенциальный штраф сохранён в UI и защищён от двойного учёта нормативной группы",
+        "Настройки уведомлений и хранения восстановлены; PDF конкретного инцидента имеет рабочий сценарий",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "7419d269f8c9c066eb089ab8d73244f69269b0eb9ce621e0ebfd34dfd70b4b0f",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-007",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T13:33:59.401333+00:00",
+      "checks": [
+        "Произвольный диапазон дат доступен на Дашборде и в списке инцидентов",
+        "Поиск, множественный фильтр магазинов и CSV из 21 поля синхронизированы с требованиями",
+        "Потенциальный штраф сохранён в интерфейсе, отдельный риск автоштрафа не дублируется",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "8c580be08ed0de66cf4173baa6d3531289a6dc85cd078624b312dd95ad22faec",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-008",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
+      "verifiedAt": "2026-09-01T07:05:31.761100+00:00",
+      "checks": [
+        "Обязательный путь и ключевые функции кликабельны",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "7677183279a694d71d32529ab6498635b9781f0018461228e4e3584dffec5f8e",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "",
       "recordedBy": "register_artifact_evidence.py"
     }
   ]

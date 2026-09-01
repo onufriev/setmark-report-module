@@ -45,7 +45,7 @@
     "status": "PASSED",
     "checkedAt": "2026-09-01T06:42:31.505356+00:00",
     "details": [
-      "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
+      "entrypoint, HTML/CSS/JS, ссылки, обязательный путь и ключевые функции Дашборда/Аналитики/Настроек проверены"
     ]
   },
   "uiSourceMode": "COMPONENT_LIBRARY",

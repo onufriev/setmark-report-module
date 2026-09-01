@@ -3,9 +3,9 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "VISUAL_PROTOTYPE",
+  "currentPhase": "VISUAL_VALIDATION",
   "status": "IN_PROGRESS",
-  "nextAction": "Продолжить этап VISUAL_PROTOTYPE по правилам PRODUCT-COMPILER.md.",
+  "nextAction": "Продолжить этап VISUAL_VALIDATION по правилам PRODUCT-COMPILER.md.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
