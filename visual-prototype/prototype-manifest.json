@@ -33,7 +33,7 @@
     {
       "id": "incident",
       "label": "Карточка инцидента",
-      "href": "#incident/INC-10482"
+      "href": "#incident/INC-10621"
     },
     {
       "id": "analytics",
@@ -43,7 +43,7 @@
   ],
   "smokeTest": {
     "status": "PASSED",
-    "checkedAt": "2026-07-28T17:27:02.335349+00:00",
+    "checkedAt": "2026-09-01T06:42:31.505356+00:00",
     "details": [
       "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
     ]
@@ -52,3 +52,4 @@
   "applicationMode": "GENERATED_PROTOTYPE",
   "storybookDetected": false
 }
+
