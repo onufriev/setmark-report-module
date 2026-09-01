@@ -1,12 +1,24 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "ac5c51d2b2f2c7d49f36e20b3ed95cd2e73d340744b5ea3c8005dfa1cb27b51f",
+  "requirementsSha256": "2ce166744ee938c1d652f8397f919904f6d423103360af163c5675d7bcde8e92",
   "requirements": [
+    {
+      "id": "REQ-DEC-077",
+      "title": "Решение Product Manager",
+      "file": "requirements/01-base/goals-and-scope.md",
+      "line": 3,
+      "domainId": "goalsScope",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-078"
+      ],
+      "applicability": "MVP1"
+    },
     {
       "id": "REQ-DEC-034",
       "title": "Решение Product Manager",
       "file": "requirements/01-base/goals-and-scope.md",
-      "line": 3,
+      "line": 14,
       "domainId": "goalsScope",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -18,12 +30,11 @@
       "id": "REQ-DEC-003",
       "title": "Границы MVP",
       "file": "requirements/01-base/goals-and-scope.md",
-      "line": 22,
+      "line": 33,
       "domainId": "goalsScope",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-003",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-003"
       ],
       "applicability": "MVP1"
     },
@@ -31,7 +42,7 @@
       "id": "REQ-GS-001",
       "title": "Целевой результат",
       "file": "requirements/01-base/goals-and-scope.md",
-      "line": 62,
+      "line": 73,
       "domainId": "goalsScope",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -44,11 +55,11 @@
       "id": "REQ-GS-002",
       "title": "Снижение риска получения штрафов",
       "file": "requirements/01-base/goals-and-scope.md",
-      "line": 75,
+      "line": 86,
       "domainId": "goalsScope",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "уточнения Product Manager от 2026-08-27"
+        "PM-DEC-078"
       ],
       "applicability": "MVP1"
     },
@@ -61,8 +72,7 @@
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
         "PM-DEC-004",
-        "PM-DEC-019",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-019"
       ],
       "applicability": "MVP1"
     },
@@ -99,8 +109,31 @@
       "domainId": "salesObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-005",
-        "уточнения Product Manager от 2026-08-11 и 2026-08-26"
+        "PM-DEC-005"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-073",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 3,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-074"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-070",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 14,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-071"
       ],
       "applicability": "MVP1"
     },
@@ -108,7 +141,7 @@
       "id": "REQ-DEC-055",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 3,
+      "line": 25,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -120,7 +153,7 @@
       "id": "REQ-DEC-054",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 14,
+      "line": 36,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -132,7 +165,7 @@
       "id": "REQ-DEC-053",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 25,
+      "line": 47,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -144,7 +177,7 @@
       "id": "REQ-DEC-050",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 36,
+      "line": 58,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -156,7 +189,7 @@
       "id": "REQ-DEC-047",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 47,
+      "line": 69,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -168,7 +201,7 @@
       "id": "REQ-DEC-049",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 58,
+      "line": 80,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -180,7 +213,7 @@
       "id": "REQ-DEC-048",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 69,
+      "line": 91,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -192,7 +225,7 @@
       "id": "REQ-DEC-046",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 80,
+      "line": 102,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -204,7 +237,7 @@
       "id": "REQ-DEC-036",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 91,
+      "line": 113,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -216,7 +249,7 @@
       "id": "REQ-DEC-031",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 104,
+      "line": 126,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -228,7 +261,7 @@
       "id": "REQ-DEC-007",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 115,
+      "line": 137,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -241,7 +274,7 @@
       "id": "REQ-BR-001",
       "title": "Корреляция отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 143,
+      "line": 165,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -253,7 +286,7 @@
       "id": "REQ-BR-002",
       "title": "Последовательность онлайн- и офлайн-проверки",
       "file": "requirements/02-system/business-rules.md",
-      "line": 156,
+      "line": 178,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -266,7 +299,7 @@
       "id": "REQ-BR-003",
       "title": "Справочник отклонений",
       "file": "requirements/02-system/business-rules.md",
-      "line": 169,
+      "line": 191,
       "domainId": "businessRules",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -278,7 +311,7 @@
       "id": "REQ-DEC-001",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/business-rules.md",
-      "line": 182,
+      "line": 204,
       "domainId": "businessRules",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -287,15 +320,26 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-BO-002",
-      "title": "Поисковые и экспортные данные товара и операции",
+      "id": "REQ-DEC-079",
+      "title": "Решение Product Manager",
       "file": "requirements/02-system/entities-and-data.md",
       "line": 3,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "обратная связь клиента ПетШоп",
-        "уточнение Product Manager от 2026-08-26"
+        "PM-DEC-080"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-BO-002",
+      "title": "Поисковые и экспортные данные товара и операции",
+      "file": "requirements/02-system/entities-and-data.md",
+      "line": 14,
+      "domainId": "businessObjects",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-080"
       ],
       "applicability": "MVP1"
     },
@@ -303,7 +347,7 @@
       "id": "REQ-DEC-035",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 17,
+      "line": 28,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -315,7 +359,7 @@
       "id": "REQ-DEC-006",
       "title": "Модель сущностей и состояний",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 32,
+      "line": 43,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -328,7 +372,7 @@
       "id": "REQ-BO-001",
       "title": "Связь отклонения с внутренними данными",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 62,
+      "line": 73,
       "domainId": "businessObjects",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -340,7 +384,7 @@
       "id": "REQ-DEC-002",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/entities-and-data.md",
-      "line": 75,
+      "line": 86,
       "domainId": "businessObjects",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -349,10 +393,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-064",
+      "id": "REQ-DEC-072",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
       "line": 3,
+      "domainId": "rolesPermissions",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-073"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-064",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/roles-and-permissions.md",
+      "line": 14,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -364,7 +420,7 @@
       "id": "REQ-DEC-062",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
-      "line": 14,
+      "line": 25,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -376,7 +432,7 @@
       "id": "REQ-DEC-061",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
-      "line": 25,
+      "line": 36,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -388,7 +444,7 @@
       "id": "REQ-DEC-008",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/roles-and-permissions.md",
-      "line": 36,
+      "line": 47,
       "domainId": "rolesPermissions",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -399,10 +455,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-038",
+      "id": "REQ-DEC-071",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/states-and-errors.md",
       "line": 3,
+      "domainId": "statesErrors",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-072"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-038",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/states-and-errors.md",
+      "line": 14,
       "domainId": "statesErrors",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -414,7 +482,7 @@
       "id": "REQ-DEC-009",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/states-and-errors.md",
-      "line": 19,
+      "line": 30,
       "domainId": "statesErrors",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -423,10 +491,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-068",
+      "id": "REQ-DEC-078",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
       "line": 3,
+      "domainId": "functionalRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-079"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-068",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/system-requirements.md",
+      "line": 14,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -438,7 +518,7 @@
       "id": "REQ-DEC-067",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 14,
+      "line": 25,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -450,7 +530,7 @@
       "id": "REQ-DEC-065",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 25,
+      "line": 36,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -462,12 +542,11 @@
       "id": "REQ-FR-004",
       "title": "Поиск по штрихкодам, артикулам и кодам маркировки",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 36,
+      "line": 47,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "обратная связь клиента ПетШоп",
-        "уточнение Product Manager от 2026-08-26"
+        "PM-DEC-079"
       ],
       "applicability": "MVP1"
     },
@@ -475,12 +554,11 @@
       "id": "REQ-FR-005",
       "title": "Множественный фильтр магазинов",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 49,
+      "line": 60,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "обратная связь клиента ПетШоп",
-        "уточнение Product Manager от 2026-08-26"
+        "PM-DEC-079"
       ],
       "applicability": "MVP1"
     },
@@ -488,12 +566,11 @@
       "id": "REQ-FR-006",
       "title": "Расширенная выгрузка инцидентов в CSV",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 62,
+      "line": 73,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "обратная связь клиента ПетШоп",
-        "уточнение Product Manager от 2026-08-26"
+        "PM-DEC-079"
       ],
       "applicability": "MVP1"
     },
@@ -501,7 +578,7 @@
       "id": "REQ-DEC-037",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 102,
+      "line": 113,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -513,7 +590,7 @@
       "id": "REQ-DEC-010",
       "title": "Решение Product Manager",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 123,
+      "line": 134,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -525,7 +602,7 @@
       "id": "REQ-FR-001",
       "title": "Централизованный мониторинг",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 150,
+      "line": 161,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -537,7 +614,7 @@
       "id": "REQ-FR-002",
       "title": "Выгрузка данных",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 163,
+      "line": 174,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -549,7 +626,7 @@
       "id": "REQ-FR-003",
       "title": "Ежедневные уведомления",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 176,
+      "line": 187,
       "domainId": "functionalRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -561,7 +638,7 @@
       "id": "REQ-DEC-033",
       "title": "Готовые и произвольный диапазоны дат",
       "file": "requirements/02-system/system-requirements.md",
-      "line": 189,
+      "line": 200,
       "domainId": "functionalRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -609,10 +686,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-069",
+      "id": "REQ-DEC-075",
       "title": "Решение Product Manager",
       "file": "requirements/03-architecture/technical-constraints.md",
       "line": 3,
+      "domainId": "technicalConstraints",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-076"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-069",
+      "title": "Решение Product Manager",
+      "file": "requirements/03-architecture/technical-constraints.md",
+      "line": 14,
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -624,7 +713,7 @@
       "id": "REQ-DEC-013",
       "title": "Решение Product Manager",
       "file": "requirements/03-architecture/technical-constraints.md",
-      "line": 14,
+      "line": 25,
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -637,7 +726,7 @@
       "id": "REQ-DEC-014",
       "title": "Решение Product Manager",
       "file": "requirements/03-architecture/technical-constraints.md",
-      "line": 26,
+      "line": 37,
       "domainId": "technicalConstraints",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -691,7 +780,8 @@
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
         "PM-DEC-016",
-        "PM-DEC-019"
+        "PM-DEC-019",
+        "PM-DEC-061"
       ],
       "applicability": "MVP1"
     },
@@ -745,10 +835,22 @@
       "applicability": "MVP1"
     },
     {
-      "id": "REQ-DEC-058",
+      "id": "REQ-DEC-076",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
       "line": 3,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-077"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-058",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 14,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -760,7 +862,7 @@
       "id": "REQ-DEC-057",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 14,
+      "line": 25,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -772,7 +874,7 @@
       "id": "REQ-DEC-056",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 25,
+      "line": 36,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -784,7 +886,7 @@
       "id": "REQ-DEC-052",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 36,
+      "line": 47,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -796,7 +898,7 @@
       "id": "REQ-DEC-051",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 47,
+      "line": 58,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -808,7 +910,7 @@
       "id": "REQ-DEC-039",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 58,
+      "line": 69,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -820,7 +922,7 @@
       "id": "REQ-DEC-018",
       "title": "Решение Product Manager",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 73,
+      "line": 84,
       "domainId": "dataRequirements",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -833,7 +935,7 @@
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 84,
+      "line": 95,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -846,7 +948,7 @@
       "id": "REQ-DATA-002",
       "title": "Данные для корреляции",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 97,
+      "line": 108,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -986,8 +1088,7 @@
       "domainId": "businessScenarios",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-042",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-042"
       ],
       "applicability": "MVP1"
     },
@@ -999,8 +1100,7 @@
       "domainId": "businessScenarios",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-030",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-030"
       ],
       "applicability": "MVP1"
     },
@@ -1012,8 +1112,7 @@
       "domainId": "businessScenarios",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-023",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-023"
       ],
       "applicability": "MVP1"
     },
@@ -1025,8 +1124,7 @@
       "domainId": "mainJourney",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-043",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-043"
       ],
       "applicability": "MVP1"
     },
@@ -1038,8 +1136,19 @@
       "domainId": "mainJourney",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-024",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-024"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-074",
+      "title": "Решение Product Manager",
+      "file": "requirements/08-acceptance/acceptance-criteria.md",
+      "line": 3,
+      "domainId": "acceptanceCriteria",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-075"
       ],
       "applicability": "MVP1"
     },
@@ -1047,13 +1156,11 @@
       "id": "REQ-AC-001",
       "title": "Поиск, фильтр магазинов и расширенный CSV",
       "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "line": 3,
+      "line": 14,
       "domainId": "acceptanceCriteria",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "REQ-FR-004",
-        "REQ-FR-005",
-        "REQ-FR-006"
+        "PM-DEC-075"
       ],
       "applicability": "MVP1"
     },
@@ -1061,7 +1168,7 @@
       "id": "REQ-DEC-043",
       "title": "Решение Product Manager",
       "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "line": 24,
+      "line": 35,
       "domainId": "acceptanceCriteria",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
@@ -1073,11 +1180,12 @@
       "id": "REQ-DEC-025",
       "title": "Решение Product Manager",
       "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "line": 46,
+      "line": 57,
       "domainId": "acceptanceCriteria",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-025"
+        "PM-DEC-025",
+        "PM-DEC-075"
       ],
       "applicability": "MVP1"
     },
@@ -1089,8 +1197,7 @@
       "domainId": "successSignal",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-045",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-045"
       ],
       "applicability": "MVP1"
     },
@@ -1102,8 +1209,7 @@
       "domainId": "successSignal",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-026",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-026"
       ],
       "applicability": "MVP1"
     },
@@ -1115,8 +1221,7 @@
       "domainId": "traceability",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-046",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-046"
       ],
       "applicability": "MVP1"
     },
@@ -1128,8 +1233,7 @@
       "domainId": "traceability",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-027",
-        "уточнение Product Manager от 2026-08-27"
+        "PM-DEC-027"
       ],
       "applicability": "MVP1"
     },
@@ -1151,21 +1255,15 @@
   "diagnostics": [
     {
       "file": "requirements/01-base/goals-and-scope.md",
-      "requirements": 4,
+      "requirements": 5,
       "needsInput": 0,
-      "candidateSections": 4
+      "candidateSections": 5
     },
     {
       "file": "requirements/01-base/product-context.md",
       "requirements": 3,
       "needsInput": 0,
       "candidateSections": 3
-    },
-    {
-      "file": "requirements/01-base/requirements-since-2026-08-28.md",
-      "requirements": 0,
-      "needsInput": 0,
-      "candidateSections": 0
     },
     {
       "file": "requirements/01-base/sales-objects.md",
@@ -1175,33 +1273,33 @@
     },
     {
       "file": "requirements/02-system/business-rules.md",
-      "requirements": 15,
+      "requirements": 17,
       "needsInput": 0,
-      "candidateSections": 15
+      "candidateSections": 17
     },
     {
       "file": "requirements/02-system/entities-and-data.md",
+      "requirements": 6,
+      "needsInput": 0,
+      "candidateSections": 6
+    },
+    {
+      "file": "requirements/02-system/roles-and-permissions.md",
       "requirements": 5,
       "needsInput": 0,
       "candidateSections": 5
     },
     {
-      "file": "requirements/02-system/roles-and-permissions.md",
-      "requirements": 4,
-      "needsInput": 0,
-      "candidateSections": 4
-    },
-    {
       "file": "requirements/02-system/states-and-errors.md",
-      "requirements": 2,
+      "requirements": 3,
       "needsInput": 0,
-      "candidateSections": 2
+      "candidateSections": 3
     },
     {
       "file": "requirements/02-system/system-requirements.md",
-      "requirements": 12,
+      "requirements": 13,
       "needsInput": 0,
-      "candidateSections": 12
+      "candidateSections": 13
     },
     {
       "file": "requirements/03-architecture/component-source.md",
@@ -1217,9 +1315,9 @@
     },
     {
       "file": "requirements/03-architecture/technical-constraints.md",
-      "requirements": 3,
+      "requirements": 4,
       "needsInput": 0,
-      "candidateSections": 3
+      "candidateSections": 4
     },
     {
       "file": "requirements/04-quality/accessibility-requirements.md",
@@ -1241,9 +1339,9 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 9,
+      "requirements": 10,
       "needsInput": 0,
-      "candidateSections": 9
+      "candidateSections": 10
     },
     {
       "file": "requirements/05-integrations/integrations.md",
@@ -1283,9 +1381,9 @@
     },
     {
       "file": "requirements/08-acceptance/acceptance-criteria.md",
-      "requirements": 3,
+      "requirements": 4,
       "needsInput": 0,
-      "candidateSections": 3
+      "candidateSections": 4
     },
     {
       "file": "requirements/08-acceptance/validation-success.md",
