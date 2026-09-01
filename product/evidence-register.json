@@ -1195,6 +1195,136 @@
       "exactUserMessage": "используй эти требования",
       "createdAt": "2026-08-31T15:01:53.083749+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-071",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-CORE",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "Перенести базовые правила единой лицензии Set Mark, отсутствия отдельной пробной лицензии и приоритета истечения лицензии над лицензионным несоответствием.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:05:53.409319+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-072",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-STATE-MATRIX",
+      "domainId": "statesErrors",
+      "domainIds": [
+        "statesErrors"
+      ],
+      "decision": "Зафиксировать единую матрицу доступности по состояниям лицензии с учётом подтверждённых уточнений о достоверной истории и автономном расчёте по дате окончания.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:06:37.909871+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-073",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-RBAC-VISIBILITY-RECOMMENDATIONS",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "rolesPermissions"
+      ],
+      "decision": "Перенести правила постоянной видимости Set Mark и системных рекомендаций только для чтения.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:07:27.436538+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-074",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ACCESS-EVALUATION-ORDER",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "Перенести обязательную последовательность вычисления доступности из нового набора требований, используя административные привилегии вместо проверки названия роли.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:09:35.418028+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-075",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ACCESS-ACCEPTANCE",
+      "domainId": "acceptanceCriteria",
+      "domainIds": [
+        "acceptanceCriteria"
+      ],
+      "decision": "Добавить матричную приёмку объединённых правил страны, прав, лицензии, ограниченного режима, хранения, поиска и экспорта.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:10:30.890890+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-076",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-JOURNAL-MIGRATION-DEFERRED",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "В текущем прототипе показать целевое размещение действующего Журнала внутри SetCentrum, не включая техническую production-миграцию.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:11:14.495160+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-077",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-DATA-CONTRACT",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Зафиксировать минимальный контракт данных лицензии: Set Agent возвращает дату окончания, SetCentrum хранит последнее достоверное состояние, дату и время успешного получения и полученную дату окончания.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:12:44.627418+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-078",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-GOAL-PRIORITY",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "goalsScope"
+      ],
+      "decision": "Главная бизнес-цель сначала требует разбирать критические инциденты с риском автоштрафа, затем регулярно снижать общее количество нарушений.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:17:06.490127+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-079",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-PETSHOP-FUNCTIONS",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "decision": "Повторно подтвердить без изменений точный массовый поиск по штрихкоду, артикулу и коду маркировки, множественный выбор магазинов и CSV текущей выборки из 23 колонок.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:18:25.601251+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-080",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-PETSHOP-INCIDENT-FIELDS",
+      "domainId": "businessObjects",
+      "domainIds": [
+        "businessObjects"
+      ],
+      "decision": "Повторно подтвердить поля товара и операции в инциденте: штрихкод, артикул, наименование товара, номер чека или идентификатор операции и источник проверки.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:19:37.295702+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }
