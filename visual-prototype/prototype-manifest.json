@@ -9,7 +9,7 @@
   "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
   "notes": null,
   "sourceType": "DIRECTORY",
-  "sourceReference": "Сгенерированный прототип на основе @crystalservice/csi_ui и актуального frontend Set Mark",
+  "sourceReference": "Оболочка Set Centrum /products/search по паттерну Set Loyalty; Журнал и логотипы из setmark-control-prototype.html; новые экраны на основе @crystalservice/csi_ui",
   "interactionLevel": "CLICKABLE",
   "materializedAt": "2026-07-28T17:27:02.303252+00:00",
   "url": "http://localhost:8000/app/index.html",
@@ -19,6 +19,11 @@
       "id": "overview",
       "label": "Обзор сети",
       "href": "#overview"
+    },
+    {
+      "id": "journal",
+      "label": "Журнал нарушений",
+      "href": "#journal"
     },
     {
       "id": "priority",
@@ -39,6 +44,11 @@
       "id": "analytics",
       "label": "Аналитика и выгрузка",
       "href": "#analytics"
+    },
+    {
+      "id": "settings",
+      "label": "Настройки и подключение ЭЦП",
+      "href": "#settings"
     }
   ],
   "smokeTest": {

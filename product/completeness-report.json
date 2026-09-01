@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-09-01T07:05:36.527210+00:00",
+  "evaluatedAt": "2026-09-01T17:30:00.534178+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -31,6 +31,8 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-GS-003",
+        "REQ-GS-004",
         "REQ-DEC-081",
         "REQ-DEC-034",
         "REQ-DEC-003",
@@ -52,6 +54,7 @@
         "REQ-DEC-072",
         "REQ-DEC-071",
         "REQ-DEC-069",
+        "REQ-FR-007",
         "REQ-FR-004",
         "REQ-FR-005",
         "REQ-FR-006",
@@ -77,6 +80,7 @@
         "REQ-DEC-083",
         "REQ-BO-002",
         "REQ-DEC-035",
+        "REQ-BO-003",
         "REQ-DEC-006",
         "REQ-BO-001",
         "REQ-DEC-002"
@@ -163,6 +167,7 @@
         "REQ-DEC-039",
         "REQ-DEC-018",
         "REQ-DATA-001",
+        "REQ-DATA-003",
         "REQ-DATA-002"
       ],
       "needsInput": [],
@@ -234,7 +239,14 @@
       "profileHintMatched": true,
       "status": "CONFIRMED",
       "requirementRefs": [
-        "REQ-DEC-052"
+        "REQ-MKT-001",
+        "REQ-MKT-002",
+        "REQ-MKT-003",
+        "REQ-MKT-004",
+        "REQ-MKT-005",
+        "REQ-MKT-006",
+        "REQ-DEC-052",
+        "REQ-SO-001"
       ],
       "needsInput": [],
       "validationNotes": []
