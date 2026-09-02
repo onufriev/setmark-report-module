@@ -145,6 +145,24 @@
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "visual-prototype",
+      "verifiedAt": "2026-08-31T16:22:22.320736+00:00",
+      "checks": [
+        "Каталог инцидентов и новые правила первой очереди не изменяют обязательный путь действующего визуального прототипа",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "7b01e3ba8694cc815f9b5edbae2a3a487f38a688ae7255fd9adb59e57f781bf8",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "Повторная регистрация контрольной суммы после синхронизации требований; пользовательский прототип не изменялся.",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-009",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "visual-prototype",
       "verifiedAt": "2026-09-01T07:05:31.761100+00:00",
       "checks": [
         "Обязательный путь и ключевые функции кликабельны",
@@ -159,7 +177,7 @@
       "recordedBy": "register_artifact_evidence.py"
     },
     {
-      "id": "ART-EV-009",
+      "id": "ART-EV-010",
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "visual-prototype",
@@ -177,7 +195,7 @@
       "recordedBy": "register_artifact_evidence.py"
     },
     {
-      "id": "ART-EV-010",
+      "id": "ART-EV-011",
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "visual-prototype",
@@ -195,7 +213,7 @@
       "recordedBy": "register_artifact_evidence.py"
     },
     {
-      "id": "ART-EV-011",
+      "id": "ART-EV-012",
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "interactive-html",
@@ -213,7 +231,7 @@
       "recordedBy": "register_artifact_evidence.py"
     },
     {
-      "id": "ART-EV-012",
+      "id": "ART-EV-013",
       "phase": "VISUAL_PROTOTYPE",
       "artifactPath": "visual-prototype",
       "artifactType": "interactive-html",
@@ -228,6 +246,24 @@
       "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
       "dataSourceRef": "Product Manager feedback 2026-09-01",
       "notes": "Browser verified for never-license scenario: 4 metrics, violation type chart, analytics with 4 metrics and 7 columns, no navigation to details",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-014",
+      "phase": "VISUAL_PROTOTYPE",
+      "artifactPath": "visual-prototype",
+      "artifactType": "interactive-html",
+      "verifiedAt": "2026-09-02T10:48:58.511037+00:00",
+      "checks": [
+        "Обязательный путь, лицензионные сценарии, Журнал нарушений, фильтры и CSV проверены после синхронизации с main",
+        "OK: визуальный прототип — кликабельное приложение; обязательный путь и ключевые функции проверены"
+      ],
+      "result": "PASSED",
+      "sha256": "f08ab01d184a56736a3a900ce1e42e15e1fb528dc0b0c05a6e581d050270f910",
+      "verificationCommand": "python3 tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "Повторная регистрация после merge PR #9 и перенумерации конфликтующих идентификаторов PR #10",
       "recordedBy": "register_artifact_evidence.py"
     }
   ]
