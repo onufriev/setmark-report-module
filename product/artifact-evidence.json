@@ -113,6 +113,26 @@
       "dataSourceRef": null,
       "notes": "Финальная корректировка: сохранено исходное имя стартового файла, служебные англицизмы в тексте не используются.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-021",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-02T15:08:06.437571+00:00",
+      "checks": [
+        "Содержатся только пять документов требований для разработки",
+        "Раздел MVP1 вынесен в начало каждого документа",
+        "Материалы прототипирования исключены",
+        "Повторяющиеся служебные поля и точные дубли удалены"
+      ],
+      "result": "PASSED",
+      "sha256": "d2a3824be4a7e04f361c9402ff9d5d0e8cf724777eab211aca940ac3cea33cba",
+      "verificationCommand": "",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Handoff очищен по запросу Product Manager: убраны прототип, служебные поля, шаблоны и повторы; требования сгруппированы по MVP1.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
