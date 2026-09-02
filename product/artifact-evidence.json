@@ -37,6 +37,82 @@
       "dataSourceRef": null,
       "notes": "Handoff без рабочего прототипа по решению Product Manager.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-017",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-02T14:37:36.727522+00:00",
+      "checks": [
+        "DEVELOPER-START-HERE.md является единой точкой входа",
+        "Все 132 уникальных REQ-ID перенесены в пять тематических файлов",
+        "Визуальный прототип указан",
+        "Служебные статусы и PM-DEC удалены из developer-facing требований"
+      ],
+      "result": "PASSED",
+      "sha256": "4c5f79edd68159ba85c261503200c9c03056e841136110050ef084c3cae532d7",
+      "verificationCommand": "",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Обновлён developer-facing handoff: требования собраны в handoff/requirements, рабочий прототип не входит в передачу.",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-018",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-02T14:39:19.444684+00:00",
+      "checks": [
+        "Стартовый файл и описание передачи используют русские формулировки",
+        "Полная компиляция требований сохранена",
+        "Визуальный прототип указан"
+      ],
+      "result": "PASSED",
+      "sha256": "1de81df297074193d72c4970818065f950962d08c801ef17bc25b9a95579e712",
+      "verificationCommand": "",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Англоязычные термины в описании передачи заменены русскими словами; добавлен файл НАЧАЛО-РАЗРАБОТКИ.md.",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-019",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-02T14:40:16.492458+00:00",
+      "checks": [
+        "Файл DEVELOPER-START-HERE.md используется как единая точка входа",
+        "Русские формулировки сохранены в содержании handoff",
+        "Дубликат стартового файла удалён"
+      ],
+      "result": "PASSED",
+      "sha256": "01679c1f7f857a2e6b39af24907b4b3435a5a4ced3dfaa999f906d4d38f88c97",
+      "verificationCommand": "",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "По запросу Product Manager сохранено исходное английское имя файла DEVELOPER-START-HERE.md.",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-020",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-02T14:40:41.819652+00:00",
+      "checks": [
+        "Имя файла DEVELOPER-START-HERE.md сохранено",
+        "Формулировки процесса и handoff грамматически корректны и русскоязычны"
+      ],
+      "result": "PASSED",
+      "sha256": "e4fd4da03958f1c4d27b6720e3ab6235544531ce2278e5104d44d11d8cdd7955",
+      "verificationCommand": "",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Финальная корректировка: сохранено исходное имя стартового файла, служебные англицизмы в тексте не используются.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
