@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1180" viewBox="0 0 1400 1180">
+  <style>
+    .title{font:700 44px Arial;fill:#0b2f6b}.subtitle{font:27px Arial;fill:#324e73}.box{fill:#fff;stroke:#1e5bb8;stroke-width:3}.decision{fill:#fff;stroke:#1e5bb8;stroke-width:3}.action{fill:#f4f8ff;stroke:#1e5bb8;stroke-width:3}.warn{fill:#fff8ed;stroke:#d47a13;stroke-width:3}.txt{font:22px Arial;fill:#12223a}.bold{font:700 22px Arial;fill:#12223a}.small{font:19px Arial;fill:#12223a}.label{font:700 20px Arial;fill:#0b2f6b}.arrow{stroke:#1e5bb8;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1e5bb8"/></marker></defs>
+  <text x="700" y="60" text-anchor="middle" class="title">Дополнительные ветки INC-001</text>
+  <text x="700" y="102" text-anchor="middle" class="subtitle">Повторные продажи менее 30 минут, у разных продавцов и с признаком АКС</text>
+  <rect x="300" y="145" width="800" height="95" rx="18" class="box"/>
+  <text x="700" y="202" text-anchor="middle" class="bold">Получено отклонение о повторной продаже</text>
+  <path d="M700 240 L700 305" class="arrow"/>
+  <polygon points="700,305 1010,395 700,485 390,395" class="decision"/>
+  <text x="700" y="385" text-anchor="middle" class="bold">Какие данные подтверждены в SMC?</text>
+
+  <path d="M390 395 L205 395 L205 580" class="arrow"/>
+  <text x="35" y="370" class="label">35: две и более продажи в SMC</text>
+  <rect x="35" y="580" width="430" height="225" rx="18" class="action"/>
+  <text x="250" y="630" text-anchor="middle" class="bold">Обычный повтор продажи</text>
+  <text x="250" y="674" text-anchor="middle" class="txt">Применить основной INC-001:</text>
+  <text x="250" y="712" text-anchor="middle" class="txt">возврат → категория →</text>
+  <text x="250" y="750" text-anchor="middle" class="txt">доступность SMC → CSI</text>
+
+  <path d="M1010 395 L1195 395 L1195 535" class="arrow"/>
+  <text x="1030" y="370" class="label">Одна продажа</text>
+  <polygon points="1050,535 1325,620 1050,705 775,620" class="decision"/>
+  <text x="1050" y="610" text-anchor="middle" class="bold">Какой результат отклонения?</text>
+
+  <path d="M775 620 L650 620 L650 850" class="arrow"/>
+  <text x="650" y="595" class="label">35: менее 30 минут</text>
+  <rect x="430" y="850" width="440" height="225" rx="18" class="warn"/>
+  <text x="650" y="900" text-anchor="middle" class="bold">RA-04 — расхождение</text>
+  <text x="650" y="944" text-anchor="middle" class="txt">В ЧЗ две продажи, в SMC одна</text>
+  <text x="650" y="986" text-anchor="middle" class="txt">Проверить повторную регистрацию</text>
+  <text x="650" y="1024" text-anchor="middle" class="txt">чека в ККТ через поддержку CSI</text>
+
+  <path d="M1050 705 L1050 850" class="arrow"/>
+  <text x="1070" y="760" class="label">37/45: разные продавцы / АКС</text>
+  <rect x="900" y="850" width="465" height="225" rx="18" class="warn"/>
+  <text x="1132" y="900" text-anchor="middle" class="bold">RA-04 — внешний контур</text>
+  <text x="1132" y="944" text-anchor="middle" class="txt">Установить второго продавца в ЧЗ</text>
+  <text x="1132" y="986" text-anchor="middle" class="txt">Для АКС проверить реквизиты ЮЛ</text>
+  <text x="1132" y="1024" text-anchor="middle" class="txt">и переход права собственности</text>
+  <text x="700" y="1140" text-anchor="middle" class="small">АКС — агентско-комиссионная схема. Одна продажа в SMC не доказывает ошибку Честного Знака.</text>
+</svg>
