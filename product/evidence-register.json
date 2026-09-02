@@ -1127,6 +1127,58 @@
       "exactUserMessage": "И там и там это будет isBlocked. Вообще ОГВ это более общее название инцидента. А вот кто именно запретил указывается в поле ogvs. Так как признает недействительный разрешительный документ, тоже один из ОГВ. Поэтому это все INC-007.",
       "createdAt": "2026-08-31T15:49:59.349816+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-065",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-SECOND-REPEAT-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "При продаже у одного продавца менее 30 минут: если в SMC видны дублирующие продажи, требуется разбираться, почему SMC их не заблокировал и проверяется ли категория на повтор продажи; если в SMC одна продажа, а в ЧЗ две, следует подать заявку из-за возможной повторной регистрации чека в ККТ. Для разных продавцов убедиться, что в SMC одна продажа, затем разбираться с ЧЗ; при агентско-комиссионной схеме проверить реквизиты второго ЮЛ.",
+      "createdAt": "2026-09-01T12:28:04.281140+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-066",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-SECOND-REALIZABLE-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Если выбытие из оборота через продажу то стоит смотреть sold. Если товар выбыл из-за списания или поставщик его вообще не ввел в оборот то realizable. В общих чертах я бы держал в голове что приоритет запрета продажи из-за sold=true выше чем realizable. Этот инцидент рассматривать только при sold=false.",
+      "createdAt": "2026-09-01T12:28:24.673940+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-067",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-SECOND-GROUP-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Групповая упаковка может выбывать из оборота, если продали один из товаров, который в нее входит, тем самым расформировав групповую упаковку. Если видим две продажи, то это обычный повтор продажи. Если одну, стоит поискать продажи КМ, входящих в эту упаковку. В данных SMC этой информации нет. Можно рекомендовать загружать групповые упаковки с указанием входящих в нее КМ в SMC для контроля этих данных со стороны SMC, а не ЧЗ.",
+      "createdAt": "2026-09-01T12:28:43.126913+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-068",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-SECOND-VETRF-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Реализация товаров с аннулированным ВСД — это isBlocked, с ogvs VETRF: заблокировано из-за аннулированного ВСД в системе ВетИС.",
+      "createdAt": "2026-09-01T12:28:54.762643+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }

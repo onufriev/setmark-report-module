@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "4104d3270e4d6b92891d9f71ddb4ba72af7f1fd56cf498d36edd6bb2c4cc48ff",
+  "requirementsSha256": "f264e0e86fb973998dc2e0ab916d503925ef3d186e6f33a447ab9a8716d48ec2",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -342,6 +342,54 @@
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
         "PM-DEC-063"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-062",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 257,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-065"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-063",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 268,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-066"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-064",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 279,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-067"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-065",
+      "title": "Решение Product Manager",
+      "file": "requirements/02-system/business-rules.md",
+      "line": 290,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-068"
       ],
       "applicability": "MVP1"
     },
@@ -1043,9 +1091,9 @@
     },
     {
       "file": "requirements/02-system/business-rules.md",
-      "requirements": 20,
+      "requirements": 24,
       "needsInput": 0,
-      "candidateSections": 20
+      "candidateSections": 24
     },
     {
       "file": "requirements/02-system/entities-and-data.md",
