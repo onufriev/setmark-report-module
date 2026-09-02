@@ -1023,6 +1023,46 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T12:15:13.971404+00:00",
       "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-057",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-INT-TRUE-API-MVP-MODE-001",
+      "domainId": "integrations",
+      "domainIds": [
+        "integrations"
+      ],
+      "decision": "MANUAL_MVP1_CONDITIONAL_SLA",
+      "exactUserMessage": "Условный SLA (Recommended)",
+      "createdAt": "2026-09-02T09:22:12.225946+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-058",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-TRUE-API-SLA-001",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "dataRequirements"
+      ],
+      "decision": "CONDITIONAL_24H_SLA",
+      "exactUserMessage": "Условный SLA (Recommended)",
+      "createdAt": "2026-09-02T09:22:12.832082+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-059",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-TRUE-API-CODES-001",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "NULLABLE_BEST_EFFORT_CODES",
+      "exactUserMessage": "Nullable enrichment (Recommended)",
+      "createdAt": "2026-09-02T09:22:13.439467+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }

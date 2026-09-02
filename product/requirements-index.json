@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "05f0c50a47572c5c72540f6a09e46b1f7a19e5b90a136def1fc300c252986acc",
+  "requirementsSha256": "50cc1be6488c2742c0d40e074cd5f344162c167e44e0919f94f7aae5d21270b0",
   "requirements": [
     {
       "id": "REQ-DEC-034",
@@ -623,7 +623,8 @@
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
         "PM-DEC-018",
-        "PM-DEC-019"
+        "PM-DEC-019",
+        "PM-DEC-058"
       ],
       "applicability": "MVP1"
     },
@@ -631,12 +632,11 @@
       "id": "REQ-DATA-001",
       "title": "Данные отклонения Честного знака",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 29,
+      "line": 31,
       "domainId": "dataRequirements",
-      "status": "Подтверждено источником",
+      "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "SRC-EV-006",
-        "SRC-EV-016"
+        "PM-DEC-059"
       ],
       "applicability": "MVP1"
     },
@@ -644,12 +644,36 @@
       "id": "REQ-DATA-002",
       "title": "Данные для корреляции",
       "file": "requirements/05-integrations/data-requirements.md",
-      "line": 42,
+      "line": 46,
       "domainId": "dataRequirements",
       "status": "Подтверждено источником",
       "evidenceRefs": [
         "SRC-EV-007",
         "SRC-EV-012"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-055",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 59,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-058"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-056",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/data-requirements.md",
+      "line": 70,
+      "domainId": "dataRequirements",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-059"
       ],
       "applicability": "MVP1"
     },
@@ -683,9 +707,9 @@
       "file": "requirements/05-integrations/integrations.md",
       "line": 38,
       "domainId": "integrations",
-      "status": "Подтверждено источником",
+      "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "SRC-EV-006"
+        "PM-DEC-057"
       ],
       "applicability": "MVP1"
     },
@@ -693,7 +717,7 @@
       "id": "REQ-INT-002",
       "title": "Получение событий Set Mark",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 51,
+      "line": 53,
       "domainId": "integrations",
       "status": "Подтверждено источником",
       "evidenceRefs": [
@@ -705,13 +729,25 @@
       "id": "REQ-INT-003",
       "title": "Контекст разрешительного режима",
       "file": "requirements/05-integrations/integrations.md",
-      "line": 64,
+      "line": 66,
       "domainId": "integrations",
       "status": "Подтверждено источником",
       "evidenceRefs": [
         "SRC-EV-013",
         "SRC-EV-014",
         "SRC-EV-015"
+      ],
+      "applicability": "MVP1"
+    },
+    {
+      "id": "REQ-DEC-054",
+      "title": "Решение Product Manager",
+      "file": "requirements/05-integrations/integrations.md",
+      "line": 79,
+      "domainId": "integrations",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-057"
       ],
       "applicability": "MVP1"
     },
@@ -859,7 +895,8 @@
       "domainId": "acceptanceCriteria",
       "status": "Подтверждено Product Manager",
       "evidenceRefs": [
-        "PM-DEC-025"
+        "PM-DEC-025",
+        "PM-DEC-058"
       ],
       "applicability": "MVP1"
     },
@@ -1013,15 +1050,15 @@
     },
     {
       "file": "requirements/05-integrations/data-requirements.md",
-      "requirements": 4,
+      "requirements": 6,
       "needsInput": 0,
-      "candidateSections": 4
+      "candidateSections": 6
     },
     {
       "file": "requirements/05-integrations/integrations.md",
-      "requirements": 5,
+      "requirements": 6,
       "needsInput": 0,
-      "candidateSections": 5
+      "candidateSections": 6
     },
     {
       "file": "requirements/06-system-scenarios/exception-scenarios.md",

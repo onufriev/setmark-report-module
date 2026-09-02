@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-08-31T15:15:06.421651+00:00",
+  "evaluatedAt": "2026-09-02T09:33:42.059972+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -140,7 +140,9 @@
         "REQ-DEC-039",
         "REQ-DEC-018",
         "REQ-DATA-001",
-        "REQ-DATA-002"
+        "REQ-DATA-002",
+        "REQ-DEC-055",
+        "REQ-DEC-056"
       ],
       "needsInput": [],
       "validationNotes": []
@@ -239,7 +241,8 @@
         "REQ-DEC-019",
         "REQ-INT-001",
         "REQ-INT-002",
-        "REQ-INT-003"
+        "REQ-INT-003",
+        "REQ-DEC-054"
       ],
       "needsInput": [],
       "validationNotes": []
