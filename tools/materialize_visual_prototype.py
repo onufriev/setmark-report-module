@@ -9,7 +9,7 @@ PATH=[
  {'id':'overview','label':'Обзор сети','href':'#overview'},
  {'id':'priority','label':'Критические инциденты с риском автоштрафа','href':'#priority'},
  {'id':'incidents','label':'Список инцидентов','href':'#incidents'},
- {'id':'incident','label':'Карточка инцидента','href':'#incident/INC-10482'},
+ {'id':'incident','label':'Карточка инцидента','href':'#incident/INC-10621'},
  {'id':'analytics','label':'Аналитика и выгрузка','href':'#analytics'},
 ]
 
@@ -99,3 +99,4 @@ def main():
  if stale: print('Устаревшие ревью: '+', '.join(stale))
  return 0
 if __name__=='__main__': raise SystemExit(main())
+

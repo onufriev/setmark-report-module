@@ -2,264 +2,6 @@
   "schemaVersion": "4.4",
   "evidence": [
     {
-      "id": "SRC-EV-001",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "goalsScope",
-        "productContext"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Проблематика",
-      "excerpt": "Ключевой риск: с запуском автоматического назначения штрафов за нарушения в сфере маркировки ритейлер может узнавать о проблемах слишком поздно — уже после возникновения серьезных финансовых последствий.",
-      "createdAt": "2026-07-27T23:18:52.160490+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-002",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "goalsScope",
-        "productContext"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Предлагаемое решение",
-      "excerpt": "Идея решения: предоставить ритейлеру централизованный инструмент мониторинга нарушений маркировки, оперативных уведомлений и рекомендаций по исправлению, чтобы предотвращать автоштрафы до их значительного накопления.",
-      "createdAt": "2026-07-27T23:18:52.629031+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-003",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "functionalRequirements"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Предлагаемое решение",
-      "excerpt": "Централизованный мониторинг — агрегированное отображение нарушений по сети магазинов, торговым точкам, кассам, товарным категориям и типам ошибок.",
-      "createdAt": "2026-07-27T23:18:53.095924+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "functionalRequirements"
-    },
-    {
-      "id": "SRC-EV-004",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "functionalRequirements"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Мониторинг и детализация",
-      "excerpt": "Возможность выгрузить любые сведения в CSV.",
-      "createdAt": "2026-07-27T23:18:53.568572+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "functionalRequirements"
-    },
-    {
-      "id": "SRC-EV-005",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "functionalRequirements"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Уведомления",
-      "excerpt": "Цель: обеспечить информирование ответственных лиц о критичных нарушениях в ежедневном режиме",
-      "createdAt": "2026-07-27T23:18:54.032057+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "functionalRequirements"
-    },
-    {
-      "id": "SRC-EV-006",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "dataRequirements",
-        "integrations"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Интеграция с API «Честный знак»",
-      "excerpt": "Реализовать периодический опрос API ЧЗ по методу 8.3.15.1 «Выгрузка сведений об отклонениях» для получения списка нарушений, зарегистрированных регулятором для ИНН клиента.",
-      "createdAt": "2026-07-27T23:18:54.509034+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-007",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "businessObjects",
-        "businessRules",
-        "dataRequirements"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Интеграция с API «Честный знак»",
-      "excerpt": "Сопоставлять отклонения из ЧЗ с записями журнала нарушений SetMark по коду маркировки (КМ) и временно́й метке: если отклонение имеет соответствие в журнале SetMark — связать записи; если отклонение не имеет соответствия — получить последний успешный результат проверки в ЧЗ (онлайн или офлайн)",
-      "createdAt": "2026-07-27T23:18:54.974265+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-008",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "quality"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Нефункциональные требования",
-      "excerpt": "Производительность: обработка событий от касс без заметного влияния на работу продажи.",
-      "createdAt": "2026-07-27T23:18:55.461701+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "quality"
-    },
-    {
-      "id": "SRC-EV-009",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "quality"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Нефункциональные требования",
-      "excerpt": "Масштабируемость: поддержка сетей с большим количеством магазинов и кассовых узлов.",
-      "createdAt": "2026-07-27T23:18:55.929679+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "quality"
-    },
-    {
-      "id": "SRC-EV-010",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "quality"
-      ],
-      "sourceId": "SRC-001",
-      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
-      "location": "Нефункциональные требования",
-      "excerpt": "Надёжность: сохранение событий при временных сбоях связи и последующая доставка данных в центральный контур.",
-      "createdAt": "2026-07-27T23:18:56.400742+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "quality"
-    },
-    {
-      "id": "SRC-EV-011",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "productContext"
-      ],
-      "sourceId": "SRC-002",
-      "snapshotPath": "sources/snapshots/confluence-3045457980.md",
-      "snapshotSha256": "ae82f0594024fd89c87cfff046a0397a0e47120aed3a192f9380a7e6527663fe",
-      "location": "Описание продукта",
-      "excerpt": "Set Mark - модуль экосистемы продукта Set Retail 10, предназначенный для контроля розничной продажи маркированного товара, в том числе акцизного алкоголя.",
-      "createdAt": "2026-07-27T23:18:56.884578+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py",
-      "domainId": "productContext"
-    },
-    {
-      "id": "SRC-EV-012",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "dataRequirements",
-        "integrations"
-      ],
-      "sourceId": "SRC-003",
-      "snapshotPath": "sources/snapshots/confluence-785842250.md",
-      "snapshotSha256": "a6a7eda147996c7dec7488acde3ea8bf0d914ae84da6a678e00850318308ec87",
-      "location": "Настройка подключения",
-      "excerpt": "Сообщения о возможных нарушениях загружаются в журнал нарушений Set Mark Centrum, и далее могут быть выгружены во внешнюю учетную систему.",
-      "createdAt": "2026-07-27T23:18:57.354242+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-013",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "businessRules",
-        "integrations"
-      ],
-      "sourceId": "SRC-004",
-      "snapshotPath": "sources/snapshots/confluence-4094230539.md",
-      "snapshotSha256": "fad9fba15acc5272f8294cd308b504fabbceebbc43609e02db7d5cb216295c11",
-      "location": "Описание разрешительного режима",
-      "excerpt": "Разрешительный режим — обязательная онлайн/офлайн проверка кода маркировки в системе «Честный знак» при продаже товара на кассе.",
-      "createdAt": "2026-07-27T23:18:57.824746+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-014",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "businessRules",
-        "integrations",
-        "statesErrors"
-      ],
-      "sourceId": "SRC-005",
-      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
-      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
-      "location": "Нет связи с ИМ ЧЗ",
-      "excerpt": "Если флажок не установлен - продажа запрещена при отсутствии ответа от онлайн и офлайн сервисов, на кассе отображается сообщение \"Сервис проверки марок ЧЗ недоступен. Продажа запрещена. Заберите товар у покупателя\".",
-      "createdAt": "2026-07-27T23:18:58.291828+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-015",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "businessRules",
-        "integrations"
-      ],
-      "sourceId": "SRC-005",
-      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
-      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
-      "location": "Сценарий проверки",
-      "excerpt": "Касса попыталась выполнить проверку КМ2 в онлайн-сервисе ЧЗ. После последнего возможного запроса к CDN касса не получила ответ.",
-      "createdAt": "2026-07-27T23:18:58.763470+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
-      "id": "SRC-EV-016",
-      "type": "SOURCE_EXCERPT",
-      "domainIds": [
-        "businessRules",
-        "dataRequirements"
-      ],
-      "sourceId": "SRC-006",
-      "snapshotPath": "sources/snapshots/true-api-v704-pages-1229-1234.txt",
-      "snapshotSha256": "4e52511e55e0676587797ded13906a76c8769fae57994e0d421b465be1caa6c0",
-      "location": "Справочники категорий, видов и результатов отклонений, стр. 1229–1234",
-      "excerpt": "Справочник «Виды отклонений»",
-      "createdAt": "2026-07-27T23:19:17.597636+00:00",
-      "verified": true,
-      "recordedBy": "register_source_evidence.py"
-    },
-    {
       "id": "PM-DEC-001",
       "type": "PRODUCT_MANAGER_DECISION",
       "questionId": "Q-BR-RETAIL-SCOPE",
@@ -1127,6 +869,840 @@
       "exactUserMessage": "И там и там это будет isBlocked. Вообще ОГВ это более общее название инцидента. А вот кто именно запретил указывается в поле ogvs. Так как признает недействительный разрешительный документ, тоже один из ОГВ. Поэтому это все INC-007.",
       "createdAt": "2026-08-31T15:49:59.349816+00:00",
       "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-065",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-GRACE-DURATION",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules",
+        "dataRequirements"
+      ],
+      "decision": "Льготный период после окончания лицензии Set Mark составляет ровно 10 календарных дней и не настраивается клиентом.",
+      "exactUserMessage": "принимается",
+      "createdAt": "2026-08-31T13:39:23.510278+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-066",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-HISTORY-STATE",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Разделение состояния «лицензии никогда не было» и неизвестного состояния возможно только при наличии достоверных исторических данных о последней активной лицензии.",
+      "exactUserMessage": "никак, обязательно нужно иметь исторические данные по последней активной лицензии, чтобы разделить эти состояния",
+      "createdAt": "2026-08-31T13:44:36.673345+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-067",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-NEVER-HAD-EVIDENCE",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Состояние «лицензии никогда не было» назначается только при явном достоверном подтверждении Set Agent об отсутствии когда-либо активной лицензии Set Mark.",
+      "exactUserMessage": "согласен",
+      "createdAt": "2026-08-31T13:53:24.143856+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-068",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-OFFLINE-EXPIRY",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules",
+        "localization"
+      ],
+      "decision": "При недоступности Set Agent система рассчитывает доступ по сохранённой дате окончания последней активной лицензии, применяет льготный период ровно 10 календарных дней и показывает предупреждение о невозможности актуализировать лицензию.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T13:57:01.680382+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-069",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-PARTIAL-STORES",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules",
+        "localization"
+      ],
+      "decision": "При частичном лицензировании магазинов полный доступ к функциям и данным Set Mark сохраняется для всех магазинов сети; система показывает неблокирующее предупреждение о необходимости докупить недостающее количество лицензий.",
+      "exactUserMessage": "подтвердить",
+      "createdAt": "2026-08-31T14:00:21.492818+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-070",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LIC-CATEGORY-MISMATCH",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules",
+        "rolesPermissions"
+      ],
+      "decision": "При наличии действующей лицензии Set Mark для другой товарной категории система сохраняет полный доступ ко всем функциям и показывает неблокирующее предупреждение с предложением приобрести лицензию нужной категории.",
+      "exactUserMessage": "Подтвердить",
+      "createdAt": "2026-08-31T14:02:21.594472+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-071",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-COLLECT-WITHOUT-LICENSE",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "Для клиентов RU после настройки Set Mark и подключения ЭЦП сбор данных Мониторинга продолжается независимо от состояния лицензии, включая состояния «лицензии никогда не было» и «льготный период закончился».",
+      "exactUserMessage": "Подтвердить",
+      "createdAt": "2026-08-31T14:04:45.686696+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-072",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-RETENTION-DEFAULT",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements",
+        "integrations"
+      ],
+      "decision": "Если срок хранения Set Mark не настроен, данные Мониторинга хранятся 30 календарных дней. Настройка меньше 30 дней применяется как есть, а значение больше 30 дней ограничивается 30 днями.",
+      "exactUserMessage": "Подтверждаю",
+      "createdAt": "2026-08-31T14:09:39.877643+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-073",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-DATA-RETENTION-BOUNDARY",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "Календарный срок хранения рассчитывается в часовом поясе SetCentrum: день события считается первым днём, запись хранится ещё 29 календарных дней и физически удаляется в начале 31-го дня.",
+      "exactUserMessage": "Подтвердить",
+      "createdAt": "2026-08-31T14:11:52.233666+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-074",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LOC-COUNTRY-DEFAULT-RU",
+      "domainId": "localization",
+      "domainIds": [
+        "functionalRequirements",
+        "localization"
+      ],
+      "decision": "Пустое или некорректное значение setmark.country нормализуется в RU; после нормализации применяется российская модель работы, включая Мониторинг маркировки и возможность подключения к «Честному знаку».",
+      "exactUserMessage": "Подтверждаю",
+      "createdAt": "2026-08-31T14:14:44.245711+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-075",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-LOC-NON-RU-MONITORING",
+      "domainId": "localization",
+      "domainIds": [
+        "localization",
+        "uiSource"
+      ],
+      "decision": "При корректном значении setmark.country, отличном от RU, Мониторинг маркировки полностью отключается: навигация скрывается, страницы и API недоступны, сбор данных и интеграция с «Честным знаком» не запускаются, подключение ЭЦП не показывается. Журнал нарушений Set Mark продолжает работать по собственным правилам.",
+      "exactUserMessage": "подтверждаю",
+      "createdAt": "2026-08-31T14:17:39.640247+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-076",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-BASE-AND-FINE-GRAINED",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "functionalRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "Право просмотра Журнала нарушений является обязательным базовым допуском к данным Set Mark. После его проверки отдельные операции дополнительно разрешаются или запрещаются соответствующими привилегиями на просмотр, поиск, экспорт, уведомления и настройки.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:31:52.880397+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-077",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-ADMIN-BY-PRIVILEGE",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "functionalRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "Право изменять каждую настройку определяется наличием соответствующей административной привилегии, а не названием роли. Роль «Администратор системы» получает административные привилегии по умолчанию, но их состав может изменяться.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:35:40.478646+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-078",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-ARCH-TRUE-API-OWNER",
+      "domainId": "integrations",
+      "domainIds": [
+        "integrations",
+        "technicalConstraints"
+      ],
+      "decision": "Backend Set Mark остаётся владельцем интеграции с True API, обработки и хранения полученных данных. SetCentrum предоставляет пользовательскую оболочку и интерфейс; перенос UI не переносит интеграционную логику в backend SetCentrum.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-08-31T14:43:32.439832+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-079",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-RBAC-ADMIN-JOURNAL-PREREQ",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "businessRules",
+        "rolesPermissions"
+      ],
+      "decision": "Любой пользователь с административными привилегиями Set Mark должен также иметь базовое право просмотра Журнала нарушений. Комбинация «администратор Set Mark без права просмотра ЖН» не поддерживается.",
+      "exactUserMessage": "Пусть админимстратор имеет право просмотра ЖН",
+      "createdAt": "2026-08-31T14:47:43.830081+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-080",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-UI-NO-ECP-EMPTY-STATE",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements",
+        "statesErrors"
+      ],
+      "decision": "Если лицензии нет, ЭЦП не подключена и данные «Честного знака» отсутствуют, усечённый Обзор показывает отдельное пустое состояние без нулевых метрик. Пользователь с административной привилегией получает действие подключения ЭЦП, остальные — указание обратиться к администратору.",
+      "exactUserMessage": "Да",
+      "createdAt": "2026-08-31T14:54:14.497900+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-081",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-UI-SOURCE",
+      "domainId": "uiSource",
+      "domainIds": [
+        "rolesPermissions",
+        "uiSource"
+      ],
+      "decision": "Применить приоритет визуальных источников из переданного набора требований: оболочка и навигация SetCentrum, действующая визуализация Журнала нарушений для Журнала, CSI UI для новых экранов Мониторинга. Прежнее требование использовать frontend Set Mark как основу всей оболочки заменяется.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T14:58:36.608160+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-082",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-INFORMATION-ARCHITECTURE",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "businessRules",
+        "functionalRequirements"
+      ],
+      "decision": "Применить информационную архитектуру из переданного набора требований: верхнеуровневые разделы Обзор, Журнал нарушений, Мониторинг маркировки и Настройки; внутри Мониторинга — Инциденты, Необходимые действия и Аналитика.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:00:24.641125+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-083",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LIMITED-ACCESS-UI",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "acceptanceCriteria",
+        "functionalRequirements"
+      ],
+      "decision": "Перенести без изменений правила усечённого Обзора, лицензионных заглушек и недоступных сервисов из переданного набора требований с учётом отдельного решения о состоянии без ЭЦП.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:01:10.764374+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-084",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ECP-PROTOTYPE-SCOPE",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "В текущем демонстрационном прототипе реализовать только точку входа в подключение ЭЦП, доступную пользователю с административной привилегией, и понятное объяснение следующего шага. Полный жизненный цикл ЭЦП отложить.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:01:53.083749+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-085",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-CORE",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules",
+        "dataRequirements"
+      ],
+      "decision": "Перенести базовые правила единой лицензии Set Mark, отсутствия отдельной пробной лицензии и приоритета истечения лицензии над лицензионным несоответствием.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:05:53.409319+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-086",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-STATE-MATRIX",
+      "domainId": "statesErrors",
+      "domainIds": [
+        "goalsScope",
+        "statesErrors"
+      ],
+      "decision": "Зафиксировать единую матрицу доступности по состояниям лицензии с учётом подтверждённых уточнений о достоверной истории и автономном расчёте по дате окончания.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:06:37.909871+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-087",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-RBAC-VISIBILITY-RECOMMENDATIONS",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "functionalRequirements",
+        "rolesPermissions"
+      ],
+      "decision": "Перенести правила постоянной видимости Set Mark и системных рекомендаций только для чтения.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:07:27.436538+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-088",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ACCESS-EVALUATION-ORDER",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessObjects",
+        "businessRules"
+      ],
+      "decision": "Перенести обязательную последовательность вычисления доступности из нового набора требований, используя административные привилегии вместо проверки названия роли.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:09:35.418028+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-089",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-ACCESS-ACCEPTANCE",
+      "domainId": "acceptanceCriteria",
+      "domainIds": [
+        "acceptanceCriteria"
+      ],
+      "decision": "Добавить матричную приёмку объединённых правил страны, прав, лицензии, ограниченного режима, хранения, поиска и экспорта.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:10:30.890890+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-090",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-JOURNAL-MIGRATION-DEFERRED",
+      "domainId": "technicalConstraints",
+      "domainIds": [
+        "technicalConstraints"
+      ],
+      "decision": "В текущем прототипе показать целевое размещение действующего Журнала внутри SetCentrum, не включая техническую production-миграцию.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:11:14.495160+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-091",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-LICENSE-DATA-CONTRACT",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements"
+      ],
+      "decision": "Зафиксировать минимальный контракт данных лицензии: Set Agent возвращает дату окончания, SetCentrum хранит последнее достоверное состояние, дату и время успешного получения и полученную дату окончания.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:12:44.627418+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-092",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-GOAL-PRIORITY",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "goalsScope"
+      ],
+      "decision": "Главная бизнес-цель сначала требует разбирать критические инциденты с риском автоштрафа, затем регулярно снижать общее количество нарушений.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:17:06.490127+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-093",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-PETSHOP-FUNCTIONS",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "decision": "Повторно подтвердить без изменений точный массовый поиск по штрихкоду, артикулу и коду маркировки, множественный выбор магазинов и CSV текущей выборки из 23 колонок.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:18:25.601251+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-094",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MERGE-PETSHOP-INCIDENT-FIELDS",
+      "domainId": "businessObjects",
+      "domainIds": [
+        "businessObjects"
+      ],
+      "decision": "Повторно подтвердить поля товара и операции в инциденте: штрихкод, артикул, наименование товара, номер чека или идентификатор операции и источник проверки.",
+      "exactUserMessage": "используй эти требования",
+      "createdAt": "2026-08-31T15:19:37.295702+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-095",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MARKET-ASSESSMENT-ASSUMPTIONS",
+      "domainId": "salesObjects",
+      "domainIds": [
+        "salesObjects"
+      ],
+      "decision": "Оценивать только активных RU-клиентов по используемым лицензиям; количество магазинов рассчитать по данным; лицензии Set Mark учитывать отдельно по типам по цене 4000 рублей с НДС за магазин в год; считать только новый валовый доход при ожидаемой покупке 80% сетей и покрытии 100% магазинов купившей сети; клиентов сопоставлять по Set ID.",
+      "exactUserMessage": "Учитываем только клиентов RU; используем используемое количество; количество магазинов рассчитать по данным; каждый тип лицензии считать отдельно по 4000 рублей с НДС за магазин в год; считать только новый валовый доход; вероятность покупки сети 80%, при покупке охватываются 100% магазинов; клиента считать по Set ID; скидки не учитывать.",
+      "createdAt": "2026-09-01T12:00:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-096",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-MARKET-LICENSE-TYPE-MIX",
+      "domainId": "salesObjects",
+      "domainIds": [
+        "salesObjects"
+      ],
+      "decision": "При оценке нового дохода учитывать фактическое количественное соотношение используемых лицензий типов «Продовольственные товары», «Непродовольственные товары» и Alco у текущих активных RU-клиентов Set Mark.",
+      "exactUserMessage": "учти соотношение лицензий прод непрод алко у текущих клиентов",
+      "createdAt": "2026-09-01T12:30:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-097",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-WITHOUT-SETMARK",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "functionalRequirements",
+        "integrations"
+      ],
+      "decision": "Для RU-клиента без Set Mark после подключения ЭЦП доступны централизованные агрегаты Честного знака в ограниченных Обзоре и Аналитике без установки Set Mark в магазинах. При наличии Set Mark в магазинах полная детализация строится по доступным данным Set Mark и SetRetail; непоступившие данные магазина явно обозначаются как неполные.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T13:40:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-098",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-RU-ONLY",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "businessRules",
+        "goalsScope"
+      ],
+      "decision": "MVP функции применяется только к организациям со страной RU в SetCentrum. Для остальных стран Мониторинг, интеграция с Честным знаком, фоновые процессы и подключение ЭЦП не запускаются; остальные возможности Set Mark не изменяются.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T13:45:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-099",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-REGULATORY-SOURCES",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "businessRules",
+        "goalsScope"
+      ],
+      "decision": "Добавить официальные ссылки на индикаторы риска, статистику контрольных мероприятий и механизм автоштрафов с 1 сентября 2026 года; явно отделить индикатор риска от установленного нарушения и присваивать риск автоштрафа только предусмотренным законом составам.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T13:50:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-100",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-BUSINESS-GOAL",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "goalsScope",
+        "productContext"
+      ],
+      "decision": "Прямая цель функции — раннее выявление нарушений, объяснение причин и предложение компенсирующих действий для ограничения масштаба и последствий и предотвращения повторения. Снижение вероятности проверок и штрафов является ожидаемым, но не гарантированным эффектом действий клиента.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T14:00:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-101",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-SMALL-RETAIL-ROLE",
+      "domainId": "rolesPermissions",
+      "domainIds": [
+        "productContext",
+        "rolesPermissions"
+      ],
+      "decision": "Пользователь функции — любой сотрудник, ответственный за разбор нарушений маркировки. Отдельная должность аналитика не требуется; в небольшой компании функцию может выполнять владелец, руководитель, товаровед или администратор. Доступ определяется привилегиями SetCentrum.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T14:10:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-102",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-COMMERCIAL-PATHS",
+      "domainId": "salesObjects",
+      "domainIds": [
+        "productContext",
+        "salesObjects"
+      ],
+      "decision": "Для действующих клиентов функция повышает ценность коробочного Set Mark без отдельной лицензии. RU-клиент SetRetail без Set Mark после подключения ЭЦП получает ограниченные Обзор и Аналитику для оценки собственных нарушений; полная детализация доступна после покупки Set Mark. Ограниченный режим не является отдельным бесплатным продуктом.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T14:20:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-103",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-FIRST-STATISTICS-SLA",
+      "domainId": "dataRequirements",
+      "domainIds": [
+        "dataRequirements",
+        "quality"
+      ],
+      "decision": "Первые показатели должны появиться не позднее 24 часов после успешного подключения ЭЦП и первого доступного ответа Честного знака. Загружается доступная история не более 30 дней; при отсутствии истории показываются фактическое покрытие и состояние загрузки, а не нулевые показатели.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T14:30:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-104",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-DASHBOARD-PERIOD",
+      "domainId": "functionalRequirements",
+      "domainIds": [
+        "businessRules",
+        "functionalRequirements"
+      ],
+      "decision": "Все показатели Обзора рассчитываются за явно выбранный период. По умолчанию используются последние 7 календарных дней, включая текущий день, в часовом поясе SetCentrum; доступны сегодня, 7 дней, 30 дней и произвольный диапазон в пределах хранения. Потенциальный штраф обозначается как расчётная оценка выбранного периода.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T14:40:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-105",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-MVP-CLIENTS",
+      "domainId": "goalsScope",
+      "domainIds": [
+        "goalsScope"
+      ],
+      "decision": "Критерием успеха MVP является успешный запуск функции минимум у трёх клиентов. Дополнительная детализация критериев успешности каждого запуска на данном этапе не устанавливается.",
+      "exactUserMessage": "можно так не детализировать, можно согласиться с 3мя клиентами и внести это как аритерий",
+      "createdAt": "2026-09-01T14:50:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "PM-DEC-106",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-REVIEW-RECOMMENDATION-HISTORY",
+      "domainId": "businessObjects",
+      "domainIds": [
+        "businessObjects",
+        "functionalRequirements"
+      ],
+      "decision": "В истории инцидента показываются дата и время первого формирования рекомендации и текст рекомендованного действия. Фактически выполненные пользователем действия не фиксируются и не показываются, поскольку постановка задач, статусы выполнения и контроль устранения не входят в MVP.",
+      "exactUserMessage": "да",
+      "createdAt": "2026-09-01T15:05:00+03:00",
+      "recordedBy": "Codex"
+    },
+    {
+      "id": "SRC-EV-001",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "goalsScope",
+        "productContext"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Проблематика",
+      "excerpt": "Ключевой риск: с запуском автоматического назначения штрафов за нарушения в сфере маркировки ритейлер может узнавать о проблемах слишком поздно — уже после возникновения серьезных финансовых последствий.",
+      "createdAt": "2026-07-27T23:18:52.160490+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-002",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "goalsScope",
+        "productContext"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Предлагаемое решение",
+      "excerpt": "Идея решения: предоставить ритейлеру централизованный инструмент мониторинга нарушений маркировки, оперативных уведомлений и рекомендаций по исправлению, чтобы предотвращать автоштрафы до их значительного накопления.",
+      "createdAt": "2026-07-27T23:18:52.629031+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-003",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Предлагаемое решение",
+      "excerpt": "Централизованный мониторинг — агрегированное отображение нарушений по сети магазинов, торговым точкам, кассам, товарным категориям и типам ошибок.",
+      "createdAt": "2026-07-27T23:18:53.095924+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-004",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Мониторинг и детализация",
+      "excerpt": "Возможность выгрузить любые сведения в CSV.",
+      "createdAt": "2026-07-27T23:18:53.568572+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-005",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "functionalRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Уведомления",
+      "excerpt": "Цель: обеспечить информирование ответственных лиц о критичных нарушениях в ежедневном режиме",
+      "createdAt": "2026-07-27T23:18:54.032057+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "functionalRequirements"
+    },
+    {
+      "id": "SRC-EV-006",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "dataRequirements",
+        "integrations"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Интеграция с API «Честный знак»",
+      "excerpt": "Реализовать периодический опрос API ЧЗ по методу 8.3.15.1 «Выгрузка сведений об отклонениях» для получения списка нарушений, зарегистрированных регулятором для ИНН клиента.",
+      "createdAt": "2026-07-27T23:18:54.509034+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-007",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessObjects",
+        "businessRules",
+        "dataRequirements"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Интеграция с API «Честный знак»",
+      "excerpt": "Сопоставлять отклонения из ЧЗ с записями журнала нарушений SetMark по коду маркировки (КМ) и временно́й метке: если отклонение имеет соответствие в журнале SetMark — связать записи; если отклонение не имеет соответствия — получить последний успешный результат проверки в ЧЗ (онлайн или офлайн)",
+      "createdAt": "2026-07-27T23:18:54.974265+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-008",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Производительность: обработка событий от касс без заметного влияния на работу продажи.",
+      "createdAt": "2026-07-27T23:18:55.461701+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-009",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Масштабируемость: поддержка сетей с большим количеством магазинов и кассовых узлов.",
+      "createdAt": "2026-07-27T23:18:55.929679+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-010",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "quality"
+      ],
+      "sourceId": "SRC-001",
+      "snapshotPath": "sources/snapshots/confluence-6419775498.md",
+      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "location": "Нефункциональные требования",
+      "excerpt": "Надёжность: сохранение событий при временных сбоях связи и последующая доставка данных в центральный контур.",
+      "createdAt": "2026-07-27T23:18:56.400742+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "quality"
+    },
+    {
+      "id": "SRC-EV-011",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "productContext"
+      ],
+      "sourceId": "SRC-002",
+      "snapshotPath": "sources/snapshots/confluence-3045457980.md",
+      "snapshotSha256": "ae82f0594024fd89c87cfff046a0397a0e47120aed3a192f9380a7e6527663fe",
+      "location": "Описание продукта",
+      "excerpt": "Set Mark - модуль экосистемы продукта Set Retail 10, предназначенный для контроля розничной продажи маркированного товара, в том числе акцизного алкоголя.",
+      "createdAt": "2026-07-27T23:18:56.884578+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py",
+      "domainId": "productContext"
+    },
+    {
+      "id": "SRC-EV-012",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "dataRequirements",
+        "integrations"
+      ],
+      "sourceId": "SRC-003",
+      "snapshotPath": "sources/snapshots/confluence-785842250.md",
+      "snapshotSha256": "a6a7eda147996c7dec7488acde3ea8bf0d914ae84da6a678e00850318308ec87",
+      "location": "Настройка подключения",
+      "excerpt": "Сообщения о возможных нарушениях загружаются в журнал нарушений Set Mark Centrum, и далее могут быть выгружены во внешнюю учетную систему.",
+      "createdAt": "2026-07-27T23:18:57.354242+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-013",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations"
+      ],
+      "sourceId": "SRC-004",
+      "snapshotPath": "sources/snapshots/confluence-4094230539.md",
+      "snapshotSha256": "fad9fba15acc5272f8294cd308b504fabbceebbc43609e02db7d5cb216295c11",
+      "location": "Описание разрешительного режима",
+      "excerpt": "Разрешительный режим — обязательная онлайн/офлайн проверка кода маркировки в системе «Честный знак» при продаже товара на кассе.",
+      "createdAt": "2026-07-27T23:18:57.824746+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-014",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations",
+        "statesErrors"
+      ],
+      "sourceId": "SRC-005",
+      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
+      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "location": "Нет связи с ИМ ЧЗ",
+      "excerpt": "Если флажок не установлен - продажа запрещена при отсутствии ответа от онлайн и офлайн сервисов, на кассе отображается сообщение \"Сервис проверки марок ЧЗ недоступен. Продажа запрещена. Заберите товар у покупателя\".",
+      "createdAt": "2026-07-27T23:18:58.291828+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-015",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "integrations"
+      ],
+      "sourceId": "SRC-005",
+      "snapshotPath": "sources/snapshots/confluence-4839243914.md",
+      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "location": "Сценарий проверки",
+      "excerpt": "Касса попыталась выполнить проверку КМ2 в онлайн-сервисе ЧЗ. После последнего возможного запроса к CDN касса не получила ответ.",
+      "createdAt": "2026-07-27T23:18:58.763470+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
+    },
+    {
+      "id": "SRC-EV-016",
+      "type": "SOURCE_EXCERPT",
+      "domainIds": [
+        "businessRules",
+        "dataRequirements"
+      ],
+      "sourceId": "SRC-006",
+      "snapshotPath": "sources/snapshots/true-api-v704-pages-1229-1234.txt",
+      "snapshotSha256": "4e52511e55e0676587797ded13906a76c8769fae57994e0d421b465be1caa6c0",
+      "location": "Справочники категорий, видов и результатов отклонений, стр. 1229–1234",
+      "excerpt": "Справочник «Виды отклонений»",
+      "createdAt": "2026-07-27T23:19:17.597636+00:00",
+      "verified": true,
+      "recordedBy": "register_source_evidence.py"
     }
   ]
 }

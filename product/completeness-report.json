@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-09-02T09:22:00.251492+00:00",
+  "evaluatedAt": "2026-09-02T10:49:41.840753+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -31,6 +31,9 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-GS-003",
+        "REQ-GS-004",
+        "REQ-DEC-089",
         "REQ-DEC-034",
         "REQ-DEC-003",
         "REQ-GS-001",
@@ -47,6 +50,11 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-090",
+        "REQ-DEC-080",
+        "REQ-DEC-079",
+        "REQ-DEC-077",
+        "REQ-FR-007",
         "REQ-FR-004",
         "REQ-FR-005",
         "REQ-FR-006",
@@ -69,8 +77,10 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-091",
         "REQ-BO-002",
         "REQ-DEC-035",
+        "REQ-BO-003",
         "REQ-DEC-006",
         "REQ-BO-001",
         "REQ-DEC-002"
@@ -86,6 +96,10 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-084",
+        "REQ-DEC-076",
+        "REQ-DEC-074",
+        "REQ-DEC-073",
         "REQ-DEC-008"
       ],
       "needsInput": [],
@@ -99,6 +113,12 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-085",
+        "REQ-DEC-082",
+        "REQ-DEC-067",
+        "REQ-DEC-066",
+        "REQ-DEC-065",
+        "REQ-DEC-062",
         "REQ-DEC-053",
         "REQ-DEC-047",
         "REQ-DEC-049",
@@ -131,6 +151,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-083",
         "REQ-DEC-038",
         "REQ-DEC-009"
       ],
@@ -145,9 +166,16 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-088",
+        "REQ-DEC-070",
+        "REQ-DEC-069",
+        "REQ-DEC-068",
+        "REQ-DEC-064",
+        "REQ-DEC-063",
         "REQ-DEC-039",
         "REQ-DEC-018",
         "REQ-DATA-001",
+        "REQ-DATA-003",
         "REQ-DATA-002"
       ],
       "needsInput": [],
@@ -175,6 +203,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-086",
         "REQ-AC-001",
         "REQ-DEC-043",
         "REQ-DEC-025"
@@ -204,6 +233,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-078",
         "REQ-DEC-011"
       ],
       "needsInput": [],
@@ -217,7 +247,14 @@
       "profileHintMatched": true,
       "status": "CONFIRMED",
       "requirementRefs": [
-        "REQ-DEC-052"
+        "REQ-MKT-001",
+        "REQ-MKT-002",
+        "REQ-MKT-003",
+        "REQ-MKT-004",
+        "REQ-MKT-005",
+        "REQ-MKT-006",
+        "REQ-DEC-052",
+        "REQ-SO-001"
       ],
       "needsInput": [],
       "validationNotes": []
@@ -243,6 +280,7 @@
       "profileHintMatched": true,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-075",
         "REQ-DEC-032",
         "REQ-DEC-019",
         "REQ-INT-001",
@@ -315,6 +353,8 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-087",
+        "REQ-DEC-081",
         "REQ-DEC-013",
         "REQ-DEC-014"
       ],
@@ -345,6 +385,8 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-072",
+        "REQ-DEC-071",
         "REQ-DEC-016"
       ],
       "needsInput": [],
