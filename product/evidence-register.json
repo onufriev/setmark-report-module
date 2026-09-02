@@ -1023,6 +1023,110 @@
       "exactUserMessage": "да",
       "createdAt": "2026-08-31T12:15:13.971404+00:00",
       "recordedBy": "github-actions:product-compiler"
+    },
+    {
+      "id": "PM-DEC-057",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-PRICE-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Если мы получили ответ от ЧЗ, в нем была указана МРЦ/ЕМЦ/МЦ то мы всегда придем в ветку необходимости обратиться в ТП CSI. Так как нет и не должно быть настроек, которые позволили бы проигнорировать эту проверку. Если ответа от ЧЗ нет, то нарушение произошло из-за того что категория не проверяется, необходимо проверить соответствующие настройки.",
+      "createdAt": "2026-08-31T15:48:30.341800+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-058",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-EXPIRY-VOLUME-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Давай ближе к инциденту с обычным просроком. Вскрытие тары, если оно произошло идет не через нас. Настройки игнорирования срока годности нет — ее выпилили. Все сводится к полностью аналогичной проверке срока годности как и у штучного товара.",
+      "createdAt": "2026-08-31T15:48:39.231600+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-059",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-GIS-STATUS-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Тут аналогично INC-004. Участнику надо разбираться со своим статусом в ГИС МТ. Каких то неправильно интерпретированных флагов в ответе ЧЗ на кассе нет.",
+      "createdAt": "2026-08-31T15:48:44.080022+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-060",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-GIS-LICENSE-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "По сути тоже самое. Пусть идет в ГИС МТ разбираться с лицензией.",
+      "createdAt": "2026-08-31T15:48:51.090599+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-061",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-GIS-COMPLIANCE-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Опять же аналог 004. Нужно уточнить данные по товару в ГИС МТ.",
+      "createdAt": "2026-08-31T15:48:57.242313+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-062",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-VALID-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "Это поле valid в ответе. По технике аналогично проверке Found, но проверяется поле valid в ответе. В ЛМ ЧЗ проверить нельзя. Проверить что не включена настройка игнорирования, что ответ есть и касса действительно проигнорировала проверку. Настройка: check.excise.ignoreTrueApiMarkVerified.",
+      "createdAt": "2026-08-31T15:49:03.730677+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-063",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-PARTIAL-VOLUME-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "В онлайн-ветке и в ЛМ ЧЗ по истории продаж проверить, было ли реально продано больше, чем есть в упаковке или кеге; если превышение подтвердилось, выяснить источник физического излишка и при необходимости скорректировать бизнес-процесс.",
+      "createdAt": "2026-08-31T15:49:09.740198+00:00",
+      "recordedBy": "record_pm_decision.py"
+    },
+    {
+      "id": "PM-DEC-064",
+      "type": "PRODUCT_MANAGER_DECISION",
+      "questionId": "Q-BR-FIRST-OGV-001",
+      "domainId": "businessRules",
+      "domainIds": [
+        "businessRules"
+      ],
+      "decision": "CONFIRMED",
+      "exactUserMessage": "И там и там это будет isBlocked. Вообще ОГВ это более общее название инцидента. А вот кто именно запретил указывается в поле ogvs. Так как признает недействительный разрешительный документ, тоже один из ОГВ. Поэтому это все INC-007.",
+      "createdAt": "2026-08-31T15:49:59.349816+00:00",
+      "recordedBy": "record_pm_decision.py"
     }
   ]
 }

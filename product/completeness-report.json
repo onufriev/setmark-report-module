@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-08-31T15:15:06.421651+00:00",
+  "evaluatedAt": "2026-09-02T09:22:00.251492+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -110,7 +110,15 @@
         "REQ-BR-001",
         "REQ-BR-002",
         "REQ-BR-003",
-        "REQ-DEC-001"
+        "REQ-DEC-001",
+        "REQ-DEC-054",
+        "REQ-DEC-061",
+        "REQ-DEC-055",
+        "REQ-DEC-056",
+        "REQ-DEC-057",
+        "REQ-DEC-058",
+        "REQ-DEC-059",
+        "REQ-DEC-060"
       ],
       "needsInput": [],
       "validationNotes": []
