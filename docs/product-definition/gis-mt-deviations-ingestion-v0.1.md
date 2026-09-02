@@ -1,7 +1,8 @@
 # Получение и импорт отклонений ГИС МТ через True API v0.1
 
 **Функция Set Mark:** контроль нарушений  
-**Статус:** проект единой спецификации для ревью Product Manager  
+**Статус:** developer-ready техническая спецификация; production acceptance требует закрытия раздела 24
+**Актуализировано:** 2026-09-02 по финальной инженерной ревизии PDF True API v704.0
 **Применимость:** MVP1  
 **Граница документа:** получение и сохранение отклонений ГИС МТ. Корреляция с событиями Set Mark и анализ причин выполняются отдельным процессом.
 
@@ -81,19 +82,31 @@ Set Mark Centrum может обслуживать несколько ИНН. К
 
 В MVP1 получение отклонений запускается вручную пользователем кнопкой в Set Mark, потому что для получения токена требуется доступная пользователю УКЭП.
 
-Пользователь:
+Точный подтверждённый PDF v704.0 сценарий:
 
-1. выбирает ИНН;
-2. выбирает доступную на своём компьютере УКЭП;
-3. подписывает данные, необходимые True API для авторизации;
-4. Set Mark передаёт подпись и получает токен;
-5. последующие технические запросы выполняются с полученным токеном без повторной подписи, пока токен действителен.
+1. пользователь выбирает разрешённый ему ИНН и доступную на рабочем месте УКЭП;
+2. backend запрашивает challenge через `GET /auth/key` и получает `uuid` и `data`;
+3. frontend/криптопровайдер создаёт **прикреплённую CAdES-подпись** значения `data`; закрытый ключ не покидает рабочее место;
+4. backend передаёт в `POST /auth/simpleSignIn` значения `uuid`, подписанное `data` в Base64, выбранный `inn` и `unitedToken=true`;
+5. Set Mark получает `token`, для UUID-режима также `uuidToken`, и точное время `expireDate`;
+6. последующие запросы выполняются с Bearer credential без новой подписи, пока credential действителен.
 
-Согласованное правило: токен действует 8 часов и может использоваться для всех запросов выбранного ИНН в рамках этого срока. Требование доменной модели о действующей МЧД сохраняется, если она необходима для выполнения операций от имени организации.
+PDF устанавливает срок действия токена **не более 10 часов**, а не фиксированные 8 часов. Фактическая граница определяется `expireDate`, сроком УКЭП/МЧД и может наступить раньше при отзыве МЧД. Каждый новый вход создаёт новый токен; продление существующего токена PDF не описывает.
 
-Если токен истёк до завершения SyncRun, процесс переходит в состояние `AUTH_REQUIRED`; пользователь повторно авторизуется УКЭП, после чего Set Mark повторяет незавершённый технический запрос и продолжает существующий SyncRun. Уже импортированные записи не импортируются повторно благодаря дедупликации.
+PDF одновременно возвращает `token` и `uuidToken`, а примеры dispenser-методов обозначают Bearer абстрактно как `<ТОКЕН>`. Поэтому выбор фактически работающего Bearer-поля для UUID-flow является `MUST VERIFY DURING SPIKE`; до проверки нельзя зашивать догадку в клиент. После spike один подтверждённый credential разрешается повторно использовать для всех запросов выбранного ИНН до `expireDate` с защитным запасом.
 
-### 5.1. Целевой периодический режим
+Требование доменной модели о действующей МЧД сохраняется, если она необходима для выполнения операций от имени организации.
+
+Если токен истёк до завершения SyncRun, процесс переходит в состояние `AUTH_REQUIRED`; пользователь повторно авторизуется УКЭП, после чего Set Mark продолжает существующий SyncRun. Безопасные `GET`/download-запросы можно повторить. Неоднозначно завершившийся `POST /dispenser/tasks` сначала сверяется со списком заданий и не повторяется вслепую. Уже сохранённые записи не создаются повторно благодаря UUID-дедупликации.
+
+### 5.1. Выбор ИНН и права
+
+Произвольный ИНН из клиентского запроса не принимается. Backend должен проверить, что пользователь имеет право запускать синхронизацию для выбранного ИНН. До production-приёмки требуется зафиксировать одно из двух продуктовых решений:
+
+- использовать существующую привилегию «настройка подключения к True API» для ручного запуска MVP1; или
+- ввести отдельную каноническую привилегию ручной синхронизации.
+
+### 5.2. Целевой периодический режим
 
 Архитектура не должна исключать будущий автоматический периодический запуск. Для него потребуется постоянный доступ Set Mark к допустимому средству подписи/авторизации без участия пользователя.
 
@@ -102,6 +115,8 @@ Set Mark Centrum может обслуживать несколько ИНН. К
 Ограничение True API в 5 выгрузок `VIOLATIONS` в сутки на одну товарную группу сохраняется и должно учитываться как в ручном, так и в будущем автоматическом режиме.
 
 ## 6. Период синхронизации
+
+Календарные значения `today` и `LocalDate(lastSuccessfulSyncAt)` вычисляются в явно настроенной timezone организации. Использование timezone сервера или UTC по умолчанию запрещено: около полуночи это меняет состав запрашиваемых дат. Выбор канонической timezone является `BLOCKER` для production acceptance; рекомендуемое значение — timezone организации Set Mark.
 
 ### 6.1. Первый успешный запуск
 
@@ -127,7 +142,7 @@ dataEndDate   = 2026-09-08
 
 Частота запуска пользователем не влияет на алгоритм периода: данные могут запрашиваться ежедневно, раз в несколько дней или раз в неделю.
 
-Если интервал от `lastSuccessfulSyncAt` до текущей даты превышает допустимый True API диапазон, Set Mark должен разбить его на последовательные окна не более 90 календарных дней.
+Если интервал от `lastSuccessfulSyncAt` до текущей даты превышает допустимый True API диапазон, Set Mark должен разбить его на последовательные окна не более 90 календарных дней без внутреннего overlap. PDF допускает до 91 календарного дня включительно, но Set Mark намеренно использует безопасное продуктовое окно до 90 дней.
 
 Для MVP1 не предполагается постоянное перечитывание уже закрытых старых периодов. После того как календарная дата вошла в полностью успешную синхронизацию и последующая синхронизация началась с этой даты, более ранние даты повторно не запрашиваются.
 
@@ -138,13 +153,75 @@ dataEndDate   = 2026-09-08
 Set Mark должен:
 
 1. получить через `/participants` товарные группы, подключённые к выбранному ИНН;
-2. оставить группы, для которых в текущем True API доступна выгрузка `VIOLATIONS`;
-3. проверить доступное число выгрузок по товарным группам через метод `available_count`;
-4. создать отдельное задание `VIOLATIONS` для каждой допустимой группы.
+2. преобразовать символьные значения `productGroups` в числовые `productGroupCode` по версионированному справочнику Appendix 1 PDF v704.0;
+3. оставить группы, для которых в текущем True API доступна выгрузка `VIOLATIONS`;
+4. проверить доступное число выгрузок по товарным группам через метод `available_count`;
+5. создать отдельное задание `VIOLATIONS` для каждой пары **товарная группа × окно периода**.
 
 Пользователь не выбирает товарные группы вручную.
 
 Внешнее ограничение: не более 5 выгрузок `VIOLATIONS` в сутки на одну товарную группу. Это ограничение относится к созданию выгрузок по ТГ, а не к общему числу технических REST-вызовов статуса/скачивания.
+
+В v704.0 `VIOLATIONS` недоступен как минимум для numeric PG `42`, `44`, `49`, `50`, `52`, `53`, `54`, `59`. Статический mapping нужен для преобразования symbol → numeric code, но операционной истиной остаётся runtime-ответ `available_count`: неизвестную или недоступную группу нельзя молча пропустить и затем продвинуть курсор.
+
+Контракт `GET /participants?inns={inn}` допускает до 100 повторяющихся параметров `inns`. Для своего ИНН Bearer нужен для расширенного ответа. PDF подтверждает поля `inn`, статус регистрации и `productGroups`, но примеры и таблица расходятся в форме object/array и optional `productGroupInfo`; точную JSON-форму необходимо закрепить fixture-тестом по результатам spike.
+
+Preflight выполняется через `GET /api/v3/true-api/dispenser/tasktypes/available_count?taskTypeShortName=VIOLATIONS[&pg={numericPg}]`, лимит 10 запросов/мин. Без `pg` PDF описывает ответ по всем применимым ТГ; если стенд не возвращает полный список, Set Mark делает запрос по каждой ТГ. `remainingCount=0` запрещает создание нового task, `-1` означает отсутствие лимита. До создания task планировщик должен проверить, что остатка хватает на все окна соответствующей ТГ. Preflight не атомарен, поэтому гонка с другим клиентом всё равно возможна.
+
+### 7.1. Mapping товарных групп PDF v704.0
+
+| Numeric PG | Symbol `/participants` | Наименование | `VIOLATIONS` v704.0 |
+|---:|---|---|:---:|
+| 1 | `lp` | Лёгкая промышленность | Да |
+| 2 | `shoes` | Обувные товары | Да |
+| 3 | `tobacco` | Табачная продукция | Да |
+| 4 | `perfumery` | Духи и туалетная вода | Да |
+| 5 | `tires` | Шины и покрышки | Да |
+| 6 | `electronics` | Фотокамеры и лампы-вспышки | Да |
+| 8 | `milk` | Молочная продукция | Да |
+| 9 | `bicycle` | Велосипеды и рамы | Да |
+| 10 | `wheelchairs` | Медицинские изделия | Да |
+| 11 | `alcohol` | Алкоголь | Да |
+| 12 | `otp` | Альтернативная табачная продукция | Да |
+| 13 | `water` | Упакованная вода | Да |
+| 14 | `furs` | Товары из натурального меха | Да |
+| 15 | `beer` | Пиво и слабоалкогольные напитки | Да |
+| 16 | `ncp` | Никотиносодержащая продукция | Да |
+| 17 | `bio` | Специализированная пищевая продукция и БАД | Да |
+| 19 | `antiseptic` | Антисептики | Да |
+| 20 | `petfood` | Корма для животных | Да |
+| 21 | `seafood` | Морепродукты | Да |
+| 22 | `nabeer` | Безалкогольное пиво | Да |
+| 23 | `softdrinks` | Соки и безалкогольные напитки | Да |
+| 25 | `meat` | Мясные изделия | Да |
+| 26 | `vetpharma` | Ветеринарные препараты | Да |
+| 27 | `toys` | Игры и игрушки | Да |
+| 28 | `radio` | Радиоэлектронная продукция | Да |
+| 31 | `titan` | Титановая металлопродукция | Да |
+| 32 | `conserve` | Консервированная продукция | Да |
+| 33 | `vegetableoil` | Растительные масла | Да |
+| 34 | `opticfiber` | Оптоволокно | Да |
+| 35 | `chemistry` | Косметика, бытовая химия и товары личной гигиены | Да |
+| 36 | `books` | Печатная продукция | Да |
+| 37 | `grocery` | Бакалейная продукция | Да |
+| 38 | `pharmaraw` | Фармацевтическое сырьё, лекарства | Да |
+| 39 | `construction` | Строительные материалы | Да |
+| 40 | `fire` | Пиротехника и огнетушащее оборудование | Да |
+| 41 | `heater` | Отопительные приборы | Да |
+| 42 | `cableraw` | Кабельно-проводниковая продукция | Нет |
+| 43 | `autofluids` | Моторные масла | Да |
+| 44 | `polymer` | Полимерные трубы | Нет |
+| 45 | `sweets` | Сладости и кондитерские изделия | Да |
+| 48 | `carparts` | Автозапчасти | Да |
+| 49 | `furslp` | Натуральный мех | Нет |
+| 50 | `nicotindev` | Электронные системы доставки никотина | Нет |
+| 51 | `gadgets` | Ноутбуки и смартфоны | Да |
+| 52 | `frozen` | Полуфабрикаты и замороженные продукты | Нет |
+| 53 | `fertilizers` | Удобрения в потребительской упаковке | Нет |
+| 54 | `homeware` | Товары для дома и интерьера | Нет |
+| 59 | `pyrotechnics` | Пиротехнические изделия | Нет |
+
+Mapping должен быть версионирован и покрыт unit-тестом. Если `/participants` возвращает неизвестный symbol, work item получает `UNMAPPED_PRODUCT_GROUP`, SyncRun не продвигает cursor до обновления mapping либо доказанного `not applicable`.
 
 ## 8. Создание задания VIOLATIONS
 
@@ -157,14 +234,18 @@ Set Mark должен:
   "dataEndDate": "yyyy-MM-dd",
   "format": "CSV",
   "periodicity": "SINGLE",
-  "params": "{...}",
+  "params": "{}",
   "productGroupCode": 2
 }
 ```
 
-`params` передаётся как JSON-строка. Цель Set Mark — получить все отклонения выбранной товарной группы за период, поэтому бизнес-фильтры по GTIN, категории, виду, результату или операции не применяются, если контракт True API допускает их отсутствие.
+Endpoint: `POST /api/v3/true-api/dispenser/tasks`. Обязательны `name`, `dataStartDate`, `dataEndDate`, `format`, `params`, `periodicity`, `productGroupCode`. Для Set Mark: `name=VIOLATIONS`, `format=CSV`, `periodicity=SINGLE`, даты включительны, период одного task — 1–90 календарных дней. Лимиты PDF: 15 create-запросов/мин и 5 выгрузок `VIOLATIONS` в сутки на одну ТГ.
 
-Если конкретная версия/стенд True API требует явно заполненные значения фильтров, Set Mark должен сформировать эквивалент запроса «все доступные значения» без исключения отклонений из-за бизнес-логики Set Mark.
+`params` передаётся как JSON-строка. Внутренние фильтры `gtin`, `violationCategory[]`, `violationKind[]`, `violationResult[]`, `operationType[]` в PDF помечены необязательными. Поэтому `params="{}"` структурно соответствует запросу без бизнес-фильтрации, но такой пример в PDF отсутствует. Это `MUST VERIFY DURING SPIKE`, а не подтверждённый контракт.
+
+Если `params="{}"` не означает «все отклонения», допустим только подтверждённый ЦРПТ/real-API эквивалент без бизнес-фильтрации. Нельзя перечислять текущие enum вручную: при расширении справочника это создаст скрытую потерю новых отклонений.
+
+Ответ create должен как минимум дать `id` (`taskId`), `createDate`, `currentStatus`, `orgInn`, `periodicity`; Set Mark сохраняет полный sanitized response и request fingerprint до следующих действий.
 
 ## 9. Асинхронный workflow
 
@@ -172,15 +253,21 @@ Set Mark должен:
 
 ```text
 SyncRun(INN, period)
-  ├─ ProductGroup A → taskId
-  ├─ ProductGroup B → taskId
-  └─ ProductGroup N → taskId
+  ├─ ProductGroup A × Window 1 → taskId
+  ├─ ProductGroup A × Window 2 → taskId
+  ├─ ProductGroup B × Window 1 → taskId
+  └─ ProductGroup N × Window M → taskId
 ```
 
 После создания заданий дальнейшая обработка выполняется без присутствия пользователя, пока токен действителен:
 
 ```text
-AUTH
+GET /auth/key
+ → attached CAdES Base64
+ → POST /auth/simpleSignIn
+ → GET /participants
+ → map symbol PG to numeric PG
+ → GET /dispenser/tasktypes/available_count
  → create VIOLATIONS tasks (8.3.15.1)
  → wait/check task status (8.5)
  → obtain resultId / resultFileParts (8.6)
@@ -189,9 +276,15 @@ AUTH
  → persist deviations
 ```
 
-Статусы задания True API должны обрабатываться согласно PDF True API. Завершённая выгрузка считается готовой к получению результата только в соответствующем успешном конечном статусе; ошибочные/отменённые/архивные задания считаются незавершёнными для целей SyncRun.
+`GET /api/v3/true-api/dispenser/tasks/{taskId}?pg={numericPg}` имеет лимит 5 запросов/мин. Подтверждённые task statuses: `PREPARATION`, `COMPLETED`, `CANCELED`, `ARCHIVE`, `FAILED`. Только `COMPLETED` разрешает переход к поиску результата. `CANCELED`, `ARCHIVE`, `FAILED` — terminal failure текущего work item.
 
-Результат может состоять из основного файла и нескольких частей. Конкретная товарная группа считается полностью полученной только после успешного скачивания и обработки всех частей результата.
+`COMPLETED` ещё не означает, что файл можно скачивать. Set Mark запрашивает `GET /api/v3/true-api/dispenser/results?page=0&size={n}&pg={numericPg}&task_ids={taskId}`, пагинирует и ждёт однозначный result с непустым `id`, `downloadStatus=SUCCESS` и `available=AVAILABLE`. `downloadStatus=PREPARATION` означает ожидание; `FAILED` — terminal result failure; `NOT_AVAILABLE` не считается успехом. Лимит results — 12 запросов/мин.
+
+Result содержит `id`, `taskId`, статусы, `fileDeleteDate`, размеры, `resultFilePartsSize` и `resultFileParts[]` с `id`, `fileNumber`, `archivePartSize`. Скачивание выполняется через `GET /api/v3/true-api/dispenser/results/{resultId}/file?pg={numericPg}` и для части — тем же endpoint с `resultFilePartId={partId}`; лимит 12 запросов/мин. Endpoint может вернуть ZIP/octet-stream либо JSON error, поэтому клиент проверяет HTTP status и `Content-Type`, а `Accept` разрешает `application/zip`, `application/octet-stream`, `application/json`.
+
+До spike ожидаемым составом считается primary + все `resultFileParts`; обязательность primary при наличии parts, порядок и нумерация частей являются `MUST VERIFY`. Конкретный work item считается полностью полученным только после успешного скачивания, проверки и импорта всех обязательных файлов/частей.
+
+Выгрузка `VIOLATIONS` хранится 14 дней. `fileDeleteDate` из result является операционной истиной; скачивание должно начинаться сразу после готовности. Общие правила недоступности metadata task после 30 дней не заменяют 14-дневный срок хранения файла.
 
 ## 10. Статусы SyncRun
 
@@ -200,6 +293,8 @@ AUTH
 ```text
 CREATED
 AUTH_REQUIRED
+PLANNING
+WAITING_QUOTA
 EXPORT_REQUESTED
 WAITING_EXPORTS
 DOWNLOADING
@@ -207,6 +302,7 @@ IMPORTING
 SUCCESS
 PARTIAL_FAILED
 FAILED
+CANCELED_BY_USER
 ```
 
 Для отдельной товарной группы допускается техническая детализация:
@@ -216,12 +312,30 @@ PENDING
 TASK_CREATED
 PREPARATION
 COMPLETED
+RESULT_PREPARATION
+RESULT_AVAILABLE
 DOWNLOADED
 IMPORTED
 FAILED
 ```
 
 Пользовательский интерфейс может отображать упрощённые русские наименования, технический статус сохраняется для диагностики.
+
+Переходы:
+
+| Состояние | Условие выхода |
+|---|---|
+| `CREATED` | сохранён run и установлен lock на ИНН |
+| `AUTH_REQUIRED` | получен новый credential; продолжается тот же run |
+| `PLANNING` | подтверждены ИНН, ТГ, mapping, окна и квоты |
+| `WAITING_QUOTA` | после восстановления квоты выполняется новый preflight |
+| `EXPORT_REQUESTED` | все create attempts завершены или неоднозначные POST reconciled |
+| `WAITING_EXPORTS` | все task `COMPLETED`; terminal task error → `PARTIAL_FAILED` |
+| `DOWNLOADING` | все обязательные primary/parts скачаны и проверены |
+| `IMPORTING` | все запланированные items полностью parsed/persisted |
+| `SUCCESS` | terminal; cursor обновлён, downstream не входит в критерий |
+| `PARTIAL_FAILED` | cursor не изменён; сохранённые отклонения остаются; допускается recovery/resume |
+| `FAILED` | terminal для непоправимой конфигурации или отсутствия полезно начатых items |
 
 ## 11. Критерий успешности и частичные ошибки
 
@@ -244,48 +358,93 @@ lastSuccessfulSyncAt → не изменяется
 
 ## 12. Повторные попытки
 
-- `401` / истёкший токен: новая авторизация пользователя через УКЭП, затем повтор незавершённого запроса;
-- timeout / временная сеть / `5xx`: ограниченные автоматические повторные попытки без повторной подписи, пока токен действителен;
-- `429`: повтор с соблюдением лимитов True API;
-- ошибочный/отменённый/архивный статус задания: новое задание для той же товарной группы и периода, если это допускают текущие лимиты;
-- повреждённый ZIP, отсутствующая обязательная структура CSV или нескачанная часть результата: товарная группа не считается успешно импортированной.
+- `401` / истёкший токен: очистить локальную ссылку на credential, перевести run в `AUTH_REQUIRED`; после новой УКЭП-авторизации повторять только незавершённый безопасный `GET`/download, а create сначала reconciliate;
+- `403`: terminal permission/contract failure для ИНН/ТГ, показать администратору, cursor не двигать;
+- `400`/обычный `404`: terminal request/not-found; bounded eventual-consistency retry для только что созданного task/result разрешается лишь после подтверждения spike;
+- `408`, timeout, connect reset: safe `GET`/download — bounded retry; `POST /dispenser/tasks` и `POST /auth/simpleSignIn` имеют неоднозначный outcome и не повторяются вслепую;
+- `429`: учитывать `Retry-After`, если заголовок есть, применять scoped token bucket и full jitter; не форсировать повтор в ту же секунду;
+- `500`/`502`/`503`/`504`: safe `GET`/download — exponential backoff; create — reconciliation по списку task;
+- `CANCELED`, `ARCHIVE`, `FAILED`, result `FAILED`/`NOT_AVAILABLE`: terminal failure текущего item; новое задание возможно осознанно после классификации причины и проверки квоты;
+- повреждённый ZIP/CRC, отсутствующая обязательная часть, blocking malformed row или невалидный UUID: item не считается импортированным.
+
+Рекомендуемый стартовый budget для безопасных `GET`: до 5 попыток с 1/2/4/8/16 секунд + full jitter. Polling task/result является отдельным ожиданием server state и не расходует этот budget как серия ошибок; интервалы должны соблюдать общий rate limiter.
+
+### 12.1. Неоднозначный POST и recovery
+
+PDF не документирует idempotency key для `POST /dispenser/tasks`. При timeout/5xx после отправки запроса Set Mark:
+
+1. сохраняет attempt и request fingerprint до network call;
+2. запрашивает `GET /api/v3/true-api/dispenser/tasks?page=0&size={n}&pg={numericPg}` (лимит 5/мин);
+3. ищет task по ИНН, `name`, ТГ, окну дат, времени создания и другим доступным полям;
+4. прикрепляет единственный однозначный кандидат;
+5. при нескольких кандидатах требует operator review;
+6. только при отсутствии кандидата после bounded wait разрешает осознанное recreate.
+
+Повторное создание task на тот же период безопасно для данных Set Mark благодаря UUID-dedupe, но не является бесплатным или контрактно идемпотентным: оно расходует суточную квоту и может вернуть иной snapshot.
 
 ## 13. Формат выгрузки и CSV
 
-True API формирует ZIP с CSV. Для выгрузки отклонений используются следующие поля, найденные в документации ЧЗ:
+True API формирует ZIP с CSV. Успешный download может иметь `application/zip` или `application/octet-stream`; JSON на том же endpoint трактуется как ошибка. Реализация обязана потоково сохранять bytes, проверять размер/hash/CRC, безопасные пути ZIP, число entries и коэффициент распаковки; PDF не задаёт максимальный размер, поэтому safety caps должны быть конфигурируемыми и проверены на реальном большом файле.
 
-| № | Колонка |
-|---:|---|
-| 1 | Вид отклонения |
-| 2 | Результат проверки |
-| 3 | Дата и время регистрации отклонения |
-| 4 | Товарная группа |
-| 5 | Субъект |
-| 6 | Адрес места фиксации отклонения |
-| 7 | Номер документа |
-| 8 | Код |
-| 9 | Идентификатор ВСД |
-| 10 | Регистрационный номер ККТ (из чека) |
-| 11 | Дата и время выполнения операции, в результате которой было выявлено отклонение |
-| 12 | ИНН участника |
-| 13 | Номер отклонения |
-| 14 | Нивелировано |
-| 15 | Объем из ВСД |
-| 16 | Единицы измерения из ВСД |
-| 17 | Объем из ГИС МТ |
-| 18 | Единицы измерения из ГИС МТ |
-| 19 | Разницы между объемами |
-| 20 | Единицы измерения разницы |
-| 21 | % превышения |
-| 22 | GTIN |
-| 23 | Идентификатор ФИАС |
-| 24 | Муниципальный округ |
-| 25 | Фискальный номер накопителя из чека операции |
-| 26 | Проверка РР |
-| 27 | Объём вывода из оборота |
-| 28 | Этап расширения |
+PDF v704.0 приводит пример с 28 колонками, но не объявляет их обязательность и типы. Поэтому все внешние поля по умолчанию nullable strings, typed projection выполняется best-effort, а raw row сохраняется. Единственное обязательное поле Set Mark — валидный UUID `Номер отклонения`.
+
+Фактический CSV dialect до spike:
+
+| Свойство | Статус |
+|---|---|
+| Разделитель | В примере PDF — запятая; нормативная формулировка отсутствует — `MUST VERIFY` |
+| Quoting | Пример использует двойные кавычки и `""` внутри quoted field |
+| Encoding | Не задана; стартовая политика parser — strict UTF-8/UTF-8-BOM — `MUST VERIFY` |
+| BOM | Не задан — `MUST VERIFY` |
+| Line endings | Не заданы; parser принимает CRLF и LF |
+| Date/time | В примере `yyyy-MM-dd HH:mm:ss`, timezone отсутствует; сохранять raw + `LocalDateTime` |
+| Empty | Пустые поля присутствуют; typed projection = `null`, raw empty сохраняется |
+| Header order | Не использовать; mapping только по точному имени header |
+
+Для выгрузки отклонений используются следующие точные заголовки и стартовый mapping. `Nullable` ниже означает продуктовую устойчивость parser, а не подтверждённую PDF обязательность:
+
+| № | Точный header | Typed projection | Nullable / правило | Mapping Set Mark |
+|---:|---|---|---|---|
+| 1 | Вид отклонения | string | Да; API mandatory не подтверждено | `violation_kind_name_raw`; optional dictionary enrichment |
+| 2 | Результат проверки | string | Да; пусто в PDF-примере | `violation_result_name_raw`; optional code enrichment |
+| 3 | Дата и время регистрации отклонения | `LocalDateTime` + raw | Да; timezone не задана | `registered_at_local`, `registered_at_raw` |
+| 4 | Товарная группа | string | Да | `product_group_name_raw`; сверить с requested PG |
+| 5 | Субъект | string | Да | `region` |
+| 6 | Адрес места фиксации отклонения | string | Да | `location_address` |
+| 7 | Номер документа | string | Да | `document_number` |
+| 8 | Код | string | Да | полный КМ для downstream; не часть unique key |
+| 9 | Идентификатор ВСД | string | Да | `vsd_id` |
+| 10 | Регистрационный номер ККТ (из чека) | string | Да | `kkt_registration_number` |
+| 11 | Дата и время выполнения операции, в результате которой было выявлено отклонение | `LocalDateTime` + raw | Да; timezone не задана | `operation_at_local`, `operation_at_raw` |
+| 12 | ИНН участника | string | Да; сохранить leading zero | `participant_inn`; отдельно `requested_inn` |
+| 13 | Номер отклонения | UUID + raw | **Set Mark required** | `external_deviation_id`; global unique MVP |
+| 14 | Нивелировано | string | Да; observed `Да/Нет` не исчерпывает контракт | raw field; no lifecycle/update MVP1 |
+| 15 | Объем из ВСД | decimal + raw | Да | `vsd_volume` |
+| 16 | Единицы измерения из ВСД | string | Да | `vsd_unit` |
+| 17 | Объем из ГИС МТ | decimal + raw | Да | `gismt_volume` |
+| 18 | Единицы измерения из ГИС МТ | string | Да | `gismt_unit` |
+| 19 | Разницы между объемами | decimal + raw | Да; header сохранять буквально | `volume_difference` |
+| 20 | Единицы измерения разницы | string | Да | `difference_unit` |
+| 21 | % превышения | decimal + raw | Да | `exceedance_percent` |
+| 22 | GTIN | string | Да; не numeric | `gtin`; сохранить leading zero |
+| 23 | Идентификатор ФИАС | string/UUID + raw | Да | `fias_id` |
+| 24 | Муниципальный округ | string | Да | `municipality` |
+| 25 | Фискальный номер накопителя из чека операции | string | Да | `fiscal_drive_number`; downstream касса/магазин |
+| 26 | Проверка РР | string | Да; enum не подтверждён | `permit_check_raw` |
+| 27 | Объём вывода из оборота | decimal + raw | Да | `withdrawal_volume` |
+| 28 | Этап расширения | string | Да | `expansion_stage_raw` |
 
 CSV должен разбираться по названиям колонок, а не по их порядковому номеру. Неизвестные новой версии True API колонки не должны приводить к потере записи: они сохраняются в raw/extras.
+
+Правила schema evolution и malformed data:
+
+- unknown columns: сохранить `name → raw value` в `extras`; импорт не ломать;
+- отсутствующая известная неключевая колонка: typed value = `null`, зарегистрировать schema drift; импорт может быть успешным;
+- отсутствующий header или невалидный `Номер отклонения`: raw row в quarantine, item неуспешен;
+- ошибка typed parse неключевого поля: сохранить raw, typed = `null`, validation warning; запись не терять;
+- structural CSV failure (unclosed quote, varying columns, undecodable bytes): сохранить file hash/fragment/error и безопасно прекратить либо quarantine по возможностям parser; item неуспешен;
+- корректный header и 0 data rows: успешный импорт с count=0;
+- большие файлы: streaming parse, bounded batches и backpressure; `readAllBytes` запрещён.
 
 ## 14. Идентификатор и дедупликация
 
@@ -306,6 +465,23 @@ CSV должен разбираться по названиям колонок, 
 
 В MVP1 ранее импортированное отклонение считается неизменяемым. Повторное получение того же UUID не приводит к обновлению его бизнес-данных и не запускает повторную обработку.
 
+Если тот же UUID приходит с другим row hash, Set Mark не мутирует deviation, но сохраняет observation/anomaly с run/item/file locator и новым hash. Это evidence для будущего lifecycle-решения, а не обновление бизнес-данных MVP1.
+
+Минимальные persistence-сущности:
+
+| Сущность | Ключевые данные/ограничения |
+|---|---|
+| `true_api_sync_run` | ИНН, timezone, period, initiator, state/timestamps, counts; не более одного active run на ИНН |
+| `true_api_sync_item` | run, PG symbol/code, window, request fingerprint, taskId/resultId/status; unique taskId |
+| `true_api_result_part` | resultId, normalized partId (`PRIMARY` sentinel), fileNumber, expected/actual size, sha256, state |
+| `true_api_raw_file` | immutable object reference, response metadata, hash, ZIP entries, retention metadata |
+| `deviation` | internal id, global unique external UUID, requested/participant INN, typed fields, raw row, extras, dictionary version, source part |
+| `deviation_observation` | run/item/file link, UUID, row hash, duplicate/new/different flag |
+| `rejected_row` | file/entry/row locator, safe raw fragment, error code/message |
+| `true_api_sync_cursor` | ИНН, `lastAttemptAt`, `lastSuccessfulSyncAt`, optimistic version |
+
+Файлы и строки импортируются streaming-батчами. Уже закоммиченные deviations при поздней ошибке не откатываются. Повторное чтение целого файла безопасно за счёт unique UUID; item получает `IMPORTED` только после обработки всех его обязательных files/entries/rows без blocking rejects.
+
 ## 15. Нивелированные отклонения
 
 Set Mark получает и сохраняет отклонения независимо от значения поля `Нивелировано`. Нивелированные записи не фильтруются и не считаются мусорными по умолчанию.
@@ -318,6 +494,14 @@ MVP1 не перечитывает и не изменяет ранее импо�
 
 ## 16. Неизвестные и неподдерживаемые отклонения
 
+### 16.1. Конфликт `REQ-DATA-001` и фактического CSV
+
+`REQ-DATA-001` требует сохранять коды и человекочитаемые наименования категории, вида и результата. Однако пример `VIOLATIONS` CSV v704.0 содержит только русские наименования `Вид отклонения` и `Результат проверки`; категории и кодов category/kind/result в CSV нет.
+
+True API предоставляет динамический справочник через `POST /api/v3/true-api/directory/statistics` с `data_set=ANALYTICAL_VIOLATIONS_NAMES`, `filters.level=2` и датой версии. Ответ содержит вложенные category → kind → result codes/names. Этот метод следует использовать как версионированное **best-effort enrichment**, но уникальность сопоставления name → code должна быть подтверждена spike.
+
+До решения Product Manager обязательным контрактом ingestion считаются raw-наименования. Разрешённые коды могут быть nullable; отсутствие или неоднозначность mapping не должны терять отклонение и ведут в downstream RA-05. Буквальное требование обязательных кодов блокирует production acceptance, потому что источник CSV их не гарантирует.
+
 Успешность импорта не зависит от того, умеет ли текущая версия Set Mark анализировать вид отклонения.
 
 Если категория, вид, результат или иное значение неизвестны Set Mark:
@@ -326,6 +510,8 @@ MVP1 не перечитывает и не изменяет ранее импо�
 - известные поля должны быть сохранены в нормализованной форме;
 - неизвестный код не должен приводить к ошибке всего SyncRun;
 - запись должна оставаться доступной для последующего ручного разбора.
+
+Для каждой строки сохраняются версия/дата использованного dictionary snapshot и состояние mapping (`RESOLVED`, `UNRESOLVED`, `AMBIGUOUS`). Обновление справочника не должно молча переклассифицировать уже созданный immutable deviation в MVP1.
 
 Таким образом интеграция выполняет raw-first ingestion: сначала сохраняется факт ГИС МТ, а поддержка его автоматического анализа определяется отдельным downstream-процессом.
 
@@ -360,6 +546,18 @@ MVP1 не перечитывает и не изменяет ранее импо�
 6. Ошибка одной товарной группы оставляет уже импортированные данные других групп, но не обновляет `lastSuccessfulSyncAt`.
 7. После истечения токена пользователь получает новый токен УКЭП, и SyncRun продолжается без повторного импорта уже сохранённых UUID.
 8. Результат с несколькими частями считается завершённым только после обработки всех частей.
+9. Период более 90 дней создаёт план ТГ × окна; квота проверяется на число окон каждой ТГ до первого create.
+10. Недостаточная квота переводит run в `WAITING_QUOTA` и не создаёт заведомо неполный набор новых task.
+11. Timeout после `POST /dispenser/tasks` не приводит к blind retry: task восстанавливается через список либо требует operator review.
+12. Task `COMPLETED` без result `SUCCESS+AVAILABLE` продолжает ожидание и не запускает download.
+13. `CANCELED`, `ARCHIVE`, `FAILED`, result `FAILED`/`NOT_AVAILABLE` не обновляют cursor.
+14. Download с JSON error, missing part, bad CRC или unsafe ZIP entry не считается успешным.
+15. Новый CSV header сохраняется в `extras`; отсутствие неключевой известной колонки не теряет запись.
+16. Отсутствующий/невалидный `Номер отклонения` создаёт quarantine row и блокирует успех item.
+17. Пустой корректный CSV даёт успешный item с count=0.
+18. Повторный UUID с изменённым row hash создаёт observation/anomaly, но не обновляет deviation.
+19. `401` посреди run переводит его в `AUTH_REQUIRED`; после новой авторизации продолжается тот же run.
+20. Downstream-корреляция/создание инцидента может завершиться ошибкой, не меняя уже успешный ingestion SyncRun.
 
 ## 19. Конфликты и разрешения
 
@@ -371,8 +569,11 @@ MVP1 не перечитывает и не изменяет ранее импо�
 | `REQ-DEC-006` | отклонение в инциденте — immutable snapshot | ранее предполагалось отслеживать изменение `Нивелировано` | В MVP1 считать отклонение неизменяемым целиком; `Нивелировано` хранить как полученное поле без lifecycle/update-логики |
 | `REQ-DATA-002`, `REQ-BO-001` | корреляция по КМ + timestamp | PM разделяет ingestion и последующую корреляцию; дата не нужна в уникальном ключе | Не включать корреляцию в True API integration. В следующем блоке искать все события Set Mark по полному КМ; timestamp оставить свойством/контекстом события |
 | `REQ-DEC-018` | Incident ≤24ч после события Set Mark или ЧЗ | ручной MVP1 зависит от действий пользователя и доступности УКЭП | Не отменять SLA. На этапе разработки использовать УКЭП сотрудника; достижимость 24 ч обеспечивается ежедневным запуском, а будущий 24/7 режим зависит от постоянно доступной подписи |
+| `REQ-DATA-001` | обязательны коды и наименования category/kind/result | `VIOLATIONS` CSV не содержит категорию и коды; доступен отдельный dynamic dictionary | До PM-решения raw names обязательны, code enrichment best-effort/nullable; буквальный acceptance по обязательным кодам заблокирован |
 | `REQ-DEC-039` | хранится время последнего обращения за отчётом | для надёжности нужны attempt и success | Разделить `lastAttemptAt` и `lastSuccessfulSyncAt` |
 | `REQ-DEC-032` | отклонения используются для создания/анализа инцидентов | integration boundary заканчивается сохранением | Создание/обогащение/анализ считать downstream-процессом; требование по дальнейшему использованию данных сохраняется |
+| Период/cursor | используются календарные даты | timezone не определена | До production acceptance выбрать каноническую timezone организации; не использовать timezone сервера неявно |
+| Roles | есть право настройки True API | отдельное право ручного SyncRun не определено | До UI/auth acceptance решить: reuse существующего права или новая privilege |
 
 ## 20. Связь с будущей корреляцией Set Mark
 
@@ -407,3 +608,105 @@ MVP1 не перечитывает и не изменяет ранее импо�
 7. после успешной проверки зафиксировать новый requirements baseline через `tools/commit_requirements.py`.
 
 До выполнения этих действий данный файл является согласованной спецификацией для ревью, но не подменяет evidence/baseline-механизм Product Compiler.
+
+## 22. Developer-ready API matrix
+
+Все dispenser endpoints выполняются относительно base path `/api/v3/true-api/`. Для рабочего сценария используется `Authorization: Bearer <credential>`. Точные error bodies и headers, не описанные PDF, сохраняются sanitized и фиксируются spike.
+
+| Назначение | HTTP и endpoint | Обязательные параметры | Необязательные параметры | Ключевой ответ | Лимит PDF | Set Mark behavior / provenance |
+|---|---|---|---|---|---:|---|
+| Challenge | `GET /auth/key` | — | — | `uuid`, `data` | не указан | PDF: challenge. Получать заново для интерактивного входа; срок/reuse challenge проверить |
+| UUID-token | `POST /auth/simpleSignIn` | body `uuid`, signed `data` | `inn`, `details`, `unitedToken`; целевой flow использует `inn`, `unitedToken=true` | `token`, `uuidToken`, `expireDate` | не указан | PDF: attached CAdES Base64, max 10h. Bearer field и provider flow — spike |
+| Участник/ТГ | `GET /participants?inns={inn}` | `inns`, 1..100 | repeated `inns` | `inn`, registration status, `productGroups`, возможно `productGroupInfo` | не указан | PDF подтверждает endpoint/fields, но shape противоречив; backend проверяет разрешённый ИНН |
+| Справочник отклонений | `POST /api/v3/true-api/directory/statistics` | `data_set=ANALYTICAL_VIOLATIONS_NAMES`, `filters.level=2` | `filters.date` | category → kind → result codes/names | не указан | PDF: contract и `400/401/403/404/500`. Set Mark кэширует version/date; enrichment не блокирует ingestion |
+| Остаток квоты | `GET /dispenser/tasktypes/available_count?taskTypeShortName=VIOLATIONS` | `taskTypeShortName` | `pg` | PG code, `remainingCount`; `-1` unlimited | 10/min | PDF. Preflight всего плана; `0` → `WAITING_QUOTA`; no-pg shape/reset semantics — spike |
+| Создать task | `POST /dispenser/tasks` | `name`, dates, `format`, `params`, `periodicity`, `productGroupCode` | inner filters внутри `params` | `id`, create/status/org/periodicity | 15/min; 5/day/PG | PDF. `productGroupCode` required, max 91 inclusive. Set Mark использует ≤90; `{}` — spike; ambiguous POST — reconciliation |
+| Task status | `GET /dispenser/tasks/{taskId}?pg={pg}` | path `taskId`; Set Mark всегда передаёт matching `pg` | `pg` формально query | task fields, `currentStatus`, `timeoutSecs` | 5/min | PDF. `PREPARATION` wait; `COMPLETED` → results; остальные terminal |
+| Task recovery/list | `GET /dispenser/tasks?page={0-based}&size={n}` | pagination | `pg` | список task с id/name/status/dates/org/periodicity | 5/min | PDF. Recovery после non-idempotent create timeout; ambiguous match → operator review |
+| Result IDs | `GET /dispenser/results?page={0-based}&size={n}` | pagination | `pg`, `task_ids`; Set Mark передаёт оба | result id/taskId/status/availability/sizes/delete date/parts | 12/min | PDF. Пагинировать, фильтровать taskId; readiness = `SUCCESS+AVAILABLE` и id |
+| ZIP/part | `GET /dispenser/results/{resultId}/file` | path `resultId` | `pg`, `resultFilePartId`; Set Mark передаёт matching `pg` | ZIP/octet-stream или JSON error | 12/min | PDF. Stream + status/content-type/size/hash/CRC; primary+parts semantics — spike |
+
+`DELETE /api/v3/true-api/dispenser/results/{resultId}` не нужен ingestion и не вызывается автоматически: удаление необратимо.
+
+## 23. Минимальный real-API spike с рабочей УКЭП
+
+Spike является обязательным первым вертикальным срезом, но не блокирует разработку transport/persistence/parser skeleton.
+
+1. Выбрать разрешённый ИНН, одну ТГ с известными отклонениями и период 1–3 дня.
+2. Выполнить `GET /auth/key`, создать attached CAdES выбранной УКЭП и вызвать `POST /auth/simpleSignIn` с `inn`, `unitedToken=true`.
+3. Зафиксировать наличие `token`/`uuidToken`/`expireDate`, фактически работающий Bearer, TTL и поведение МЧД. Token/signature/private key в evidence не сохранять.
+4. Выполнить `/participants`; зафиксировать JSON shape, `productGroups`, status, optional fields и Content-Type.
+5. Вызвать `available_count` сначала без `pg`, затем при необходимости с одной `pg`; зафиксировать shape, scope/reset quota и rate headers.
+6. Получить `/directory/statistics` level=2 на дату spike; проверить структуру и уникальность names.
+7. Создать **один** `VIOLATIONS` task с коротким периодом и `params="{}"`. Если UI/ЧЗ показывает известные отклонения, zero-row CSV означает, что `{}` не эквивалентен «все».
+8. Poll не чаще 5/мин; сохранить последовательность task statuses и значение `timeoutSecs`.
+9. Запросить results с `task_ids` и `pg`; зафиксировать query encoding, pagination, propagation lag, result fields и parts.
+10. Скачать primary и все parts; зафиксировать status, Content-Type, Content-Length/Disposition, размеры, hashes, ZIP entry names и CRC.
+11. Зафиксировать только первые bytes CSV в hex для BOM/encoding, а также delimiter, quoting, line endings, точные headers, row width, date/timezone, null/empty и UUID shape. Не включать реальные ИНН/КМ/ФН/адреса в evidence.
+12. Прогнать parser/persistence дважды: второй импорт должен дать duplicates и не изменить deviation.
+13. Сформировать sanitized evidence bundle: request/response schemas, безопасные headers, hashes, dialect summary и синтетические fixtures.
+
+Spike завершён, когда:
+
+- авторизация воспроизводима на поддерживаемом рабочем месте;
+- `{}` подтверждён как «все» либо найден документированный эквивалент без бизнес-фильтрации;
+- однозначно известен primary/parts download algorithm;
+- parser имеет byte-level fixture фактического dialect;
+- каждый `MUST VERIFY` ниже переведён в confirmed contract или конкретное operational constraint.
+
+## 24. Open questions и классификация готовности
+
+### BLOCKER — до production acceptance
+
+1. Как привести `REQ-DATA-001` к источнику без кодов: raw names + best-effort nullable enrichment либо другой подтверждённый источник кодов.
+2. SLA 24 часа: условная организационная гарантия ежедневного ручного запуска либо системная гарантия с допустимой 24/7 подписью.
+3. Какая timezone задаёт `today` и календарную дату `lastSuccessfulSyncAt`.
+4. Какая privilege разрешает ручной SyncRun.
+
+### MUST VERIFY DURING SPIKE
+
+- фактический CAdES/plugin flow, формат bytes и поведение `inn`/МЧД;
+- какое из `token`/`uuidToken` передаётся как Bearer, фактический `expireDate` и повторное использование credential;
+- `/participants`: object/array, optional fields, absence vs empty `productGroups`;
+- полнота no-pg `available_count`, quota scope/reset;
+- `params="{}"` как все отклонения;
+- serialization/query encoding `task_ids`, pagination и propagation delay;
+- primary в дополнение ко всем `resultFileParts`, порядок/нумерация частей;
+- ZIP names/count, encoding, BOM, delimiter, line endings, exact headers;
+- timezone/semantics date columns, nullable/enum values;
+- реальные error bodies/headers для `401/403/404/429/5xx`, `Retry-After`;
+- Range support, размер и производительность большого файла;
+- уникальность name → code в dynamic dictionary.
+
+### CAN DEFER
+
+- автоматическая периодика и 24/7 signing implementation после MVP1, если SLA оформлен условно;
+- lifecycle обновления `Нивелировано` и mutation existing deviation;
+- автоматическое удаление result через `DELETE`;
+- heuristics encoding/header aliases до появления evidence;
+- автоматическая переклассификация старых incidents при обновлении dictionary/rules.
+
+## 25. Рекомендуемый implementation backlog
+
+1. **Decisions/evidence patch plan:** оформить четыре BLOCKER-решения; зарегистрировать snapshots PDF auth, 8.1, 8.3.15, 8.4–8.8, 8.7.16, Appendix 1/2.
+2. **Real API spike:** выполнить раздел 23, сохранить sanitized fixtures и contract tests.
+3. **True API client foundation:** base URL v3, DTO, secure credential holder, correlation, error decoder, scoped rate limiters.
+4. **УКЭП auth vertical slice:** `/auth/key`, local attached signature, `/auth/simpleSignIn`, `expireDate`, `AUTH_REQUIRED`, redaction tests.
+5. **INN/participant/product groups:** permission-bound INN, `/participants`, v704 mapping, unknown-group fail-safe.
+6. **Dictionary enrichment:** `/directory/statistics`, versioned cache, resolved/unresolved/ambiguous mapping.
+7. **Sync planner:** timezone/date algorithm, 90-day windows, PG×window plan, quota preflight, per-INN lock.
+8. **Task orchestration:** create, persisted task state, global polling, terminal states, task-list reconciliation.
+9. **Result/download pipeline:** readiness predicate, pagination, primary/parts, 14-day expiry, streaming download, content-type/size/hash.
+10. **ZIP/CSV parser:** security caps, confirmed dialect, headers/extras, raw preservation, quarantine, large-file tests.
+11. **Idempotent persistence:** schema/constraints, batch insert, observations, immutable first snapshot, cursor atomicity.
+12. **Crash/recovery:** restart at every boundary, credential expiry continuation, replay imports, missing/corrupt part.
+13. **Manual admin UX:** privilege, INN/certificate selection, run status, `AUTH_REQUIRED`, quota/partial failure; не расширять `REQ-DEC-038` внутренней telemetry.
+14. **Operational telemetry/alerts:** rates, status age, expiry risk, counts/rejects, duplicate mismatch, redaction.
+15. **Acceptance suite:** first sync, overlap, >90-day gap, insufficient quota, multi-PG/multipart, empty CSV, new column, malformed UUID, crash after POST, duplicate delivery, `401`, `429/5xx`, unknown PG.
+16. **Downstream contract:** durable new-deviation signal; не более одного incident на deviation UUID; отсутствие correlation не влияет на ingestion success.
+
+## 26. Merge/readiness recommendation
+
+Технический каркас можно начинать разрабатывать после принятия этой спецификации. Production-ready приёмка требует закрыть четыре `BLOCKER` и выполнить real-API spike. До этого документ сохраняет явные `MUST VERIFY`, чтобы разработчик не подменял отсутствующий API-контракт догадками.
+
+PR не должен автоматически менять baseline requirements без штатной регистрации `SRC-EV-*`/`PM-DEC-*`. После отдельных решений Product Manager нужно обновить `REQ-DATA-001`, эксплуатационную предпосылку `REQ-DEC-018`, timezone и roles/permissions, затем выполнить штатный Product Compiler workflow.
