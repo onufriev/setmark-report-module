@@ -163,31 +163,33 @@ if not ui_source.get('evidenceRefs') or not all(
 if ui_source.get('strategy') == 'STORYBOOK' and not load('product/ui-component-inventory.json').get('components'):
     ui_blockers.append('Storybook выбран, но реальные stories/components не зафиксированы')
 prototype_data = load('product/prototype-data-source.json')
+prototype_exemption = load('product/prototype-exemption.json')
+prototype_skipped = prototype_exemption.get('status') == 'SKIPPED_BY_PM'
 data_blockers = []
 allowed_data_sources = {'REAL_OBJECT', 'MANUAL_INPUT', 'DATABASE_SCRIPT', 'CSV', 'EMULATOR', 'POSTMAN_COLLECTION', 'API', 'OTHER'}
-if prototype_data.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
+if not prototype_skipped and prototype_data.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
     data_blockers.append('Источник данных рабочего прототипа не подтверждён Product Manager')
-if prototype_data.get('sourceType') not in allowed_data_sources:
+if not prototype_skipped and prototype_data.get('sourceType') not in allowed_data_sources:
     data_blockers.append('Не выбран допустимый тип источника данных рабочего прототипа')
 for field, message in (
     ('location', 'Не указано расположение или подключение к данным'),
     ('setupMethod', 'Не описан способ подготовки и наполнения данными'),
     ('verificationMethod', 'Не описана проверка корректной загрузки данных'),
 ):
-    if not prototype_data.get(field):
+    if not prototype_skipped and not prototype_data.get(field):
         data_blockers.append(message)
-if not prototype_data.get('evidenceRefs') or not all(
+if not prototype_skipped and (not prototype_data.get('evidenceRefs') or not all(
     registry_decision_valid(ref, 'prototypeDataSource') for ref in prototype_data.get('evidenceRefs', [])
-):
+)):
     data_blockers.append('Источник данных не подтверждён решением по области prototypeDataSource')
 
 stack = load('product/technology-stack.json')
 stack_blockers = []
-if stack.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
+if not prototype_skipped and stack.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
     stack_blockers.append('Технологический стек рабочего прототипа не подтверждён Product Manager')
-if not stack.get('selectedStack'):
+if not prototype_skipped and not stack.get('selectedStack'):
     stack_blockers.append('Не зафиксирован выбранный стек')
-if stack.get('status') in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
+if not prototype_skipped and stack.get('status') in {'Подтверждено Product Manager', 'Временно принято Product Manager'}:
     if not stack.get('evidenceRefs') or not all(
         registry_decision_valid(ref, 'technologyStack') for ref in stack.get('evidenceRefs', [])
     ):

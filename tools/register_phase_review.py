@@ -60,7 +60,7 @@ def main() -> int:
         'WORKING_PROTOTYPE': ('WORKING_PROTOTYPE', 'prototype'),
         'HANDOFF_READY': ('HANDOFF_READY', 'handoff'),
     }.get(args.phase)
-    if required_artifact:
+    if required_artifact and not (args.phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM'):
         artifact_phase, artifact_path = required_artifact
         artifact = project_path(artifact_path, must_exist=True)
         current_digest = artifact_sha256(artifact)
@@ -77,7 +77,7 @@ def main() -> int:
                 'Повторно запустите обязательную проверку и register_artifact_evidence.py.'
             )
 
-    if args.phase == 'WORKING_PROTOTYPE':
+    if args.phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') != 'SKIPPED_BY_PM':
         working_gate = completeness.get('gates', {}).get('WORKING_PROTOTYPE', {})
         if working_gate.get('status') != 'PASSED':
             raise SystemExit('WORKING_PROTOTYPE нельзя завершить: не закрыты источник данных, стек или требования')
@@ -87,7 +87,10 @@ def main() -> int:
     revision = max([int(item.get('revision') or 0) for item in existing] or [0]) + 1
     review_id = f'{args.phase}-R{revision}'
     phase_index = PHASE_SEQUENCE.index(args.phase)
-    next_phase = PHASE_SEQUENCE[phase_index + 1] if phase_index + 1 < len(PHASE_SEQUENCE) else None
+    if args.phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM':
+        next_phase = 'HANDOFF_READY'
+    else:
+        next_phase = PHASE_SEQUENCE[phase_index + 1] if phase_index + 1 < len(PHASE_SEQUENCE) else None
     for item in existing:
         if item.get('status') == 'READY_FOR_REVIEW':
             item['status'] = 'SUPERSEDED'

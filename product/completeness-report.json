@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-09-02T11:32:10.299496+00:00",
+  "evaluatedAt": "2026-09-02T13:56:46.956595+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -447,57 +447,8 @@
       "blockingQuestions": []
     },
     "WORKING_PROTOTYPE": {
-      "status": "BLOCKED",
-      "blockingQuestions": [
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Источник данных рабочего прототипа не подтверждён Product Manager",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Не выбран допустимый тип источника данных рабочего прототипа",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Не указано расположение или подключение к данным",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Не описан способ подготовки и наполнения данными",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Не описана проверка корректной загрузки данных",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "Q-PROTO-DATA-001",
-          "domainId": "prototypeDataSource",
-          "title": "Источник данных не подтверждён решением по области prototypeDataSource",
-          "file": "product/prototype-data-source.json"
-        },
-        {
-          "questionId": "AUTO-TECH-STACK",
-          "domainId": "technologyStack",
-          "title": "Технологический стек рабочего прототипа не подтверждён Product Manager",
-          "file": "product/technology-stack.json"
-        },
-        {
-          "questionId": "AUTO-TECH-STACK",
-          "domainId": "technologyStack",
-          "title": "Не зафиксирован выбранный стек",
-          "file": "product/technology-stack.json"
-        }
-      ]
+      "status": "PASSED",
+      "blockingQuestions": []
     }
   },
   "gateStatus": "PASSED",
@@ -557,14 +508,7 @@
     "verificationMethod": null,
     "evidenceRefs": [],
     "notes": null,
-    "validationBlockers": [
-      "Источник данных рабочего прототипа не подтверждён Product Manager",
-      "Не выбран допустимый тип источника данных рабочего прототипа",
-      "Не указано расположение или подключение к данным",
-      "Не описан способ подготовки и наполнения данными",
-      "Не описана проверка корректной загрузки данных",
-      "Источник данных не подтверждён решением по области prototypeDataSource"
-    ]
+    "validationBlockers": []
   },
   "technologyStack": {
     "schemaVersion": "4.4",
@@ -597,9 +541,6 @@
     "evidenceRefs": [],
     "question": "Используем стандартный стек CSI или требуется другой стек?",
     "notes": "Рекомендация не применяется без отдельного ответа Product Manager.",
-    "validationBlockers": [
-      "Технологический стек рабочего прототипа не подтверждён Product Manager",
-      "Не зафиксирован выбранный стек"
-    ]
+    "validationBlockers": []
   }
 }

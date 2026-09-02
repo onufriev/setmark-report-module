@@ -9,7 +9,7 @@
       "type": "CONFLUENCE",
       "origin": "https://crystals.atlassian.net/wiki/spaces/SR10/pages/6419775498/Set+Mark+-",
       "snapshotPath": "sources/snapshots/confluence-6419775498.md",
-      "snapshotSha256": "61379915c8aaa62ebc6d41a24998261c99c0e4594354fab2c4decdaf4967c236",
+      "snapshotSha256": "2c277e44ffe031f6fbe48cc41c367dfeade5e6ca96a3cfbece59d0f8fdcc8460",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:18:18.243829+00:00",
       "registeredBy": "register_source_snapshot.py"
@@ -20,7 +20,7 @@
       "type": "CONFLUENCE",
       "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/3045457980/SetMark",
       "snapshotPath": "sources/snapshots/confluence-3045457980.md",
-      "snapshotSha256": "ae82f0594024fd89c87cfff046a0397a0e47120aed3a192f9380a7e6527663fe",
+      "snapshotSha256": "604e2f544249bd38c07f0033c60887894486a41b263c39e56fee46655eca0aa7",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:18:18.727778+00:00",
       "registeredBy": "register_source_snapshot.py"
@@ -31,7 +31,7 @@
       "type": "CONFLUENCE",
       "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/785842250/SetMark+SetMark",
       "snapshotPath": "sources/snapshots/confluence-785842250.md",
-      "snapshotSha256": "a6a7eda147996c7dec7488acde3ea8bf0d914ae84da6a678e00850318308ec87",
+      "snapshotSha256": "ef18549a8eb2549ad1c66437567a64d38c6c05aa65711ceb18401754fd26e7e4",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:18:19.200225+00:00",
       "registeredBy": "register_source_snapshot.py"
@@ -42,7 +42,7 @@
       "type": "CONFLUENCE",
       "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/4094230539",
       "snapshotPath": "sources/snapshots/confluence-4094230539.md",
-      "snapshotSha256": "fad9fba15acc5272f8294cd308b504fabbceebbc43609e02db7d5cb216295c11",
+      "snapshotSha256": "fedeec72a393b3c6c20a2b920deb11bc79ff0357b7165dbbd7032783391eeb56",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:18:19.665498+00:00",
       "registeredBy": "register_source_snapshot.py"
@@ -53,7 +53,7 @@
       "type": "CONFLUENCE",
       "origin": "https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/4839243914/-",
       "snapshotPath": "sources/snapshots/confluence-4839243914.md",
-      "snapshotSha256": "a7f3cf485035041075a979be78a8962b178c6f7733dbac17202d7025ba12c2c0",
+      "snapshotSha256": "557018becb5e1d4141ca360b75fcc8c451398f913c74d09993c92a5ef10454fe",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:18:20.123707+00:00",
       "registeredBy": "register_source_snapshot.py"
@@ -64,7 +64,7 @@
       "type": "PDF",
       "origin": "reference-materials/true-api/True API v704.0.pdf",
       "snapshotPath": "sources/snapshots/true-api-v704-pages-1229-1234.txt",
-      "snapshotSha256": "4e52511e55e0676587797ded13906a76c8769fae57994e0d421b465be1caa6c0",
+      "snapshotSha256": "db4b8596cbe1bd9580a0bfc394c6d19aa291e9948b0e84a51aff9a57406a7c8b",
       "accessStatus": "SNAPSHOT_VERIFIED",
       "registeredAt": "2026-07-27T23:19:17.288224+00:00",
       "registeredBy": "register_source_snapshot.py"

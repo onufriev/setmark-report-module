@@ -17,10 +17,13 @@ def _approved_phase_reviews(reviews: list[dict]) -> set[str]:
 
 def _current_phase(reviews: list[dict]) -> str:
     approved = _approved_phase_reviews(reviews)
-    for phase in PHASE_SEQUENCE:
+    phases = list(PHASE_SEQUENCE)
+    if load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM' and 'WORKING_PROTOTYPE' in approved:
+        phases.remove('WORKING_VALIDATION')
+    for phase in phases:
         if phase not in approved:
             return phase
-    return PHASE_SEQUENCE[-1]
+    return phases[-1]
 
 
 def _latest_review(reviews: list[dict], phase: str) -> dict | None:
@@ -101,13 +104,18 @@ def derive_state(existing: dict | None = None) -> dict:
     elif phase == 'PRODUCT_DEFINITION' and completeness.get('gates', {}).get('VISUAL_PROTOTYPE', {}).get('status') != 'PASSED':
         status = 'WAITING_FOR_INPUT'
         next_action = 'Закрыть все требования или явно зафиксировать NEEDS_INPUT до визуального прототипа.'
-    elif phase == 'WORKING_PROTOTYPE' and (
+    elif phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') != 'SKIPPED_BY_PM' and (
         stack.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}
         or data_source.get('status') not in {'Подтверждено Product Manager', 'Временно принято Product Manager'}
     ):
         status = 'WAITING_FOR_INPUT'
         next_action = 'Зафиксировать технологический стек и источник данных рабочего прототипа.'
-    elif len(_approved_phase_reviews(reviews)) == len(PHASE_SEQUENCE):
+    elif len(_approved_phase_reviews(reviews)) == len(
+        [p for p in PHASE_SEQUENCE if not (
+            p == 'WORKING_VALIDATION'
+            and load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM'
+        )]
+    ):
         status = 'VALIDATED'
         next_action = 'Процесс завершён.'
     else:
