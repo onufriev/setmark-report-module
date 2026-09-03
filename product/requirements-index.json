@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "7936b45357fcbefac1cd037fc7e454fd8a867b7890c24a08eedddf3418e4b5df",
+  "requirementsSha256": "bb9d74b55caa29d38e8e9c1c2d2a706787848b6326e111ccc7ed751c8b3fc387",
   "requirements": [
     {
       "id": "REQ-GS-003",
@@ -1795,6 +1795,12 @@
       "requirements": 1,
       "needsInput": 0,
       "candidateSections": 1
+    },
+    {
+      "file": "requirements/pm-questions-and-comments.md",
+      "requirements": 0,
+      "needsInput": 0,
+      "candidateSections": 0
     }
   ]
 }

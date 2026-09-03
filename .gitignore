@@ -6,3 +6,4 @@ node_modules/
 visual-prototype/node_modules/
 prototype/node_modules/
 reports/_tmp/
+.idea

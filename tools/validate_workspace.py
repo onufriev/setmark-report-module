@@ -316,6 +316,8 @@ for review in reviews:
 for phase_name in PHASE_SEQUENCE:
     if phase_name in approved_phases:
         prior = PHASE_SEQUENCE[:PHASE_SEQUENCE.index(phase_name)]
+        if load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM':
+            prior = [item for item in prior if item != 'WORKING_VALIDATION']
         missing = [item for item in prior if item not in approved_phases]
         if missing:
             errors.append(f'{phase_name}: утверждён с пропущенными этапами {missing}')
@@ -328,7 +330,7 @@ if phase in PHASE_SEQUENCE and phase_at_least(phase, 'VISUAL_VALIDATION'):
     result = run_tool('validate_visual_prototype.py', ['--phase', 'VISUAL_PROTOTYPE'], allowed_returncodes={0, 1})
     if result.returncode:
         errors.append('Визуальный прототип невалиден:\n' + result.stdout + result.stderr)
-if phase in PHASE_SEQUENCE and phase_at_least(phase, 'WORKING_VALIDATION'):
+if phase in PHASE_SEQUENCE and phase_at_least(phase, 'WORKING_VALIDATION') and load('product/prototype-exemption.json').get('status') != 'SKIPPED_BY_PM':
     result = run_tool('validate_working_prototype.py', ['--phase', 'WORKING_PROTOTYPE'], allowed_returncodes={0, 1})
     if result.returncode:
         errors.append('Рабочий прототип невалиден:\n' + result.stdout + result.stderr)

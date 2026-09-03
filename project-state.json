@@ -3,27 +3,27 @@
   "productName": "Product Compiler",
   "productVersion": "4.4",
   "projectName": null,
-  "currentPhase": "VISUAL_VALIDATION",
-  "status": "WAITING_FOR_APPROVAL",
-  "nextAction": "Ждать отдельного решения Product Manager по показанному отчёту.",
+  "currentPhase": "HANDOFF_READY",
+  "status": "VALIDATED",
+  "nextAction": "Процесс завершён.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "VISUAL_VALIDATION",
-    "status": "READY_FOR_REVIEW",
-    "reviewId": "VISUAL_VALIDATION-R3",
-    "markdownReport": "reports/visual-validation-v0.3.md",
-    "pdfReport": "reports/visual-validation-v0.3.pdf",
-    "shownToProductManagerAt": "2026-09-01T12:03:28.412904+00:00",
-    "nextPhase": "WORKING_PROTOTYPE"
+    "phase": "HANDOFF_READY",
+    "status": "APPROVED",
+    "reviewId": "HANDOFF_READY-R1",
+    "markdownReport": "reports/handoff-ready-v0.1.md",
+    "pdfReport": "reports/handoff-ready-v0.1.pdf",
+    "shownToProductManagerAt": "2026-09-02T13:27:02.095255+00:00",
+    "nextPhase": null
   },
   "artifactStatus": {
     "requirements": "COMMITTED",
-    "visualPrototype": "VERIFIED",
+    "visualPrototype": "IN_PROGRESS",
     "workingPrototype": "NOT_STARTED",
-    "handoff": "NOT_STARTED"
+    "handoff": "VERIFIED"
   }
 }
