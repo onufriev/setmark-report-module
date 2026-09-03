@@ -11,4 +11,4 @@
 
 
 Возникшие вопросы должны быть заданы в документе
-[pm-questions-and-comments.md](requirements/pm-questions-and-comments.md).
+[pm-questions-and-comments.md](pm-questions-and-comments.md).
