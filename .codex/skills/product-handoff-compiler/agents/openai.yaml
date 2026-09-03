@@ -1,0 +1,3 @@
+interface:
+  display_name: "Сформировать итоговые материалы"
+  short_description: "Собирает итоговый handoff продукта"
