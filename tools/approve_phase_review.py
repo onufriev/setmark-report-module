@@ -47,6 +47,8 @@ def main() -> int:
         if PHASE_SEQUENCE.index(args.phase) + 1 < len(PHASE_SEQUENCE)
         else None
     )
+    if args.phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM':
+        expected_next = 'HANDOFF_READY'
     if review.get('nextPhase') != expected_next:
         raise SystemExit('Некорректный следующий этап')
     review.update({

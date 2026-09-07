@@ -133,6 +133,28 @@
       "dataSourceRef": null,
       "notes": "Handoff очищен по запросу Product Manager: убраны прототип, служебные поля, шаблоны и повторы; требования сгруппированы по MVP1.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-022",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-07T17:08:51.674051+00:00",
+      "checks": [
+        "В handoff/requirements содержится ровно девять обязательных Markdown-файлов",
+        "В индекс трассировки включены 225 продуктовых требований; два требования рабочего прототипа исключены по решению о пропуске прототипа",
+        "Внутренние Markdown-ссылки разрешаются",
+        "MVP разделен на два самостоятельных законченных продуктовых этапа",
+        "Открытые вопросы отсутствуют, pm-questions-and-comments.md пуст",
+        "Названия конкретных клиентов и исходные комментарии обратной связи не включены"
+      ],
+      "result": "PASSED",
+      "sha256": "83bd504899bf3a72a5b16ff87c27c3cb56a4f37285740090c333d6b9dbb8387e",
+      "verificationCommand": "python tools/verify_requirements_baseline.py; python tools/compile_local_handoff.py; local link and content checks",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Handoff пересобран из baseline REQ-BASELINE-015 без использования прежнего handoff как источника.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }

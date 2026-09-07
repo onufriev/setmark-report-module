@@ -297,6 +297,11 @@ for review in reviews:
     if review_phase not in PHASE_SEQUENCE:
         errors.append(f'{review_id}: неизвестный этап')
         continue
+    # Устаревшая ревизия сохранена только для аудита. Её файлы могли быть
+    # заменены новой ревизией, поэтому их контрольные суммы не должны блокировать
+    # штатную повторную регистрацию отчёта.
+    if review.get('status') == 'STALE_REVIEW':
+        continue
     try:
         markdown = project_path(review.get('markdownReport', ''), must_exist=True, allowed_root='reports')
         pdf = project_path(review.get('pdfReport', ''), must_exist=True, allowed_root='reports')
@@ -306,6 +311,8 @@ for review in reviews:
         errors.append(f'{review_id}: {exc}')
     next_index = PHASE_SEQUENCE.index(review_phase) + 1
     expected_next = PHASE_SEQUENCE[next_index] if next_index < len(PHASE_SEQUENCE) else None
+    if review_phase == 'WORKING_PROTOTYPE' and load('product/prototype-exemption.json').get('status') == 'SKIPPED_BY_PM':
+        expected_next = 'HANDOFF_READY'
     if review.get('nextPhase') != expected_next:
         errors.append(f'{review_id}: некорректный nextPhase')
     if review.get('status') == 'APPROVED':
