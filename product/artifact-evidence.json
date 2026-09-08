@@ -174,6 +174,27 @@
       "dataSourceRef": null,
       "notes": "Редакционная коррекция границы MVP после подтверждения Product Manager; продуктовый объём не изменён.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-024",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-08T08:33:09.527637+00:00",
+      "checks": [
+        "Handoff содержит ровно девять тематических документов",
+        "Служебные заголовки Решение Product Manager отсутствуют",
+        "Этапность и последующее развитие объяснены один раз в стартовом документе",
+        "Тематические документы содержат связное описание вместо копии карточек требований",
+        "Отдельная трассировка связывает документы с каноническими REQ-ID"
+      ],
+      "result": "PASSED",
+      "sha256": "736ce9737e1b86e39cca09dd04d029fcf705b790746c77cfe2b6fbd2b91fbdcc",
+      "verificationCommand": "python tools/verify_requirements_baseline.py; python tools/compile_local_handoff.py; local content and link checks",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Handoff переработан по замечаниям review PR #14 без изменения канонических требований.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }

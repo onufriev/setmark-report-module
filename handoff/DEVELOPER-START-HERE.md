@@ -1,18 +1,9 @@
 # Старт для команды разработки
 
-1. Прочитайте [обзор продукта и этапов](requirements/00-architect-and-lead-start-here.md).
-2. Согласуйте границы первого самостоятельного выпуска по
-   [продукту и границам](requirements/01-product-scope.md).
-3. Проверьте контракты и владение данными в
-   [системном контексте](requirements/02-system-context-and-boundaries.md) и
-   [данных и интеграциях](requirements/05-data-and-integrations.md).
-4. Используйте [возможности и приёмку](requirements/06-capabilities-and-acceptance.md)
-   как карту проверяемого результата, а
-   [нефункциональные требования](requirements/07-nonfunctional-and-operations.md) —
-   как обязательную часть каждого выпуска.
-5. При спорной детали переходите по `REQ-*` из
-   [трассировки](requirements/08-traceability.md) к каноническому файлу.
-
-Handoff не заменяет `requirements/` и не используется для изменения требований.
-Технические решения, отсутствующие в канонических требованиях, принимает команда
-разработки и фиксирует отдельно.
+1. Прочитайте [краткий обзор и этапы](requirements/00-architect-and-lead-start-here.md).
+2. Согласуйте границы по [описанию продукта](requirements/01-product-scope.md).
+3. Проверьте [системный контекст](requirements/02-system-context-and-boundaries.md),
+   [данные и интеграции](requirements/05-data-and-integrations.md).
+4. Декомпозируйте этапы по [возможностям и приёмке](requirements/06-capabilities-and-acceptance.md).
+5. Для точной формулировки откройте соответствующий `REQ-*` через
+   [трассировку](requirements/08-traceability.md).
