@@ -155,6 +155,25 @@
       "dataSourceRef": null,
       "notes": "Handoff пересобран из baseline REQ-BASELINE-015 без использования прежнего handoff как источника.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-023",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-08T05:40:43.696072+00:00",
+      "checks": [
+        "REQ-DEC-034 однозначно отнесён к следующему этапу",
+        "Handoff пересобран из канонического каталога requirements",
+        "Внутренние Markdown-ссылки и состав пакета сохранены"
+      ],
+      "result": "PASSED",
+      "sha256": "5869e1f169b3b2972bffe631054bc3bb2f3df99f5ce434e99fdbd61d94e54b95",
+      "verificationCommand": "python tools/verify_requirements_baseline.py; python tools/compile_local_handoff.py",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Редакционная коррекция границы MVP после подтверждения Product Manager; продуктовый объём не изменён.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
