@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1380" viewBox="0 0 1200 1380">
+  <style>
+    .title{font:700 44px Arial;fill:#0b2f6b}.subtitle{font:28px Arial;fill:#324e73}.box{fill:#fff;stroke:#1e5bb8;stroke-width:3}.decision{fill:#fff;stroke:#1e5bb8;stroke-width:3}.action{fill:#f4f8ff;stroke:#1e5bb8;stroke-width:3}.unknown{fill:#f7f7f7;stroke:#777;stroke-width:3}.txt{font:24px Arial;fill:#12223a}.bold{font:700 24px Arial;fill:#12223a}.small{font:20px Arial;fill:#12223a}.label{font:700 22px Arial;fill:#0b2f6b}.arrow{stroke:#1e5bb8;stroke-width:4;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1e5bb8"/></marker></defs>
+
+  <text x="600" y="65" text-anchor="middle" class="title">Единая ветка: результата проверки нет</text>
+  <text x="600" y="108" text-anchor="middle" class="subtitle">Применяется только при доказанном отсутствии результата онлайн ЧЗ и ЛМ ЧЗ</text>
+
+  <rect x="220" y="150" width="760" height="120" rx="18" class="box"/>
+  <text x="600" y="198" text-anchor="middle" class="bold">Продажа завершена без результата обоих каналов</text>
+  <text x="600" y="238" text-anchor="middle" class="txt">Это не ветка разрешающего ответа ЛМ ЧЗ</text>
+  <path d="M600 270 L600 335" class="arrow"/>
+
+  <polygon points="600,335 900,430 600,525 300,430" class="decision"/>
+  <text x="600" y="415" text-anchor="middle" class="bold">Включена валидация</text>
+  <text x="600" y="452" text-anchor="middle" class="txt">соответствующей товарной группы?</text>
+
+  <path d="M300 430 L145 430 L145 620" class="arrow"/>
+  <text x="205" y="405" class="label">Нет</text>
+  <rect x="35" y="620" width="410" height="190" rx="18" class="action"/>
+  <text x="240" y="668" text-anchor="middle" class="bold">Причина подтверждена</text>
+  <text x="240" y="710" text-anchor="middle" class="txt">Проверка группы отключена</text>
+  <text x="240" y="760" text-anchor="middle" class="bold">Включить валидацию группы</text>
+
+  <path d="M900 430 L1045 430 L1045 620" class="arrow"/>
+  <text x="930" y="405" class="label">Да</text>
+  <polygon points="820,620 1115,715 820,810 525,715" class="decision"/>
+  <text x="820" y="698" text-anchor="middle" class="bold">Разрешена продажа</text>
+  <text x="820" y="735" text-anchor="middle" class="txt">при отсутствии ответа от ЧЗ?</text>
+
+  <path d="M525 715 L465 715 L465 930" class="arrow"/>
+  <text x="535" y="690" class="label">Да</text>
+  <rect x="230" y="930" width="470" height="220" rx="18" class="action"/>
+  <text x="465" y="982" text-anchor="middle" class="bold">Причина подтверждена</text>
+  <text x="465" y="1025" text-anchor="middle" class="txt">Настройка разрешила продажу без ответа</text>
+  <text x="465" y="1080" text-anchor="middle" class="bold">Отключить разрешение продажи</text>
+  <text x="465" y="1118" text-anchor="middle" class="txt">при отсутствии ответа от ЧЗ</text>
+
+  <path d="M1115 715 L1140 715 L1140 930 L950 930" class="arrow"/>
+  <text x="1080" y="690" class="label">Нет</text>
+  <rect x="735" y="930" width="430" height="220" rx="18" class="unknown"/>
+  <text x="950" y="975" text-anchor="middle" class="bold">Причина не определена</text>
+  <text x="950" y="1012" text-anchor="middle" class="bold">достоверно</text>
+  <text x="950" y="1055" text-anchor="middle" class="txt">Обе настройки корректны,</text>
+  <text x="950" y="1090" text-anchor="middle" class="txt">но продажа завершена</text>
+  <text x="950" y="1120" text-anchor="middle" class="bold">Обратиться в поддержку CSI</text>
+
+  <text x="600" y="1260" text-anchor="middle" class="small">Исторический результат, который просто не найден, не считается доказанным отсутствием проверки.</text>
+  <text x="600" y="1310" text-anchor="middle" class="small">Порядок соответствует согласованному правилу INC-006.</text>
+</svg>
