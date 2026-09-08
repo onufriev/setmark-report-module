@@ -1,0 +1,92 @@
+name: Render Confluence export assets
+
+on:
+  push:
+    paths:
+      - '.github/workflows/render-confluence-export.yml'
+      - 'visual-prototype/app/**'
+      - 'docs/product-definition/diagrams/**'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start prototype
+        run: |
+          python3 -m http.server 8080 --directory visual-prototype/app >/tmp/setmark-http.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/setmark-http.log
+          exit 1
+
+      - name: Capture current UI and normalize diagrams
+        run: |
+          mkdir -p docs/confluence-assets/screens docs/confluence-assets/incident-maps
+          cat > capture-confluence.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({headless:true});
+          const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+          const screens = [
+            ['dashboard','overview'],
+            ['incidents','incidents'],
+            ['incident-card','incident/INC-10621'],
+            ['actions','actions'],
+            ['analytics','analytics'],
+            ['settings','settings']
+          ];
+          for (const [name,hash] of screens) {
+            await page.goto(`http://127.0.0.1:8080/#${hash}`, {waitUntil:'networkidle'});
+            await page.waitForTimeout(500);
+            await page.screenshot({path:`docs/confluence-assets/screens/${name}.png`,fullPage:true,timeout:60000});
+          }
+          await browser.close();
+          EOF
+          node capture-confluence.mjs
+          rm capture-confluence.mjs
+
+          cp docs/product-definition/diagrams/inc-003-analysis-flow-v0.4.png docs/confluence-assets/incident-maps/inc-003.png
+          cp docs/product-definition/diagrams/inc-004-analysis-flow-v0.2.png docs/confluence-assets/incident-maps/inc-004.png
+          cp docs/product-definition/diagrams/inc-005-analysis-flow-v0.1.png docs/confluence-assets/incident-maps/inc-005.png
+          cp docs/product-definition/diagrams/inc-007-analysis-flow-v0.6.svg docs/confluence-assets/incident-maps/inc-007.svg
+          cp docs/product-definition/diagrams/inc-008-analysis-flow-v0.4.png docs/confluence-assets/incident-maps/inc-008.png
+          cp docs/product-definition/diagrams/inc-010-analysis-flow-v0.1.png docs/confluence-assets/incident-maps/inc-010.png
+          cp docs/product-definition/diagrams/inc-011-analysis-flow-v0.1.png docs/confluence-assets/incident-maps/inc-011.png
+          cp docs/product-definition/diagrams/inc-015-analysis-flow-v0.1.png docs/confluence-assets/incident-maps/inc-015.png
+          cp docs/product-definition/diagrams/inc-016-analysis-flow-v0.2.png docs/confluence-assets/incident-maps/inc-016.png
+          cp docs/product-definition/diagrams/inc-001-second-priority-flow-v0.1.svg docs/confluence-assets/incident-maps/inc-001-extra.svg
+          cp docs/product-definition/diagrams/inc-017-analysis-flow-v0.1.svg docs/confluence-assets/incident-maps/inc-017.svg
+          cp docs/product-definition/diagrams/inc-018-analysis-flow-v0.1.svg docs/confluence-assets/incident-maps/inc-018.svg
+          cp docs/product-definition/diagrams/proven-no-response-settings-flow-v0.1.svg docs/confluence-assets/incident-maps/proven-no-response.svg
+
+      - name: Commit rendered assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/confluence-assets
+          if git diff --cached --quiet; then
+            echo 'Assets unchanged'
+          else
+            git commit -m 'docs: refresh current Confluence export assets'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
