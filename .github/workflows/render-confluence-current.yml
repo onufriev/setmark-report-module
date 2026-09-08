@@ -56,7 +56,7 @@ jobs:
           cp docs/product-definition/diagrams/inc-015-analysis-flow-v0.1.png docs/confluence-current/incident-maps/inc-015.png
           cp docs/product-definition/diagrams/inc-016-analysis-flow-v0.2.png docs/confluence-current/incident-maps/inc-016.png
 
-          cat > /tmp/capture.mjs <<'EOF'
+          cat > capture-confluence-current.mjs <<'EOF'
           import { chromium } from 'playwright';
           const browser = await chromium.launch({headless:true});
           const page = await browser.newPage({viewport:{width:1600,height:1100},deviceScaleFactor:1});
@@ -94,7 +94,8 @@ jobs:
           await mapPage.close();
           await browser.close();
           EOF
-          node /tmp/capture.mjs
+          node capture-confluence-current.mjs
+          rm capture-confluence-current.mjs
 
       - name: Commit generated assets
         run: |
