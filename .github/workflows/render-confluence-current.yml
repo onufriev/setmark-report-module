@@ -1,0 +1,109 @@
+name: Render current Confluence documentation assets
+
+on:
+  push:
+    branches:
+      - agent/confluence-sync-20260909
+    paths:
+      - '.github/workflows/render-confluence-current.yml'
+      - 'visual-prototype/app/**'
+      - 'docs/product-definition/diagrams/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local servers
+        run: |
+          python3 -m http.server 8080 --directory visual-prototype/app >/tmp/prototype.log 2>&1 &
+          python3 -m http.server 8081 --directory . >/tmp/assets.log 2>&1 &
+          for port in 8080 8081; do
+            for i in {1..30}; do
+              if curl -fsS http://127.0.0.1:${port}/ >/dev/null; then break; fi
+              sleep 1
+            done
+          done
+
+      - name: Capture current prototype and normalize diagrams
+        run: |
+          mkdir -p docs/confluence-current/screens docs/confluence-current/incident-maps
+          cp docs/product-definition/diagrams/inc-003-analysis-flow-v0.4.png docs/confluence-current/incident-maps/inc-003.png
+          cp docs/product-definition/diagrams/inc-004-analysis-flow-v0.2.png docs/confluence-current/incident-maps/inc-004.png
+          cp docs/product-definition/diagrams/inc-005-analysis-flow-v0.1.png docs/confluence-current/incident-maps/inc-005.png
+          cp docs/product-definition/diagrams/inc-008-analysis-flow-v0.4.png docs/confluence-current/incident-maps/inc-008.png
+          cp docs/product-definition/diagrams/inc-010-analysis-flow-v0.1.png docs/confluence-current/incident-maps/inc-010.png
+          cp docs/product-definition/diagrams/inc-011-analysis-flow-v0.1.png docs/confluence-current/incident-maps/inc-011.png
+          cp docs/product-definition/diagrams/inc-015-analysis-flow-v0.1.png docs/confluence-current/incident-maps/inc-015.png
+          cp docs/product-definition/diagrams/inc-016-analysis-flow-v0.2.png docs/confluence-current/incident-maps/inc-016.png
+
+          cat > /tmp/capture.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({headless:true});
+          const page = await browser.newPage({viewport:{width:1600,height:1100},deviceScaleFactor:1});
+          const screens = [
+            ['overview','overview'],
+            ['journal','journal'],
+            ['priority','priority'],
+            ['incidents','incidents'],
+            ['incident-card','incident/INC-10621'],
+            ['analytics','analytics'],
+            ['settings','settings']
+          ];
+          for (const [name,hash] of screens) {
+            await page.goto(`http://127.0.0.1:8080/#${hash}`, {waitUntil:'networkidle'});
+            await page.waitForTimeout(700);
+            await page.screenshot({path:`docs/confluence-current/screens/${name}.png`,fullPage:true,timeout:60000});
+          }
+          await page.close();
+
+          const mapPage = await browser.newPage({viewport:{width:1600,height:1200},deviceScaleFactor:1});
+          const svgMaps = [
+            ['inc-001-second-priority','docs/product-definition/diagrams/inc-001-second-priority-flow-v0.1.svg'],
+            ['inc-006','docs/product-definition/diagrams/inc-006-analysis-flow-v0.1.svg'],
+            ['inc-007','docs/product-definition/diagrams/inc-007-analysis-flow-v0.6.svg'],
+            ['inc-017','docs/product-definition/diagrams/inc-017-analysis-flow-v0.1.svg'],
+            ['inc-018','docs/product-definition/diagrams/inc-018-analysis-flow-v0.1.svg'],
+            ['proven-no-response','docs/product-definition/diagrams/proven-no-response-settings-flow-v0.1.svg']
+          ];
+          for (const [name,path] of svgMaps) {
+            await mapPage.goto(`http://127.0.0.1:8081/${path}`, {waitUntil:'networkidle'});
+            await mapPage.waitForTimeout(300);
+            const svg = mapPage.locator('svg');
+            await svg.screenshot({path:`docs/confluence-current/incident-maps/${name}.png`,timeout:60000});
+          }
+          await mapPage.close();
+          await browser.close();
+          EOF
+          node /tmp/capture.mjs
+
+      - name: Commit generated assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/confluence-current
+          if git diff --cached --quiet; then
+            echo 'Assets unchanged'
+          else
+            git commit -m 'docs: refresh current Confluence assets'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
