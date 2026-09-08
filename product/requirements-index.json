@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "requirementsSha256": "b4553f18705d970d3db29ea6b86b6d2a4abaea29bdaffd2925dd4024c7e4319c",
+  "requirementsSha256": "cb7da57e717c883680248116830c6a075fcae4d1684eaef00fc3a5628de4acaf",
   "requirements": [
     {
       "id": "REQ-DEC-193",
@@ -851,6 +851,313 @@
       "evidenceRefs": [
         "PM-DEC-002",
         "PM-DEC-151"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-004",
+      "title": "Модель результатов автоматического анализа",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 3,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-020",
+        "PM-DEC-021",
+        "PM-DEC-025",
+        "PM-DEC-100",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-005",
+      "title": "Формирование рекомендаций и необходимых действий",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 36,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-035",
+        "PM-DEC-037",
+        "PM-DEC-042",
+        "PM-DEC-100",
+        "PM-DEC-106",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-006",
+      "title": "Общая ветка отсутствующих результатов проверки",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 75,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-057",
+        "PM-DEC-058",
+        "PM-DEC-062",
+        "PM-DEC-063",
+        "PM-DEC-064",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-007",
+      "title": "INC-001 — повторные продажи",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 101,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-107",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-008",
+      "title": "INC-002 — продажа товара с истекшим сроком годности",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 137,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-058",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-009",
+      "title": "INC-003 — код идентификации не зарегистрирован в ГИС МТ",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 164,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-048",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-010",
+      "title": "INC-004 — участник не зарегистрирован в ГИС МТ",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 186,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-050",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-011",
+      "title": "INC-005 — участник не зарегистрирован в товарной группе",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 202,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-049",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-012",
+      "title": "INC-006 — продажа без проверки кода маркировки",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 218,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-047",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-013",
+      "title": "INC-007 — блокировка по решению ОГВ",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 244,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-047",
+        "PM-DEC-064",
+        "PM-DEC-110",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-014",
+      "title": "INC-008 — повторная реализация товара, не подлежащего возврату",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 266,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-047",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-015",
+      "title": "INC-009 — неизвестный вид отклонения",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 284,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-020",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-016",
+      "title": "INC-010 — ценовые отклонения",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 300,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-057",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-017",
+      "title": "INC-011 — истёкший срок при реализации в объёмных показателях",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 319,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-058",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-018",
+      "title": "INC-012 — участник прекратил деятельность",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 336,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-059",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-019",
+      "title": "INC-013 — отсутствие лицензии на ветеринарные препараты",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 352,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-060",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-020",
+      "title": "INC-014 — отсутствие сведений о соответствии",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 368,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-061",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-021",
+      "title": "INC-015 — некорректный код проверки",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 385,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-062",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-022",
+      "title": "INC-016 — превышение зарегистрированного объёма",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 405,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-063",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-023",
+      "title": "INC-017 — товар недоступен для реализации",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 425,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-108",
+        "PM-DEC-146",
+        "PM-DEC-209"
+      ],
+      "applicability": "Следующий этап"
+    },
+    {
+      "id": "REQ-BR-024",
+      "title": "INC-018 — продажа групповой упаковки после выбытия",
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "line": 446,
+      "domainId": "businessRules",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-109",
+        "PM-DEC-146",
+        "PM-DEC-209"
       ],
       "applicability": "Следующий этап"
     },
@@ -2766,7 +3073,7 @@
       "evidenceRefs": [
         "PM-DEC-203"
       ],
-      "applicability": "MVP1"
+      "applicability": "Планирование поставки"
     },
     {
       "id": "REQ-DEC-185",
@@ -2843,6 +3150,18 @@
       "applicability": "Следующий этап"
     },
     {
+      "id": "REQ-DEC-194",
+      "title": "Решение Product Manager",
+      "file": "requirements/09-traceability/traceability.md",
+      "line": 113,
+      "domainId": "traceability",
+      "status": "Подтверждено Product Manager",
+      "evidenceRefs": [
+        "PM-DEC-209"
+      ],
+      "applicability": "MVP1"
+    },
+    {
       "id": "REQ-DEC-141",
       "title": "Решение Product Manager",
       "file": "requirements/10-prototype/prototype-data-source.md",
@@ -2906,6 +3225,12 @@
       "requirements": 8,
       "needsInput": 0,
       "candidateSections": 8
+    },
+    {
+      "file": "requirements/02-system/incident-analysis-rules.md",
+      "requirements": 21,
+      "needsInput": 0,
+      "candidateSections": 21
     },
     {
       "file": "requirements/02-system/roles-and-permissions.md",
@@ -3017,9 +3342,9 @@
     },
     {
       "file": "requirements/09-traceability/traceability.md",
-      "requirements": 7,
+      "requirements": 8,
       "needsInput": 0,
-      "candidateSections": 7
+      "candidateSections": 8
     },
     {
       "file": "requirements/10-prototype/prototype-data-source.md",
