@@ -1,0 +1,8 @@
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+
+# Эти два ранее зафиксированных файла входят в REQ-BASELINE-018 с CRLF.
+# Сохраняем их представление, чтобы baseline был воспроизводим без смысловой правки.
+requirements/01-base/market-assessment.md text eol=crlf
+requirements/04-quality/accessibility-requirements.md text eol=crlf

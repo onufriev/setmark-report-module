@@ -1,14 +1,13 @@
-# Set Mark: мониторинг и анализ нарушений
+# Старт для команды разработки
 
-Для архитектурного решения и планирования MVP начните с единого документа
-[00-architect-and-lead-start-here.md](requirements/00-architect-and-lead-start-here.md).
-Он ведёт по восьми тематическим документам и даёт ссылки на канонические требования
-только там, где требуется углубление в деталь.
-
-Технологический стек, production-архитектура, API-контракты и источник
-производственных данных определяются командой разработки в пределах зафиксированных
-продуктовых требований.
-
-
-Возникшие вопросы должны быть заданы в документе
-[pm-questions-and-comments.md](pm-questions-and-comments.md).
+1. Прочитайте [краткий обзор и этапы](requirements/00-architect-and-lead-start-here.md).
+2. Согласуйте границы по [описанию продукта](requirements/01-product-scope.md).
+3. Проверьте [системный контекст](requirements/02-system-context-and-boundaries.md),
+   [данные и интеграции](requirements/05-data-and-integrations.md).
+4. Декомпозируйте этапы по [возможностям и приёмке](requirements/06-capabilities-and-acceptance.md).
+5. Для анализа RA/INC и рекомендаций используйте
+   [предметную модель и правила](requirements/03-domain-model-and-rules.md); для
+   Аналитики и уведомлений — [интерфейс](requirements/04-user-flows-and-ui.md) и
+   [интеграции](requirements/05-data-and-integrations.md).
+6. Для точной формулировки откройте соответствующий `REQ-*` через
+   [трассировку](requirements/08-traceability.md).

@@ -14,10 +14,10 @@
   "phaseReview": {
     "phase": "HANDOFF_READY",
     "status": "APPROVED",
-    "reviewId": "HANDOFF_READY-R1",
-    "markdownReport": "reports/handoff-ready-v0.1.md",
-    "pdfReport": "reports/handoff-ready-v0.1.pdf",
-    "shownToProductManagerAt": "2026-09-02T13:27:02.095255+00:00",
+    "reviewId": "HANDOFF_READY-R2",
+    "markdownReport": "reports/handoff-ready-v0.2.md",
+    "pdfReport": "reports/handoff-ready-v0.2.pdf",
+    "shownToProductManagerAt": "2026-09-07T20:10:04.940183+00:00",
     "nextPhase": null
   },
   "artifactStatus": {
