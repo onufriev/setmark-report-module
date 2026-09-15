@@ -195,6 +195,42 @@
       "dataSourceRef": null,
       "notes": "Handoff переработан по замечаниям review PR #14 без изменения канонических требований.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-028",
+      "phase": "VISUAL_VALIDATION",
+      "artifactPath": "visual-prototype",
+      "artifactType": "interactive-html",
+      "verifiedAt": "2026-09-15T12:55:26.631633+00:00",
+      "checks": [
+        "Обязательный путь и ключевые функции проверены штатным валидатором"
+      ],
+      "result": "PASSED",
+      "sha256": "4eede480e416fcb52937416de547095b71fe8c1a329366afe09ccc57dc37b9e9",
+      "verificationCommand": "python tools/validate_visual_prototype.py --phase VISUAL_PROTOTYPE",
+      "runbookPath": "visual-prototype/PROTOTYPE-RUNBOOK.md",
+      "dataSourceRef": null,
+      "notes": "Повторная регистрация по каноническому LF-представлению неизменённого визуального прототипа.",
+      "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-029",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-15T12:56:23.045437+00:00",
+      "checks": [
+        "Handoff пересобран из канонических требований",
+        "Ответы на вопросы разработки добавлены и не содержат открытых продуктовых решений",
+        "90-дневная первая загрузка и хранение согласованы во всех связанных документах"
+      ],
+      "result": "PASSED",
+      "sha256": "44334dbe1057941543f366c1058a7a9ee128573df17d6a058fdfe2d5fa565a50",
+      "verificationCommand": "python tools/verify_requirements_baseline.py; python tools/compile_local_handoff.py",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Финальная регистрация handoff по PM-DEC-210, PM-DEC-211 и PM-DEC-212.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
