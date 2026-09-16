@@ -248,6 +248,23 @@
       "dataSourceRef": null,
       "notes": "Обновление handoff после решений Product Manager PM-DEC-213–PM-DEC-227.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-031",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-16T16:00:11.435464+00:00",
+      "checks": [
+        "Baseline REQ-BASELINE-021 verified; nine handoff documents compiled with valid links; PM-DEC-228 reconciled"
+      ],
+      "result": "PASSED",
+      "sha256": "a97b96953c95ac2475b116b2d3719d6589ec95c8f03d16f6bca96a9b8b40f4ab",
+      "verificationCommand": "tools/verify_requirements_baseline.py; tools/compile_local_handoff.py",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Пересборка handoff: отказ от хранения сырых строк и игнорирование повторов по ключу по PM-DEC-228.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
