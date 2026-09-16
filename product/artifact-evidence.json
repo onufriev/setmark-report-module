@@ -231,6 +231,23 @@
       "dataSourceRef": null,
       "notes": "Финальная регистрация handoff по PM-DEC-210, PM-DEC-211 и PM-DEC-212.",
       "recordedBy": "register_artifact_evidence.py"
+    },
+    {
+      "id": "ART-EV-030",
+      "phase": "HANDOFF_READY",
+      "artifactPath": "handoff",
+      "artifactType": "developer-handoff",
+      "verifiedAt": "2026-09-16T10:16:21.787189+00:00",
+      "checks": [
+        "Baseline verified; handoff compiler produced exactly nine documents and valid links; PM decisions 213-227 reconciled"
+      ],
+      "result": "PASSED",
+      "sha256": "e5d3f3af17bda5b34dc14d3f285c4b20df2655f543792b64ce82b9e241725025",
+      "verificationCommand": "tools/verify_requirements_baseline.py; tools/compile_local_handoff.py",
+      "runbookPath": "handoff/HANDOFF.md",
+      "dataSourceRef": null,
+      "notes": "Обновление handoff после решений Product Manager PM-DEC-213–PM-DEC-227.",
+      "recordedBy": "register_artifact_evidence.py"
     }
   ]
 }
