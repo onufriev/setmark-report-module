@@ -1,29 +1,29 @@
 {
-  "schemaVersion": "4.4",
+  "schemaVersion": "2.0",
   "productName": "Product Compiler",
-  "productVersion": "4.4",
+  "productVersion": "5.0",
   "projectName": null,
-  "currentPhase": "HANDOFF_READY",
-  "status": "VALIDATED",
-  "nextAction": "Процесс завершён.",
+  "currentPhase": "SOURCE_SETUP",
+  "status": "IN_PROGRESS",
+  "nextAction": "Завершить настройку источников и подготовить отчёт SOURCE_SETUP.",
   "blockingQuestionId": null,
   "sourceSetup": {
     "status": "COMPLETED",
     "inputMode": "MIXED"
   },
   "phaseReview": {
-    "phase": "HANDOFF_READY",
-    "status": "APPROVED",
-    "reviewId": "HANDOFF_READY-R2",
-    "markdownReport": "reports/handoff-ready-v0.2.md",
-    "pdfReport": "reports/handoff-ready-v0.2.pdf",
-    "shownToProductManagerAt": "2026-09-07T20:10:04.940183+00:00",
+    "phase": null,
+    "status": "NOT_PREPARED",
+    "reviewId": null,
+    "markdownReport": null,
+    "pdfReport": null,
+    "shownToProductManagerAt": null,
     "nextPhase": null
   },
   "artifactStatus": {
     "requirements": "COMMITTED",
     "visualPrototype": "IN_PROGRESS",
     "workingPrototype": "NOT_STARTED",
-    "handoff": "VERIFIED"
+    "handoff": "IN_PROGRESS"
   }
 }

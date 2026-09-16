@@ -1,8 +1,8 @@
 {
-  "schemaVersion": "4.4",
-  "status": "SKIPPED_BY_PM",
-  "decision": "Рабочий прототип пропускается; для передачи в разработку достаточно проверенного визуального прототипа.",
-  "evidenceRef": "PM-DEC-113",
-  "approvedAt": "2026-09-02",
-  "notes": "Решение Product Manager для текущего проекта."
+  "schemaVersion": "2.0",
+  "plan": "VISUAL_ONLY",
+  "decision": "VISUAL_ONLY",
+  "evidenceRef": "PM-DEC-210",
+  "approvedAt": "2026-09-15T19:27:10.386407+00:00",
+  "notes": null
 }

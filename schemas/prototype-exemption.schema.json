@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "plan", "decision", "evidenceRef", "approvedAt", "notes"],
+  "properties": {
+    "schemaVersion": {"$ref": "schema-version.schema.json"},
+    "plan": {"enum": ["NOT_SET", "NONE", "VISUAL_ONLY", "VISUAL_AND_WORKING"]},
+    "decision": {"type": ["string", "null"]},
+    "evidenceRef": {"type": ["string", "null"]},
+    "approvedAt": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  }
+}
