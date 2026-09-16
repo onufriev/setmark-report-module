@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "4.4",
+  "schemaVersion": "2.0",
   "status": "READY",
   "entryPoint": "visual-prototype/app/index.html",
   "startCommand": "python -m http.server 8000 --directory visual-prototype",
@@ -53,9 +53,9 @@
   ],
   "smokeTest": {
     "status": "PASSED",
-    "checkedAt": "2026-09-01T06:42:31.505356+00:00",
+    "checkedAt": "2026-09-15T19:25:48.551385+00:00",
     "details": [
-      "entrypoint, HTML/CSS/JS, ссылки, обязательный путь и ключевые функции Дашборда/Аналитики/Настроек проверены"
+      "entrypoint, HTML/CSS/JS, ссылки и обязательный путь проверены"
     ]
   },
   "uiSourceMode": "COMPONENT_LIBRARY",
