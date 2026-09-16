@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.4",
-  "evaluatedAt": "2026-09-08T05:40:47.617902+00:00",
+  "evaluatedAt": "2026-09-16T16:00:29.398123+00:00",
   "detectedProfiles": [
     "BASE",
     "RETAIL",
@@ -91,6 +91,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-207",
         "REQ-DEC-136",
         "REQ-DEC-091",
         "REQ-BO-002",
@@ -167,7 +168,28 @@
         "REQ-DEC-092",
         "REQ-DEC-093",
         "REQ-DEC-094",
-        "REQ-DEC-095"
+        "REQ-DEC-095",
+        "REQ-BR-004",
+        "REQ-BR-005",
+        "REQ-BR-006",
+        "REQ-BR-007",
+        "REQ-BR-008",
+        "REQ-BR-009",
+        "REQ-BR-010",
+        "REQ-BR-011",
+        "REQ-BR-012",
+        "REQ-BR-013",
+        "REQ-BR-014",
+        "REQ-BR-015",
+        "REQ-BR-016",
+        "REQ-BR-017",
+        "REQ-BR-018",
+        "REQ-BR-019",
+        "REQ-BR-020",
+        "REQ-BR-021",
+        "REQ-BR-022",
+        "REQ-BR-023",
+        "REQ-BR-024"
       ],
       "needsInput": [],
       "validationNotes": []
@@ -180,6 +202,8 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-203",
+        "REQ-DEC-196",
         "REQ-DEC-171",
         "REQ-DEC-137",
         "REQ-DEC-126",
@@ -200,6 +224,15 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-213",
+        "REQ-DEC-201",
+        "REQ-DEC-204",
+        "REQ-DEC-205",
+        "REQ-DEC-210",
+        "REQ-DEC-211",
+        "REQ-DEC-212",
+        "REQ-DEC-206",
+        "REQ-DEC-195",
         "REQ-DEC-174",
         "REQ-DEC-166",
         "REQ-DEC-162",
@@ -235,6 +268,8 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-198",
+        "REQ-DEC-199",
         "REQ-DEC-176",
         "REQ-DEC-134",
         "REQ-DEC-042",
@@ -251,6 +286,7 @@
       "profileHintMatched": false,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-202",
         "REQ-DEC-183",
         "REQ-DEC-177",
         "REQ-DEC-168",
@@ -346,6 +382,10 @@
       "profileHintMatched": true,
       "status": "CONFIRMED",
       "requirementRefs": [
+        "REQ-DEC-200",
+        "REQ-DEC-209",
+        "REQ-DEC-208",
+        "REQ-DEC-197",
         "REQ-DEC-173",
         "REQ-DEC-155",
         "REQ-DEC-164",
@@ -516,7 +556,8 @@
         "REQ-DEC-178",
         "REQ-DEC-142",
         "REQ-DEC-045",
-        "REQ-DEC-027"
+        "REQ-DEC-027",
+        "REQ-DEC-194"
       ],
       "needsInput": [],
       "validationNotes": []
